@@ -1,0 +1,580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Transifex Community Edition v1.2 (Mystique) &mdash; Transifex documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1-r&#39;bae89a6&#39;',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Transifex documentation" href="../../index.html" />
+    <link rel="up" title="Release notes" href="index.html" />
+    <link rel="next" title="Transifex version 1.1 (Sabretooth)" href="1.1.html" />
+    <link rel="prev" title="Release notes" href="index.html" />  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold">
+  </head>
+  <body>
+
+    <div class="document">
+  <div id="global-header">
+    <div class="wrapper" >
+      <a id="transifex-logo" href="https://www.transifex.com/" title="Go to start page">
+  			<img src="../../_static/transifex-logo.png" alt="Transifex logo" width="109" height="30"/>
+  		</a>
+  		<ul id="global-nav" >
+				<li><h6><a href="../../genindex.html" class="smooth-transition">INDEX</a></h6></li>
+				<li><h6><a href="../../contents.html" class="smooth-transition">TABLE OF CONTENTS</a></h6></li>
+				<li><h6><a href="../../index.html" class="smooth-transition">DOCS HOME</a></h6></li>
+  		</ul>
+  		
+    </div>
+    <div class="wrapper" >
+      <span style="font-weight:bold;padding-top: 3px;display: block;text-align: center;margin: 0em 0em 0em 1.75em;color: #cacfd2;">For the most up-to-date information, please refer to <a style="color: #8a8f92;" href="https://www.transifex.com">Transifex.com</a> and <a style="color: #8a8f92;" href="http://support.transifex.com">support.transifex.com.</a>
+    </div>
+  </div>
+ 
+  <div class="nav wrapper"><div class="wrapper_contents">
+    &laquo; <a href="index.html" title="Release notes">Release notes</a> 
+     |
+    <a href="../../contents.html" title="Table of Contents" accesskey="U">up</a>
+   |
+    <a href="1.1.html" title="Transifex version 1.1 (Sabretooth)">Transifex version 1.1 (Sabretooth)</a> &raquo;</div></div>
+ 
+  <div id="custom-doc" class="yui-t6">
+   <div id="bd">
+      <div id="yui-main">
+        <div class="yui-b">
+          <div class="yui-g" id="server-releases-1.2">
+            
+  <div class="section" id="transifex-community-edition-v1-2-mystique">
+<span id="releases-1-2"></span><h1>Transifex Community Edition v1.2 (Mystique)<a class="headerlink" href="#transifex-community-edition-v1-2-mystique" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to Transifex CE v1.2, codenamed <a class="reference external" href="http://en.wikipedia.org/wiki/Mystique_(comics)">Mystique</a>!</p>
+<dl class="docutils">
+<dt>Released:</dt>
+<dd>December 2011</dd>
+</dl>
+<p>Transifex-1.0 was a huge breakthrough for us since it revolutionized L10n
+workflow in many ways, like handling translations on a per-string level, adding
+the .ts file format and introducing of our powerful API. Transifex-1.1
+introduced a ton of fixes and improvements that refined the whole experience.
+Transifex-1.2, codenamed Mystique, brings a lot of fresh and cool, entirely new
+features to the party.</p>
+<p>Here&#8217;s the gist:</p>
+<ul class="simple">
+<li>New file formats: .desktop, dtd, mozilla .properties, .strings, .wiki, xliff.</li>
+<li>Pseudo-file format.</li>
+<li>Review/proofread translations.</li>
+<li>Webhooks: HTTP callbacks for automatic notification of events.</li>
+<li>User authentication through 3rd-party services (twitter, facebook, google
+accounts, linkedin).</li>
+<li>Better tag-assignment for projects.</li>
+<li>Resource categories.</li>
+<li>Django-1.3 compatibility.</li>
+<li>Rewrite of the core source file parser.</li>
+<li>Speed improvements, especially on Lotte.</li>
+<li>New user account and profile pages</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>714 changesets recorded
+1046 files changed, 126392 insertions<span class="o">(</span>+<span class="o">)</span>, 85936 deletions<span class="o">(</span>-<span class="o">)</span>
+</pre></div>
+</div>
+<div class="figure">
+<img alt="../../_images/mystique.png" class="alcenter shot" src="../../_images/mystique.png" />
+<p class="caption">Mystique &#8211; Promotional cover art.
+Art by Mike Mayhew.</p>
+</div>
+<div class="section" id="what-s-new-in-transifex-ce-1-2">
+<h2>What&#8217;s new in Transifex CE 1.2<a class="headerlink" href="#what-s-new-in-transifex-ce-1-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="new-file-formats-desktop-dtd-mozilla-properties-strings-wiki-xliff">
+<h3>New file formats: .desktop, dtd, mozilla .properties, .strings, .wiki, xliff.<a class="headerlink" href="#new-file-formats-desktop-dtd-mozilla-properties-strings-wiki-xliff" title="Permalink to this headline">¶</a></h3>
+<p>It is always better to have support for a wide range of i18n file formats. This
+release has implemented native support for the following file formats.</p>
+<ul class="simple">
+<li><cite>.desktop</cite>: .desktop file contains &#8220;desktop entries&#8221;, or configuration files
+describing how a particular program is launched, how it appears in menu, etc.
+It is widely used by KDE and Gnome</li>
+<li><cite>.dtd</cite>: A DTD file contains a list of entities that need to be localized.
+The entities here defined are then used inside the user interface XUL files.</li>
+<li><cite>mozilla .properties</cite>: In these files a number of JavaScript properties
+(consider them as variables) are assigned with a string value. This format is
+a lot like the .properties files from Java but it supports unicode.</li>
+<li><cite>Apple .strings</cite>: Apple .strings files are used for the localization of Mac
+OS X and iPhone applications.</li>
+<li><cite>.wiki</cite>: A .wiki file is expected to contain text formatted in the wikiML
+format, eg articles from Wikipedia.</li>
+<li><cite>.xliff</cite>: XLIFF (XML Localisation Interchange File Format) is an XML-based
+format created to standardize localization.</li>
+</ul>
+</div>
+<div class="section" id="pseudo-translation-files">
+<h3>Pseudo translation files<a class="headerlink" href="#pseudo-translation-files" title="Permalink to this headline">¶</a></h3>
+<p>This is a very important tool in the i18n process. It helps software developers
+check their application in terms of proper i18n support. Transifex can now
+produce language files with fake translated strings that appear distorted, are
+of greater length than the source strings but are still readable. Developers can
+use this &#8220;pseudo&#8221; language file when compiling their product and view the
+outcome. This is needed to make sure that the product supports multiple
+languages, that all strings that should be translated are marked as localizable
+and that the product supports different size and encoding where the original
+strings are placed.</p>
+<p>Pseudo tranlsation files are of course being used during the i18n testing of
+Transifex itself; here&#8217;s a sneek peek:</p>
+<div class="figure">
+<img alt="../../_images/pseudo_screenshot.png" class="alcenter shot2" src="../../_images/pseudo_screenshot.png" />
+</div>
+</div>
+<div class="section" id="review-proofread-translations">
+<h3>Review/proofread translations<a class="headerlink" href="#review-proofread-translations" title="Permalink to this headline">¶</a></h3>
+<p>Transifex 1.2 introduces a way for project maintainers to control the quality of
+their translations. Every language team can have a number of reviewers (team
+members with reviewing privileges, set by the team coordinator or the project
+maintainer) responsible for proofreading the translated strings and marking them
+as reviewed. Reviewers can add, edit and suggest translations normally. The
+process takes place through Lotte, by using the checkboxes visible next to each
+string&#8217;s entry. The reviewing interface is only visible to reviewers and project
+maintainers while translators can only see which strings have been reviewed so
+far.</p>
+</div>
+<div class="section" id="webhooks-http-callbacks-for-automatic-notification-of-events">
+<h3>Webhooks: HTTP callbacks for automatic notification of events<a class="headerlink" href="#webhooks-http-callbacks-for-automatic-notification-of-events" title="Permalink to this headline">¶</a></h3>
+<p>Transifex allows you to specify a <a class="reference external" href="http://wiki.webhooks.org/w/page/13385124/FrontPage">web hook</a> for the translations of
+your project. This way, you can get notified whenever the translation of a
+resource is modified. This opens many possibilities for the maintainers of the
+project, like pulling translations as soon as they are completed. To use this
+feature, you have to add a URL for the project. This URL should expect a POST
+request with the following variables, JSON-formatted:</p>
+<ul class="simple">
+<li><cite>project</cite> : The slug of the project this notification is for.</li>
+<li><cite>resource</cite>: The slug of the resource this notification is for.</li>
+<li><cite>language</cite>: The language code of the translation that was modified.</li>
+<li><cite>percent</cite> : An integer that represents the rate of translation for the
+particular resource in the particular language.</li>
+</ul>
+</div>
+<div class="section" id="user-authentication-through-3rd-party-services-twitter-facebook-google-accounts-linkedin">
+<h3>User authentication through 3rd-party services (twitter, facebook, google accounts, linkedin).<a class="headerlink" href="#user-authentication-through-3rd-party-services-twitter-facebook-google-accounts-linkedin" title="Permalink to this headline">¶</a></h3>
+<p>Transifex 1.2 adds support for social registration that gives users the ability
+to create a Transifex account in just one step, by using the account provider of
+their choice. Currently, the supported providers are Twitter, Google Account,
+Facebook and LinkedIn. The relevant user profile fields are populated
+automatically.</p>
+<p>Existing Transifex accounts can be associated with social accounts as well.
+Using your linked social account you can sign in to Transifex without filling a
+form; just by following the appropriate links in the login page. Account
+associations are available from the profile settings.</p>
+<p>The feature is available on both Transifex.com and hosted versions of Transifex
+Community Edition.</p>
+</div>
+<div class="section" id="resource-categories">
+<h3>Resource categories<a class="headerlink" href="#resource-categories" title="Permalink to this headline">¶</a></h3>
+<p>For projects that house a big number of categories, Transifex now supports an
+extra level of hierarchy. You can now organize project resources into categories
+via the project-edit form. You will be further able to view your resources
+categorized in all pages that show them. The &#8216;categories&#8217; field is also
+accesible via our API.</p>
+</div>
+<div class="section" id="django-1-3-compatibility">
+<h3>Django-1.3 compatibility<a class="headerlink" href="#django-1-3-compatibility" title="Permalink to this headline">¶</a></h3>
+<p>Transifex has moved on top of Django 1.3 in this version. Django 1.3 has
+brought a number of improvements around how static files are served and
+organized in Transifex, among with the possibility of using the
+<tt class="docutils literal"><span class="pre">django_compressor</span></tt> app to compress JavaScript and CSS, making the loading
+of pages faster.</p>
+</div>
+<div class="section" id="new-user-account-and-profile-pages">
+<h3>New user account and profile pages<a class="headerlink" href="#new-user-account-and-profile-pages" title="Permalink to this headline">¶</a></h3>
+<p>Besides the authentication through 3rd-party services, which is referred as
+social auth, Transifex also has moved on top of a modern and more maintained
+and secure upstream application for handling the users accounts and profiles.
+This application is called django-userena and is responsible for important
+parts of the system such as the user signing up, password rescue and such
+things.</p>
+<p>As a consequence to it, the location feature using Google maps was removed
+along with client-side cropping of the avatar using JavaScript. These features
+might come back in the future if decided that they should so.</p>
+</div>
+</div>
+<div class="section" id="full-list-of-important-fixes">
+<h2>Full list of important fixes<a class="headerlink" href="#full-list-of-important-fixes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Use owner as maintainer, if no maintainers are specified.</li>
+<li>Remove FIRST AUTHOR line from po files and sort copyrights.</li>
+<li>Keep &#8216;FIRST AUTHOR&#8217; for pot file.</li>
+<li>Improved Django admin panel for resources app</li>
+<li>Avoid doubly-inserted double-quotes in joomla .ini files.</li>
+<li>Effort to improved speed of Release details page</li>
+<li>Effort to improve speed on Lotte</li>
+<li>Handle unicode filenames when downloading resources.</li>
+<li>Add custom mime types for java .properties and joomla .ini files.</li>
+<li>Add API calls to access the RLStats object for a resource.</li>
+<li>Improve lotte performance when filtering strings.</li>
+<li>Added support for &lt;comment&gt; tag in .ts files (Qt)</li>
+<li>Add .desktop format support.</li>
+<li>Make views in Lotte show 50 entries by default.</li>
+<li>Added dates validation on release form</li>
+<li>Added simple widget for date fields on release form</li>
+<li>Implemented google-spellcheck in lotte</li>
+<li>Added support for Apple&#8217;s .strings file format in Tx</li>
+<li>Fine tuned auto-save feature in Lotte</li>
+<li>Implemented support for XLIFF i18n file format (initial contribution by Miroslav Suchý [<a class="reference external" href="https://bitbucket.org/msuchy/">https://bitbucket.org/msuchy/</a>])</li>
+<li>Allow language codes with dots</li>
+<li>Added Klingon language</li>
+<li>Added view for downloading pesudo files within the UI</li>
+<li>Add .tx/config.</li>
+<li>Visual improvements on fancybox</li>
+<li>Replace django-profile app by django-userena</li>
+<li>Experimental support for social login.</li>
+<li>Added custom edit profile form/url</li>
+<li>Add short instructions on how to setup social login with various services.</li>
+<li>Initial Django 1.3 support</li>
+<li>NEW FILE FORMAT: adding support for mozilla-style .dtd file (added test for commented entity in .dtd); author: tymofiy</li>
+<li>Update jQuery to version 1.6.2.</li>
+<li>Added RSS feed for user activities in user&#8217;s public profile page.</li>
+<li>added location field in profile edit form and made the field autocomplete with google&#8217;s geoAPI</li>
+<li>Implemented tag autocomplete in project form.</li>
+<li>Added django_compressor support</li>
+<li>initial commit on resource-categories</li>
+<li>javascript to visually highlight categories in release-language page</li>
+<li>added &#8216;category&#8217; field to fields handled by the APIv2</li>
+<li>Initial support for wikitext.</li>
+<li>Implemented API(v2) for actionlogs.</li>
+<li>Only show untranslated strings in Lotte by default.</li>
+<li>Invoke save_and_exit on window unload in Lotte.</li>
+<li>Add the web hook addon.</li>
+<li>Add the txapps addon.</li>
+<li>Add &#8216;reviewed&#8217; field in Translation.</li>
+<li>Integration of the basic reviewing functionality with Lotte.</li>
+<li>Enable the review checkbox in Lotte when creating new strings and uncheck it when modifying existing strings.</li>
+<li>Add GET for releases to the new API, too.</li>
+<li>added validator that checks for blacklisted slugs in project model</li>
+<li>Add new project delete form with password validation.</li>
+<li>Add a new templatetag to split forms in fieldsets in the template.</li>
+<li>added REQUIRE_EMAIL_VALIDATION in settings</li>
+<li>Add shortcuts link and reposition some elements.</li>
+<li>Add LinkedIn authentication backend.</li>
+<li>Add reviewed and reviewed_perc fields to the RLStats model.</li>
+<li>Added API call to return details of supported i18n formats.</li>
+<li>Populate the twitter profile field with the user&#8217;s screen name when logging in with Twitter.</li>
+<li>Added &#8216;My projects&#8217; page.</li>
+<li>Follow &#8216;next&#8217; URL in the social login links.</li>
+<li>When all strings in Lotte are translated, turn ON default &#8216;translated&#8217; filter by default.</li>
+<li>Fill the linked_in field of the user profile with the user&#8217;s public profile URL when logging in with the LinkedIn backend.</li>
+<li>Use i18n_type to choose a parser instead of the filename or the mimetype.</li>
+<li>String filtering with reviewed strings in lotte.</li>
+<li>Allow users with non-usable password to set a new one.</li>
+<li>Fixes for java .proeprties format in case of escaped chars.</li>
+<li>Fixes for pofile handler</li>
+<li>fix for &#8216;save and exit&#8217; button in lotte</li>
+<li>Lotte absolute positioning fixes for: a)lotte-actions for Chrome/Opera and b)trigger tabs in Opera</li>
+</ul>
+</div>
+<div class="section" id="getting-transifex-ce-1-2">
+<h2>Getting Transifex CE 1.2<a class="headerlink" href="#getting-transifex-ce-1-2" title="Permalink to this headline">¶</a></h2>
+<p>You can experience Transifex live at <a class="reference external" href="http://www.transifex.com/">http://www.transifex.com/</a>. This upstream
+instance is hosted by Transifex, the company behind the development of Transifex.</p>
+<p>Project and community managers who want to deploy Transifex for their
+own community may refer to the <a class="reference internal" href="../install.html#installing"><em>Installation documentation</em></a>.</p>
+</div>
+<div class="section" id="upgrading-to-this-version">
+<h2>Upgrading to this version<a class="headerlink" href="#upgrading-to-this-version" title="Permalink to this headline">¶</a></h2>
+<p>To upgrade the code, update your package distribution as usual:</p>
+<ul class="simple">
+<li>If you installed from your package distribution, check if there&#8217;s been a
+package upgrade and go for it.</li>
+<li>If you used <tt class="docutils literal"><span class="pre">easy_install</span></tt>, run <tt class="docutils literal"><span class="pre">easy_install</span> <span class="pre">-U</span></tt> to upgrade.</li>
+<li>Fresh tarballs are available, if you installed from a release zipfile.</li>
+<li>Finally, if you&#8217;re of the daredevil kind and feed straight from the source,
+<tt class="docutils literal"><span class="pre">git</span> <span class="pre">pull</span></tt> should do the trick for you.</li>
+</ul>
+<div class="section" id="dependencies">
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h3>
+<p>The following extra dependencies were <em>added</em> since the last major version:</p>
+<ul class="simple">
+<li>Django &gt;= 1.3.1</li>
+<li>django-userena</li>
+<li>django-addons &gt;= 0.6.6</li>
+<li>django-social-auth</li>
+<li>django-tagging-autocomplete</li>
+<li>django_compressor</li>
+</ul>
+<p>Instructions on how to install the dependencies can be found at the
+<a class="reference internal" href="../install.html#installing"><em>Installation docs</em></a>. You&#8217;ll need to complete this step
+before actually doing the database migration.</p>
+</div>
+<div class="section" id="migration">
+<h3>Migration<a class="headerlink" href="#migration" title="Permalink to this headline">¶</a></h3>
+<p>Transifex 1.2 has undergone some changes in its database schema. However it&#8217;s
+very easy to migrate to the new database using the python commands included in
+the main directory. To do this, you need to run:</p>
+<div class="highlight-python"><div class="highlight"><pre>python manage.py syncdb --noinput
+python manage.py migrate copyright 0001 --fake
+python manage.py migrate --ignore-ghost-migrations --noinput
+</pre></div>
+</div>
+<p>Then, you only need to create new notice types, new languages and new static
+media by executing the following commands:</p>
+<div class="highlight-python"><div class="highlight"><pre>python manage.py txcreatenoticetypes
+python manage.py txlanguages
+python manage.py collectstatic
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Depending on the size of the database and the number or projects and
+resources that you have, this process may take up to several minutes.</p>
+</div>
+<div class="section" id="sample-migration">
+<h4>Sample Migration<a class="headerlink" href="#sample-migration" title="Permalink to this headline">¶</a></h4>
+<p>A sample run for a migration from Transifex CE 1.1 to Transifex CE 1.2
+follows (all stdout/sterr output are omitted):</p>
+<div class="highlight-python"><div class="highlight"><pre>git clone git@github.com:transifex/transifex.git
+git checkout 1.2
+python manage.py syncdb --noinput
+python manage.py migrate copyright 0001 --fake
+python manage.py migrate --ignore-ghost-migrations --noinput
+python manage.py txcreatenoticetypes
+python manage.py txlanguages
+python manage.py collectstatic
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
+<p>The following people have contributed to this release, with one way or another:</p>
+<ul class="simple">
+<li>Antonios Garnelis</li>
+<li>Apostolos Bessas</li>
+<li>Diego Búrigo Zacarão</li>
+<li>Dimitris Glezos</li>
+<li>John Kalantzis</li>
+<li>Konstantinos Bairaktaris</li>
+<li>Ratnadeep Debnath</li>
+<li>Sebastian Hahn</li>
+<li>Tim Babych</li>
+</ul>
+</div>
+<div class="section" id="transifex-ce-1-2-1">
+<h2>Transifex CE 1.2.1<a class="headerlink" href="#transifex-ce-1-2-1" title="Permalink to this headline">¶</a></h2>
+<p>Transifex 1.2.1 is a maintenance release, which fixes a few issues for the
+series of the Mystique codenamed release (1.2.x).</p>
+<dl class="docutils">
+<dt>Released:</dt>
+<dd>January 08, 2012</dd>
+</dl>
+<div class="highlight-bash"><div class="highlight"><pre>116 changesets recorded
+178 files changed, 36797 insertions<span class="o">(</span>+<span class="o">)</span>, 24301 deletions<span class="o">(</span>-<span class="o">)</span>
+</pre></div>
+</div>
+<div class="section" id="full-list-of-important-fixes-and-enhancements">
+<h3>Full list of important fixes and enhancements<a class="headerlink" href="#full-list-of-important-fixes-and-enhancements" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Add support for redis.</li>
+<li>Marked new strings for translation.</li>
+<li>Dropped pseudo char that was causing troubles to smart_unicode function.</li>
+<li>Added tag field in userena profile form.</li>
+<li>Import comments from Joomla INI files.</li>
+<li>Add Unicode .properties support.</li>
+<li>Free memory more aggressively in format handlers.</li>
+<li>Refactored mozilla properties handler.</li>
+<li>Take into account the filename, when choosing a parser for a file.</li>
+<li>Added support to translate strings in JavaScripts.</li>
+<li>Fix a bug in API v2 while reading an ISO-8859-1 encoded translation.</li>
+<li>Bugfix in GET translation APIv2</li>
+<li>Allow changing the project language from the form when there are no resources.</li>
+<li>Apply filtering by &#8216;user&#8217; correctly in lotte.</li>
+<li>In Lotte, search for filter keywords in translations as well.</li>
+<li>Handle multiple accounts with the same email correctly in copyright addon.</li>
+<li>Fixed creation of usernames from unicode chars when using social auth.</li>
+<li>Bugfix in team details page for team coordinators and maintainers.</li>
+<li>Bugfix for not able to download original POT file.</li>
+<li>Show reviewers in team_detail.</li>
+<li>Add . character in username regex.</li>
+<li>Bugfix in Joomla INI handler.</li>
+<li>Forbid updating the i18n_type of a resource.</li>
+<li>Added support for xliff files with .xml extension.</li>
+<li>Correctly handle errors from PO files in Storage API.</li>
+<li>Improved project searching results by boosting some fields.</li>
+<li>Added new languages: Swahili (Kenya) (sw_KE) and Kazakh (Kazakhstan) (kk_KZ).</li>
+<li>Show ajax upload errors correctly.</li>
+<li>Display errors with line numbers in case of msgfmt check failure.</li>
+<li>Add validator for project slug.</li>
+<li>Check the project created through the API for validation errors.</li>
+<li>Forbid changing the slug of a project through the API.</li>
+<li>Fixed distutils installation and tarball generation.</li>
+<li>Updated dependency versions.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="transifex-ce-1-2-development-releases">
+<h2>Transifex CE 1.2 Development Releases<a class="headerlink" href="#transifex-ce-1-2-development-releases" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Alpha: 21 Nov 2011</li>
+<li>Beta: 5 Dec 2011</li>
+<li>Final: 15 Dec 2011</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Why the name &#8216;Mystique&#8217;?</p>
+<p>Mystique (Raven Darkhölme) is a fictional character associated with the
+Marvel Comics&#8217; franchise X-Men. Originally created by artist David Cockrum
+and writer Chris Claremont, she first appeared in Ms. Marvel #16.</p>
+<p>Throughout most of her history, Mystique has been a supervillain, founding
+her own Brotherhood of Mutants and assassinating several important people
+involved in mutant affairs. Mystique herself is a mutant, a shapeshifter
+whose natural appearance includes blue skin and yellow eyes. At one point,
+she mentions that she is over 100 years old. Mystique is the mother of the
+villain Graydon Creed, the X-Men hero Nightcrawler, and adoptive mother of
+the hero Rogue. She is forced to abandon Nightcrawler, but raises Rogue for
+a number of years, and the two women have mixed feelings towards one
+another.</p>
+<p>Despite Mystique&#8217;s history of crime, she works with the X-Men&#8217;s Professor X
+in a short-lived series. She is later voted straight into the X-Men.</p>
+<p>All the above match perfectly with the characteristics of Transifex CE 1.2
+ifself. The best is yet to come.</p>
+<p class="last">The above information is taken from <a class="reference external" href="http://en.wikipedia.org/wiki/Main_Page">wikipedia</a> (<a class="reference external" href="http://en.wikipedia.org/wiki/Mystique_(comics)">Mystique</a>)</p>
+</div>
+</div>
+</div>
+
+
+      <div class="mainbodynav">
+    Next Section: <a href="1.1.html" title="Transifex version 1.1 (Sabretooth)">Transifex version 1.1 (Sabretooth)</a> &raquo;</div>
+
+          </div>         
+        </div>
+      </div>
+      
+          <div class="yui-b" id="sidebar">
+            
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Transifex Community Edition v1.2 (Mystique)</a><ul>
+<li><a class="reference internal" href="#what-s-new-in-transifex-ce-1-2">What&#8217;s new in Transifex CE 1.2</a><ul>
+<li><a class="reference internal" href="#new-file-formats-desktop-dtd-mozilla-properties-strings-wiki-xliff">New file formats: .desktop, dtd, mozilla .properties, .strings, .wiki, xliff.</a></li>
+<li><a class="reference internal" href="#pseudo-translation-files">Pseudo translation files</a></li>
+<li><a class="reference internal" href="#review-proofread-translations">Review/proofread translations</a></li>
+<li><a class="reference internal" href="#webhooks-http-callbacks-for-automatic-notification-of-events">Webhooks: HTTP callbacks for automatic notification of events</a></li>
+<li><a class="reference internal" href="#user-authentication-through-3rd-party-services-twitter-facebook-google-accounts-linkedin">User authentication through 3rd-party services (twitter, facebook, google accounts, linkedin).</a></li>
+<li><a class="reference internal" href="#resource-categories">Resource categories</a></li>
+<li><a class="reference internal" href="#django-1-3-compatibility">Django-1.3 compatibility</a></li>
+<li><a class="reference internal" href="#new-user-account-and-profile-pages">New user account and profile pages</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#full-list-of-important-fixes">Full list of important fixes</a></li>
+<li><a class="reference internal" href="#getting-transifex-ce-1-2">Getting Transifex CE 1.2</a></li>
+<li><a class="reference internal" href="#upgrading-to-this-version">Upgrading to this version</a><ul>
+<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li><a class="reference internal" href="#migration">Migration</a><ul>
+<li><a class="reference internal" href="#sample-migration">Sample Migration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contributors">Contributors</a></li>
+<li><a class="reference internal" href="#transifex-ce-1-2-1">Transifex CE 1.2.1</a><ul>
+<li><a class="reference internal" href="#full-list-of-important-fixes-and-enhancements">Full list of important fixes and enhancements</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#transifex-ce-1-2-development-releases">Transifex CE 1.2 Development Releases</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>You are here:</h3>
+  <ul>
+      <li>
+        <a href="../../index.html">Transifex documentation</a>
+        
+          <ul><li><a href="../../contents.html">Table of Contents</a>
+        
+          <ul><li><a href="../index.html">Transifex Server (Community Edition)</a>
+        
+          <ul><li><a href="index.html">Release notes</a>
+        
+        <ul><li>Transifex Community Edition v1.2 (Mystique)</li></ul>
+        </li></ul></li></ul></li></ul>
+      </li>
+  </ul>  
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+          </div> 
+      
+    </div>
+    
+
+  </div>
+  <div id="ft">
+    <div class="nav wrapper"><div class="wrapper_contents">
+    &laquo; <a href="index.html" title="Release notes">Release notes</a> 
+     |
+    <a href="../../contents.html" title="Table of Contents" accesskey="U">up</a>
+   |
+    <a href="1.1.html" title="Transifex version 1.1 (Sabretooth)">Transifex version 1.1 (Sabretooth)</a> &raquo;</div></div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="footer wrapper">
+      &copy; Copyright <a href="https://www.transifex.com/">Transifex</a>.
+      Last updated on Feb 19, 2015 using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4362397-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<!-- Google Analytics for help.transifex.net (new) -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21799942-3']);
+  _gaq.push(['_setDomainName', '.transifex.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>

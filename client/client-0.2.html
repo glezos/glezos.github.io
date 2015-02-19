@@ -1,0 +1,560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Transifex Command-line Client v0.2 &mdash; Transifex documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1-r&#39;bae89a6&#39;',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Transifex documentation" href="../index.html" />
+    <link rel="up" title="The Transifex Client" href="index.html" />
+    <link rel="next" title="Transifex API v1 (deprecated)" href="../api/api-v1.html" />
+    <link rel="prev" title="Transifex Command-line Client v0.3.x" href="client-0.3.html" />  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold">
+  </head>
+  <body>
+
+    <div class="document">
+  <div id="global-header">
+    <div class="wrapper" >
+      <a id="transifex-logo" href="https://www.transifex.com/" title="Go to start page">
+  			<img src="../_static/transifex-logo.png" alt="Transifex logo" width="109" height="30"/>
+  		</a>
+  		<ul id="global-nav" >
+				<li><h6><a href="../genindex.html" class="smooth-transition">INDEX</a></h6></li>
+				<li><h6><a href="../contents.html" class="smooth-transition">TABLE OF CONTENTS</a></h6></li>
+				<li><h6><a href="../index.html" class="smooth-transition">DOCS HOME</a></h6></li>
+  		</ul>
+  		
+    </div>
+    <div class="wrapper" >
+      <span style="font-weight:bold;padding-top: 3px;display: block;text-align: center;margin: 0em 0em 0em 1.75em;color: #cacfd2;">For the most up-to-date information, please refer to <a style="color: #8a8f92;" href="https://www.transifex.com">Transifex.com</a> and <a style="color: #8a8f92;" href="http://support.transifex.com">support.transifex.com.</a>
+    </div>
+  </div>
+ 
+  <div class="nav wrapper"><div class="wrapper_contents">
+    &laquo; <a href="client-0.3.html" title="Transifex Command-line Client v0.3.x">Transifex Command-line Client v0.3.x</a> 
+     |
+    <a href="../contents.html" title="Table of Contents" accesskey="U">up</a>
+   |
+    <a href="../api/api-v1.html" title="Transifex API v1 (deprecated)">Transifex API v1 (deprecated)</a> &raquo;</div></div>
+ 
+  <div id="custom-doc" class="yui-t6">
+   <div id="bd">
+      <div id="yui-main">
+        <div class="yui-b">
+          <div class="yui-g" id="client-client-0.2">
+            
+  <div class="section" id="transifex-command-line-client-v0-2">
+<span id="user-client-02"></span><h1>Transifex Command-line Client v0.2<a class="headerlink" href="#transifex-command-line-client-v0-2" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This document describes Transifex Client <strong>v0.2</strong> (outdated).
+There are also docs for the
+<a class="reference internal" href="index.html#user-client-index"><em>latest stable release</em></a> and the
+<em class="xref std std-ref">development version</em>.</p>
+</div>
+<p>The Transifex Command-line Client is a command line tool that enables you to
+easily manage your translations within a project without the need of an
+elaborate UI system. With the command line client you can easily create new
+resources, map locale files to translations and synchronize your Transifex
+project with your local repository and vice-versa.</p>
+<div class="section" id="getting-the-client">
+<span id="user-client-02-install"></span><h2>Getting the client<a class="headerlink" href="#getting-the-client" title="Permalink to this headline">¶</a></h2>
+<p>The Transifex Client can be found on the Python Package Index (PYPI) under the
+name <em>transifex-client</em>. So to install it, make sure you have a recent
+version of setuptools installed and then issue the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre>easy_install -U transifex-client
+</pre></div>
+</div>
+<p>This command will install the latest version of transifex-client and if
+you have an outdated version it&#8217;ll perform an update.</p>
+<p>Alternatively, you can get the source code of transifex-client directly
+from our repository on bitbucket. To clone the repository locally, issue:</p>
+<div class="highlight-python"><div class="highlight"><pre>git clone git://github.com/transifex/transifex-client.git
+</pre></div>
+</div>
+<p>To install it on your computer you may run the following:</p>
+<div class="highlight-python"><div class="highlight"><pre>cd transifex-client
+(sudo) python setup.py install
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-the-client">
+<h2>Using the client<a class="headerlink" href="#using-the-client" title="Permalink to this headline">¶</a></h2>
+<p>To make sure that transifex-client was installed correctly, try running it
+with the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">tx</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+<p>If everything was completed, then you should see a brief help message
+and basic instructions on how to use the tool. You can also view
+the available commands by running:</p>
+<div class="highlight-python"><div class="highlight"><pre>tx help
+</pre></div>
+</div>
+<p>To get more information for each command you can use <tt class="docutils literal"><span class="pre">tx</span> <span class="pre">help</span> <span class="pre">*command*</span></tt>.</p>
+<div class="section" id="command-list">
+<h3>Command list<a class="headerlink" href="#command-list" title="Permalink to this headline">¶</a></h3>
+<p>A brief introduction to the most commonly used commands provided by
+transifex-client follows.</p>
+<div class="section" id="init">
+<span id="user-client-02-init"></span><h4>init<a class="headerlink" href="#init" title="Permalink to this headline">¶</a></h4>
+<p>The <strong class="command">tx init</strong> command is used to initialize a project.</p>
+<p>This is very similar to the way most <em class="xref std std-term">VCS</em> treat the init command. Use
+this command to create a new project in the current directory. This way
+you will be able to manage all translation files of the project that exist
+under the project&#8217;s root directory.</p>
+<p>Here&#8217;s a sample run:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ tx init
+Creating .tx folder...
+Please enter your transifex username: editor
+Password: &lt;...&gt;
+Creating .transifexrc file...
+Creating txdata file...
+Please enter your tx project URL:
+http://www.transifex.com/projects/p/Transifex/
+Transifex instance:
+Project slug:
+Creating skeleton...
+Done.
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-source-file">
+<h4>set_source_file<a class="headerlink" href="#set-source-file" title="Permalink to this headline">¶</a></h4>
+<p><strong class="command">tx set_source_file -r resource -l language &lt;file&gt;</strong></p>
+<p>The <strong class="command">set_source_file</strong> command associates a source translation file with
+a resource. If the resource doesn&#8217;t exist, it gets created with the next push.
+You must specify the name of the resource and the language of the source file.</p>
+</div>
+<div class="section" id="set-translation">
+<h4>set_translation<a class="headerlink" href="#set-translation" title="Permalink to this headline">¶</a></h4>
+<p><strong class="command">tx set_translation -r resource -l language &lt;file&gt;</strong></p>
+<p>Run this command after creating a resource with the
+<strong class="command">set_source_file</strong> in order to associate locale translation files with
+specific language translations in Transifex.</p>
+</div>
+<div class="section" id="auto-find">
+<h4>auto_find<a class="headerlink" href="#auto-find" title="Permalink to this headline">¶</a></h4>
+<p><strong class="command">tx auto_find -r resource &lt;expression&gt;</strong></p>
+<p>This command can help you setup the translations of a resource automatically
+provided that you have a common naming scheme and directory hierarchy for all
+translation files. If for example you have a <tt class="docutils literal"><span class="pre">locale</span></tt> dir inside which you
+have a separate folder for each language and in that you have the translation
+file for this language, you could automatically assign all translations to
+their corresponding language by running:</p>
+<div class="highlight-python"><div class="highlight"><pre>tx auto_find -r resource &#39;locale/&lt;lang&gt;/foo.po&#39;
+</pre></div>
+</div>
+<p>For more complex setups, you could use regular expressions to identify
+the translation files in your project.</p>
+</div>
+<div class="section" id="status">
+<h4>status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h4>
+<p><strong class="command">tx status</strong></p>
+<p>This is a simple command that displays the existing project configuration
+in a more human readable format. It lists all resources associated with
+this project along with their translation files and the translation
+progress percentage for each file.</p>
+<p>Sample output:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ tx status
+myproject -&gt; default (1 of 1)
+Translation Files:
+ - en: po/smolt.pot (source)
+ - ar: po/ar.po [5%]
+ - as: po/as.po [48%]
+ - bg: po/bg.po [48%]
+ - bn_IN: po/bn_IN.po [48%]
+ ...
+</pre></div>
+</div>
+</div>
+<div class="section" id="push">
+<h4>push<a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h4>
+<p><strong class="command">tx push</strong></p>
+<p>This command sends local changes to the Transifex server. If you have
+added new source files, the corresponding resources are created on
+the Transifex server and if you have new translations those will get
+pushed as well. This can also be used to update existing source files or
+translations on the server with new strings.</p>
+<p>Transifex will update the source strings to match those of the new source file.
+This operation may result in loss of information, so please pay extra attention
+when pushing a source file.</p>
+<p>Here&#8217;s how differences between the old and new source files will be handled:</p>
+<ul class="simple">
+<li>New strings will be added.</li>
+<li>Modified strings will be considered new ones and added as well.</li>
+<li>Strings which do not exist in the new source file (including ones which have
+been modified) will be removed from the database, along with their
+translations.</li>
+</ul>
+</div>
+<div class="section" id="pull">
+<h4>pull<a class="headerlink" href="#pull" title="Permalink to this headline">¶</a></h4>
+<p><strong class="command">tx pull</strong></p>
+<p>This command updates your local files by pulling the latest translations
+from the server as well as new translation files that were created in
+the Transifex UI. By default, this command will overwrite existing
+translation files so if you don&#8217;t want this to happen use the
+<tt class="docutils literal"><span class="pre">--disable-overwrite</span></tt> flag.</p>
+</div>
+</div>
+</div>
+<div class="section" id="managing-your-project">
+<h2>Managing your project<a class="headerlink" href="#managing-your-project" title="Permalink to this headline">¶</a></h2>
+<p>For information regarding projects and what they represent, check <em class="xref std std-ref">the
+appropriate documentation</em>.</p>
+<div class="section" id="creating-a-project">
+<h3>Creating a project<a class="headerlink" href="#creating-a-project" title="Permalink to this headline">¶</a></h3>
+<p>Currently, the client doesn&#8217;t support creating a project directly from the
+command line. So, in order to create a project, you need to visit the project
+creation page and fill out the corresponding form. Once you have created your
+project, the only thing you need is the project url (usually it is in the
+following format: <tt class="docutils literal"><span class="pre">http://transifex.com/projects/p/myproject/</span></tt>).</p>
+<p>Once you have a project created on the Transifex site, go into your project&#8217;s
+root directory and run the <em>tx init</em> command. This will initialize your
+project
+and will create all necessary configuration files. Once this is finished you
+are ready to go on to the next step....</p>
+</div>
+<div class="section" id="managing-your-translations">
+<h3>Managing your translations<a class="headerlink" href="#managing-your-translations" title="Permalink to this headline">¶</a></h3>
+<p>Under a single project you may have a lot of different source files for
+translating. Each of these files should be mapped to a resource (an
+organizational unit corresponding to a source file) under which all of the
+available translations will be listed. To create a mapping between a file
+and a resource, simply run:</p>
+<div class="highlight-python"><div class="highlight"><pre>tx set_source_file -r &lt;resource_name&gt; -l &lt;language&gt; source_file
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The resource name cannot contain special characters. The only valid
+characters are alphanumeric, the hyphen and the underscore.</p>
+</div>
+<p>Once you have created a mapping between a source file and a resource, you
+should add more translations to this resource. To do this simply run:</p>
+<div class="highlight-python"><div class="highlight"><pre>tx set_translation -r &lt;resource_name&gt; -l &lt;language&gt; translation_file
+</pre></div>
+</div>
+<p>After doing this for all available languages, you can check the existing
+mapping using the <tt class="docutils literal"><span class="pre">tx</span> <span class="pre">status</span></tt> command. When you&#8217;re sure that the mapping is
+correct, you can push your files to the Transifex server using the <tt class="docutils literal"><span class="pre">tx</span> <span class="pre">push</span></tt>
+command. Similarly, whenever you&#8217;ve done some work in the online translation
+editor in Transifex and you want to incorporate those changes back into your
+project, you can simply run <tt class="docutils literal"><span class="pre">tx</span> <span class="pre">pull</span></tt>. This will update all tracked
+translation files with new translations as well as downloading new
+translation files and saving them in the <tt class="docutils literal"><span class="pre">.tx</span></tt> folder. After downloading new
+translation files, you should move them to the appropriate localization folder
+by hand and add them to the managed files using the <tt class="docutils literal"><span class="pre">set_translation</span></tt>
+command.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Depending on the size of the files and the number of languages, this
+process can take up to several minutes as it requires uploading all files,
+parsing them, extracting the available strings, and storing them into the
+database.  To avoid misuse of the API, we have some throttling mechanisms
+in play which should not interfere with your work but just to be safe,
+whenever uploading or downloading from the Transifex server, if you want a
+specific resource or language use the <tt class="docutils literal"><span class="pre">-r/--resource</span></tt> and
+<tt class="docutils literal"><span class="pre">-l/--language</span></tt> options of the <tt class="docutils literal"><span class="pre">push</span></tt>/<tt class="docutils literal"><span class="pre">pull</span></tt> commands to avoid
+pushing/pulling all of the tracked files.</p>
+</div>
+</div>
+<div class="section" id="configuration-files">
+<h3>Configuration files<a class="headerlink" href="#configuration-files" title="Permalink to this headline">¶</a></h3>
+<p>All of the configuration files that the <tt class="docutils literal"><span class="pre">transifex-client</span></tt> is using are
+simple text files that you can edit by hand. In this section, we will go over
+the structure of each configuration file so that if you need to edit a file by
+hand, you&#8217;ll know what to look for.</p>
+<p>The <tt class="docutils literal"><span class="pre">transifex-client</span></tt> is using two basic configuration files. The first one
+is <tt class="docutils literal"><span class="pre">.transifexrc</span></tt> and is unique per user. In this file, we store the user
+name and password for Transifex as well as the hostname of the Transifex
+server:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[API credentials]</span>
+<span class="na">username</span> <span class="o">=</span> <span class="s">user</span>
+<span class="na">token</span> <span class="o">=</span>
+<span class="na">password</span> <span class="o">=</span> <span class="s">p@ssw0rd</span>
+<span class="na">hostname</span> <span class="o">=</span> <span class="s">http://www.transifex.com</span>
+</pre></div>
+</div>
+<p>If you change your password on the Transifex server for example, you should
+edit this file with the new password. The <tt class="docutils literal"><span class="pre">token</span></tt> variable should be left
+blank.</p>
+<p>Apart from the system-wide <tt class="docutils literal"><span class="pre">.transifexrc</span></tt>, <tt class="docutils literal"><span class="pre">transifex-client</span></tt> uses a
+per project configuration file to store the project&#8217;s details and the
+file-to-resource mappings. This file is stored in <tt class="docutils literal"><span class="pre">.tx/txdata</span></tt> of your
+project&#8217;s root directory and has the following outline:</p>
+<div class="highlight-javascript"><div class="highlight"><pre>{
+    &quot;meta&quot;: {
+        &quot;last_push&quot;: null,
+        &quot;project_slug&quot;: &quot;Transifex&quot;
+    },
+    &quot;resources&quot;: [
+        {
+            &quot;source_file&quot;: &quot;transifex/locale/en/LC_MESSAGES/django.po&quot;,
+            &quot;resource_slug&quot;: &quot;txo&quot;,
+            &quot;source_lang&quot;: &quot;en&quot;
+
+            &quot;translations&quot;: {
+                &quot;&quot;el&quot;: {
+                    &quot;file&quot;: &quot;transifex/locale/el/LC_MESSAGES/django.po&quot;
+                },
+                &quot;af&quot;: {
+                    &quot;file&quot;: &quot;transifex/locale/af/LC_MESSAGES/django.po&quot;
+                },
+                ...
+            }
+        }
+    ]
+}
+</pre></div>
+</div>
+<p>So if you ever need to change the language of a file or correct the file path
+for a specific translation, you can edit this file directly.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Transifex does not offer a way to revert your <tt class="docutils literal"><span class="pre">txdata</span></tt>
+configuration back after some unsuccessful changes so make sure you
+back up the original file before editing by hand.</p>
+</div>
+</div>
+</div>
+<div class="section" id="sample-usage">
+<span id="user-client-02-sample-usage"></span><h2>Sample Usage<a class="headerlink" href="#sample-usage" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s assume you are the maintainer of the Transifex project itself, and you
+want to setup your client. First of all, change into your project&#8217;s main
+directory, such as your VCS directory root. Then, issue the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>tx init
+Creating .tx folder...
+Please enter your transifex username: editor
+Password:
+Creating .transifexrc file...
+Creating txdata file...
+Please enter your tx project url here: http://www.transifex.com/projects/p/transifex/
+Transifex instance:
+Project slug:
+Creating skeleton...
+Done.
+</pre></div>
+</div>
+<p>To ask Transifex to detect your files automatically, run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>tx auto_find -l en -r myresource <span class="s1">&#39;transifex/locale/&lt;lang&gt;/LC_MESSAGES/django.po&#39;</span>
+Only printing the commands which will be run <span class="k">if </span>the --execute switch is specified.
+
+tx set_source_file -r default -l en po/myproject.pot
+tx set_translation -r default -l bal transifex/locale/bal/LC_MESSAGES/django.po
+tx set_translation -r default -l bn_IN transifex/locale/bn_IN/LC_MESSAGES/django.po
+...
+Done.
+</pre></div>
+</div>
+<p>If everything looks good, issue the command again with the <tt class="docutils literal"><span class="pre">--execute</span></tt> switch:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>tx auto_find --execute -l en -r foo <span class="s1">&#39;transifex/locale/&lt;lang&gt;/LC_MESSAGES/django.po&#39;</span>
+
+Setting <span class="nb">source </span>file <span class="k">for </span>resource foo <span class="o">(</span> en -&gt; transifex/locale/en/LC_MESSAGES/django.po <span class="o">)</span>.
+Updating resource foo <span class="o">(</span> bal -&gt; ./transifex/locale/bal/LC_MESSAGES/django.po <span class="o">)</span>.
+Updating resource foo <span class="o">(</span> bn_IN -&gt; ./transifex/locale/bn_IN/LC_MESSAGES/django.po <span class="o">)</span>.
+Updating resource foo <span class="o">(</span> ca -&gt; ./transifex/locale/ca/LC_MESSAGES/django.po <span class="o">)</span>.
+...
+Done.
+</pre></div>
+</div>
+<p>Finally, here&#8217;s a sample run with manual mapping of your files:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>tx set_source_file -r foo -l en transifex/locale/en/LC_MESSAGES/django.po
+Updating txdata file...
+Done.
+
+<span class="nv">$ </span>tx set_translation -r foo -l bal transifex/locale/bal/LC_MESSAGES/django.po
+Updating txdata file...
+Done.
+
+<span class="nv">$ </span>tx set_translation -r foo -l ...
+<span class="nv">$ </span>tx set_translation -r foo -l ...
+
+<span class="nv">$ </span>tx pull
+Pulling translations <span class="k">for </span><span class="nb">source </span>file transifex/locale/en/LC_MESSAGES/django.po
+ -&gt; bal: transifex/locale/bal/LC_MESSAGES/django.po
+ -&gt; bn_IN: transifex/locale/bn_IN/LC_MESSAGES/django.po
+ -&gt; ca: transifex/locale/ca/LC_MESSAGES/django.po
+ -&gt; cs: transifex/locale/cs/LC_MESSAGES/django.po
+ ...
+Done.
+
+<span class="nv">$ </span>tx status
+Transifex -&gt; txo <span class="o">(</span>1 of 1<span class="o">)</span>
+Translation Files:
+ - en: transifex/locale/en/LC_MESSAGES/django.po <span class="o">(</span><span class="nb">source</span><span class="o">)</span>
+ - bal: transifex/locale/bal/LC_MESSAGES/django.po <span class="o">[</span>10%<span class="o">]</span>
+ - bn_IN: transifex/locale/bn_IN/LC_MESSAGES/django.po <span class="o">[</span>15%<span class="o">]</span>
+ - ca: transifex/locale/ca/LC_MESSAGES/django.po <span class="o">[</span>22%<span class="o">]</span>
+ ...
+</pre></div>
+</div>
+<p>Then, you can visit the Transifex server and view the available translations
+from the web UI. Let&#8217;s say, you translate your project into more languages and
+just before the new release, you want to update the translations. In that
+case, this is what you should do:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>tx pull -a
+...
+    Pulling new translations <span class="k">for </span><span class="nb">source </span>file transifex/locale/en/LC_MESSAGES/django.po
+ -&gt; af: /home/user/mainline-happix/.tx/txo/af_translation
+Done.
+
+<span class="nv">$ </span>mkdir -p transifex/locale/af/LC_MESSAGES/
+
+<span class="nv">$ </span>mv .tx/txo/af_translation transifex/locale/af/LC_MESSAGES/django.po
+
+<span class="nv">$ </span>tx set_translation -r txo -l af transifex/locale/af/LC_MESSAGES/django.po
+Updating txdata file...
+Done.
+
+<span class="nv">$ </span>tx status
+Transifex -&gt; txo <span class="o">(</span>1 of 1<span class="o">)</span>
+Translation Files:
+ - en: transifex/locale/en/LC_MESSAGES/django.po <span class="o">(</span><span class="nb">source</span><span class="o">)</span>
+ - af: transifex/locale/en/LC_MESSAGES/django.po <span class="o">[</span>1%<span class="o">]</span>
+ - bal: transifex/locale/bal/LC_MESSAGES/django.po <span class="o">[</span>1%<span class="o">]</span>
+ - bn_IN: transifex/locale/bn_IN/LC_MESSAGES/django.po <span class="o">[</span>3%<span class="o">]</span>
+ - ca: transifex/locale/ca/LC_MESSAGES/django.po <span class="o">[</span>58%<span class="o">]</span>
+</pre></div>
+</div>
+<p>Notice the &#8216;ar&#8217; language: the new translation file is now managed by Transifex,
+which means that in subsequent pushes/pulls this will be updated as well.</p>
+</div>
+</div>
+
+
+      <div class="mainbodynav">
+    Next Section: <a href="../api/api-v1.html" title="Transifex API v1 (deprecated)">Transifex API v1 (deprecated)</a> &raquo;</div>
+
+          </div>         
+        </div>
+      </div>
+      
+          <div class="yui-b" id="sidebar">
+            
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Transifex Command-line Client v0.2</a><ul>
+<li><a class="reference internal" href="#getting-the-client">Getting the client</a></li>
+<li><a class="reference internal" href="#using-the-client">Using the client</a><ul>
+<li><a class="reference internal" href="#command-list">Command list</a><ul>
+<li><a class="reference internal" href="#init">init</a></li>
+<li><a class="reference internal" href="#set-source-file">set_source_file</a></li>
+<li><a class="reference internal" href="#set-translation">set_translation</a></li>
+<li><a class="reference internal" href="#auto-find">auto_find</a></li>
+<li><a class="reference internal" href="#status">status</a></li>
+<li><a class="reference internal" href="#push">push</a></li>
+<li><a class="reference internal" href="#pull">pull</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#managing-your-project">Managing your project</a><ul>
+<li><a class="reference internal" href="#creating-a-project">Creating a project</a></li>
+<li><a class="reference internal" href="#managing-your-translations">Managing your translations</a></li>
+<li><a class="reference internal" href="#configuration-files">Configuration files</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sample-usage">Sample Usage</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>You are here:</h3>
+  <ul>
+      <li>
+        <a href="../index.html">Transifex documentation</a>
+        
+          <ul><li><a href="../contents.html">Table of Contents</a>
+        
+          <ul><li><a href="index.html">The Transifex Client</a>
+        
+        <ul><li>Transifex Command-line Client v0.2</li></ul>
+        </li></ul></li></ul>
+      </li>
+  </ul>  
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+          </div> 
+      
+    </div>
+    
+
+  </div>
+  <div id="ft">
+    <div class="nav wrapper"><div class="wrapper_contents">
+    &laquo; <a href="client-0.3.html" title="Transifex Command-line Client v0.3.x">Transifex Command-line Client v0.3.x</a> 
+     |
+    <a href="../contents.html" title="Table of Contents" accesskey="U">up</a>
+   |
+    <a href="../api/api-v1.html" title="Transifex API v1 (deprecated)">Transifex API v1 (deprecated)</a> &raquo;</div></div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="footer wrapper">
+      &copy; Copyright <a href="https://www.transifex.com/">Transifex</a>.
+      Last updated on Feb 19, 2015 using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4362397-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<!-- Google Analytics for help.transifex.net (new) -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21799942-3']);
+  _gaq.push(['_setDomainName', '.transifex.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>

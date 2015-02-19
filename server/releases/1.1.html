@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Transifex version 1.1 (Sabretooth) &mdash; Transifex documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1-r&#39;bae89a6&#39;',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Transifex documentation" href="../../index.html" />
+    <link rel="up" title="Release notes" href="index.html" />
+    <link rel="next" title="Transifex version 1.0 (Proteus)" href="1.0.html" />
+    <link rel="prev" title="Transifex Community Edition v1.2 (Mystique)" href="1.2.html" />  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold">
+  </head>
+  <body>
+
+    <div class="document">
+  <div id="global-header">
+    <div class="wrapper" >
+      <a id="transifex-logo" href="https://www.transifex.com/" title="Go to start page">
+  			<img src="../../_static/transifex-logo.png" alt="Transifex logo" width="109" height="30"/>
+  		</a>
+  		<ul id="global-nav" >
+				<li><h6><a href="../../genindex.html" class="smooth-transition">INDEX</a></h6></li>
+				<li><h6><a href="../../contents.html" class="smooth-transition">TABLE OF CONTENTS</a></h6></li>
+				<li><h6><a href="../../index.html" class="smooth-transition">DOCS HOME</a></h6></li>
+  		</ul>
+  		
+    </div>
+    <div class="wrapper" >
+      <span style="font-weight:bold;padding-top: 3px;display: block;text-align: center;margin: 0em 0em 0em 1.75em;color: #cacfd2;">For the most up-to-date information, please refer to <a style="color: #8a8f92;" href="https://www.transifex.com">Transifex.com</a> and <a style="color: #8a8f92;" href="http://support.transifex.com">support.transifex.com.</a>
+    </div>
+  </div>
+ 
+  <div class="nav wrapper"><div class="wrapper_contents">
+    &laquo; <a href="1.2.html" title="Transifex Community Edition v1.2 (Mystique)">Transifex Community Edition v1.2 (Mystique)</a> 
+     |
+    <a href="../../contents.html" title="Table of Contents" accesskey="U">up</a>
+   |
+    <a href="1.0.html" title="Transifex version 1.0 (Proteus)">Transifex version 1.0 (Proteus)</a> &raquo;</div></div>
+ 
+  <div id="custom-doc" class="yui-t6">
+   <div id="bd">
+      <div id="yui-main">
+        <div class="yui-b">
+          <div class="yui-g" id="server-releases-1.1">
+            
+  <div class="section" id="transifex-version-1-1-sabretooth">
+<span id="releases-1-1"></span><h1>Transifex version 1.1 (Sabretooth)<a class="headerlink" href="#transifex-version-1-1-sabretooth" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to Transifex 1.1, codenamed <a class="reference external" href="http://en.wikipedia.org/wiki/Sabretooth_(Comics)">Sabretooth</a>!</p>
+<dl class="docutils">
+<dt>Released:</dt>
+<dd>June 2011</dd>
+</dl>
+<p>Transifex 1.1 &#8216;<a class="reference external" href="http://en.wikipedia.org/wiki/Sabretooth_(Comics)">Sabretooth</a>&#8216; is a new major release. Transifex 1.0
+&#8216;Proteus&#8217; brought a number of big changes. This release introduces a ton of
+improvements and bugfixes and a small number of yet important new features.</p>
+<p>Here&#8217;s the gist:</p>
+<ul class="simple">
+<li>High performance and speed, even for huge projects with hundred of thousands
+of translations</li>
+<li>Support for Java properties and Joomla INI files</li>
+<li>A richer and more robust Application Programmable Interface</li>
+<li>Transifex Client v0.5</li>
+<li>Fuzzy matching of source strings when updating source language files
+(translation memory)</li>
+<li>Ability for projects to link to L10n instructions page</li>
+<li>Support for language codes alongside language-country codes</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>400 changesets recorded
+415 files changed, 76407 insertions<span class="o">(</span>+<span class="o">)</span>, 48711 deletions<span class="o">(</span>-<span class="o">)</span>
+</pre></div>
+</div>
+<div class="figure">
+<img alt="../../_images/sabretooth.png" class="alcenter shot" src="../../_images/sabretooth.png" />
+<p class="caption">Sabretooth &#8211; As seen on the cover of X-men vol. 2.
+Art by Salvador Larroca.</p>
+</div>
+<div class="section" id="what-s-new-in-transifex-1-1">
+<h2>What&#8217;s new in Transifex 1.1<a class="headerlink" href="#what-s-new-in-transifex-1-1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="improved-performance">
+<h3>Improved Performance<a class="headerlink" href="#improved-performance" title="Permalink to this headline">¶</a></h3>
+<p>A much wanted improvement comes in the form of denormalized statistics.
+Transifex 1.1 boosts performance between 4x-10x on various pages on the
+interface, especially the ones showing statistics, which should now load in
+milliseconds.</p>
+<p>The various statistics for each resource or release are available in real time,
+no matter how large your project is. Together with smarter statistics update
+algorithms, the performance gain should be obvious.</p>
+<div class="figure">
+<img alt="../../_images/statistics.png" class="alcenterhot" src="../../_images/statistics.png" />
+</div>
+</div>
+<div class="section" id="native-support-for-joomla-ini-and-java-property-files">
+<h3>Native support for Joomla INI and Java .property files<a class="headerlink" href="#native-support-for-joomla-ini-and-java-property-files" title="Permalink to this headline">¶</a></h3>
+<p>Joomla extensions and themes are managed using special
+<em class="xref std std-ref">INI files</em>, which can now be loaded in Transifex and
+handled natively. This means that these resources behave exactly like any other,
+with full support of all features, including the web-based editor, Transifex
+client, etc. No need to convert to PO or another intermediate format.</p>
+<p>Additionally, <em class="xref std std-ref">Java .property files</em> are now
+supported natively as well.</p>
+<p>Just create a new resource by uploading the INI or <tt class="docutils literal"><span class="pre">.property</span></tt> file and a
+resource should be created right away. Support or even more file formats is
+on the way.</p>
+</div>
+<div class="section" id="fussy-re-using-of-existing-strings-in-source-language-files">
+<h3>Fussy re-using of existing strings in source language files<a class="headerlink" href="#fussy-re-using-of-existing-strings-in-source-language-files" title="Permalink to this headline">¶</a></h3>
+<p>A new feature that was added in this version is the fuzzy matching of source
+strings when importing new source files. This enables Transifex to identify
+similar source strings and use the existing translations as suggestions for
+newly added source strings. This is especially useful when updating the source
+strings of a resource and most of the changes are minor corrections since you
+can still use your existing translations with minor tweaking.</p>
+<p>The similarity threshold is configurable in the settings files, although we
+expect most projects to keep the default value.</p>
+</div>
+<div class="section" id="integration-of-l10n-instructions-url-in-the-project-details-page">
+<h3>Integration of L10n instructions URL in the project details page<a class="headerlink" href="#integration-of-l10n-instructions-url-in-the-project-details-page" title="Permalink to this headline">¶</a></h3>
+<p>Another new feature that the new Transifex version offers is the ability to
+define a URL containing L10n instructions for a project. This will be linked
+from the Project Details page and can include documentation for translators,
+packagers, other developers etc. Useful to link against wiki pages of a project.</p>
+</div>
+<div class="section" id="support-for-language-codes-alongside-language-country-codes">
+<h3>Support for language codes alongside language-country codes<a class="headerlink" href="#support-for-language-codes-alongside-language-country-codes" title="Permalink to this headline">¶</a></h3>
+<p>Several languages available in Transifex with aliases pointing to countries, as
+for example &#8216;es&#8217; pointing to &#8216;es_ES&#8217; now were split into two different
+languages. It allows the projects registered on Transifex to choose whenever
+they want to use only general language code (&#8216;es&#8217;) or language code plus country
+info (&#8216;es_ES&#8217;), depending on the code style used by the system.</p>
+</div>
+<div class="section" id="application-programming-interface-version-2">
+<h3>Application Programming Interface version 2<a class="headerlink" href="#application-programming-interface-version-2" title="Permalink to this headline">¶</a></h3>
+<p>The <em class="xref std std-ref">new revised API</em> is a simpler, more elegant and more
+consistent version of the Transifex API.</p>
+<p>The most important feature is the merge between the
+StorageHandler, the ProjectResourceHandler and the ResourceHandler into one
+unified ResourceHandler. This gives you the ability to create a resource and
+push its content with a single request. Furthermore, the Translation Handler now
+also accepts json-encoded strings, empowering you to send the translations along
+with other information in one request.</p>
+<p>The URLs of the new API are under
+<strong>/api/2</strong> while the old API still resides in <strong>/api</strong>. The old API can also be
+accessed under <strong>/api/1</strong>. This way full backwards compatibility is ensured.</p>
+<p>More technical details at <em class="xref std std-ref">Version 2 API docs</em>.</p>
+</div>
+</div>
+<div class="section" id="transifex-client-0-5">
+<h2>Transifex Client-0.5<a class="headerlink" href="#transifex-client-0-5" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Main article at <a class="reference internal" href="../../client/client-0.5.html#user-client-05"><em>Transifex Client-0.5</em></a></p>
+</div>
+<p>Parallel to the release of Transifex-1.1, the release of the Transifex client
+v0.5 took place. The gist of the new introduced features is:</p>
+<div class="section" id="new-features">
+<h3>New features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Introduced <a class="reference internal" href="../../client/client-0.5.html#user-client-05-mapping"><em>local language mappings</em></a>, allowing
+the push of arbitrary local files (eg. custom language codes) to remote,
+canonical languages (and also pulling) (added in version 0.5.1).</li>
+<li>The client can now pull the file with the translation in the source
+language as well with <tt class="docutils literal"><span class="pre">tx</span> <span class="pre">pull</span> <span class="pre">--source</span></tt>.</li>
+<li>You can now specify the <tt class="docutils literal"><span class="pre">--skip</span></tt> option for the <tt class="docutils literal"><span class="pre">pull</span></tt> command
+so that the client does not stop on errors. This is useful when you want to
+pull many files from the server.</li>
+<li>The client uses now the HTTPS protocol by default for increased security.</li>
+</ul>
+</div>
+<div class="section" id="enhancements">
+<h3>Enhancements<a class="headerlink" href="#enhancements" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Entries in configuration files are now sorted alphabetically. This way they
+don&#8217;t change often, and when they do, they produce smaller diffs.</li>
+<li>The client now skips translations which have never been updated.</li>
+<li>The client is now more Windows-friendly.</li>
+<li>Support for Python stable release 2.4.</li>
+<li>Numerous bug fixes.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Enhancements<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Added CSRF protection to all POST requests throughout Transifex using Django
+1.2 csrf support</li>
+<li>Updated txmigratemap command to add autofetch URL info, in the corresponding
+resource.</li>
+<li>Added API calls for auto remote project initialization from transifex-client.</li>
+<li>Last updated timestamps are only updated when a translation is added/removed
+for a specific language.</li>
+<li>Updated the source edit form with the following:
+Source language cannot be changed.  Source file uploads are enabled.</li>
+<li>Improved the checks for invalid PO files.</li>
+<li>Added migrated=True to the migrate map app which will allow you to run the
+migration from 0.9 to 1.0 in steps.</li>
+<li>Files can now be downloaded by their language code aliases as well</li>
+<li>Transifex now makes different msgfmt checks for POT and PO files</li>
+<li>Optimized some queries that took a lot of time.</li>
+<li>Updated translation files.</li>
+<li>Maintainers can now push translations even when resource has
+accept_translations set to False</li>
+<li>Throttling in now configurable in the settings.</li>
+<li>Lotte now checks translations for common errors and reports them to the
+translator.</li>
+<li>Improved managers for getting private projects/resources per user.</li>
+<li>Improved release views/templates to take into account private resources as
+well.</li>
+<li>A lot of languages were added and some of the existing ones were updated with
+correct plural rules/equations.</li>
+<li>Split Languages into general languages and languages + country</li>
+<li>When editing a team it&#8217;s possible to change the language to a language related
+to the previous one, such as from &#8216;pt&#8217; to &#8216;pt_PT&#8217; or vice versa.</li>
+<li>Languages added: Belarusian (Tarask) (<a class="reference external" href="mailto:be&#37;&#52;&#48;tarask">be<span>&#64;</span>tarask</a>), <a class="reference external" href="mailto:sr_SR&#37;&#52;&#48;Latin">sr_SR<span>&#64;</span>Latin</a> ** NOT COMPLETE</li>
+<li>Languages updated: Russian (Russia) (ru_RU), <a class="reference external" href="mailto:ca&#37;&#52;&#48;valencia">ca<span>&#64;</span>valencia</a>, &#8216;ga&#8217;, &#8216;b s&#8217;, &#8216;hr&#8217;,
+&#8216;sr&#8217;, &#8216;uk&#8217; and similars, such as &#8216;sr_RS&#8217;, for example. ** NOT COMPLETE</li>
+<li>Modified watches so if the source language is changed all languages are
+notified.</li>
+<li>Added support for developer comments in Qt Linguist files.</li>
+<li>Updated jquery dataTables to a newer version.</li>
+<li>The autofetch URL addon now accepts all URL formats that point to a valid
+translation file.</li>
+<li>Transifex has been updated to fully support Django-1.2.4 and Django-1.2.5.</li>
+<li>Updated test suites for all Transifex applications.</li>
+<li>Added support for empty numerus forms in TS files.</li>
+<li>Lock information is now presented in stats table rows</li>
+<li>&#8216;Translate Now&#8217; button is disabled for locked resources/languages.</li>
+<li>Added escaping to xml special characters on import/export for Qt files. (Now
+lotte is a WYSIWYG editor)</li>
+<li>Save &amp; exit button now emulates translation sessions</li>
+<li>Developer comments are now displayed in the source entity details box.</li>
+<li>Updated fancybox to v1.3.4</li>
+<li>Updated requirements.txt which is used by PIP</li>
+<li>Updated favicon</li>
+<li>Added south migration to remove deprecated tables from pre1.0 Transifex.</li>
+<li>All data migrations now use south&#8217;s orm</li>
+<li>More languages are now available for Transifex</li>
+<li>All unsaved entries are now saved when a page is changed in lotte.</li>
+<li>Transifex now offers a &#8220;Remember me&#8221; option in the login form.</li>
+<li>Use project and resource slug in downloaded translation files.</li>
+<li>Timeline is now available for all logged in users.</li>
+<li>User messages now use the new Django messages framework.</li>
+<li>Source language is always on top in the statistic tables.</li>
+<li>Txmigratemap now stores the URL of the source file in the Resource model.</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h2>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h2>
+<p>A number of important bug-fixes have been incorporated into this release as
+well. Many thanks go to our vibrant community for helping us point out and
+implement them. Following is an overview of the fixes the Transifex 1.1 release
+incorporates:</p>
+<ul class="simple">
+<li>Fixed a bug in jsonmap migrations under MySQL</li>
+<li>Fixed JSONMap slug field MySQL problem</li>
+<li>Fixed some issues with extended unicode characters in source strings</li>
+<li>Fixed a problem with Languages containing unicode characters in their name.</li>
+<li>Fixed a unicode issue in PO file metadata.</li>
+<li>Fixed auto-suggest and copy source actions for pluralized translation rows in
+Lotte.</li>
+<li>Removed unused dependency (Urlgrabber)</li>
+<li>Translation unique hashes are now calculated from the concatenation of the
+translation string and the context.</li>
+<li>Improved permissions checks and fixed some permission issues.</li>
+<li>Private teams are no longer visible in the user&#8217;s public profile.</li>
+<li>Fixed encoding error with charts addon.</li>
+<li>Char overflow for resource slug from the API has been fixed.</li>
+<li>Fixed encode error with localized exception messages.</li>
+<li>Fixed feeds not printing correct chars.</li>
+<li>Fixed a bug which broke the default ordering of plurals in Qt, PO files</li>
+<li>Fixed a bug with PO files using logical ids.</li>
+<li>Fixed URL misleading what was resulting on 404 errors
+The issue was related to some slugs ending with &#8216;p&#8217; that were
+mismatching the /p/ on the URLS. Includes of URLS should always have
+^ in the beginning. So p/ as changed to ^p/ to avoid such problems.</li>
+<li>Fixed Lotte auto-save for plural fields
+Now whenever the auto-save is enabled, a plural entry will only be
+pushed whether all or None of the plural textareas where filled in,
+when the entry is modified, of cource.</li>
+<li>Changed Ajax resource action page URL to avoid cross-subdomain problems</li>
+<li>Fixed watches Ajax URLs to avoid cross-subdomain problems</li>
+<li>Uploading a new source file to Transifex now updates all the source entity
+fields with the new values (which means you can convert a non-pluralized
+source entity to a pluralized one etc)</li>
+<li>PO-Revision-Date now has the last update time of the language, not now().</li>
+<li>Fixed duplication of received email for some notifications.</li>
+<li>Obsolete entries are not imported in the Db.</li>
+<li>Fixed an issue with lotte and backslashed (&#8216;n&#8217; and &#8216;\n&#8217; were treated the
+same).</li>
+</ul>
+</div>
+<div class="section" id="getting-transifex-1-1">
+<h2>Getting Transifex 1.1<a class="headerlink" href="#getting-transifex-1-1" title="Permalink to this headline">¶</a></h2>
+<p>You can experience Transifex live at <a class="reference external" href="http://www.transifex.com/">http://www.transifex.com/</a>. This upstream
+instance is hosted by Transifex, the company behind the development of Transifex.</p>
+<p>Project and community managers who want to deploy Transifex for their
+own community may refer to the <a class="reference internal" href="../install.html#installing"><em>Installation documentation</em></a>.</p>
+</div>
+<div class="section" id="upgrading-to-this-version">
+<h2>Upgrading to this version<a class="headerlink" href="#upgrading-to-this-version" title="Permalink to this headline">¶</a></h2>
+<p>To upgrade the code, update your package distribution as usual:</p>
+<ul class="simple">
+<li>If you installed from your package distribution, check if there&#8217;s been a
+package upgrade and go for it.</li>
+<li>If you used <tt class="docutils literal"><span class="pre">easy_install</span></tt>, run <tt class="docutils literal"><span class="pre">easy_install</span> <span class="pre">-U</span></tt> to upgrade.</li>
+<li>Fresh tarballs are available, if you installed from a release zipfile.</li>
+<li>Finally, if you&#8217;re of the daredevil kind and feed straight from the source,
+<tt class="docutils literal"><span class="pre">git</span> <span class="pre">pull</span></tt> should do the trick for you.</li>
+</ul>
+<div class="section" id="dependencies">
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h3>
+<p>The following extra dependencies was <em>added</em> since the last major version:</p>
+<ul class="simple">
+<li>django-haystack &gt;= 1.2</li>
+<li>pysolr</li>
+</ul>
+<p>One dependency is <em>no longer</em> required starting from this version:</p>
+<ul class="simple">
+<li>urlgrabber</li>
+</ul>
+<p>Instructions on how to install the dependencies can be found at the
+<a class="reference internal" href="../install.html#installing"><em>Installation docs</em></a>. You&#8217;ll need to complete this step
+before actually doing the database migration.</p>
+</div>
+<div class="section" id="migration">
+<h3>Migration<a class="headerlink" href="#migration" title="Permalink to this headline">¶</a></h3>
+<p>Transifex 1.1 has undergone some changes in its database schema. However it&#8217;s
+very easy to migrate to the new database using the python commands included in
+the main directory. To do this, you need to run:</p>
+<div class="highlight-python"><div class="highlight"><pre>python manage.py syncdb --noinput
+python manage.py migrate --ignore-ghost-migrations --noinput
+</pre></div>
+</div>
+<p>Then, you only need to create new notice types and new languages by executing
+the following commands:</p>
+<div class="highlight-python"><div class="highlight"><pre>python manage.py txcreatenoticetypes
+python manage.py txlanguages
+</pre></div>
+</div>
+<p>Also, our new extra-powerful RLStats feature needs to be initialized
+with the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre>python manage.py txstatsupdate
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Depending on the size of the database and the number or projects and
+resources that you have, this process may take up to several hours.</p>
+</div>
+<div class="section" id="sample-migration">
+<h4>Sample Migration<a class="headerlink" href="#sample-migration" title="Permalink to this headline">¶</a></h4>
+<p>A sample run for a migration from Transifex version 01.1 to Transifex 1.1
+follows (all stdout/sterr output are omitted):</p>
+<div class="highlight-python"><div class="highlight"><pre>git clone git@github.com:transifex/transifex.git
+git checkout 1.1
+python manage.py syncdb --noinput
+python manage.py migrate --ignore-ghost-migrations --noinput
+python manage.py txcreatenoticetypes
+python manage.py txlanguages
+python manage.py txstatsupdate
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
+<p>The following people have contributed to this release, with one way or another:</p>
+<ul class="simple">
+<li>Andreas Loupasakis</li>
+<li>Antonios Garnelis</li>
+<li>Apostolos Bessas</li>
+<li>Diego Búrigo Zacarão</li>
+<li>Dimitris Glezos</li>
+<li>Konstantinos Bairaktaris</li>
+<li>Michał Sawicz</li>
+<li>Ratnadeep Debnath</li>
+<li>Seraphim Mellos</li>
+<li>timeless</li>
+</ul>
+<p>For a list of our awesome translators, refer to the <a href="#id2"><span class="problematic" id="id3">`Translations`_</span></a> section.</p>
+</div>
+<div class="section" id="transifex-1-1-development-releases">
+<h2>Transifex 1.1 Development Releases<a class="headerlink" href="#transifex-1-1-development-releases" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Alpha: 5 May 2011</li>
+<li>Beta: 15 May 2011</li>
+<li>Final: 4 July 2011</li>
+</ul>
+<p>Please refer to the full <a href="#id4"><span class="problematic" id="id5">`Transifex 1.1 changelog`_</span></a> for more information on
+what has changed between the development releases and final one.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Why the name &#8216;Sabretooth&#8217;?</p>
+<p>Sabretooth (Victor Creed) is a fictional character, a Marvel Comics
+supervillain. The character first appeared in Iron Fist #14 (August 1977).
+Originally portrayed as a non-powered serial killer, Sabretooth is later
+written as a mutant who possesses bestial superhuman abilities, most
+notably a rapid healing factor, razor-sharp fangs and claws, and superhuman
+senses. He is a vicious assassin responsible for numerous deaths both as a
+paid mercenary and for his personal pleasure.</p>
+<p>Sabretooth has appeared in several X-Men animated series, movies and video
+games, just like all the codenames of our releases. The character Wolverine
+is depicted as his long-time enemy.</p>
+<p>All the above match perfectly with the characteristics of Transifex 1.1
+ifself. The best is yet to come.</p>
+<p class="last">The above information is taken from <a class="reference external" href="http://en.wikipedia.org/wiki/Main_Page">wikipedia</a> (<a class="reference external" href="http://en.wikipedia.org/wiki/Sabretooth_(Comics)">Sabretooth</a>)</p>
+</div>
+</div>
+</div>
+
+
+      <div class="mainbodynav">
+    Next Section: <a href="1.0.html" title="Transifex version 1.0 (Proteus)">Transifex version 1.0 (Proteus)</a> &raquo;</div>
+
+          </div>         
+        </div>
+      </div>
+      
+          <div class="yui-b" id="sidebar">
+            
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Transifex version 1.1 (Sabretooth)</a><ul>
+<li><a class="reference internal" href="#what-s-new-in-transifex-1-1">What&#8217;s new in Transifex 1.1</a><ul>
+<li><a class="reference internal" href="#improved-performance">Improved Performance</a></li>
+<li><a class="reference internal" href="#native-support-for-joomla-ini-and-java-property-files">Native support for Joomla INI and Java .property files</a></li>
+<li><a class="reference internal" href="#fussy-re-using-of-existing-strings-in-source-language-files">Fussy re-using of existing strings in source language files</a></li>
+<li><a class="reference internal" href="#integration-of-l10n-instructions-url-in-the-project-details-page">Integration of L10n instructions URL in the project details page</a></li>
+<li><a class="reference internal" href="#support-for-language-codes-alongside-language-country-codes">Support for language codes alongside language-country codes</a></li>
+<li><a class="reference internal" href="#application-programming-interface-version-2">Application Programming Interface version 2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#transifex-client-0-5">Transifex Client-0.5</a><ul>
+<li><a class="reference internal" href="#new-features">New features</a></li>
+<li><a class="reference internal" href="#enhancements">Enhancements</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id1">Enhancements</a></li>
+<li><a class="reference internal" href="#bug-fixes">Bug Fixes</a></li>
+<li><a class="reference internal" href="#getting-transifex-1-1">Getting Transifex 1.1</a></li>
+<li><a class="reference internal" href="#upgrading-to-this-version">Upgrading to this version</a><ul>
+<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li><a class="reference internal" href="#migration">Migration</a><ul>
+<li><a class="reference internal" href="#sample-migration">Sample Migration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contributors">Contributors</a></li>
+<li><a class="reference internal" href="#transifex-1-1-development-releases">Transifex 1.1 Development Releases</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>You are here:</h3>
+  <ul>
+      <li>
+        <a href="../../index.html">Transifex documentation</a>
+        
+          <ul><li><a href="../../contents.html">Table of Contents</a>
+        
+          <ul><li><a href="../index.html">Transifex Server (Community Edition)</a>
+        
+          <ul><li><a href="index.html">Release notes</a>
+        
+        <ul><li>Transifex version 1.1 (Sabretooth)</li></ul>
+        </li></ul></li></ul></li></ul>
+      </li>
+  </ul>  
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+          </div> 
+      
+    </div>
+    
+
+  </div>
+  <div id="ft">
+    <div class="nav wrapper"><div class="wrapper_contents">
+    &laquo; <a href="1.2.html" title="Transifex Community Edition v1.2 (Mystique)">Transifex Community Edition v1.2 (Mystique)</a> 
+     |
+    <a href="../../contents.html" title="Table of Contents" accesskey="U">up</a>
+   |
+    <a href="1.0.html" title="Transifex version 1.0 (Proteus)">Transifex version 1.0 (Proteus)</a> &raquo;</div></div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="footer wrapper">
+      &copy; Copyright <a href="https://www.transifex.com/">Transifex</a>.
+      Last updated on Feb 19, 2015 using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4362397-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<!-- Google Analytics for help.transifex.net (new) -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21799942-3']);
+  _gaq.push(['_setDomainName', '.transifex.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>

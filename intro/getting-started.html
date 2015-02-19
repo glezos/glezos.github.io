@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting Started &mdash; Transifex documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1-r&#39;bae89a6&#39;',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Transifex documentation" href="../index.html" />
+    <link rel="up" title="Introduction" href="index.html" />
+    <link rel="next" title="Transifex Server (Community Edition)" href="../server/index.html" />
+    <link rel="prev" title="Introduction" href="index.html" />  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold">
+  </head>
+  <body>
+
+    <div class="document">
+  <div id="global-header">
+    <div class="wrapper" >
+      <a id="transifex-logo" href="https://www.transifex.com/" title="Go to start page">
+  			<img src="../_static/transifex-logo.png" alt="Transifex logo" width="109" height="30"/>
+  		</a>
+  		<ul id="global-nav" >
+				<li><h6><a href="../genindex.html" class="smooth-transition">INDEX</a></h6></li>
+				<li><h6><a href="../contents.html" class="smooth-transition">TABLE OF CONTENTS</a></h6></li>
+				<li><h6><a href="../index.html" class="smooth-transition">DOCS HOME</a></h6></li>
+  		</ul>
+  		
+    </div>
+    <div class="wrapper" >
+      <span style="font-weight:bold;padding-top: 3px;display: block;text-align: center;margin: 0em 0em 0em 1.75em;color: #cacfd2;">For the most up-to-date information, please refer to <a style="color: #8a8f92;" href="https://www.transifex.com">Transifex.com</a> and <a style="color: #8a8f92;" href="http://support.transifex.com">support.transifex.com.</a>
+    </div>
+  </div>
+ 
+  <div class="nav wrapper"><div class="wrapper_contents">
+    &laquo; <a href="index.html" title="Introduction">Introduction</a> 
+     |
+    <a href="../contents.html" title="Table of Contents" accesskey="U">up</a>
+   |
+    <a href="../server/index.html" title="Transifex Server (Community Edition)">Transifex Server (Community Edition)</a> &raquo;</div></div>
+ 
+  <div id="custom-doc" class="yui-t6">
+   <div id="bd">
+      <div id="yui-main">
+        <div class="yui-b">
+          <div class="yui-g" id="intro-getting-started">
+            
+  <div class="section" id="getting-started">
+<span id="introduction"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basic-concepts-in-transifex">
+<h2>Basic Concepts in Transifex<a class="headerlink" href="#basic-concepts-in-transifex" title="Permalink to this headline">¶</a></h2>
+<p>In Transifex, everything revolves around a Translation Projects. This
+usually represents a branded project or product, such as a specific text
+editor or a web browser. For example, MeeGo&#8217;s Installer, which is the
+software the user sees when trying to install the MeeGo Operating System,
+would be registered as an independent project on Transifex.</p>
+<p>Projects are created and managed by people
+who Transifex refers to as <strong>project maintainers</strong>.
+They can configure all aspects of a project and are ultimately responsible
+for it.</p>
+<p>Translators who contribute to a project are organized in <strong>Language Teams</strong>.
+Each project has its own set of Translation Teams, one per language. This
+ensures people work on the files they are interested in. Teams can also have
+<strong>coordinators</strong>, who are privileged members who can help in team management
+tasks, such as approving new members and reviewing contributions to that
+language.</p>
+<p>Now, let&#8217;s get to the chorus.</p>
+<div class="section" id="things-inside-a-project">
+<span id="user-project-intro"></span><h3>Things inside a Project<a class="headerlink" href="#things-inside-a-project" title="Permalink to this headline">¶</a></h3>
+<p>A project may have many translatable parts, which, in Transifex, we call
+Resources. If you are familiar with PO files and gettext, a resource is a
+source POT file and all its respective PO files. For example, a software project
+on Transifex may create separate resources for its User Interface,
+Documentation, command-line tool, etc.</p>
+<p>A resource is basically a set of translatable entities and their translations.
+Each resource has a <strong>Source Language</strong>, which is the language in which the
+entity was originally written (e.g. in the source code). When translating
+online, this is the language from which the translators will translate.</p>
+<p>A resource can be created by uploading a translation file such as a POT file
+or TS file (Qt), and selecting its language. Transifex opens
+the uploaded file and searches for translatable strings. For each string it
+finds, it creates a translatable entity in the source language (e.g. English).</p>
+<p>We now have a resource and a set of translatable strings (e.g. in English),
+and can proceed to the actual translation phase.</p>
+</div>
+<div class="section" id="translating">
+<h3>Translating<a class="headerlink" href="#translating" title="Permalink to this headline">¶</a></h3>
+<p>Translators, who are members of a language team in the project, can now create
+a <strong>new translation of the resource</strong>, typically, using English as the source
+language. They can choose to translate online by using the web-based Transifex
+translation editor (<strong>Lotte</strong>), or offline, by downloading a file and
+translating it using their own desktop tools.</p>
+<p>The translator can now translate the resource to a <strong>new language</strong>. By choosing
+to translate online, the web editor opens up. The English strings are shown
+on the left, on the right are have text boxes to select/enter translations.
+Each translated string is automatically saved in Transifex, so translators
+never lose their work.</p>
+<p>Translators can also choose to <strong>download a file</strong> for translation. The type of
+the file depends on the source/template file the maintainer used to
+originally create the resource. For example, if the resource was created using
+a POT file, the downloaded translation file in French will be <tt class="docutils literal"><span class="pre">fr.po</span></tt>.</p>
+<p>Depending on the file type, translators can use their favorite desktop tools
+to translate it. When they&#8217;re ready, they can <strong>upload the file</strong> to Transifex
+in their language and Transifex will import the translations, just like if
+they used the online translation editor.</p>
+<p>The project maintainer now has imported his source translation files in
+Transifex and got a bunch of translations. Cool. Let&#8217;s now see how this is
+combined with the content itself and its publication.</p>
+</div>
+<div class="section" id="using-translations">
+<h3>Using Translations<a class="headerlink" href="#using-translations" title="Permalink to this headline">¶</a></h3>
+<p>Depending on the project type, Transifex offers the maintainer a number
+of ways to get the translations back.</p>
+<p>The most common one is to <strong>export</strong> them as translation files. This is done
+the same way a translator downloaded the file, as described above.</p>
+<p>Let&#8217;s take a moment and explain how this works under the hood. Remember the
+source file (e.g. POT) we uploaded when we created the resource
+originally? Transifex actually stored this template/source file in its database.
+To download the translations in a file (e.g. <tt class="docutils literal"><span class="pre">fr.po</span></tt> for French), Transifex
+takes the template file, replaces all English strings with the French
+translations, and provides this new file for download.</p>
+<p>Since this process can be repeated often, we&#8217;ve created a handy
+command-line tool called transifex-client, which is targeted mainly
+towards software developers, localization coordinators and language leaders.
+They can use the client to &#8216;pull&#8217; translations from Transifex right before a
+release, every week or even every half an hour if they so choose.</p>
+<p>But there&#8217;s more. Transifex supports fetching translations directly from the
+database using an Application Programmable Interface (API),
+without the need to mess around with translation files. This way, software
+developers can integrate their tools directly with Transifex.
+So, for example, an application could even fetch fresh translations the moment
+the user launches it.</p>
+</div>
+</div>
+</div>
+
+
+      <div class="mainbodynav">
+    Next Section: <a href="../server/index.html" title="Transifex Server (Community Edition)">Transifex Server (Community Edition)</a> &raquo;</div>
+
+          </div>         
+        </div>
+      </div>
+      
+          <div class="yui-b" id="sidebar">
+            
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Getting Started</a><ul>
+<li><a class="reference internal" href="#basic-concepts-in-transifex">Basic Concepts in Transifex</a><ul>
+<li><a class="reference internal" href="#things-inside-a-project">Things inside a Project</a></li>
+<li><a class="reference internal" href="#translating">Translating</a></li>
+<li><a class="reference internal" href="#using-translations">Using Translations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h3>You are here:</h3>
+  <ul>
+      <li>
+        <a href="../index.html">Transifex documentation</a>
+        
+          <ul><li><a href="../contents.html">Table of Contents</a>
+        
+          <ul><li><a href="index.html">Introduction</a>
+        
+        <ul><li>Getting Started</li></ul>
+        </li></ul></li></ul>
+      </li>
+  </ul>  
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+          </div> 
+      
+    </div>
+    
+
+  </div>
+  <div id="ft">
+    <div class="nav wrapper"><div class="wrapper_contents">
+    &laquo; <a href="index.html" title="Introduction">Introduction</a> 
+     |
+    <a href="../contents.html" title="Table of Contents" accesskey="U">up</a>
+   |
+    <a href="../server/index.html" title="Transifex Server (Community Edition)">Transifex Server (Community Edition)</a> &raquo;</div></div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="footer wrapper">
+      &copy; Copyright <a href="https://www.transifex.com/">Transifex</a>.
+      Last updated on Feb 19, 2015 using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4362397-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<!-- Google Analytics for help.transifex.net (new) -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21799942-3']);
+  _gaq.push(['_setDomainName', '.transifex.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>
