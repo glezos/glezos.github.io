@@ -494,7 +494,7 @@ schema of the previous version, is run the following::
 
     ./manage.py syncdb
     ./manage.py migrate
-    ./manage.py build_static
+    ./manage.py buildstatic
     cd transifex/site_media/
     mv userprofile media/userprofile
     mv reviews_files media/reviews_files
