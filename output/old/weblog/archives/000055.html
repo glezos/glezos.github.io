@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-7" />
+
+<meta name="author" content="Dimitris Glezos" />
+<meta name="description" content="Dimitris Glezos web site - Contains all his hypertext stuff" />
+<meta name="keywords" content="dimitris, glezos, subbie, mitsman, web log, weblog, journal, XML, web development, greek, greece, programming, cyfssg, cylug" />
+
+<link rel="stylesheet" href="/old/weblog/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/old/weblog/index.rdf" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/old/weblog/rsd.xml" />
+<title>Chit-Chat-Choe - Πώς επιλέγει κανείς το OSS λογισμικό του;</title>
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'dimitris.glezos.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="/old/weblog/archives/000055.html">
+<dc:title>Πώς επιλέγει κανείς το OSS λογισμικό του;</dc:title>
+<dc:description>Στην linux-greek-users mailing list του HeLLUG εξελίσσεται ένα ενδιαφέρον thread (μάλλον flame!) σχετικά με τα distributions - και συγκεκριμένα μεταξύ των debian και slackware (του τέστιν Βασίλη Βασαϊτη και Θάνο Κυρίτση:). Βλέποντας τη συζήτηση, θυμήθηκα κάποιες πιο παλιές συζητήσεις που είχα με τον Θάνο και την άποψη μου για τον τρόπο που πρέπει να επιλέγει κανείς το distribution του. Ο οποίος τρόπος επεκτείνεται για όλα μας τα προγράμματα. (Ο οποίος τρόπος επεκτείνεται γενικότερα για τη ζωή, αλλά ας μην το αναλύσουμε αυτό τώρα..)...</dc:description>
+<dc:creator>glezos</dc:creator>
+<dc:date>2004-05-20T12:46:42+02:00</dc:date>
+<license rdf:resource="http://creativecommons.org/licenses/by-sa/1.0/" />
+</Work>
+<License rdf:about="http://creativecommons.org/licenses/by-sa/1.0/">
+<requires rdf:resource="http://web.resource.org/cc/Attribution" />
+<requires rdf:resource="http://web.resource.org/cc/Notice" />
+<requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+<permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+<permits rdf:resource="http://web.resource.org/cc/Distribution" />
+<permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+</License>
+</rdf:RDF>
+-->
+
+
+
+</head>
+
+<body>
+		<div id="genborder">
+			<div id="logo">
+				<a class="simlink" href="../../">
+					<img border="0" src="../../images/logo.png" alt="weblog logo"/old/>
+				</a>
+			</div>
+			<div id="dotcom">
+				<a class="dotcom" href="../../">.com/</a><a class="wldotcom" href="../">weblog</a>
+			</div>
+
+<div id="banner">
+<h1><a href="/old/weblog/" accesskey="1">Chit-Chat-Choe</a></h1>
+<span class="description">A greek/geek weblog</span>
+</div>
+
+<div id="pagepad">
+<div id="container">
+
+<div class="blog">
+<h2 class="date">May 20, 2004</h2>
+
+<div class="blogbody">
+<h3 class="title">Πώς επιλέγει κανείς το OSS λογισμικό του;</h3>
+
+<p>Στην <a href="http://lists.hellug.gr/pipermail/linux-greek-users/">linux-greek-users</a> mailing list του HeLLUG εξελίσσεται ένα <a href="http://lists.hellug.gr/pipermail/linux-greek-users/2004-May/thread.html#98133">ενδιαφέρον thread</a> (μάλλον flame!) σχετικά με τα distributions - και συγκεκριμένα μεταξύ των debian και slackware (του τέστιν Βασίλη Βασαϊτη και Θάνο Κυρίτση:).</p>
+
+<p>Βλέποντας τη συζήτηση, θυμήθηκα κάποιες πιο παλιές συζητήσεις που είχα με τον Θάνο και την άποψη μου για τον τρόπο που πρέπει να επιλέγει κανείς το distribution του. Ο οποίος τρόπος επεκτείνεται για όλα μας τα προγράμματα. (Ο οποίος τρόπος επεκτείνεται γενικότερα για τη ζωή, αλλά ας μην το αναλύσουμε αυτό τώρα..)</p>
+
+<br/>
+<a name="more"></a>
+<p></p>
+
+<p>Ο Νίκος Χαρωνιτάκης έγραψε στο thread:<br />
+<div class="quotetext">Κακά τα ψέματα: Η μεγάλη πρόοδος που γίνεται τα τελευταία χρόνια στο linux είναι αποτέλεσμα της ενεργής συμμετοχής στα διάφορα project μισθωμένων προγραμματιστών και manger από τις εταιρίες. Έτσι (χωρίς να είναι κακό αυτό) οι εν λόγω διανομές περιλαμβάνουν το λογισμικό που έχουν αναπτύξει σε σημαντικό βαθμό αυτοί που θέλουν να βγάλουν κέρδος. Π.χ. ο πυρήνας έχει τα πιο σημαντικά patches από ibm/redhat/suse/novell/sun/intel, το gnome στην ουσία το αναπτύσσουν ximian/redhat/sun openoffice sun κτλ.</div></p>
+
+<p>Τα λεφτά που πέφτουν στα open source προγράμματα σχεδόν πάντα κατηγορούνται και είναι κρίμα. Ο Νίκος έχει δίκαιο. Ναι μεν σχεδόν πάντα όλα ξεκινούν από το "scratch an itch" και την άπειρη "τζαμπέ" δουλειά, αλλά έχει πολύ δρόμο κάτι για να φτάσει κάπου που μπορείς να το χαρακτηρίσεις αξιόλογο. Και η ιστορία έχει δείξει πως τα διαμάντια <acronym title="Open Source Software">OSS</acronym> έχουν φτάσει εκεί που είναι με την οικονομική υποστήριξη εταιριών.</p>
+
+<p>Πάρτε για παράδειγμα το Mozilla, το <acronym title="Openoffice.org">OOo</acronym> και το Evolution. Τρία διαμάντια στο linux desktop μας (ξέρω, υπάρχουν και άλλα εναλλακτικά!! Αυτό όμως δεν αλλάζει ότι τα παραπάνω είναι διαμάντια). Όποιος πιστεύει ότι θα έφτανε εδώ ο Mozilla (ή και στο μισό δρόμο μέχρι εδώ) χωρίς λεφτά από εταιρίες, κάνει μέγα λάθος. Το να αρνούμαστε την ανάγκη του community για λεφτά από εταιρίες, τα οποία είναι πολλαπλάσια αυτών που μπορεί να πάρει ένα project από τα donations, είναι μια ουτοπία και μισή.</p>
+
+<p>&lt;sidethoughts&gt;</p>
+
+<p>Κάτι παρόμοιες πολιτικές τρύπες-στο-νερό πιστεύει ένας καλός μου φίλος και στις συζητήσεις μας πιάνω τον εαυτό μου να του λέω συχνά: <em>"Το να είναι κανείς κατά της παγκοσμιοποίησης είναι ένα πράγμα. Το να πιστεύει όμως ότι πραγματικά ο κουμμουνισμός μπορεί να δουλέψει σε ένα κράτος είναι κάτι άλλο".</em></p>
+
+<p>Και ακόμη ένα side-thought. Βλέπω συχνά αρκετούς αντι-{redhat|suse}-ϊκούς να χρησιμοποιούν ReiserFS. Προσωπικά, αν είναι να "τα παίρνει" ένα project, για να είμαι ειλικρινής προτιμώ να τα παίρνει από την ΑΒΓ IBM/Redhat/μπλα εταιρία παρά από το <acronym title="Defense Advanced Research Projects Agency">DARPA</acronym>.</p>
+
+<p>&lt;/sidethoughts&gt;</p>
+
+<p>Λίγο γενικότερα τώρα..</p>
+
+<p>Το πόσο ένα project έχει πραγματικά <strong>προσφέρει</strong> στο community νομίζω πρέπει να μας απασχολεί πολύ περισσότερο πριν το επιλέξουμε, είτε μέσω switch είτε μέσω πρώτης επιλογής. Δεν αρκεί να είναι γρήγορο ένα λογισμικό, ή να έχει απλά ένα καλύτερο package manager (αν και είναι πολύ σημαντικό feature), ή να είναι γραμμένο με το τάδε toolkit αντί το τάδε, ή να θέλει να είναι λίγο πιο secure ή να έχει ένα desktop env περισσότερο, ή να βάζει και σαντιγύ στον καφέ αντίθετα με το άλλο.</p>
+
+<p>Για μένα, πρέπει να κάνει *πολύ* περισσότερα για να αξίζει να λέγεται <em>"η συνειδητή μου επιλογή σ'αυτή τη κατηγορία προγραμμάτων"</em>. Θα το δοκιμάσω, ναι, χωρίς να το πολυσκεφτώ. Αλλά η επιλογή για πρωτεύον distro / browser / MUA / samba implementation / [put your favourite type of program here] πιστεύω θα πρέπει να γίνεται κάτω από πολύ πιο αυστηρό φακό.</p>
+
+<p>Και αυτό επειδή το knowledge-base που έχτισε το πρόγραμμα από το οποίο έκανε fork (ή στηρίχθηκε, ή πήρε παραδείγματα) έφτασε εδώ μετά από πολύ κόπο. Μόνο και μόνο χρησιμοποιώντας το, το υποστηρίζουμε - ακόμη και αν δεν κάνουμε submit bug reports και άλλες how-to-help ενέργειες.</p>
+
+<p>Για να μην πω ότι ακριβώς <em>μετά</em> που γίνεται σταθερό είναι που το "παλιό" software χρειάζεται το support μας. Ο mozilla πιστεύω ότι πολύ περισσότερο ήθελε το support μας μετά την έκδοση 0.96 (μετά από 3.5+ χρόνια development?) που ήταν πολύ σταθερή. Προσωπικά αν έβγαινε (που βγήκε!) ένα ενεργό fork (ή μια άλλη υλοποίηση, πχ λέγε με KHTML), θα είχε πολύ δρόμο για να γίνει default browser μου. Απλά γιατί ο κόπος και το μεράκι που μπήκε στο mozilla trunk τόσο καιρό με κρατάει πολύ περισσότερο από τα νέα σούπερ-ντούπερ features του τάδε fork.</p>
+
+<p>Κατηγορούμε τους windows-άδες (IE-άδες, Outlook) για τη μη-συνειδητή επιλογή τους για το OS (browser, <acronym title="Mail User Agent">MUA</acronym>) που χρησιμοποιούν. Παρόμοια όμως μη-συνειδητή, χαλαρή και σταρχιδέ επιλογή κάνουν αρκετοί για ενδο-OSS επιλογές προγραμμάτων. Και είναι κρίμα γιατί στερούν το πολύτιμο support τους από προγράμματα που έχουν αποδείξει ότι την αξίζουν περισσότερο.</p>
+
+<p>Και όλα τα παραπάνω, παίρνουν πολύ μεγαλύτερο νόημα όταν κάνει κανείς advocate ένα πρόγραμμα. Γιατί τότε σημαίνει ότι πιστεύει <em>πραγματικά</em> ότι είναι καλύτερο! Δε με νοιάζει αν κάποιος χρησιμοποιεί windows χωρίς να τον νοιάζει γιατί. Αλλά με ενοχλούν απίστευτα οι συζητήσεις με μερικούς windows-άδες γιατί απλά φέρνουν επιχειρήματα για την επιλογή του OS τους που δεν έχουν <strong>καμία</strong> σχέση μπροστά στους λόγους που οι περισσότεροι linux-άδες επιλέγουν linux (μέσα και εγώ). Είναι τόσο σημαντικό και βαρυσήμαντο για μένα η φιλοσοφία πίσω από το OS που χρησιμοποιώ, που το ότι πρέπει να αγοράσω νέο modem γιατί το εσωτερικό δεν παίζει, είναι από ασήμαντο έως γελοίο. Ακόμη και η ταχύτητα.</p>
+
+<p>Για παρόμοιους λόγους, νιώθω ότι οι συζητήσεις για το ποιό OSS θα πρέπει να χρησιμοποιεί κανείς, πρέπει να γίνονται στη βάση <em>φιλοσοφίας, ιστορίας και αξίας</em> παρά στο featureset.</p>
+
+<p>Ωμά και σύντομα για το θέμα μας: Δεν υπάρχει χώρος για άπειρα forks στο community και πρέπει να κάνει πολύ περισσότερα από 5, 10, 20 νέα πραγματάκια ένα νέο SW (πχ distro) για να με πείσει να κάνω switch και συνεπώς να στερήσει το support μου από το distro που χρησιμοποιώ και έχει αποδείξει προ πολλού την αξία του (και συνεχίζει να την αποδεικνύει).</p>
+
+<p>Πόσο μάλλον για συνηγορώ υπερ του ;-)</p>
+
+<div style="clear: right;">&nbsp;</div>
+<div class="posted"><img alt="clock" src="/old/weblog/images/clock.gif"/old/> May 20 2004, 12:46 GMT+2<br/>
+[ <a href="/old/weblog/archives/cat_ossfslinux.html">OSS/FS/linux</a> ]
+| <img alt="link" src="/old/weblog/images/link.gif"/old/> <a href="/old/weblog/archives/000055.html">Permanent Link</a><br /></div>
+
+</div>
+
+
+<div class="comments-head"><a name="comments"></a>Σχόλια (8)</div>
+<br/>
+
+<div class="comments-body">
+	<div class="comment-numbering"><h2>#1</h2></div>
+	<strong><a href="http://students.ceid.upatras.gr/~mavrikas">Γιώργος Μαυρίκας</a></strong><br/>
+	<div class="comments-post"><img alt="clock" src="/old/weblog/images/clock.gif"/old/> May 21 2004, 01:20 GMT+2<br/></div>
+	<p>Γιατί ρε λες έτσι για το ReiserFS?<br />
+Το έχεις άχτι τελικά....</p>
+</div>
+<div class="comments-body">
+	<div class="comment-numbering"><h2>#2</h2></div>
+	<strong><a href="http://livejournal.com/users/georgis">Γιώργος Ιορδάνου</a></strong><br/>
+	<div class="comments-post"><img alt="clock" src="/old/weblog/images/clock.gif"/old/> May 21 2004, 15:49 GMT+2<br/></div>
+	<p>Κακά τα ψέματα, το τί προσφέρει ένα distro σε σχέση με ένα άλλο παίζει πολύ σημαντικό ρόλο. Tί θέλω να πώ; Εγώ δεν είμαι ακόμα σε θέση να στήσω ένα σύστημα με gentoo, αλλά θα μου ήταν πολύ πιο εύκολο να στήσω ένα με Red Hat. Αυτό είναι μια ελάχιστη επέκταση αυτού του ζητήματος. Το γεγονός ότι η RH έχει GUI installation method παίζει σημαντικό ρόλο (όταν θα επιλέξω διανομή) όσο αξιόλογο, με αγνούς στόχους και αισθήματα μπλά μπλά κι είναι το gentoo.</p>
+
+<p>Συφωνώ απόλυτα με τα κριτήρια επιλογής σου, όμως ας μην παραμερίζουμε τόσο πολύ τις διαφορετικές επιλογές που έχεις με το κάθε ένα distro</p>
+
+<p>Επίσης τα λεφτά είναι δύναμη (money is power) και δεν νομίζω να διαφωνεί κάποιος. Εάν αυτή η δύναμη χρησιμοποιηθεί προς όφελος του ανοιχτού προγραμματισμού, τότε είναι πολύ πολύ ευπρόσδεκτη. Χωρίς τα OpenOffice θα χρειάζονταν ακόμα 10 χρόνια για να βρεθεί κάτι ανάλογο των προϊόντων της Microsoft. Η καλή θέληση των προγραμματιστών μπορεί να δημιουργήσει πολύ καλά και λειτουργικά προγράμματα, όμως δεν είναι απαραίτητα και "professional".  Είχαμε τη συζήτηση πριν λίγες μέρες Δημήτρη, με το GIMP και το Photoshop. Όσο καλό και να είναι χρειάζεται μια πιο επαγγελματική προσέγγιση στο GIMP για να γίνει πιο προσιτό και εύχρηστο. Αυτό θα γινόταν ευκολότερα αν υπήρχαν οι κατάλληλοι άνθρωποι στις κατάλληλες θέσεις.</p>
+
+<p>Τα λέμε</p>
+</div>
+<div class="comments-body">
+	<div class="comment-numbering"><h2>#3</h2></div>
+	<strong>Γιάννης Μπερεδήμας</strong><br/>
+	<div class="comments-post"><img alt="clock" src="/old/weblog/images/clock.gif"/old/> May 21 2004, 21:16 GMT+2<br/></div>
+	<p>Fair points. Αλλά καλό είναι να προσπαθείς να δεις και την άλλη μεριά. Πχ εγώ, που παρά την πόρωσή μου με τους υπολογιστές τους θεωρώ ΠΡΩΤΙΣΤΑ εργαλείο δουλειάς και όχι πεδίο φιλοσοφίας, θα προτιμήσω Windows για λόγους που πιθανότατα σε εκνευρίζουν. Εσύ μπορεί να μη σε ενοχλεί το να πάρεις ένα εξωτερικό modem, αλλά εμένα με ενοχλεί αφάνταστα (και θεωρώ ότι ακροβατεί στα όρια της ηλιθιότητας) η μη συμπερίληψη binary drivers στις διανομές για την υποστήριξή τους επειδή θα γίνει "tainted" (η φιλοσοφία και τίποτα παραπάνω AFAIC) του kernel. Και συχνά θα προτιμήσω το X fork ή το Υ πρόγραμμα ακριβώς γιατί μου προσφέρει features, που πιθανότατα χρειάζομαι. Ακόμα και όλα αυτά τα εξαίρετα προγράμματα που αναφέρεις, για μένα είναι (ακόμα) μισό, ένα ή περισσότερα βήματα πίσω από τον ανταγωνισμό (ο Firefox σκίζει, αλλά με ένα footpring γιγαντιαίο σε σχέση με το Opera που προσφέρει περισσότερα out-of-the-box, λατρεύω το Thunderbird αλλά θα διαλέγα το Outlook 2003 ANY DAY και το Open Office απέχει ακόμα από τα αντίστοιχα apps του ΜS Office, πόσο μάλλον από το Office ως πλατφόρμα -Sharepoint, Infopath κλπ κλπ κλπ). Ναι, οι λόγοι που θα επιλέξω Windows, MS Office, ... μπορεί να είναι εντελώς πεζοί για εσένα, αλλά δες τους με ένα ανοιχτό μάτι. </p>
+
+<p>Ακόμα και αν μιλήσουμε καθαρά για open source, τα κριτήριά σου δεν είναι τόσο απόλυτα. ΟΚ, η προσφορά στο community είναι σημαντική, αλλά αν για κάτι ΣΚΙΖΕΙ η GNU είναι ακριβώς αυτό: Ο,ΤΙ αλλαγή και να κάνεις, είσαι υποχρεωμένος να την περάσεις πίσω στο community. Απο κει και πέρα, εφόσον η αλλαγή (το νέο feature) είναι κάπου εκεί, γιατί να μην το υιοθετήσει και η διανομή που αγαπάς; I mean, γουστάρεις να τη λες στην MS που εδώ και 3 χρόνια έχει έναν υποδεέστερο web browser, αλλά η προτίμηση της Redhat/Suse σε ένα ΣΑΦΩΣ ΥΠΟΔΕΕΣΤΕΡΟ -δεν είναι να πεις ότι επιλέγει το XFS- file system είναι ΟΚ? [ο παραλληλισμός είναι εν γνώσει μου ακραίος: read on]. Ένα άλλο παράδειγμα: το Fedora δίνει σίγουρα περισσότερα στο community από το Mandrake. Αλλά πες μου ΓΙΑΤΙ να το βάλω (ενώ το έχω κατεβάσει και έχω το bootable DVD+RW δίπλα μου) τη στιγμή που τόσα άτομα φωνάζουν από το Test 1 ότι εξαφανίζει συχνά beyond repair το XP partition σε dual-boot configs, και ΑΚΟΜΑ δεν έχει διορθωθεί το πρόβλημα; [και μερικοί από τους προσφέροντες στο community βγαίνουν και το χαρακτηρίζουν ως ... feature!!] Για να φιλοσοφήσω και να χάσω μια βδομάδα να ξαναστήσω το Windows partition? </p>
+
+<p>I could go on, με παραδείγματα ή με φιλοσοφίες ή στάση ζωής. Αντιμετώπισε αυτό το rant ως παρότρυνση να μην αντιμετωπίζεις ό,τι δε σ' αρέσει (για τον οποιοδήποτε λόγο) ως "λάθος", "βλακεία", whatever, ούτε να εκνευρίζεσαι με αυτό. Υπάρχουν κι πολλά κριτήρια και ο καθένας τα σταθμίζει με διαφορετικό τρόπο. Και αν ο Βασαΐτης και ο Κυρίτσης πλακώνονται για Slackware κaι Redhat, υπάρχει ο Κεραμίδας που θεωρεί ανώτερο το FreeBSD και ο Μαυρίκας που αφενός θεωρεί ανώτερο το Gentoo ανάμεσα στα Linux, αφετέρου πιστεύει (λέμε τώρα) "ποιο FreeBSD και OpenBSD, το Linux με τον 2.6 kernel δεν παίζεται πουθενά".</p>
+
+<p>Για να κλείσω κάπου: Εγώ πιστεύω πως είναι όλα tools for the job. Αν κάνεις τη δουλειά σου και (even better) σε ευχαριστεί να τα χρησιμοποιείς, ποσώς με απασχολεί τι επιλογή θα κάνεις. Αρκεί να μην υποτιμάς τους λόγους που κάνω εγώ τη δική μου και να μην παρεξηγείς τους λόγους που ΔΕΝ κάνω τη δική σου. Και φυσικά τα παραπάνω ισχύουν μόνο για τους υπολογιστές (αλίμονο αν δεχτώ την απαράδεκτη για μένα γενίκευσή σου). <br />
+</p>
+</div>
+<div class="comments-body">
+	<div class="comment-numbering"><h2>#4</h2></div>
+	<strong>Nikos Kouremenos</strong><br/>
+	<div class="comments-post"><img alt="clock" src="/old/weblog/images/clock.gif"/old/> May 24 2004, 20:07 GMT+2<br/></div>
+	<p>Γεια σου δημήτρη, πολύ ωραία γράφεις.<br />
+Μια και είδα ένα σχόλιο για την παγκοσμιοποίηση:<br />
+Εγώ πάντα αναρωτιόμουν πως γίνεται κάποιος να είναι linux-άς και να είναι εναντίον της παγκοσμιοποίησης.. Από τον kernel και γενικά από την δύναμη του internet community που επιδρά πάνω σε όλα τα FLOSS projects. Μήπως άραγε δεν είναι εναντίον της παγκοσμιοποίησης γενικά, αλλά της παγκοσμιοποίησης των (οικονομικών) κεφαλαίων;;<br />
+ΟΚ εκεί δεν θα πολυδιαφωνήσουμε, αλλά υπάρχει και παγκοσμιοποίηση των πολιτών που έρχεται μαζί. Είναι αυτό που λέμε, τίποτα δεν είναι απλά καλό ή απλά κακό. Για μένα τουλάχιστον αυτά είναι αλληλένδετα. Δεν λέω πως αυτό πρέπει να μειώσει τις αντιστάσεις μας πχ στην μετακίνηση οικονομικών κεφαλαίων, αλλά γενικά δεν είμαι άτομο αρνητικό σε αυτό που γίνεται. <br />
+Τέλος χωρίς πολλά περαιτέρω σχόλια (και εννοείται IMHO):<br />
+ο κομμουνισμός είναι πεθαμένη ιστορία του περασμένου αιώνα. Είναι σα να προσπαθείς να φέρεις βασιλεία ή δημοκρατία τύπου αρχαίας Αθήνας σήμερα. Ο καπιταλισμός έχει ένα σωρό κακά (όπως όλα τα συστήματα) αλλά έχει ένα βασικό καλό. Προσαρμοστικότητα που έρχεται από την (συνήθως) ελευθεριά σκέψης, έκφρασης, οικονομικής επιχειρηματικότητας.. Απορώ λοιπόν πως μπορούμε εν έτει 2004 να μιλάμε για καθεστώτα που η επιχειρηματικότητα είναι έγκλημα, όταν μάλιστα το "επιχειρείν" είναι τάση του κάθε ανθρώπου.. [σου πουλάω ένα WesternDigital που δεν θέλω 10 Ευρώ και ένας μου λέει 12 οπότε τον δίνω σε αυτόν.. κλπ κλπ.." :)]</p>
+
+<p>θα μπορούσα να γράφω για ώρες αλλά έχω βγει εκτός θέματος. Θα κλείσω κάπως έτσι:<br />
+το FLOSS community και η γενική κινητικότητα γι' αυτό στο ίντερνετ και όχι μόνο, θα μπορούσε να υπάρξει ΜΟΝΟ σε καπιταλιστικό σύστημα.<br />
+Σε ένα κομμουνιστικό απλά θα είχαμε:<br />
+"επιβάλλεται το μοντέλο του OpenSource ή δεν επιβάλλεται" (όποιος έχει άλλη άποψη πάει "διακοπές" ως κατάσκοπος των δυτικών..)</p>
+
+<p>ενώ στον καπιταλισμό που έχουμε σήμερα, επειδή ο καθένας κάνει ότι του γουστάρει έχουμε FreeSoftware, OpenSource Software, Libre Software, FreeWARE και ότι γουστάρει διαλέγει και με όποιο απ'όλα αυτά (που τα πρώτα 3 είαν ιπάνω κάτω τα ίδαι) βολεύεται..</p>
+
+<p>Α αν ποτέ νιώσεις την ανάγκη να παίξεις με κάτι νέο και φρέσκο: <a href="http://www.archlinux.org">ArchLinux</a></p>
+
+<p>αυτά τα ολίγα για σήμερα..</p>
+</div>
+<div class="comments-body">
+	<div class="comment-numbering"><h2>#5</h2></div>
+	<strong><a href="http://livejournal.com/users/georgis">Γιώργος Ιορδάνου</a></strong><br/>
+	<div class="comments-post"><img alt="clock" src="/old/weblog/images/clock.gif"/old/> May 25 2004, 10:58 GMT+2<br/></div>
+	<p>Εμ... πρώτα απ' όλα όντως είσαι κάπως εκτός θέματος.. και υπάρχει μια υπερβολική απλούστευση. Τί  εννοώ; Μιλάς λες και υπάρχουν μόνο δυο πολιτικά/οικονομικά συστήματα αποκλείωντας (συγχωρέστε με αν το έγραψα λάθος) άλλες ιδέες, συστήματα και αξίες. Τον σοσιαλισμό για παράδειγμα που τον βάζεις; Μιλάς μόνο για το opensource στον καπιταλισμό και τον κουμμουνισμό</p>
+
+<p>Καλή σας μέρα</p>
+</div>
+<div class="comments-body">
+	<div class="comment-numbering"><h2>#6</h2></div>
+	<strong>Γιώργος Κεραμίδας</strong><br/>
+	<div class="comments-post"><img alt="clock" src="/old/weblog/images/clock.gif"/old/> May 28 2004, 06:22 GMT+2<br/></div>
+	<p>Ο Γ.Μπερεδήμας έγραψε:<br />
+<blockquote>Εσύ μπορεί να μη σε ενοχλεί το να πάρεις ένα εξωτερικό modem, αλλά εμένα με ενοχλεί αφάνταστα (και θεωρώ ότι ακροβατεί στα όρια της ηλιθιότητας) η μη συμπερίληψη binary drivers στις διανομές για την υποστήριξή τους επειδή θα γίνει "tainted"</blockquote></p>
+
+<p>Και πως θα κάνεις debug χρυσέ μου άνθρωπε ένα driver του οποίου δεν έχεις ούτε τον κώδικα, ούτε τις τεχνικές προδιαγραφές, ούτε τίποτα... απλά ένα binary kernel module;</p>
+
+<p>Όσον αφορά στην προτίμηση που δείχνει ο καθένας σε συγκεκριμένα προγράμματα και εκδόσεις λογισμικού, προς το παρόν να πω μόνο ότι πολλά από τα βασικά κριτήρια απόφασης είναι εντελώς υποκειμενικά.</p>
+
+<p>Θεωρητικά παίζουν ρόλο πολλοί και σημαντικοί παράγοντες στην επιλογή, όπως η ευκολία εγκατάστασης, ο τρόπος με τον οποίο διανέμονται ενημερωμένες εκδόσεις, η ασφάλεια του προγράμματος, η σταθερότητά του, η επεκτασιμότητα κλπ. κλπ. αλλά αυτά είναι, απ' ότι φαίνεται, όλα όνειρα θερινής νυκτός κοιμωμένων software engineers.  IRL δεν κοιτάζει κανείς την ποιότητα των προγραμμάτων που χρησιμοποιεί γιατί το μόνο που τον απασχολεί είναι "να κάνει τη δουλειά του".  Χωρίς να είναι όλοι ικανοί να διακρίνουν τις επιπτώσεις που μπορεί να έχει ένα πρόγραμμα χαμηλής ή ανύπαρκτης ποιότητας, καλούνται παρολ' αυτά όλοι να κρίνουν και να αποφασίσουν αν το πρόγραμμα Α ή το Β είναι "καλύτερο".</p>
+
+<p>Πριν αρχίσουμε να τσακωνόμαστε για το αν το ReiserFS ή το ext3 είναι "καλύτερο" ή για το αποτέλεσμα ενός mozilla vs. IE flamefest, μάλλον πρέπει να ορίσουμε σαφή, συγκεκριμένα κριτήρια "ποιότητας" και "καταλληλότητας (για κάποια συγκεκριμένη δουλειά)" του λογισμικού.  Ύστερα μπορούμε να δούμε αν έχει νόημα να τα ακολουθούμε και γιατί.  Τέλος μπορούμε να δούμε αν όντως τα ακολουθεί κανείς σήμερα (κι αν όχι, μάλλον πρέπει να διερευνήσουμε τις πιθανές αιτίες της ασυμφωνίας θεωρίας-πραγματικότητας).</p>
+</div>
+<div class="comments-body">
+	<div class="comment-numbering"><h2>#7</h2></div>
+	<strong>Γιάννης Μπερεδήμας</strong><br/>
+	<div class="comments-post"><img alt="clock" src="/old/weblog/images/clock.gif"/old/> May 29 2004, 20:18 GMT+2<br/></div>
+	<p>------<br />
+Και πως θα κάνεις debug χρυσέ μου άνθρωπε ένα driver του οποίου δεν έχεις ούτε τον κώδικα, ούτε τις τεχνικές προδιαγραφές, ούτε τίποτα... απλά ένα binary kernel module;<br />
+------<br />
+Καλή ερώτηση :) [έτσι σχολιάζω τις ερωτήσεις στις οποίες δεν μπορώ να απαντήσω ;)]. Πραγματικά δεν ξέρω, αλλά και δε βλέπω γιατί να με αφορά. Δεδομένου ότι δεν μπορείς να κάνεις debug τον driver, ας δεχτούμε ότι αυτό είναι A BAD THING (TM). Θα προτιμούσα χίλιες φορές η διανομή Ψ να μου λέει: </p>
+
+<p>"The installation detected a winmodem. It may add support for this modem through a binary kernel module, however this is a bad thing, your system may become seriously unstable (yadda yadda yadda) and you will BURN IN HELL if you do it. Do you wish to continue?"</p>
+
+<p>Κατά τα άλλα δε διαφωνώ με όσα λες. Ούτε κάποιο βραβείο αντικειμενικότητας διεκδικώ (εξάλλου όπως λέω θέλω πρωτιστα να κάνω τη δουλειά "ΜΟΥ"! ;)), ούτε θεωρώ πως ο μόνος τρόπος να κάνει κάποιος σωστά τη δουλειά του είναι ο δικός μου τρόπος. Αποδέχομαι τις επιλογές όλων, στο βαθμό που είναι πραγματικά ΕΠΙΛΟΓΕΣ (I.e. δοκίμασα εναλλακτικές λύσεις, σύγκρινα -με τα δικά του κριτήρια ο καθένας, πεζά ή υψηλά, σκέφτηκα και επέλεξα! καθότι πολλοί δυστυχώς δεν επιλέγουν ή νομίζουν ότι επιλέγουν, μέσα σε αυτούς ορισμένες φορές και εγώ). Και από κει και πέρα συζητώ μαζί τους και ανταλλάσσω απόψεις, με στόχο να αποκομίσω κάτι χρήσιμο :) </p>
+</div>
+<div class="comments-body">
+	<div class="comment-numbering"><h2>#8</h2></div>
+	<strong><a href="http://students.ceid.upatras.gr/~keramida/">Γιώργος Κεραμίδας</a></strong><br/>
+	<div class="comments-post"><img alt="clock" src="/old/weblog/images/clock.gif"/old/> May 31 2004, 22:21 GMT+2<br/></div>
+	<p>---<br />
+Καλή ερώτηση :) [έτσι σχολιάζω τις ερωτήσεις στις οποίες δεν μπορώ να απαντήσω ;)]. Πραγματικά δεν ξέρω, αλλά και δε βλέπω γιατί να με αφορά. Δεδομένου ότι δεν μπορείς να κάνεις debug τον driver, ας δεχτούμε ότι αυτό είναι A BAD THING (TM).<br />
+---</p>
+
+<p>Γίνομαι επίτηδες δηκτικός ώρες ώρες, γιατί ο αφορισμός που είδα παραπάνω "είναι ηλίθιο να μην βάζεις binary only drivers" με άφησε λίγο κάγκελο :-)</p>
+
+<p>Το ξέρω ότι είναι bad thing(TM) να σου κολλάει το σύστημα επειδή δεν έχεις open source drivers.  Επίσης το ξέρω ότι είναι κακό να μη θέλεις να αγοράσεις οτιδήποτε hardware αλλά μόνο ότι ξέρεις πως υποστηρίζεται από το open source λειτουργικό σου.  Απλά δε μ' αρέσει να με λένε ηλίθιο επειδή δεν ανέχομαι να δουλεύω σε closed source προγράμματα γιατί θεωρώ πως δε μου ταιριάζουν.  Είτε για φιλοσοφικούς, είτε για εκπαιδευτικούς, είτε για development, είτε για ό,τι άλλους λόγους με ενδιαφέρει να έχω τον κώδικα.<br />
+</p>
+</div>
+
+
+
+<div class="comments-head">Σχολιάστε!</div>
+<br/>
+
+<div class="comments-body">
+<form method="post" action="/old/weblog/mt-comments.cgi" name="comments_form">
+<input type="hidden" name="static" value="1" />
+<input type="hidden" name="entry_id" value="55" />
+
+<div>
+	<div class="comment-inputs">
+		<label for="author">Ονοματεπώνυμο: </label><br />
+		<input class="newborder" tabindex="1" id="author" name="author" />
+		<br /><br />
+		<label for="email">Email: *</label><br />
+		<input class="newborder" tabindex="2" id="email" name="email" />
+		<br /><br />
+		<label for="url">URL: </label><br />
+		<input class="newborder" tabindex="3" id="url" name="url" />
+		<br/>
+	</div>
+	<div class="comment-rules">
+		<p>
+			Νιώστε ελεύθερα να πείτε τη γνώμη σας!
+		</p>
+		<p>
+			Παρακαλώ διαβάστε το <a href="/old/weblog/about.html#comments">comment policy</a> πριν σχολιάσετε. Δεν επιτρέπεται η <acronym title="HyperText Markup Language">HTML</acronym>, τα <acronym title="Uniform Resource Indicator">URI</acronym> γίνονται αυτόματα links και τα line breaks μετατρέπονται σωστά σε new lines.
+		</p>
+		<p>
+			Επίσης αποφύγετε τα greeklish: Είναι άσχημα, δυσκολεύουν τον αναγνώστη και αχρηστεύουν τις αναζητήσεις.
+		</p>
+		<p>
+			* Η email διεύθυνση σας δεν θα δημοσιοποιηθεί ποτέ. Το πεδίο υπάρχει απλά για να σας στείλω κάποια απάντηση αν θελήσω. Να 'στε σίγουροι, απεχθάνομαι κι εγώ το spam.
+		</p>
+	</div>
+
+	<br style="clear: both;" />
+</div>
+
+<label for="text">Σχόλια:</label><br />
+<textarea class="newborder" tabindex="4" id="text" name="text" rows="10" cols="50"></textarea><br /><br />
+
+<input class="newborder" type="submit" name="preview" value="&nbsp;Preview&nbsp;" />
+<input class="newborder" style="font-weight: bold;" type="submit" name="post" value="&nbsp;Post&nbsp;" />
+
+<br /><br />
+
+</form>
+
+<div style="border: 1px #B99 dashed; padding:5px;">
+&nbsp;<img alt="excl" src="/old/weblog/images/excl.gif"/old/> Προς τους spammers:
+<br/>Οποιαδήποτε σχόλια θεωρηθούν ως spam (διαφημίσεις, κλπ) θα αφαιρούνται, τα domains που περιέχονται στα links θα γίνονται blacklisted και δεν θα μπορείτε να ξανασχολιάσετε σ' αυτό τ

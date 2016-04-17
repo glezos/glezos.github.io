@@ -1,0 +1,546 @@
+/*  
+Theme Name: Glezos
+Theme URI: /weblog/
+Description: Wordpress theme for website of Dimitris Glezos
+Version: 1.1
+Author: Dimitris Glezos
+Author URI: /
+
+	Licenced under the terms found at:
+		http://creativecommons.org/licenses/by-nc/1.0/
+*/
+
+
+/***********************************************************
+    Override original HTML tags */
+
+body { font-family: Verdana, Trebuchet, Lucida, Arial, sans-serif; }
+
+input {
+	border: #AAA 1px solid;
+	padding: 2px 5px 2px 5px;
+}
+
+textarea {
+	border: #AAA 1px solid;
+}
+
+input:hover,
+textarea:hover {
+	border: 1px solid #cb6900;
+}
+
+input:focus {
+	background: #f5faff;
+	border: 1px solid #cb6900;
+}
+
+textarea:focus {
+	background: #f5faff;
+	border: 1px solid #cb6900;
+}
+
+
+/***********************************************************
+    Custom ID-based tags */
+
+#page { /* border: 2px solid #79593d; */ }
+
+#sidebar {
+	padding-top: 30px;
+	width: 160px;
+	color: #333;
+	font-family: Verdana, Trebuchet, Lucida, Arial, sans-serif;
+	font-size: 1.1em;
+}
+
+#content {
+	width: 500px;
+	min-height: 1100px;
+}
+
+#pidiv { margin: -26px 0 0 0; }
+
+#miniposts {
+	color: #333;
+	border: #EEE solid 2px;
+	margin: 0;
+	padding: 15px 15px 10px 15px;
+	font-family: Verdana, Trebuchet, Lucida, Arial, sans-serif;
+	font-size: 0.9em;
+	line-height: 1.55em;
+}
+
+#miniposts h2 {
+	color: #5A69A5;
+	background-color: #fff;
+	margin: 0 0 0 0;
+	font-size: 1.5em;
+	margin-bottom: 1.4em;
+}
+
+#miniposts div.alright {
+	font-size: 1em;
+}
+
+#miniposts ul {
+	margin: 0;
+	padding: 0;
+}
+
+#miniposts ul li {
+	list-style: none;
+	list-style-image: none;
+}
+
+#miniposts ul li dt {
+	font-weight: normal;
+	color: #888;
+}
+#miniposts ul li dd {
+	margin: 0 0 0.4em 0;
+	padding: 0 0 0.4em 0;
+}
+	
+#miniposts ul li dd:before {
+	color: #cb6900;
+	margin-right: 2px;
+	content: '» ';
+}
+
+
+
+/* was:
+#miniposts ul {
+	margin: 0;
+	padding: 0;
+}
+
+#miniposts ul li {
+	margin: 0 0 0.4em 0;
+	padding: 0 0 0.4em 0;
+	list-style: none;
+	list-style-image: none;
+}
+
+#miniposts ul li:before {
+	color: #cb6900;
+	margin-right: 2px;
+	content: '» ';
+}*/
+
+
+#sidebar h1,
+#sidebar h2 {
+	color: #666600;
+	font-family: Georgia, "Bitstream Vera Serif", Utopia, "Times New Roman", times, serif;
+	font-weight: normal;
+}
+
+#sidebar h2 {
+	margin: 30px 0 15px 0;
+	font-size: 1.2em;
+	letter-spacing: .3em;
+}
+
+#sidebar h3 {
+	font-family: Verdana, Trebuchet, Lucida, Arial, sans-serif;
+	color: #666;
+}
+
+#sidebar ul { padding: 0; }
+#sidebar li { list-style: none; }
+
+#sidebar ul ul {
+	border-left: none;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+#sidebar ul ul li:before {
+	color: #b96000; /* orange */
+	margin-right: 0.4em;
+	content: '»';
+}
+
+#sidebar ul ul ul {
+	border-left: none;
+	margin-left: 10px;
+	padding-left: 5px;
+}
+
+#sidebar #sidesearchform #search {
+	font-size: 1.1em;
+}
+
+#sidebar #i-read {
+	color: #555;
+}
+
+#sidebar #i-read h3 {
+	font-weight: normal;
+	font-size: 1em;
+	margin-bottom: 0.4em;
+}
+
+#sidebar #i-read ul,
+#sidebar #i-read li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+#sidebar #i-read ul:before,
+#sidebar #i-read li:before {
+	content: '';
+}
+
+#commenting {
+		padding: 0 10px 0 10px;
+}
+#commenting label {
+	margin-left: 0px;
+}
+
+#commenting label[for="comment"] {
+	float: left;
+}
+
+#commenting input#author,
+#commenting input#email,
+#commenting input#url {
+	margin-top: 0.3em;
+	font-size: 1.1em;
+	font-family: Georgia, "Bitstream Vera Serif", Utopia, "Times New Roman", times, serif;
+}
+
+#commenting div#commentadvices {
+/*	float: right;
+	width: 270px;*/
+	color: #333;
+	font-family: Verdana, Trebuchet, Lucida, Arial, sans-serif;
+	font-size: 0.9em;
+	line-height: 1.55em;
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+#commenting div#commentinputs {
+	float: left;
+	border-right: 1px solid #ddd;
+	padding-right: 15px;
+	margin: 0 15px 20px 0;
+	min-height: 22em;
+}
+
+#commenting div.txtareasize {
+	margin-right: 5px;
+	text-align: right;
+	font-size: 0.9em;
+	float: right;
+	color: #666;
+}
+
+#commenting div.txtareasize img:hover {
+	cursor: pointer;
+}
+
+#ed_toolbar {
+	float: right;
+	margin-right: 10px;
+}
+#ed_toolbar input {
+	border: 1px solid #ccc;
+	border-bottom: none;
+	background: #f5f5f5;
+	-moz-border-radius: 6px 6px 0 0;
+	padding: 0 5px;
+	margin-right: -1px;
+	font-size: 0.9em;
+}
+
+#ed_toolbar input:hover {
+	background: #f5faff;
+	cursor: pointer;
+}
+
+#commenting textarea#comment {
+	margin: -1px 0 0.5em 0;
+	font-family: Georgia, "Bitstream Vera Serif", Utopia, "Times New Roman", times, serif;
+	width: 467px;
+	font-size: 1.1em;
+	padding: 0.5em;
+}
+
+#commenting textarea#comment:focus {
+	background: #f5faff;
+	border: 1px solid #cb6900;
+}
+
+#commenting #preview-wrapper {
+	margin-top: 30px;
+}
+
+#commenting #preview {
+	border-top: #86A6C2 1px solid;
+	padding: 0 10px 0 10px;
+	font-family: Georgia, "Bitstream Vera Serif", Utopia, "Times New Roman", times, serif;
+	font-size: 1.1em;
+}
+
+
+/***********************************************************
+	Custom classes */
+
+.post {
+	font-size: 1.1em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 10px 10px 15px 10px;
+	font-family: Georgia, "Bitstream Vera Serif", Utopia, "Times New Roman", times, serif;
+}
+
+ul.post > li {
+	list-style: none;
+	list-style-image: none;
+}
+
+ul.post ol > li {
+	list-style: decimal;
+	list-style-image: none;
+}
+
+ul.post > li:first-child { margin-bottom: 1.5em; }
+
+.post h2,
+.post h2 a {
+	color: #cb6900; /* orange */
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+.post h2 a { border-bottom: 1px solid #eee; }
+
+.post h2 a:hover {
+	border-bottom: 1px solid #aaa;
+}
+
+ul.post > li > ul > li {
+	list-style-image: url(/images/list_dot.png);
+}
+
+ul.post > li > ul > li > ul > li {
+	list-style-image: url(/images/list_dot_sec.png);
+}
+
+.postmetadata {
+	color: #999;
+	margin: 1em 0 0 0;
+	padding: 0;
+	line-height: 1.5em;
+	text-align: right;
+	font-family: Verdana, Trebuchet, Lucida, Arial, sans-serif;
+	font-size: 0.85em;
+	clear: both;
+}
+
+a.postmetadata,
+a.postmetadata:link,
+a.postmetadata:visited,
+a.postmetadata:active { color: #999; }
+
+hr.separator {
+	border: 0;
+	border-bottom: #aaa dotted 1px;
+	margin: 0;
+	padding: 0;
+}
+
+.archives ul {
+	font-family: Georgia, "Bitstream Vera Serif", Utopia, "Times New Roman", times, serif;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.archives li {
+	color: #333;
+	list-style: none;
+}
+
+.archives ul ul {
+	margin-left: 25px;
+	padding-left: 3px;
+}
+
+.archives ul ul li {
+	color: #666;
+	list-style-image: url(/images/list_dot_sec.png);
+}
+
+fieldset {
+	border: 1px #aaa solid;
+	padding: 15px;
+}
+
+ol.commentlist {
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, "Bitstream Vera Serif", Utopia, "Times New Roman", times, serif;
+	font-size: 1.1em;
+	line-height: 1.5em;
+}
+
+ol.commentlist > li {
+	padding: 10px;
+	border-top: #86A6C2 1px solid;
+	list-style: none;
+	list-style-image: none;
+}
+
+ol.commentlist > li > ul > li { padding: 0; } 
+
+ol.commentlist > li > ul > li.comment-favicon {
+	float: left;
+}
+
+ol.commentlist > li > ul > li.comment-cite cite {
+	font-size: 1.2em;
+	font-style: normal;
+	text-decoration: none;
+}
+
+ol.commentlist > li > ul > li.comment-cite cite.weblog-author {
+}
+
+ol.commentlist > li > ul > li.comment-metadata {
+	color: #999;
+	line-height: 1.5em;
+	font-family: Verdana, Trebuchet, Lucida, Arial, sans-serif;
+	font-size: 0.85em;
+	clear: both;
+}
+
+ol.commentlist > li > ul > li.comment-numbering a {
+	float: right;
+	color: #eee;
+	font-size: 2em;
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: none;
+}
+
+ol.commentlist li > ul > li.comment-numbering a:hover { color: #86A6C2; }
+
+/* alternating comment properties */
+.alt { /* background: #eff3f7; */ }
+.alt .comment-numbering { /* color: #e5e5e5; */ }
+
+.poetry {
+	color: #666;
+	margin-top: 80px;
+	line-height: 1.5em;
+	font-family: Georgia, "Bitstream Vera Serif", Utopia, "Times New Roman", times, serif;
+	font-size: 0.9em;
+	letter-spacing: .2em;
+}
+
+.comments-header {
+	color: #333;
+	margin: 30px 0 30px 0;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+del.moderated a {
+	text-decoration: line-through;
+	border-bottom: none;
+	font-weight: normal;
+	background-color: transparent;
+	color: #bb0000;
+}
+
+table.columns3 { width: 100%; }
+table.columns3 tr td { width: 33%; }
+
+ul.cols3 {
+	display: block;
+	text-align: center;
+}
+
+ul.cols3 li {
+	width: 33%;
+	display: block;
+}
+
+ul.cols3 li.left {
+	float: left;
+	text-align: left;
+}
+
+ul.cols3 li.right {
+	float: right;
+	text-align: right;
+}
+
+div.last-stuff {
+	color: #333;
+	border: #EEE solid 2px;
+	margin: 0;
+	padding: 5px 15px 10px 15px;
+	font-family: Verdana, Trebuchet, Lucida, Arial, sans-serif;
+	font-size: 0.9em;
+	line-height: 1.55em;
+}
+div.last-comments {
+	width: 50%;
+	float: left;
+}
+
+div.last-posts {
+	width: 50%;
+	float: right;
+	clear: both;
+}
+
+div.last-comments h2,
+div.last-posts h2 {
+	font-size: 1.3em;
+	font-weight: normal;
+}
+
+
+div.last-stuff ul {
+	margin: 0;
+	padding: 0;
+}
+
+div.last-stuff ul li {
+	list-style: none;
+	list-style-image: none;
+}
+
+div.last-stuff ul li dt {
+	font-weight: normal;
+	color: #888;
+}
+div.last-stuff ul li dd {
+	margin: 0 0 0.4em 0;
+	padding: 0 0 0.4em 0;
+}
+	
+div.last-stuff ul li dd:before {
+	color: #cb6900;
+	margin-right: 2px;
+	content: '» ';
+}
+
+
+.post div.codehl { font-size: 0.9em; }
+
+/***********************************************************
+    Hacks
+
+	The following break the CSS Validation, but do not
+	affect the user experience.
+*/
+
+#miniposts { -moz-border-radius: 15px; }
+div.last-stuff { -moz-border-radius: 15px; }

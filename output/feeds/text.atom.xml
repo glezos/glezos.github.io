@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dimitris Glezos' Personal website</title><link href="http://glezos.github.io/" rel="alternate"></link><link href="http://glezos.github.io/feeds/text.atom.xml" rel="self"></link><id>http://glezos.github.io/</id><updated>2013-09-25T22:52:00-07:00</updated><entry><title>Box</title><link href="http://glezos.github.io/2013-09-25-box.html" rel="alternate"></link><published>2013-09-25T22:52:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2013-09-25:2013-09-25-box.html</id><summary type="html">&lt;iframe width="550" height="415" src="//www.youtube.com/embed/lX6JcybgDFo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Any sufficiently advanced technology is indistinguishable from magic.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;— Arthur C. Clarke&lt;/p&gt;</summary></entry><entry><title>Noooo!</title><link href="http://glezos.github.io/2012-05-13-noooo.html" rel="alternate"></link><published>2012-05-13T12:57:13-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2012-05-13:2012-05-13-noooo.html</id><summary type="html">&lt;p&gt;For future reference: http://www.nooooooooooooooo.com/&lt;/p&gt;</summary></entry><entry><title>Let's set the world on fire</title><link href="http://glezos.github.io/2012-03-21-lets-set-the-world-on-fire.html" rel="alternate"></link><published>2012-03-21T18:25:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2012-03-21:2012-03-21-lets-set-the-world-on-fire.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Tonight
+&lt;br/&gt;we are young
+&lt;br/&gt;so let's set the world on fire
+&lt;br/&gt;we can burn brighter
+&lt;br/&gt;than the sun&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/Sv6dMFF_yts" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</summary></entry><entry><title>A Separation</title><link href="http://glezos.github.io/2012-03-04-a-separation.html" rel="alternate"></link><published>2012-03-04T02:15:06-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2012-03-04:2012-03-04-a-separation.html</id><summary type="html">&lt;p&gt;Fantastic. Now I understand why it got 99% on Rotten Tomatoes. Brilliant.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/MjTkXGRhy9w" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</summary></entry><entry><title>Respectful discourse</title><link href="http://glezos.github.io/2012-02-19-flaimebait.html" rel="alternate"></link><published>2012-02-19T14:10:30-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2012-02-19:2012-02-19-flaimebait.html</id><summary type="html">&lt;p&gt;&lt;a href="http://www.intertwingly.net/blog/flamebait"&gt;Copied&lt;/a&gt; from the blog of the amazing &lt;a href="http://www.intertwingly.net/"&gt;Sam Ruby&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The reason you have arived here is probably due to the fact that the owner of this web site has deemed some portion of a comment as flamebait.&lt;/p&gt;
+&lt;p&gt;While I am not sure of many things, here are a few things I do believe:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Overall, the comments feature of my weblog is something that I find the most enjoyable and rewarding aspects of my site.&lt;/li&gt;
+&lt;li&gt;I welcome thoughtful and respectful expressions of alternate points of view.&lt;/li&gt;
+&lt;li&gt;There are some topics that I am interested in that others seem to find as irresistable temptations to bash one another.&lt;/li&gt;
+&lt;li&gt;Nobody has an inalienable right to place information on my website.  If you have something to say, I encourage you to get your own weblog.  Feel free to use trackback to draw attention to your comments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Given the above, I would like to find a solution less drastic than disabling comments, blocking of ip address, or wholesale removal of comments. That being said, I do reserve the right to selectively employ one or more of the above in situations I feel warrant it.&lt;/p&gt;
+&lt;p&gt;At the moment, the best solution I have come up with is to mark up the portions I find objectionable with links to this page. No words are addded, deleted, or rearranged in the process.&lt;/p&gt;
+&lt;p&gt;Suggestions are welcome.&lt;/p&gt;</summary></entry><entry><title>xkcd and abstraction layers</title><link href="http://glezos.github.io/2012-02-17-xkcd-and-abstraction-layers.html" rel="alternate"></link><published>2012-02-17T00:25:09-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2012-02-17:2012-02-17-xkcd-and-abstraction-layers.html</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://media.tumblr.com/tumblr_lzj3bwum8y1qati3p.png" /&gt;&lt;/p&gt;
+&lt;p&gt;This xkcd reminded me of a 3-year old blog post of mine, &lt;a href="http://dimitris.glezos.com/weblog/2009/04/13/one-two-many"&gt;Abstraction layers: One, two, many&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>Innovation, Solutions, and Effectiveness</title><link href="http://glezos.github.io/2012-02-10-innovation-solutions-and-effectiveness.html" rel="alternate"></link><published>2012-02-10T01:42:00-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2012-02-10:2012-02-10-innovation-solutions-and-effectiveness.html</id><summary type="html">&lt;p&gt;Business Partners, the influential magazine of the American-Hellenic Chamber of Commerce, has &lt;a href="http://bponline.amcham.gr/?p=1397"&gt;published an article&lt;/a&gt; discussing Greece, Startups and Transifex. I was invited to write a column.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Business Partners presents the voices of six young entrepreneurs who are rising above the status quo to take control of their professional careers, with all the difficulties this involves, and experience life from a different vantage point. And they offer insights into shifts—of beliefs, of values, of perspectives—that, at this time of upheaval and despair, will move Greece forward.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here's my take on the topic.&lt;/p&gt;
+&lt;h3&gt;Innovation, Solutions, and Effectiveness&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Being an entrepreneur and a pattern recognition geek, I am very often tempted
+to compare Greece’s challenges with those of a startup.&lt;/p&gt;
+&lt;p&gt;Startups are businesses at their extremes. One day you’re the king of the
+world at the top of the mountain, invincible against your competition. The
+next day you’re in the valley, wondering how on earth you’ll survive the
+imminent and inevitable end of your world. And while entrepreneurs often have
+optimism engraved in their DNA to be able to survive (and thrive), a
+startup’s roller-coaster life, and a negative ecosystem, can drain it out
+from you.&lt;/p&gt;
+&lt;p&gt;I’m often asked what were the biggest challenges I faced in founding
+Transifex. Expected answers, such as bureaucracy and taxation, are always
+areas a country can improve on. But the biggest challenge for me was a
+different one: To keep looking at things positively. To keep believing that
+change is possible and you’re a part of it. If I had a magic wand, I’d switch
+the negativity being pushed by the media before a good night’s sleep, or by
+the grocery store owner before a good morning, with constructive criticism
+with realistic propositions and a thumbs-up with a smile.&lt;/p&gt;
+&lt;p&gt;Empowerment will prove to be an important element of Greece’s fight for
+survival. From entrepreneurs to employees, from citizens to ministers and the
+prime minister himself, everybody needs to feel empowered to fight for a
+better tomorrow. Citizens need to feel empowered to be part of the change and
+fight to bring new value the next day. This cultural change requires many
+years to improve, but that’s no reason not to start working on it today.&lt;/p&gt;
+&lt;p&gt;Greece is challenged today to innovate itself out of its doom, whirlpool. In
+any system which brought itself to such a bad state, innovation, or improving
+its own parameters, is a necessary element for escape. And while lots of
+people are busy with inventing solutions, some few are busy in innovating new
+solutions, that is, ones which will be effective in improving the current
+state in a significant way. These people are smarter than the ones which
+brought the system to the current state. Let’s identify them, remove all
+their obstacles and provide them with all the necessary tools to do great
+things.&lt;/p&gt;
+&lt;p&gt;Effectiveness is key. Both optimized systems, as well as ones which have been
+broken for decades, which represents the case of Greece, require hard work to
+fix. When resources such as budget and time are limited, being effective is
+key for success. The right solutions should be brought to the table today and
+ways to get them implemented soon should be found.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Full article at:
+http://bponline.amcham.gr/?p=1397.&lt;/p&gt;</summary></entry><entry><title>Major Flashback</title><link href="http://glezos.github.io/2011-12-27-major-flashback.html" rel="alternate"></link><published>2011-12-27T07:23:16-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2011-12-27:2011-12-27-major-flashback.html</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://media.tumblr.com/tumblr_lwvc27dT8I1qati3p.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Out Run.&lt;/p&gt;</summary></entry><entry><title>Here's to the crazy ones</title><link href="http://glezos.github.io/2011-10-05-to-the-crazy-ones.html" rel="alternate"></link><published>2011-10-05T19:04:48-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2011-10-05:2011-10-05-to-the-crazy-ones.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Here’s to the crazy ones.
+&lt;br/&gt;The misfits.
+&lt;br/&gt;The rebels.
+&lt;br/&gt;The troublemakers.
+&lt;br/&gt;The round pegs in the square holes.
+&lt;br/&gt;
+&lt;br/&gt;The ones who see things differently.
+&lt;br/&gt;They’re not fond of rules.
+&lt;br/&gt;And they have no respect for the status quo.
+&lt;br/&gt;You can quote them, disagree with them, glorify or vilify them.
+&lt;br/&gt;
+&lt;br/&gt;About the only thing you can’t do is ignore them.
+&lt;br/&gt;Because they change things.
+&lt;br/&gt;They invent.
+&lt;br/&gt;They imagine.
+&lt;br/&gt;They heal.
+&lt;br/&gt;They explore.
+&lt;br/&gt;They create.
+&lt;br/&gt;They inspire.
+&lt;br/&gt;They push the human race forward.
+&lt;br/&gt;Maybe they have to be crazy.
+&lt;br/&gt;
+&lt;br/&gt;How else can you stare at an empty canvas and see a work of art? Or sit in silence and hear a song that’s never been written? Or gaze at a red planet and see a laboratory on wheels?
+&lt;br/&gt;
+&lt;br/&gt;We make tools for these kinds of people.
+&lt;br/&gt;
+&lt;br/&gt;While some see them as the crazy ones, we see genius.
+&lt;br/&gt;Because the people who are crazy enough to think they can change the world, are the ones who do.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;mdash; RIP Steve Jobs&lt;/p&gt;</summary></entry><entry><title>Eargasm</title><link href="http://glezos.github.io/2011-09-18-eargasm.html" rel="alternate"></link><published>2011-09-18T08:18:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2011-09-18:2011-09-18-eargasm.html</id><summary type="html">&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/6PHOeXIPNZE" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Alicia Keys, "New York"&lt;/p&gt;</summary></entry><entry><title>Pushing the envelope with GMail</title><link href="http://glezos.github.io/2011-08-31-pushing-the-envelope-with-gmail.html" rel="alternate"></link><published>2011-08-31T09:11:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2011-08-31:2011-08-31-pushing-the-envelope-with-gmail.html</id><summary type="html">&lt;p&gt;Received the following messages from GMail today, a few seconds from each other:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;"Permanently delete 80944 conversations from Trash?"&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;"Oops… the system encountered a problem (#767) - Retrying now"&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;nbsp; &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Temporary Error (503): We’re sorry, but your Gmail account is temporarily unavailable.&lt;/p&gt;
+&lt;/blockquote&gt;</summary></entry><entry><title>A long time ago, in a living room far far away</title><link href="http://glezos.github.io/2011-08-25-dimitris-as-a-kid.html" rel="alternate"></link><published>2011-08-25T10:36:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2011-08-25:2011-08-25-dimitris-as-a-kid.html</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://media.tumblr.com/tumblr_lqg0wwXP4y1qati3p.jpg" /&gt;&lt;/p&gt;</summary></entry><entry><title>The Greek Crisis</title><link href="http://glezos.github.io/2011-07-20-greece-crisis.html" rel="alternate"></link><published>2011-07-20T10:24:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2011-07-20:2011-07-20-greece-crisis.html</id><summary type="html">&lt;p&gt;A lot of friends abroad ask me the same question: "What has led up to the current financially hard situation in Greece?". I found this excellent article from NY Times called "&lt;a href="http://www.nytimes.com/2011/07/20/opinion/20friedman.html?_r=1"&gt;Can Greeks Become Germans?&lt;/a&gt;", which summarizes the problem in a very detailed way. I'll quote some large sections here, for reference.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[...] Germany is the epitome of a country that made itself rich by making stuff.
+Greece, alas, after it joined the European Union in 1981, actually became
+just another Middle East petro-state — only instead of an oil well, it had
+Brussels, which steadily pumped out subsidies, aid and euros with low
+interest rates to Athens.&lt;/p&gt;
+&lt;p&gt;Natural resources create corruption, as groups compete for who controls the
+tap. That is exactly what happened in Greece when it got access to huge
+Euro-loans and subsidies. &lt;strong&gt;The natural entrepreneurship of Greeks was
+channeled in the wrong direction — in a competition for government funds and
+contracts.&lt;/strong&gt; To be sure, it wasn’t all squandered. Greece had a real
+modernization spurt in the 1990s. But after 2002, it put its feet up,
+thinking it had arrived, and too much “Euro-oil” from the European Union went
+back to financing a corrupt, patrimonial system whereby politicians dispensed
+government jobs and projects to localities in return for votes. This
+reinforced a huge welfare state, where young people dreamed of a cushy
+government job and everyone from cabdrivers to truckers to pharmacists to
+lawyers was allowed to erect barriers to entry that artificially inflated
+prices.&lt;/p&gt;
+&lt;p&gt;European Union membership “was a big opportunity for development, and we
+wasted it,” explained Dimitris Bourantas, a professor of management at Athens
+University. “We also did not take advantage of the markets of the [formerly]
+socialist countries around Greece. And we also did not take advantage of the
+growth of the global economy. We lost them all because &lt;strong&gt;the political system
+was focused on growing public administration — not on [fostering]
+entrepreneurship, competition or industrial strategy or competitive
+advantages&lt;/strong&gt;. We created a state with big inefficiencies, corruption and a very
+large bureaucracy. We were the last Soviet country in Europe.”&lt;/p&gt;
+&lt;p&gt;That is why, he added, that &lt;strong&gt;Greeks, when they move to the U.S., “unleash
+their skills and entrepreneurship&lt;/strong&gt;” in ways that enable them to thrive in
+commerce. But here in Greece, the system encourages just the opposite.
+Investors here tell you that the red tape involved in starting a new business
+is overwhelming. It’s crazy; Greece is the only country in the world where
+Greeks don’t behave like Greeks. Their welfare state, financed by Euro-oil,
+has bred it out of them.&lt;/p&gt;
+&lt;p&gt;With the decline of Beirut and Dubai, Athens should have become the service
+center of the Eastern Mediterranean. Instead, Cyprus and Istanbul seized that
+role. Greece must not waste this crisis. While it has instituted some reforms
+in the last year, Prime Minister George Papandreou said to me, “&lt;strong&gt;What is most
+frustrating is the resistance in the system. How do you produce a change in
+culture?&lt;/strong&gt;”&lt;/p&gt;
+&lt;p&gt;It will take a cultural revolution. And that can happen only if Greece’s two
+major parties come together, hold hands, and collectively force through a
+radical change in the governing culture from the top down. Without that,
+Greece will never be able to pay back its loans.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Update 6 Mar 2012:&lt;/strong&gt; Following my &lt;a href="http://miniblog.glezos.com/post/17906591407/flaimebait"&gt;respectful discource&lt;/a&gt; policy, I've annotated some flamebait parts of the comments on this thread. I don't like removing comments or moderating, so I chose to annotate and link to the relevant post where further information and discussion can take place.&lt;/p&gt;</summary></entry><entry><title>Text</title><link href="http://glezos.github.io/2011-07-11-brainstorming-design-mockups-at-summer-seaside.html" rel="alternate"></link><published>2011-07-11T11:06:10-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2011-07-11:2011-07-11-brainstorming-design-mockups-at-summer-seaside.html</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://media.tumblr.com/tumblr_lo6ky47mDk1qati3p.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Brainstorming design mockups at summer seaside café&lt;/p&gt;</summary></entry><entry><title>Dark sailing weather</title><link href="http://glezos.github.io/2011-05-30-dark-sailing-weather.html" rel="alternate"></link><published>2011-05-30T11:11:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2011-05-30:2011-05-30-dark-sailing-weather.html</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://media.tumblr.com/tumblr_lsbcidiZOC1qati3p.jpg" /&gt;&lt;/p&gt;</summary><category term="sailing"></category></entry><entry><title>Keynote at the MeeGo Conference</title><link href="http://glezos.github.io/2011-05-25-meego-keynote.html" rel="alternate"></link><published>2011-05-25T17:28:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2011-05-25:2011-05-25-meego-keynote.html</id><summary type="html">&lt;p&gt;I had the privilege to be invited to the opening keynote talk at the recent MeeGo Conference in San Francisco. Jim Zemlin, the Director of Linux Foundation, called me on stage to talk about MeeGo Localization and the acceleration of MeeGo's availability in dozens of markets around the world we achieved with Transifex.&lt;/p&gt;
+&lt;div class="photo"&gt;
+                &lt;div class="image"&gt;
+                    &lt;a href="http://www.flickr.com/photos/umpcportal/5752351226/in/photostream/lightbox/"&gt;&lt;img src="http://farm3.static.flickr.com/2641/5752351226_78220819a8.jpg" alt="Keynote at the MeeGo Conference."&gt;&lt;/a&gt;
+                    &lt;a href="http://www.flickr.com/photos/umpcportal/5752351226/in/photostream/lightbox/" class="hi-res"&gt;View high resolution&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+&lt;p&gt;Here's the full video clip of the talk we had (6 minutes):&lt;/p&gt;
+&lt;iframe width="425" height="349" src="http://www.youtube.com/embed/kHUr7J1YHf8" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</summary></entry><entry><title>SSD awesomeness</title><link href="http://glezos.github.io/2011-05-03-ssd.html" rel="alternate"></link><published>2011-05-03T05:23:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2011-05-03:2011-05-03-ssd.html</id><summary type="html">&lt;p&gt;Psyched with the Intel SSD disk's performance: 238 MB/s on reads, 138 MB/s on writes. #wow&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://media.tumblr.com/tumblr_lkmd4gwjiz1qati3p.jpg" /&gt;&lt;/p&gt;</summary></entry><entry><title>Test-wrapped development: Develop from within your tests</title><link href="http://glezos.github.io/2011-03-11-test-wrapped-development.html" rel="alternate"></link><published>2011-03-11T06:14:00-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2011-03-11:2011-03-11-test-wrapped-development.html</id><summary type="html">&lt;p&gt;Here's something neat. Today I decided not to develop using the Django
+development server, but instead do that from inside my tests. This way I will
+work directly on my test database which runs with my test fixtures and when
+I'm ready, I'll just write the necessary assertions.&lt;/p&gt;
+&lt;p&gt;Previously I talked about rendering the test client's &lt;a href="http://miniblog.glezos.com/post/3388080372/tests-browser"&gt;responses in the
+browser&lt;/a&gt; to view the
+results of your tests live, before choosing the correct assertions. This time
+I'm wrapping the code in a while loop to iterate over my development workflow.&lt;/p&gt;
+&lt;p&gt;This is something different than test-driven development. This way you don't
+run your tests for every development iteration, but rather you just "stuck"
+your test case until you like what you see in your code. Here's an example
+from a unit test:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;transifex.txcommon.tests.utils&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;response_in_browser&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;test_homepage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;resp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;anonymous&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;response_in_browser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;resp&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;halt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# Loop control:&lt;/span&gt;
+        &lt;span class="n"&gt;ch&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;raw_input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Halted. [r]eload, drop to [s]hell or any other key to continue: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;ch&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;continue&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;ch&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;IPython.Shell&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;IPShellEmbed&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;IPShellEmbed&lt;/span&gt;&lt;span class="p"&gt;()()&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now when I run the test, my browser opens up showing how my homepage looks
+like. I start tweaking the template, hit &lt;code&gt;r&lt;/code&gt; and view the page in the
+browser again. When I'm satisfied with what I see, I copy-paste from the
+browser some of the test I want to assert against and hit 's' to drop in a
+shell.&lt;/p&gt;
+&lt;p&gt;I write my assertions there, in-place, with the test data initialized and
+ready to be asserted against. When I'm happy with those assertions, I just
+copy-paste them in the test case and remove the while statement and loop control code.&lt;/p&gt;
+&lt;p&gt;This type of testing &amp;amp; development works well for template testing. I'm not sure how this should be called. It's test-wrapped development or something.&lt;/p&gt;
+&lt;p&gt;Also note that the following config variables will be needed:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TEMPLATE_DEBUG = True
+CACHE_BACKEND = &amp;#39;dummy://&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Rendering Django tests in your web browser</title><link href="http://glezos.github.io/2011-02-19-tests-browser.html" rel="alternate"></link><published>2011-02-19T13:05:00-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2011-02-19:2011-02-19-tests-browser.html</id><summary type="html">&lt;p&gt;There are a number of levels you can test your Django project. You can test any Python method, your models, your views and even your templates. In the latter case, you're actually testing the rendered response of a view with a specific context. Most of the times, this result is HTML.&lt;/p&gt;
+&lt;p&gt;When I write my assertion, I often need to query for a particular string in the response's content. I end up &lt;a href="http://miniblog.glezos.com/post/401011795/django-ipython"&gt;opening ipython&lt;/a&gt;, print the result and try to find something in that mess.&lt;/p&gt;
+&lt;p&gt;This takes a lot of time, because the command-line window isn't the best HTML renderer in the world. Here's a simple method to take the response content and render it in a browser:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;response_in_browser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;resp&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;halt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Open a browser and render the response&amp;#39;s content.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tempfile&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;webbrowser&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;tempfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NamedTemporaryFile&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;resp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flush&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;webbrowser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;halt&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="nb"&gt;raw_input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Press a key to continue with your tests...&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="c1"&gt;# Give the browser a chance to open the file&lt;/span&gt;
+            &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And just call it from inside any test of yours:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;reverse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;myUrlName&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;foo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;txcommon.tests.utils&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;response_in_browser&lt;/span&gt;
+&lt;span class="n"&gt;response_in_browser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Your browser will open for you:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://media.tumblr.com/tumblr_lgvubuaB0s1qati3p.png" /&gt;&lt;/p&gt;
+&lt;p&gt;One of the first issues you might face is seeing a style-less page. This
+happens becuase the test server isn't really a web server, and you're probably
+serving static files from something relative such as &lt;code&gt;'/site_media'&lt;/code&gt;. The
+solution is simple: Run a separate Django server and tweak your
+development-only static URL to something like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;STATIC_URL = &amp;#39;http://localhost:8000/site_media/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will trick the temporary window to show the test's HTML with the static files served from the server. Voilà:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://media.tumblr.com/tumblr_lgvuc5Rq8Z1qati3p.png" /&gt;&lt;/p&gt;
+&lt;p&gt;You can then use your browser's browser's super tools such as 'View Source' and 'Inspect Element'.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://media.tumblr.com/tumblr_lgvuk3DBKi1qati3p.png" /&gt;&lt;/p&gt;</summary></entry><entry><title>Insufficiency</title><link href="http://glezos.github.io/2011-01-17-insufficiency.html" rel="alternate"></link><published>2011-01-17T14:19:15-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2011-01-17:2011-01-17-insufficiency.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;"The whys are many and the becauses few."&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;mdash; &lt;a href="https://twitter.com/#!/ltsampros"&gt;ltsampros&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Why" src="http://farm1.static.flickr.com/94/270775337_3c3b159a75_o.gif" /&gt; (photo by &lt;a href="http://www.flickr.com/photos/mushon/"&gt;mushon&lt;/a&gt;)&lt;/p&gt;</summary></entry><entry><title>Best Strapatsada ever</title><link href="http://glezos.github.io/2010-12-20-strapatsada.html" rel="alternate"></link><published>2010-12-20T11:55:45-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-12-20:2010-12-20-strapatsada.html</id><summary type="html">&lt;p&gt;Today I created my best strapatsada ever. It tasted fantastic. So I'll try to document it for more people to use.&lt;/p&gt;
+&lt;p&gt;Strapatsada, or kagiana, is a simple dish for breakfast or dinner. Basically, it's a dish of scrambled eggs with added tomatoes and feta cheese. This way it becomes more like a 'dish' by itself -- the only thing that needs now is some bread, chapata etc. Its name comes from the italian word 'strapazzare' which means scramble, mistreat or chop.&lt;/p&gt;
+&lt;p&gt;Warning. This is &lt;a href="http://images.google.com/images?q=strapatsada"&gt;not a good-looking food&lt;/a&gt;. But its taste is fantastic.&lt;/p&gt;
+&lt;h4&gt;Ingredients&lt;/h4&gt;
+&lt;p&gt;Serves 3 people:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;12 eggs&lt;/li&gt;
+&lt;li&gt;300g feta cheese, medium hardness&lt;/li&gt;
+&lt;li&gt;6-8 mid-sized tomatoes. Juices are needed in this dish, so ripe tomatoes are preferred.&lt;/li&gt;
+&lt;li&gt;2 tbsp tomato purée&lt;/li&gt;
+&lt;li&gt;1 tsp Indian &lt;a href="http://en.wikipedia.org/wiki/Garam_masala"&gt;Garam Masala&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;3 fresh chilies, very finely chopped.&lt;/li&gt;
+&lt;li&gt;4 tbsp milk&lt;/li&gt;
+&lt;li&gt;1/4 cup olive oil&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In short, my variation is to use garam masala spice mixture for flavor, chilies for hotness and some milk for fluffiness.&lt;/p&gt;
+&lt;h4&gt;How?&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Peel tomatoes and grate.&lt;/li&gt;
+&lt;li&gt;Cut feta cheese in square cubes (e.g. 1cm big)&lt;/li&gt;
+&lt;li&gt;Sauté tomatoes and chillies in olive oil. Add respective salt and pepper. Cook for a couple of minutes, until almost all the juices evaporate and you have a nice sauce.&lt;/li&gt;
+&lt;li&gt;In parallel, beat eggs until a solid mixture and before they start to produce any foam. Stir in milk.&lt;/li&gt;
+&lt;li&gt;Put eggs in pan. Stir like common scrambled eggs: Use a flat spatula to constantly push mixture towards the center of the pan.&lt;/li&gt;
+&lt;li&gt;When the mixture &lt;em&gt;starts&lt;/em&gt; loosing its liquids, add feta cheese.&lt;/li&gt;
+&lt;li&gt;Before the mixture looses all its liquids remove from fire.&lt;/li&gt;
+&lt;li&gt;Serve immediately. Goes well with some crispy bread, like grilled thin pita bread.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="http://media.tumblr.com/tumblr_ldqsmzRFLP1qati3p.jpg" alt="kagianas" /&gt;&lt;/p&gt;
+&lt;h4&gt;Tips&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Due to the simplicity and little cooking time of this food, your core ingredients (eggs, feta cheese) should be of good quality.&lt;/li&gt;
+&lt;li&gt;Tomatoes can be easily peeled when put into hot water for 1 minute.&lt;/li&gt;
+&lt;li&gt;Do not use food processor/multi for grating tomatoes. It breaks the seeds and adds bitterness.&lt;/li&gt;
+&lt;li&gt;Tomato purée adds 'depth' to the color (orange-red instead of light-organge) and flavor of tomatoes, and thickens the sauce. Its a must-add IMHO, otherwise your dish might end up having some liquids in the plate.&lt;/li&gt;
+&lt;li&gt;Like good scrambled eggs, your strapatsada should be fluffy. You want to get a solid mixture but which the egg has not completely lost all its liquids, otherwise the dish will be somewhat 'dry'. Milk or creme helps here.&lt;/li&gt;
+&lt;li&gt;Keep in mind that after removing from the heat, the food continues to cook slightly for the next 30 seconds due to resident heat.&lt;/li&gt;
+&lt;li&gt;I don't use oregano because it adds small dry pieces in the bite. Like good scrambled eggs, the greatness of this dish is its simplicity, and for this reason I'd avoid the temptation to add any omelette ingredient like ball peppers, onions, sausages etc.&lt;/li&gt;
+&lt;li&gt;Fresh chillies add freshness to the dish and a slight "unbalance" in chewing (some bites are a bit more spicy). This is nice due to the simplicity of the dish. Alternatively, one can use chili powder.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Garam_masala"&gt;Garam masala&lt;/a&gt; spice blend can be replaced with a good mix of similar spices. Refer to the wikipedia page for more info.&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Changing your Mac address on Linux</title><link href="http://glezos.github.io/2010-12-12-mac-address.html" rel="alternate"></link><published>2010-12-12T01:48:00-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-12-12:2010-12-12-mac-address.html</id><summary type="html">&lt;p&gt;Useful for privacy and time-capped WiFi connection at airports.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ifconfig -a wlan0 &lt;span class="p"&gt;|&lt;/span&gt; grep HWaddr
+wlan0  Link encap:Ethernet HWaddr 00:16:2B:8D:A2:6C
+$ sudo ifconfig wlan0 down
+$ sudo ifconfig wlan0 hw ether 00:16:2B:8D:A2:7C
+$ sudo ifconfig wlan0 up
+$ ifconfig -a wlan0 &lt;span class="p"&gt;|&lt;/span&gt; grep HWaddr
+wlan0  Link encap:Ethernet HWaddr 00:16:2B:8D:A2:7C
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I think newer versions of NetworkManager get this right. Haven't tried MacChanger.&lt;/p&gt;</summary><category term="mac"></category><category term="address"></category><category term="ifconfig"></category><category term="airports"></category><category term="change"></category></entry><entry><title>She</title><link href="http://glezos.github.io/2010-11-03-she.html" rel="alternate"></link><published>2010-11-03T06:45:46-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-11-03:2010-11-03-she.html</id><summary type="html">&lt;p&gt;A poem about that girl I met yesterday.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;...she  had  an unusual calmness around
+&lt;br/&gt; her. One,  that  everyone  strives  for.  The
+&lt;br/&gt; calmness  of  a floating kite. That character
+&lt;br/&gt; of a river.   Calmness  which,  monks  attain
+&lt;br/&gt; through divine realisation, and turtles gain,
+&lt;br/&gt; perhaps, through years  of  watching  genera-
+&lt;br/&gt; tions  pass  by.  I  found it soothing like a
+&lt;br/&gt; river; So tender, yet extremely  captivating.
+&lt;br/&gt; Her low voice, quiet smile, all had an excep-
+&lt;br/&gt; tional gracefulness to it. I never  told  her
+&lt;br/&gt; all  this;  Actually, I couldn’t. And today I
+&lt;br/&gt; think, some things are just meant not  to  be
+&lt;br/&gt; conveyed;  They are meant to become memories,
+&lt;br/&gt; and we are suppose to cherish  them  for  the
+&lt;br/&gt; eternity.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://pjp.dgplug.org/readme/she.html"&gt;pjp&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>Greek Prime minister talks about Indifex</title><link href="http://glezos.github.io/2010-09-12-prime-minister.html" rel="alternate"></link><published>2010-09-12T03:15:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-09-12:2010-09-12-prime-minister.html</id><summary type="html">&lt;p&gt;Yesterday both me and &lt;a href="http://www.indifex.com/"&gt;Indifex&lt;/a&gt; were unexpectedly honored to be mentioned by the &lt;strong&gt;Greek Prime Minister&lt;/strong&gt; as one of the best examples of innovative companies in Greece.&lt;/p&gt;
+&lt;p&gt;The Prime Minister was giving a talk at the biggest exhibition/fair in Greece (and probably the Balkans) which was broadcasted live by TV media and was being watched by a few million people (wow). In his talk about development and innovation, he mentions:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For us, sustainability means investing in people, knowledge
+acquisition, technology assimilation, investing in our own products,
+knowledge, history, skills, and aesthetic quality.&lt;/p&gt;
+&lt;p&gt;And we can do it, yes, it can be done.&lt;/p&gt;
+&lt;p&gt;People around us prove it every day. They are the revolution of the evident.&lt;/p&gt;
+&lt;p&gt;People like Dimitris Glezos, based in Patras, who started Indifex and created an on-line platform used by thousands of translators from around the world to translate computer programs in multiple languages.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(OMG!!!1!)&lt;/p&gt;
+&lt;p&gt;This totally caught me by surprise, and it's still kind of hard to believe. It's such an honor and a proof that we should be bold and take the step, dare to try new things and insist in pursuing our dream.&lt;/p&gt;
+&lt;p&gt;At this point I feel more motivated and psyched than ever. But most importantly, I feel grateful for everyone who is following our progress and respects our work. Your support means so much, and it's translated to our work as pure motivation.&lt;/p&gt;
+&lt;p&gt;ΤΟ ΒΗΜΑ hosts a &lt;a href="http://www.tovima.gr/default.asp?pid=2&amp;ct=32&amp;artId=353809&amp;dt=11/09/2010"&gt;transcript of the talk&lt;/a&gt; (in Greek) and following is the video of the talk (the mention happens at ~16m).&lt;/p&gt;
+&lt;h4&gt;&lt;strong&gt;Update 14/9:&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The following day, TA NEA, one of the most influential newspapers in Greece, published a &lt;a href="http://www.tanea.gr/default.asp?pid=2&amp;ct=1&amp;artid=4593845"&gt;whole-page article&lt;/a&gt; (&lt;a href="http://translate.google.com/translate?u=http://www.tanea.gr/default.asp%3Fpid%3D2%26ct%3D1%26artid%3D4593845" title="Machine-translation of the page in English by Google Translate"&gt;eng&lt;/a&gt;) on Indifex and innovation. A number of news websites run &lt;a href="http://www.attacktv.gr/Pages/viewArticle.aspx?ID=9119"&gt;articles&lt;/a&gt; (&lt;a href="http://translate.google.com/translate?u=http://www.attacktv.gr/Pages/viewArticle.aspx?ID=9119" title="Machine-translation of the page in English by Google Translate"&gt;eng&lt;/a&gt;) on the topic, and I also had the opportunity to give a couple of &lt;a href="http://www.skai.gr/player/Radio/?MMID=204856"&gt;interviews on the Greek Radio&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;object width="480" height="385"&gt;&lt;param name="movie" value="http://www.youtube.com/v/yM4sAjDXYtk?fs=1&amp;amp;hl=en_US#t=5m40s"&gt;&lt;/param&gt;&lt;param name="allowFullScreen" value="true"&gt;&lt;/param&gt;&lt;param name="allowscriptaccess" value="always"&gt;&lt;/param&gt;&lt;embed src="http://www.youtube.com/v/yM4sAjDXYtk?fs=1&amp;amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/p&gt;</summary><category term="prime-minister"></category><category term="indifex"></category><category term="transifex"></category><category term="wow"></category></entry><entry><title>Turning 29</title><link href="http://glezos.github.io/2010-08-04-turning-29.html" rel="alternate"></link><published>2010-08-04T09:32:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-08-04:2010-08-04-turning-29.html</id><summary type="html">&lt;p&gt;I remember it like it was yesterday.&lt;/p&gt;
+&lt;p&gt;I was 9. It was a hot summer day in Cyprus at my grandmother's back yard. My bicycle hit top speed, but chose a rather unfortunate and irreparable route towards the hen-house, resulting to my landing on a pile of mud and chicken poop. I sat down and watched the chicken stare at me, probably thinking something along the lines of "What a wacko."&lt;/p&gt;
+&lt;p&gt;I run to the house to brag about the mess I did with a huge smile on my face, only to find 15 relatives of mine --grandparents, aunts, cousins, in a my-big-fat-greek-wedding style-- preparing the birthday cake. We couldn't stop laughing with the smell and the picture of my clothes and face.&lt;/p&gt;
+&lt;p&gt;A few minutes later I blew the candles. My wish was to remember this very happy moment ten years later and continue getting myself into similarly hilarious places and situations.&lt;/p&gt;
+&lt;p&gt;The day I was turning 19 was a hot summer day, albeit without my face covered in poop. Instead, I found myself in the shower with a whole bunch of finely-chopped green parsley all over me. A buddy of mine finally managed to get back at me for a similarly crazy prank I did to him. We laughed 'till tears came out. At that point I remembered the hen-house incident, along with the promise I made to myself back then.&lt;/p&gt;
+&lt;p&gt;A decade later, these incidents are still coming back to me now.&lt;/p&gt;
+&lt;p&gt;The past years were a blessing to me. I feel so fortunate for everything that has happened to me, and I feel grateful to all my friends, my family and the people I worked with. Thank you all for everything.&lt;/p&gt;
+&lt;p&gt;Happy birthday wacko. Here's to another 10 years full of joy and happiness.&lt;/p&gt;
+&lt;p&gt;Here's to all the crazy people out there.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="a" src="http://farm3.static.flickr.com/2032/2428524045_5578b34898.jpg" /&gt;
+(pic by &lt;a href="http://www.flickr.com/photos/thorinside/"&gt;Neal Sanche&lt;/a&gt; -- CC by-nc)&lt;/p&gt;</summary><category term="birthday"></category><category term="happy"></category><category term="memories"></category></entry><entry><title>Faster and Resume-able Secure copy (scp)</title><link href="http://glezos.github.io/2010-07-19-scpresume.html" rel="alternate"></link><published>2010-07-19T11:25:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-07-19:2010-07-19-scpresume.html</id><summary type="html">&lt;p&gt;Ever wondered how you could combine the power of rsync and simplicity of scp? Here's how:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;scpresume&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;rsync --compress --partial --progress --recursive --rsh=ssh&amp;#39;&lt;/span&gt;
+$ scpresume -r * ssh://example.com/foodir
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Simple as that!&lt;/p&gt;</summary><category term="scp"></category><category term="bash"></category><category term="linux"></category></entry><entry><title>Pulseaudio loves USB headsets</title><link href="http://glezos.github.io/2010-07-16-logitech-usb-pulseaudio.html" rel="alternate"></link><published>2010-07-16T03:03:15-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-07-16:2010-07-16-logitech-usb-pulseaudio.html</id><summary type="html">&lt;p&gt;Following my habit of posting solutions to Linux problems I face (Google rocks for troubleshooting), here's how I fixed a small issue with Pulseaudio and a USB headset I had today.&lt;/p&gt;
+&lt;p&gt;Since our &lt;a href="http://www.indifex.com/"&gt;team&lt;/a&gt; is scattered across the planet, we're having regular VoIP/Skype calls, so we bought a couple of good headsets to use. We're trying out &lt;a href="http://www.logitech.com/en-us/webcam-communications/internet-headsets-phones/devices/3622"&gt;Logitech Headset Clearchat Pro Usb&lt;/a&gt; which has a 2-year guarantee &lt;a href="http://www.plaisio.gr/Peripherals/PC-Peripherals/Speakers-Headsets-Microphones/Headsets/Logitech-Headset-Clearchat-Pro-Usb-981-000011.htm"&gt;from the local computer store PLAISIO&lt;/a&gt; (this shop has the best support ever).&lt;/p&gt;
+&lt;p&gt;Once connected to Fedora 13 on the USB port, the headset was detected automatically by Pulseaudio. The name matched, the microphone worked, and the digital volume control buttons on the headphones worked perfectly with Pulseaudio. Sweet!&lt;/p&gt;
+&lt;p&gt;The problem was that no sound came out of the speakers. Since the microphone worked, I imagined it was a problem in the Output channel somehow. Based on &lt;a href="https://bugs.launchpad.net/ubuntu/+source/pulseaudio/+bug/566449"&gt;this bug report&lt;/a&gt; I fired &lt;code&gt;alsamixer&lt;/code&gt;, selected the USB Headset device, and found the volume level to be 0. Once the volume there was increased, oh bliss, sound came out of the headsets.&lt;/p&gt;
+&lt;p&gt;All in all, this took 10 minutes.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Logitech headset" src="http://www.plaisio.gr/ProductImages/250x250/1240404.JPG" /&gt;&lt;/p&gt;</summary><category term="pulseaudio"></category><category term="logitech"></category><category term="headset"></category><category term="usb"></category></entry><entry><title>Setting up Network Photo Scanning</title><link href="http://glezos.github.io/2010-06-16-network-scanner.html" rel="alternate"></link><published>2010-06-16T12:30:31-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-06-16:2010-06-16-network-scanner.html</id><summary type="html">&lt;p&gt;I spent around 30 minutes setting up our office printer/scanner/fax machine on Linux. While there's been a lot of work in the CUPS world for setting up things automatically, scanning didn't particularly work out-of-the-box.&lt;/p&gt;
+&lt;p&gt;Here's what I remember needing to do to get scanning work on this networked all-in-one machine setup to scan.&lt;/p&gt;
+&lt;p&gt;Setup necessary packages:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo yum -y install xsane sane-backends sane-frontends
+# Actual drivers:
+sudo yum -y install libsane-hpaio
+# Front-ends:
+sudo yum -y install hplip-gui simple-scan xsane-gimp
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Setup machine to have a static IP for future easy reference (192.168.1.50 in my case). This can be done using the machine menus. Once you know this IP, you can play around with the settings from your computer by pointing your browser to that IP address.&lt;/p&gt;
+&lt;p&gt;At this point, theoretically one can fire up &lt;code&gt;hp-toolbox&lt;/code&gt; and add the printer &amp;amp; scanner from there, by adding a network printer and filling in the IP. But this tool died on me with a message "Restart CUPS". So, here's the workaround I did:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Create HP URIs:
+hp-makeuri -g 192.168.1.50
+
+# Test temporarily:
+xsane hpaio:/net/Officejet_6500_E709a?ip=192.168.1.50
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;To setup the device permanently and the SANE backend to always discover it, the following did the trick (notice the prefix &lt;code&gt;hp:/&lt;/code&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo vi /etc/cups/printers.conf
+[Change DeviceURI to `hp:/net/Officejet_6500_E709a?ip=192.168.1.50`]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;To scan, fire up &lt;code&gt;simple-scan&lt;/code&gt;, or &lt;code&gt;xsane&lt;/code&gt;, or from GIMP, choose File→Create→XSane.&lt;/p&gt;
+&lt;p&gt;Finally, it's worth noting that flegita, the GNOME scanning tool, simply crashes.&lt;/p&gt;</summary></entry><entry><title>Creepy introduction #2</title><link href="http://glezos.github.io/2010-06-06-fuel-cells.html" rel="alternate"></link><published>2010-06-06T03:55:54-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-06-06:2010-06-06-fuel-cells.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;"Hi Dimitris. I was wondering whether you work on proton exchange membrane fuel cells, as I'd like to ask a few questions."&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This introduction/message came on my Facebook account. At first I thought it was a joke, but &lt;a href="http://en.wikipedia.org/wiki/Proton_exchange_membrane_fuel_cell"&gt;such things do exist&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Fuel cell" src="http://www.tessol-inc.com/TekStak/Images/How-Fuel-Cells-work.jpg" /&gt;&lt;/p&gt;</summary></entry><entry><title>Rock climbing inspirations</title><link href="http://glezos.github.io/2010-06-04-inspiring-rock.html" rel="alternate"></link><published>2010-06-04T14:00:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-06-04:2010-06-04-inspiring-rock.html</id><summary type="html">&lt;p&gt;What inspires people to go for rock climbing? Stuff like this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Wow" src="http://www.8a.nu/images/gallery/2688_634106581608808750.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;(via &lt;a href="http://8a.nu/"&gt;8a.nu&lt;/a&gt;)&lt;/p&gt;</summary></entry><entry><title>Treating deep cuts</title><link href="http://glezos.github.io/2010-06-04-treating-deep-cuts.html" rel="alternate"></link><published>2010-06-04T05:46:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-06-04:2010-06-04-treating-deep-cuts.html</id><summary type="html">&lt;p&gt;Tip of the day: For deep cuts, add a stronger disinfectant (hydrogen peroxide-like) on top of Betadine; better against anaerobic microbes (via @vickykorvesi).&lt;/p&gt;</summary></entry><entry><title>Favorite fonts for programming</title><link href="http://glezos.github.io/2010-05-23-fonts-programming.html" rel="alternate"></link><published>2010-05-23T10:48:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-05-23:2010-05-23-fonts-programming.html</id><summary type="html">&lt;p&gt;What are your favorite fonts for code editing? Mine are DejaVu Sans Mono (Vera-based) and Droid Sans Mono (Google).&lt;/p&gt;
+&lt;p&gt;Inconsolata is very good (and free) but I can't seem to get sub-pixel anti-aliasing with it (only normal one, which at &amp;lt;10px gets blurry). And Envy Code R is just too condensed.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fonts" src="http://media.tumblr.com/tumblr_l2vw8vLMKB1qati3p.png" /&gt;&lt;/p&gt;</summary></entry><entry><title>Typing my pass instead of root in GNOME</title><link href="http://glezos.github.io/2010-05-18-gnome-user-pass.html" rel="alternate"></link><published>2010-05-18T02:23:00-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-05-18:2010-05-18-gnome-user-pass.html</id><summary type="html">&lt;p&gt;I'm an avid fan of using sudo when needed and avoiding typing my root password. In the command-line this works fairly easy:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;su&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;
+&lt;span class="n"&gt;usermod&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt; &lt;span class="n"&gt;wheel&lt;/span&gt; &lt;span class="n"&gt;MYUSERNAME&lt;/span&gt;
+&lt;span class="n"&gt;visudo&lt;/span&gt;
+&lt;span class="cp"&gt;# Uncomment the following line:&lt;/span&gt;
+&lt;span class="nf"&gt;%wheel&lt;/span&gt;  &lt;span class="n"&gt;ALL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ALL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;       &lt;span class="n"&gt;ALL&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In GNOME, the above won't 'just work' due to the (fortunate) existence of PolicyKit. You're always asked for your root password instead of your user password. Configuration used to involve &lt;a href="http://dimitris.glezos.com/weblog/2009/03/28/sudo-policykit"&gt;editing PolicyKit.conf&lt;/a&gt;. In newer versions of Fedora, a new PolicyKit is shipped, with improved setup for policies and configurations.&lt;/p&gt;
+&lt;p&gt;After some searching around, I figured out I need to install &lt;code&gt;polkit-gnome&lt;/code&gt;. We now have a special group called 'desktop_admin_r', and polkit is already setup to read from that group the desktop admins. So the new way to make GNOME ask your password instead of the root one, the following commands should just work:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo yum install polkit-gnome
+usermod -a -G desktop_admin_r mits
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;For the record, gksudo is something completely different. And more evil. =/&lt;/p&gt;</summary><category term="gnome"></category><category term="english"></category><category term="linux"></category><category term="tech"></category><category term="foss"></category></entry><entry><title>Geek by nature, Linux by choice</title><link href="http://glezos.github.io/2010-04-20-geek-by-nature-linux-by-choice.html" rel="alternate"></link><published>2010-04-20T17:12:39-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-04-20:2010-04-20-geek-by-nature-linux-by-choice.html</id><summary type="html">&lt;p&gt;This weekend &lt;a href="http://twitter.com/andy_lupo"&gt;@andy_lupo&lt;/a&gt; and me will head north to Thessaloniki to present at the FOSS-Communities Conference some of the kewl technologies we're using at &lt;a href="http://www.indifex.com/"&gt;Indifex&lt;/a&gt;. Andreas' talk is titled "Multi-GB databases with NoSQL" and mine "Extreme Web Programming".&lt;/p&gt;
+&lt;p&gt;Additionally, I was humbled to be invited from the local entrepreneur's club OpenCoffee to present at their &lt;a href="http://opencoffee.gr/2010/04/15/oc-slk-xiv/"&gt;weekend event&lt;/a&gt;. I'll talk about open-source business models and the lessons learned while building Indifex. The talk is titled "Transifex: Developing Open Source Software for fun and profit".&lt;/p&gt;
+&lt;p&gt;So looking forward to this trip. I hope the weather is nice on Friday evening!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Geek by nature, Linux by choice." src="http://farm5.static.flickr.com/4028/4539473906_921dee2177.jpg" title="Geek by nature, Linux by choice." /&gt;&lt;/p&gt;</summary></entry><entry><title>Making things happen</title><link href="http://glezos.github.io/2010-04-10-making-things-happen.html" rel="alternate"></link><published>2010-04-10T02:35:01-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-04-10:2010-04-10-making-things-happen.html</id><summary type="html">&lt;p&gt;LWN.net interviewed Leslie Hawthorn, the main person behind Google Summer of Code. I liked how a small team in a big company Google can feel like a startup sometimes.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I think the most important lesson I learned was to just get out there and &lt;strong&gt;make things happen&lt;/strong&gt;, no matter how many mistakes you'll make along the way and no matter how many pairs of eyes are watching you make those mistakes. When I started with the team, I had no FOSS experience whatsoever and was quite worried about doing the wrong thing, and very publicly no less. Over time, I realized the it was far better to make as much progress as possible and make the &lt;strong&gt;inevitable course corrections&lt;/strong&gt; required rather than try to get everything right from the start.&lt;/p&gt;
+&lt;p&gt;I've also learned that a small group of people who are dedicated to &lt;strong&gt;making the world a better place&lt;/strong&gt; can be incredibly successful in doing just that. It may sound like a cliche, but I never imagined when I started working on Summer of Code that I would have the chance to help so many individuals and projects make things better.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src="http://farm4.static.flickr.com/3309/3271350050_d8ddeb25b1.jpg" alt="make things happen"&gt;
+(pic by &lt;a href="http://www.flickr.com/photos/crustina/3271349698/"&gt;CRUSTINA!&lt;/a&gt;)&lt;/p&gt;</summary><category term="make-things-happen"></category><category term="google"></category><category term="startups"></category></entry><entry><title>Do you monetize your international traffic?</title><link href="http://glezos.github.io/2010-03-28-monetizing-international-traffic.html" rel="alternate"></link><published>2010-03-28T02:55:28-07:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-03-28:2010-03-28-monetizing-international-traffic.html</id><summary type="html">&lt;p&gt;Did you know that ~80% of the traffic on Google, Facebook and Twitter come from &lt;strong&gt;outside of the US&lt;/strong&gt;?&lt;/p&gt;
+&lt;p&gt;Fred Wilson (avc.com) has written an insightful blog post titled "&lt;a href="http://www.avc.com/a_vc/2010/03/does-rest-of-world-matter-more-than-the-us.html"&gt;Does Rest Of World Matter More Than The US?&lt;/a&gt;". Fred believes that localization is key to monetize outside of the US:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The web sector needs to &lt;strong&gt;start working harder on international monetization&lt;/strong&gt;. [...]
+Web services that are highly international today should invest in fully localizing their user experience and then start thinking about monetizing outside of the US.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is the &lt;em&gt;reason d'etre&lt;/em&gt; of web services like &lt;a href="http://www.transifex.net/"&gt;Transifex&lt;/a&gt;: the vast majority of international speakers, who can stay on your website twice as much and have 4x more chances of buying something, if your website speaks their native language.&lt;/p&gt;
+&lt;p&gt;Of course the US traffic can achieve (much) higher monetization than other countries in most industries, but the monetization does follow the high numbers of international visitors:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Even if international traffic could only be monetized 25% as well as US traffic, when your international traffic is 80% of your total traffic, you would make &lt;strong&gt;as much money internationally as domestically&lt;/strong&gt;. So that's a lot of potential out there to be tapped.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;An interesting comment was made by daveclark, mentioning that the cost of winning a local market shouldn't be underestimated. Businesses which 'inherently scale friction-free across markets' should 'game on', while others might need much more work than just localizing the user interface (think, for example, selling shoes or books). Lots of good comments on the article.&lt;/p&gt;
+&lt;p&gt;Read the full article over at &lt;a href="http://www.avc.com/a_vc/2010/03/does-rest-of-world-matter-more-than-the-us.html"&gt;avc.com&lt;/a&gt; (thanks &lt;a href="http://twitter.com/gtzi"&gt;@gtzi&lt;/a&gt;).&lt;/p&gt;</summary></entry><entry><title>Mercurial rebase and merges</title><link href="http://glezos.github.io/2010-03-09-mercurial-rebase-and-merges.html" rel="alternate"></link><published>2010-03-09T13:51:00-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-03-09:2010-03-09-mercurial-rebase-and-merges.html</id><summary type="html">&lt;p&gt;Epiphany!&lt;/p&gt;
+&lt;p&gt;The past days I learned great things today about Mercurial.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;I found out Joel Spolsky's &lt;a href="hginit.com"&gt;hginit.com&lt;/a&gt;. It teaches you the key concepts behind hg in a way which doesn't mess with complex internals, but focuses on what's important: the user experience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I found out that the latest version of the hgtk history window supports running an 'Outgoing' command, which directly marks the nodes which will be pushed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I noticed that sometimes when I rebase, I get a merged head node instead of a linear history. That is, the rebase doesn't work 100%. Not sure why this was happening, but I found a few hackish workarounds. The funny thing is that I also found a solution: I then rebased the branche's root node on top of the merged node.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I now understand that the problem was much simpler: I just run accidentally hg rebase with &lt;code&gt;--source&lt;/code&gt; instead of &lt;code&gt;--branch&lt;/code&gt;. The first flag rebases a single node and the latter a whole branch. So, obviously, only the last node was "rebased" to look on top of tip. Instead, when you rebase with &lt;code&gt;--branch&lt;/code&gt;, the branche's base node is rebased, and the history is, of course, linearized.&lt;/p&gt;
+&lt;p&gt;Success.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Success" src="http://media.tumblr.com/tumblr_kz1be0Vx0s1qati3p.jpg" /&gt;
+(The Beast playing some hoops at the office.)&lt;/p&gt;</summary></entry><entry><title>ack</title><link href="http://glezos.github.io/2010-03-05-ack.html" rel="alternate"></link><published>2010-03-05T06:01:00-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-03-05:2010-03-05-ack.html</id><summary type="html">&lt;p&gt;ack rocks. It's like grep, but you can also ignore &lt;code&gt;.svn&lt;/code&gt;-like dirs  and backup files (&lt;code&gt;foo~, foo#&lt;/code&gt;), specify file types to search, color highlighting. Sweet!&lt;/p&gt;
+&lt;p&gt;http://betterthangrep.com/&lt;/p&gt;</summary></entry><entry><title>Dropping to ipython from Django</title><link href="http://glezos.github.io/2010-02-20-django-ipython.html" rel="alternate"></link><published>2010-02-20T11:50:00-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-02-20:2010-02-20-django-ipython.html</id><summary type="html">&lt;p&gt;Today I wanted to debug some of our unit tests, so I wanted to drop to a shell from inside a test case. Here's how that can be done:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;IPython&lt;/span&gt;
+&lt;span class="n"&gt;IPython&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;embed&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In previous versions this used to be:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;IPython.Shell&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;IPShellEmbed&lt;/span&gt;
+&lt;span class="n"&gt;ipython&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;IPShellEmbed&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The first two lines go somewhere in your module and the latter wherever you want to hook up with the shell (tests, models, views). This can serve as a more rich alternative to &lt;code&gt;ipdb.set_trace()&lt;/code&gt;.&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;&lt;img src="http://media.tumblr.com/tumblr_ky5odtAqpB1qati3p.jpg" alt="handy" /&gt;&lt;/p&gt;</summary><category term="django"></category><category term="ipython"></category><category term="tip"></category></entry></feed>
