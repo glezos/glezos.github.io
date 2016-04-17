@@ -1,0 +1,29 @@
+<img class="framed floatright" src="/old/weblog/box/groovy-baby.jpg" width="113" height="140" alt="Groovy baby!" title="Groovy baby!" />
+
+Με το [διαφωτιστικό σχόλιο του Άγγελου Ορφανάκου][aorf], έμαθα ότι το [Markdown syntax][md] του John Gruber έχει γίνει ported σε PHP, εν ονόματι (τι άλλο) [PHP Markdown][phpmd].
+
+[aorf]: /weblog/2005/08/07/wiki-markup/#comment-325 "σχόλιο του Άγγελου Ορφανάκου"
+[md]: http://daringfireball.net/projects/markdown/ "Ιστοσελίδα του Markdown"
+[phpmd]: http://www.michelf.com/projects/php-markdown/ "Ιστοσελίδα του PHP markdown"
+
+Ρίγη συγκίνσης διαπέρασαν το κορμί μου.
+
+Τουλάχιστον συγκλονιστικό.
+
+Το *φανταστικό* χαρακτηριστικό του Markdown σε σχέση με άλλα συντακτικά text-2-html είναι ότι είναι φτιαγμένο έτσι ώστε να είναι όσο το δυνατόν πιο αναγνώσιμο και κατανοητό από μόνο του. Αυτό σημαίνει ότι το κείμενο είναι τόσο καθαρό, ώστε να μπορεί να δημοσιευτεί _όπως είναι_, χωρίς να φαίνονται χαρακτήρες ελέγχου ή εντολές φορμαρίσματος. Για το σκοπό αυτό, οι δημιουργοί του εμπνεύστηκαν από τη σύνταξη των email αντί των ιστοσελίδων (εξού και το markdown αντί markup). 
+
+Για να μην κάθομαι να γράφω όλα τα εντυπωσιακά χαρακτηριστικά, σας παραπέμπω [στη σελίδα του markdown][mdbasics]. Για να το θέσω όσο πιο απλά γίνεται, ο μόνος λόγος που [επέλεξα το κουτσουρεμένο Text_Wiki][tw] ήταν ότι το Markdown ήταν γραμμένο σε Perl και έπαψα προ πολλού να γράφω perl.
+
+Εκτός όλων αυτών, ο [Aaron Swartz][as] έφτιαξε το πολύ χρήσιμο [html2text][html2text] με το οποίο μπορεί κανείς να μετατρέψει HTML σελίδες σε markdown format.
+
+[tw]: /weblog/2005/08/07/wiki-markup/ "Καταχώρηση για το Text_Wiki σε ιστοσελίδες""
+[mdbasics]: http://daringfireball.net/projects/markdown/basics "Βασικά χαρακτηριστικά του markdown"
+[as]: http://www.aaronsw.com/ "Ιστοσελίδα του Aaron Scwartz"
+[html2text]: http://www.aaronsw.com/2002/html2text/ "Μετατροπή html σε (markdown) κείμενο"
+
+Όσο για την υλοποίηση, δεν υπάρχει και πολλά να πω: Απλά κάνεις ``include_once "markdown.php";`` και τελείωσες: ``echo Markdown($wikitext);``.
+
+Για του λόγου το αληθές, δείτε τον [markdown κώδικα αυτής της καταχώρησης][post.markdown] και της [αρχικής σελίδας του ιστοχώρου μου][index.markdown].
+
+[post.markdown]: /box/code/post.markdown.text "Markdown κώδικας καταχώρησης"
+[index.markdown]: /box/code/index.markdown.text "Markdown κώδικας αρχικής σελίδας ιστοχώρου"
