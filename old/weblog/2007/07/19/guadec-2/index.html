@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos » Weblog &raquo; The GUADEC diaries &#8212; chapter 2</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2005 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	<meta name="generator" content="WordPress 2.5.1" />
+	
+	<link rel="stylesheet" href="/old/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/old/weblog/wp-content/themes/glezos/style.css" type="text/css" media="screen" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/old/weblog/feed/" />
+	<link rel="alternate" type="text/xml" title="RSS .92" href="/old/weblog/feed/rss/" />
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="/old/weblog/feed/atom/" />
+	<link rel="accessibility" href="/old/website/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="/old/favicon.ico" type="image/x-icon" />
+	<link rel="author" href="/old/contact/" title="Contact the author" />
+	<link rel="start" href="/old/weblog/" title="Weblog home page" />
+
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/old/weblog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/old/weblog/wp-includes/wlwmanifest.xml" /> 
+<script type='text/javascript' src='/weblog/wp-includes/js/jquery/jquery.js?ver=1.2.3'></script>
+<meta name="generator" content="WordPress 2.5.1" />
+
+
+<!-- JavaScript Pull-Quotes plugin v1.6.5
+	http://striderweb.com/nerdaphernalia/features/wp-javascript-pull-quotes/ -->
+	<link rel="stylesheet" href="/old/weblog/wp-content/plugins/jspullquotes/files/jspullquotes-core.css" type="text/css" />
+	<link rel="stylesheet" href="/old/weblog/wp-content/plugins/jspullquotes/styles/Default.css" type="text/css" />
+	<script type="text/javascript" src="/old/weblog/wp-content/plugins/jspullquotes/files/jspullquotes.js"></script>
+	<script type="text/javascript">
+		var arrOptions = new Array("1", "right", "1", "1", "", "blockquote", "pullquote", "pullquote pqRight");
+		pullQuoteOpts(arrOptions);
+	</script>
+<!-- end pull-quote additions -->
+
+			<link rel="stylesheet" type="text/css" href="/old/weblog/index.php?ak_action=aktt_css" />
+			<script type="text/javascript" src="/old/weblog/index.php?ak_action=aktt_js"></script>
+		
+<link rel="stylesheet" href="/old/weblog/wp-content/plugins/wp-syntax/wp-syntax.css" type="text/css" media="screen" />
+
+	<!-- Google analytics -->
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		_uacct = "UA-264563-1";
+		urchinTracker();
+	</script>
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="/old/" class="simlink" tabindex="1" accesskey="1"><img id="top" width="159" height="67" src="/old/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li><li class="dotcom"><a href="/old/">.com/</a></li><li class="dotcom dotcomactive"><a href="/old/weblog/" accesskey="2">weblog</a></li>
+	</ul>
+	<span id="date">23 <span id="month">νοέ</span> 08</span>
+</div>
+
+	<div id="content" class="widecolumn">
+				
+  	
+		<ul class="post">
+		<li>
+			<h2 id="post-486">The GUADEC diaries &#8212; chapter 2</h2>
+		</li>
+	
+		<li class="entry">
+<p>Wireless connection is rare in Birmingham, so I&#8217;ll grab this opportunity to post a quick update.</p>
+	<ul>
+	<li>
+<p>Had a meeting with Danilo Šegan (Данило Шеган) of GNOME L10n fame and Carlos Perelló Marín of Ubuntu, Launchpad/Rosetta fame, and discussed handling of upstream translations. It&#8217;s a pretty important issue which everyone would like to see tackled, but there are many technical details that need addressing, like for example, downstream patches that alter the module&#8217;s translatable strings (the need only downstream translation, requires coding), security (<em>sigh</em>), and coordination with/review from upstream translation teams (if they exist).</p>
+	<p>Danilo and I talked also about translate.fedoraproject.org, damned lies and Transifex. Both of us would like to keep the codebases close to each other, but without breaking or enforcing anything. This is basically my responsibility, but transifex adds a bunch of stuff on DL&#8217;s object model, and requires the data to be updateable (ie. <acronym title="eXtensible Markup Language">XML</acronym> files are problematic), so we should solve these in DL too. A port to TurboGears will make the project more maintainable.</p>
+</li>
+	<li>
+<p>Talked a bit with Colin Walters and Bryan Clark about Mugshot&#8217;s i18n. There are a bunch of different technologies in the project, so it&#8217;s not just a matter of a patch submitted. The Python web pages might be the easier of the three targets (other two are the server and the client).</p>
+</li>
+	<li>
+<p>Had a cool discussion with a Fedora OpenOffice.org hacker/maintainer about the way <abbr title="OpenOffice.org">OOo</abbr> handles locales and languages. There are many requests to have <abbr title="OpenOffice.org">OOo</abbr> override the session&#8217;s locale, which imply to have <abbr title="OpenOffice.org">OOo</abbr> behave differently than all the other desktop apps. This will only increase the confusion and if the problem is solved, it will only be so for <abbr title="OpenOffice.org">OOo</abbr>. Also, <abbr title="OpenOffice.org">OOo</abbr> spellchecker ideas about fine-grained language detection are again something that ideally would be solved desktop-wide and not just in <abbr title="OpenOffice.org">OOo</abbr>. Having the &#8220;keyboard layout&#8221; define what the language of the text written is, again isn&#8217;t a one-to-one relationship; this <em>could</em> work, but only if it was just a <em>suggestion</em> to a guessing engine, and not a true binding between the two. Doing something that <em>makes sense</em> is important.</p>
+</li>
+	</ul>
+	<p><ins>Update, 2 hours later:</ins></p>
+	<ul>
+	<li>
+<p>After my talk, David Glassey from Debian approached me for discussing whether it&#8217;s possible to use 

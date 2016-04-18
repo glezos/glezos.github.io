@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos » Weblog &raquo; Turning Transifex to a True Upstream Project</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2005 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	<meta name="generator" content="WordPress 2.5.1" />
+	
+	<link rel="stylesheet" href="/old/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/old/weblog/wp-content/themes/glezos/style.css" type="text/css" media="screen" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/old/weblog/feed/" />
+	<link rel="alternate" type="text/xml" title="RSS .92" href="/old/weblog/feed/rss/" />
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="/old/weblog/feed/atom/" />
+	<link rel="accessibility" href="/old/website/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="/old/favicon.ico" type="image/x-icon" />
+	<link rel="author" href="/old/contact/" title="Contact the author" />
+	<link rel="start" href="/old/weblog/" title="Weblog home page" />
+
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/old/weblog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/old/weblog/wp-includes/wlwmanifest.xml" /> 
+<script type='text/javascript' src='/weblog/wp-includes/js/jquery/jquery.js?ver=1.2.3'></script>
+<meta name="generator" content="WordPress 2.5.1" />
+
+
+<!-- JavaScript Pull-Quotes plugin v1.6.5
+	http://striderweb.com/nerdaphernalia/features/wp-javascript-pull-quotes/ -->
+	<link rel="stylesheet" href="/old/weblog/wp-content/plugins/jspullquotes/files/jspullquotes-core.css" type="text/css" />
+	<link rel="stylesheet" href="/old/weblog/wp-content/plugins/jspullquotes/styles/Default.css" type="text/css" />
+	<script type="text/javascript" src="/old/weblog/wp-content/plugins/jspullquotes/files/jspullquotes.js"></script>
+	<script type="text/javascript">
+		var arrOptions = new Array("1", "right", "1", "1", "", "blockquote", "pullquote", "pullquote pqRight");
+		pullQuoteOpts(arrOptions);
+	</script>
+<!-- end pull-quote additions -->
+
+			<link rel="stylesheet" type="text/css" href="/old/weblog/index.php?ak_action=aktt_css" />
+			<script type="text/javascript" src="/old/weblog/index.php?ak_action=aktt_js"></script>
+		
+<link rel="stylesheet" href="/old/weblog/wp-content/plugins/wp-syntax/wp-syntax.css" type="text/css" media="screen" />
+
+	<!-- Google analytics -->
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		_uacct = "UA-264563-1";
+		urchinTracker();
+	</script>
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="/old/" class="simlink" tabindex="1" accesskey="1"><img id="top" width="159" height="67" src="/old/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li><li class="dotcom"><a href="/old/">.com/</a></li><li class="dotcom dotcomactive"><a href="/old/weblog/" accesskey="2">weblog</a></li>
+	</ul>
+	<span id="date">07 <span id="month">αύγ</span> 08</span>
+</div>
+
+	<div id="content" class="widecolumn">
+				
+  	
+		<ul class="post">
+		<li>
+			<h2 id="post-622">Turning Transifex to a True Upstream Project</h2>
+		</li>
+	
+		<li class="entry">
+<p>From time to time we&#8217;ve discussed Transifex with people from various other projects that showed interest to use it to solve their localization platform challenges (lots of users, lots of hosting platforms). Among these were people from Debian, GNOME, OpenSUSE, Gentoo and Wikipedia. A common point in the discussions was whether (or better, <em>when</em>) we were going to make Transifex a true upstream project™, one that is not specific to any distribution, with contributors across communities, roadmap and milestones targeting a broader audience, hosted on neutral ground, etc.</p>
+	<p>So far <a href="http://fedorahosted.org/">Fedora Hosted</a> has been nothing but great as a hosting platform. The folks from Fedora Infrastructure <em>really</em> get it: as open source developers, we value a 100% open development platform, and with some support for the admin bits, we love being able to focus on development. My experience with <acronym title="Fedora Hosted">FH</acronym> has been great, and I&#8217;d recommend it to anyone wanting a free development platform for a small project.</p>
+	<p>Now, with me spending more time on Tranisfex lately and in the future, I feel more confident to start helping other projects have Trasifex on their infrastructure, produce releases more often, have it packaged in many formats etc. So I feel Transifex is mature enough to move on to the next level and grow as much as needed to be useful to other communities, projects (and why not companies) as well.</p>
+	<p>While moving to a hosted environment means a bit more work on administration, the benefits are many: more projects (users) on board, better control over the tools (eg. tweak Trac as needed), more hg repositories for branched development, more authenticated users on Trac, confident contributors and users, etc.</p>
+	<p>So, without further adieu, I&#8217;m happy to say Transifex development now has its own upstream space:</p>
+	<ul>
+	<li><strong><a href="http://transifex.org/">http://transifex.org/</a></strong> (home)</li>
+	<li><strong><a href="http://code.transifex.org/">http://code.transifex.org/</a></strong> (repositories)</li>
+	</ul>
+	<p>We now have a Trac instance and a Mercurial repo to play with (thanks <a href="http://transifex.org/wiki/Development/Crew#ChristosTrochalakis">Christos</a> for some of the admin bits). Please do take a look at the pages and fire away suggestions or corrections. We haven&#8217;t setup Trac registration yet, so any contributor wanting a trac account, let me know with a password and I&#8217;ll manually add you right away. The <a href="/old/weblog/2008/04/24/summer-08-transifex/">GSoC students</a> (<a href="/old/weblog/2008/04/24/summer-08-transifex/">blog post</a>) will probably need thes

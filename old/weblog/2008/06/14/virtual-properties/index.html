@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos » Weblog &raquo; Tip of the day: Virtual object properties</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2005 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	<meta name="generator" content="WordPress 2.5.1" />
+	
+	<link rel="stylesheet" href="/old/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/old/weblog/wp-content/themes/glezos/style.css" type="text/css" media="screen" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/old/weblog/feed/" />
+	<link rel="alternate" type="text/xml" title="RSS .92" href="/old/weblog/feed/rss/" />
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="/old/weblog/feed/atom/" />
+	<link rel="accessibility" href="/old/website/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="/old/favicon.ico" type="image/x-icon" />
+	<link rel="author" href="/old/contact/" title="Contact the author" />
+	<link rel="start" href="/old/weblog/" title="Weblog home page" />
+
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/old/weblog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/old/weblog/wp-includes/wlwmanifest.xml" /> 
+<script type='text/javascript' src='/weblog/wp-includes/js/jquery/jquery.js?ver=1.2.3'></script>
+<meta name="generator" content="WordPress 2.5.1" />
+
+
+<!-- JavaScript Pull-Quotes plugin v1.6.5
+	http://striderweb.com/nerdaphernalia/features/wp-javascript-pull-quotes/ -->
+	<link rel="stylesheet" href="/old/weblog/wp-content/plugins/jspullquotes/files/jspullquotes-core.css" type="text/css" />
+	<link rel="stylesheet" href="/old/weblog/wp-content/plugins/jspullquotes/styles/Default.css" type="text/css" />
+	<script type="text/javascript" src="/old/weblog/wp-content/plugins/jspullquotes/files/jspullquotes.js"></script>
+	<script type="text/javascript">
+		var arrOptions = new Array("1", "right", "1", "1", "", "blockquote", "pullquote", "pullquote pqRight");
+		pullQuoteOpts(arrOptions);
+	</script>
+<!-- end pull-quote additions -->
+
+			<link rel="stylesheet" type="text/css" href="/old/weblog/index.php?ak_action=aktt_css" />
+			<script type="text/javascript" src="/old/weblog/index.php?ak_action=aktt_js"></script>
+		
+<link rel="stylesheet" href="/old/weblog/wp-content/plugins/wp-syntax/wp-syntax.css" type="text/css" media="screen" />
+
+	<!-- Google analytics -->
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		_uacct = "UA-264563-1";
+		urchinTracker();
+	</script>
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="/old/" class="simlink" tabindex="1" accesskey="1"><img id="top" width="159" height="67" src="/old/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li><li class="dotcom"><a href="/old/">.com/</a></li><li class="dotcom dotcomactive"><a href="/old/weblog/" accesskey="2">weblog</a></li>
+	</ul>
+	<span id="date">19 <span id="month">αύγ</span> 08</span>
+</div>
+
+	<div id="content" class="widecolumn">
+				
+  	
+		<ul class="post">
+		<li>
+			<h2 id="post-640">Tip of the day: Virtual object properties</h2>
+		</li>
+	
+		<li class="entry">
+<p>Here&#8217;s a trick I learned today from <a href="http://ctrochalakis.org/blog/">Chris</a> that&#8217;s worth sharing: creating &#8220;virtual&#8221; attributes for objects (in need for a better wording).</p>
+	<p>Here&#8217;s a use-case: we have a person with a Name and a Surname &#8212; how could we access its full name in one string like <code>person.full_name</code>? You could do that with Python&#8217;s <code>@property</code> decorator:</p>
+	
+<div class="wp_syntax"><div class="code"><pre class="python"><span style="color: #ff7700;font-weight:bold;">class</span> Person<span style="color: black;">&#40;</span><span style="color: #008000;">object</span><span style="color: black;">&#41;</span>:
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">def</span> <span style="color: #0000cd;">__init__</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, name, surname<span style="color: black;">&#41;</span>:
+        <span style="color: #008000;">self</span>.<span style="color: black;">name</span> = name
+        <span style="color: #008000;">self</span>.<span style="color: black;">surname</span> = surname
+&nbsp;
+    @<span style="color: #008000;">property</span>
+    <span style="color: #ff7700;font-weight:bold;">def</span> full_name<span style="color: black;">&#40;</span><span style="color: #008000;">self</span><span style="color: black;">&#41;</span>:
+        <span style="color: #ff7700;font-weight:bold;">return</span> <span style="color: #483d8b;">&quot;%s %s&quot;</span> <span style="color: #66cc66;">%</span> <span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">name</span>, <span style="color: #008000;">self</span>.<span style="color: black;">surname</span><span style="color: black;">&#41;</span>
+&nbsp;
+p=Person<span style="color: black;">&#40;</span><span style="color: #483d8b;">'John'</span>, <span style="color: #483d8b;">'Doe'</span><span style="color: black;">&#41;</span>
+<span style="color: #ff7700;font-weight:bold;">print</span> <span style="color: black;">&#40;</span>p.<span style="color: black;">name</span>, p.<span style="color: black;">surname</span><span style="color: black;">&#41;</span>
+<span style="color: black;">&#40;</span><span style="color: #483d8b;">'John'</span>, <span style="color: #483d8b;">'Doe'</span><span style="color: black;">&#41;</span>
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">print</span> p.<span style="color: black;">full_name</span>
+John Doe</pre></div></div>
+
+	<p>Without the decorator we would need to access the string as <code>person.full_name()</code>, instead of the simpler and more intuitive <code>person.full_name</code>. Pretty neat.</p>	
+		</li>
+		<li class="postmetadata">
+				απόγευμα, Σάββατο 14 Ιουνίου 2008				<span title="2 μήνες πριν"><img alt="date" src="/old/images/clock.gif" width="9" height="11" /></span>
+				<br/>
+				[ <a href="/old/weblog/category/foss/" title="View all posts in FOSS, linux" rel="category tag">FOSS, linux</a>,  <a href="/old/weblog/category/tech/" title="View all posts in Tech/web" rel="category tag">Tech/web</a> ]
+				| <img alt="link" src="/old/images/link.gif" width="7" height="7" />
+					<a href="/old/weblog/2008/06/14/virtual-properties/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Tip of the day: Virtual object properties'">Σύνδεσμος</a>
+									| <a href="#respond">Σχολιάστε!</a>
+				
+		</li>
+		</ul>
+
+	
+	<h2 id="comments">4 σχόλια »</h2> 
+
+	<ol class="commentlist">
+	
+		<li id="co

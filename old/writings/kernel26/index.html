@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
 
 <head>
-	<title>Dimitris Glezos » Περί εμού</title>
+	<title>Dimitris Glezos » Aloha 2.6 !</title>
 	
 	<meta http-equiv="content-type" content="textot/html; charset=UTF-8" />
 	<meta name="author" content="Dimitris Glezos" />
@@ -33,21 +33,20 @@
 
 <div id="header">
 	<ul id="logo" class="simpleinlineul">
-		<li><a href="/old/" class="simlink" tabindex="1" accesskey="1" title="Πίσω στην οικοσελίδα"><img id="top" width="159" height="67" src="/old/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li><li class="dotcom dotcomactive" title="Πίσω στην οικοσελίδα"><a href="/old/">.com</a></li>	</ul>
-	<span id="date">16 <span id="month">ιουν</span> 06</span>
+		<li><a href="/old/" class="simlink" tabindex="1" accesskey="1" title="Homepage"><img id="top" src="/old/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li><li class="dotcom dotcomactive" title="Homepage"><a href="/old/">.com</a></li>	</ul>
+	<span id="date">17 <span id="month">σεπ</span> 12</span>
 </div>
 <div id="content">
 
-	
-	<h1>Aloha 2.6 !</h1><br/>
+	<h1>Aloha 2.6 !</h1>
 
 	<p>
-		<a href="mailto: dimitiris@glezos.com">Δημήτρης Γλέζος</a>, 7/1/2004<br/>
-		Αρχικά αναρτήθηκε στο: <a href="/old/weblog/archives/000021.html">/weblog/archives/000021.html</a>.
+		<em>Μόνιμος σύνδεσμος: <a href="/old/writings/kernel26/">/writings/kernel26/</a>.</em>
 	</p>
-	<br/>
-	<div class="dashedhr">&nbsp;</div>
 
+	<hr class="class2hr" />
+	
+	<h2>Εισαγωγή</h2>
 	<p>
 	Υποθέτω πως για τους ενασχολούντες, η είδηση της βάφτισης του linux kernel tree σε 2.6 στις 17 του Δεκέμβρη 2003 είναι ήδη γνωστή. Πιθανώς ακόμη, οι περισσότεροι να ξεπέρασαν την κλασική (και ορθότατη) στάση του "δουλεύει, άστο όπως είναι" και να τον δοκίμασαν, σε μη-workstation μηχανηματάκια - όπως π.χ. σε απλά, καλοστημένα ADSL <acronym title="Network Address Translation">NAT</acronym>/firewall PCs τα οποία συνήθως πειράζεις μόνο για κανένα OpenSSH patch.
 	</p>
@@ -56,15 +55,14 @@
 	Οι διαφορές του νέου πυρήνα από τον 2.4 είναι τόσο σημαντικές, που συζητήθηκε η ονομασία του σε 3.0 αντί 2.6. Ακολουθεί μια προσπάθεια για μια περιεκτική αλλά όσο γίνεται πιο σύντομη ανακεφαλαίωση του τι υπάρχει στη νέα αυτή έκδοση του linux kernel. Έτσι κι αλλιώς, για τέτοιου είδους τεχνικά κείμενα, η καταγραφή σε σχέση με την ανάγνωση και κατανόηση είναι οικονομική - κάτι σε στυλ O(n).
 	</p>
 
-	<br/>
-
+	<h3>Λίγη ιστορία</h3>
 
 	<p>
 	Η προηγούμενη σταθερή έκδοση του πυρήνα ήταν η 2.4.0, η οποία ανακοινώθηκε στις 4/1/01, δυο χρόνια πριν. Για αυτούς που αναρωτιούνται γιατί το 2.4++ κάνει 2.6, να πω πως παραδοσιακά στον linux kernel, οι minor εκδόσεις που έχουν ζυγό αριθμό είναι οι σταθερές (2.4, 2.6, ...), ενώ αυτές που έχουν μονό αριθμό είναι οι development (2.5, 2.7, ...). Όταν ο πυρήνας είναι αρκετά σταθερός, παίρνει ζυγό αριθμό έκδοσης (X.Y - το Y ζυγό), ενώ αμέσως ξεκινά το επόμενο μονής έκδοσης developing tree (τώρα π.χ., το 2.7). Φυσικά, για σκοπούς συντήρησης και bugfixes, η σταθερή έκδοση συνεχίζει να αναπτύσσεται παράλληλα με την development (2.4.1 ... 2.4.22), χωρίς όμως να ενσωματώνει συνήθως πολύ μεγάλες αλλαγές - μια και οι μεγάλες αλλαγές απαιτούν και μεγάλες περιόδους testing/bugfixing.
 	</p>
 
 
-	<h4>Πριν το compile</h4>
+	<h2>Η νέα έκδοση</h2>
 
 	<p>
 	Μερικές αρχικές και σημαντικές σημειώσεις για τη μεταγλώττιση του 2.6:
@@ -72,16 +70,16 @@
 
 	<ul>
 		<li>Ο compiler που προτείνεται είναι ακόμη ο gcc 2.95.3, αν και με gcc 3.x θα έχετε σημαντικές βελτιστοποιήσεις σε σχέση με τον 2.4.</li>
-		<li>Για την εφαρμογή patches χρειάζεται πλέον το flag -p1 (π.χ. patch -p1 &lt; patchfile).</li>
+		<li>Για την εφαρμογή patches χρειάζεται πλέον το flag -p1 (π.χ. <code>patch -p1 &lt; patchfile</code>).</li>
 		<li>Για αρκετά συστήματα, χρειάζονται αναβάθμιση τα module utilities και το procps.</li>
 		<li>Το build system στον 2.6 έχει αντικατασταθεί δίνοντας καλύτερους χρόνους για επανα-μεταγλωττίσεις ενώ το output του είναι μικρότερο και πιο συγυρισμένο.</li>
-		<li>Το εργαλείο ρυθμίσεων μέσω του "make xconfig" απαιτεί τη βιβλιοθήκη qt ενώ το "make gconfig" απαιτεί τη βιβλιοθήκη gtk. Φυσικά υπάρχει και το κλασικό command-line "make menuconfig".</li>
-		<li>Προτιμείται το σκέτο "make" το οποίο κάνει compile τόσο το bzimage όσο και τα modules, ενώ το "make -jN" υπάρχει για παράλληλη εκτέλεση. Το "make dep" δεν χρειάζεται πλέον να εκτελεστεί.</li>
-		<li>Στον 2.6 δεν θα δουλεύουν πολύ παλιά swap files έκδοσης v0 (εποχής 2.0.Χ και πριν) και χρειάζονται ξανά format (με απλή mkswap).</li>
+		<li>Το εργαλείο ρυθμίσεων μέσω του <code>make xconfig</code> απαιτεί τη βιβλιοθήκη qt ενώ το <code>make gconfig</code> απαιτεί τη βιβλιοθήκη gtk. Φυσικά υπάρχει και το κλασικό command-line <code>make menuconfig</code>.</li>
+		<li>Προτιμείται το σκέτο "make" το οποίο κάνει compile τόσο το bzimage όσο και τα modules, ενώ το <code>make -jN</code> υπάρχει για παράλληλη εκτέλεση. Το <code>make dep</code> δεν χρειάζεται πλέον να εκτελεστεί.</li>
+		<li>Στον 2.6 δεν θα δουλεύουν πολύ παλιά swap files έκδοσης v0 (εποχής 2.0.Χ και πριν) και χρειάζονται ξανά format (με απλή <code>mkswap</code>).</li>
 	</ul>
 
 
-	<h4>Αρχιτεκτονικές</h4>
+	<h3>Αρχιτεκτονικές</h3>
 
 	<p>
 	Ο νέος πυρήνας ενσωματώνει υποστήριξη για <acronym title="Non-Uniform Memory Access">NUMA</acronym> αρχιτεκτονικές, ένα βήμα πιο πάνω από το <acronym title="Symmetric Multi-Processing">SMP</acronym>, όπου η προσπέλαση στη μνήμη δεν είναι ισότιμη μεταξύ των CPU. Επίσης, υποστηρίζεται το Intel <acronym title="Physical Address Extension">PAE</acronym> για 64 GB paged RAM, αριθμός χρηστών και groups μέχρι και 4 εκατομμύρια (4M), αριθμός process μέχρι 1Μ, filesystems μέχρι 16 ΤΒ σε 32-bit αρχιτεκτονικές και 8 <acronym title="Exa-bytes (=10^18)">ΕΒ</acronym> σε 64-bit, ενώ ο αριθμός των major και minor αριθμών που μπορεί να έχει μια συσκευή μεγαλώνει από 255/255 σε 4096/1Μ αντίστοιχα.
@@ -92,7 +90,7 @@
 	</p>
 
 
-	<h4>Ταχύτητα/απόκριση</h4>
+	<h3>Ταχύτητα/απόκριση</h3>
 
 	<p>
 	Πλησιάζοντας πιο κοντά σε ένα Real-Time OS (RTOS), ο νέος πυρήνας ανταποκρίνεται πιο γρήγορα στις αιτήσεις που το χρειάζονται (για παράδειγμα στο <acronym title="Input/Output">I/Ο</acronym>). Με την 2.6 έκδοση, ο ίδιος ο kernel είναι preemptible, επιτρέποντας έτσι σε εφαρμογές να διακόψουν τον ίδιο τον kernel όταν αυτός κάνει κάτι που πριν θεωρούνταν ως μη-ικανό διακοπής.
@@ -107,7 +105,7 @@
 	</p>
 
 	<p>
-	Τα I/O τυγχαίνουν καλύτερης διαχείρησης, ενώ τώρα υποστηρίζονται τα futexes (Fast User-Space Mutexes) τα οποία παρακάμπτουν τα bottlenecks των συνηθισμένων mutexes και επίσης χρησιμοποιούνται από την NPTL. Επίσης, η συμπεριφορά των sched_yield() και yield() άλλαξε, δίνοντας μεγαλύτερους χρόνους sleep στις διεργασίες που την καλούν.
+	Τα I/O τυγχαίνουν καλύτερης διαχείρησης, ενώ τώρα υποστηρίζονται τα futexes (Fast User-Space Mutexes) τα οποία παρακάμπτουν τα bottlenecks των συνηθισμένων mutexes και επίσης χρησιμοποιούνται από την NPTL. Επίσης, η συμπεριφορά των <code>sched_yield()</code> και <code>yield()</code> άλλαξε, δίνοντας μεγαλύτερους χρόνους sleep στις διεργασίες που την καλούν.
 	</p>
 
 	<p>
@@ -115,7 +113,7 @@
 	</p>
 
 
-	<h4>Input/Output</h4>
+	<h3>Input/Output</h3>
 
 	<p>
 	Το human interface layer έχει αλλάξει ώστε να είναι πιο modular, κάτι το οποίο οφελεί πολύ τα embedded συστήματα. Πλέον υποστηρίζονται touchscreens, μη-συνηθισμένα ποντίκια (με πολλά κουμπιά, scroll-wheels κλπ), πολλά νέα joysticks (και του X-Box) και braille devices για πρόσβαση στο linux από τυφλούς. Το framebuffer/console layer έχει υποστεί αρκετές αλλαγές, ενώ πλέον υπάρχει βασική υποστήριξη για AGP 3.0.
@@ -134,7 +132,7 @@
 	</p>
 
 
-	<h4>Block Devices</h4>
+	<h3>Block Devices</h3>
 
 	<p>
 	Το <acronym title="Integrated Drive Electronics">IDE</acronym>/<acronym title="Advanced Technology Attachment">ATA</acronym> υποσύστημα έχει ξαναγραφτεί από την αρχή, με έμφαση στο scalability. Τώρα υποστηρίζονται Serial Ata devices με ρυθμούς διαμεταγωγής μέχρι 150 ΜΒ/s. Tα IDE CD-RW υποστηρίζονται μέσω του IDE driver (δε χρειάζεται SCSI-emulation πλέον) και έτσι έχουν ενεργοποιημένο το <acronym title="Direct Memory Access">DMA</acronym>, το οποίο επιτρέπει στις συσκευές να αιτούνται και να εκπληρώνουν αιτήσεις για μπλοκ δεδομένων κατευθείαν μέσω preallocated memory χωρίς να απασχολούν το CPU, αντίθετα με το <acronym title="Programmable Input/Output">PIO</acronym> mode. Αυτό προφανώς έχει ως αποτέλεσμα την αύξηση της ταχύτητας εγγραφής CD με μείωση των buffer underruns και σαφή βελτίωση της ταχύτητας του CD ripping.
@@ -149,31 +147,31 @@
 	</p>
 
 
-	<h4>Filesystems</h4>
+	<h3>Filesystems</h3>
 
 	<p>
 	Τα ext2/ext3 filesystems πλέον υποστηρίζουν την εισαγωγή επιπλέον γνωρισμάτων (ή μεταδεδομένων) σε κάθε αρχείο, ώστε να υποστηρίζονται τα POSIX access control lists για πιο λεπτό έλεγχο προσβάσεων στα αρχεία. Υποστηρίζονται νέες πολιτικές τοποθεσίας αρχείων, ώστε οι υποκατάλογοι να βρίσκονται κοντά μεταξύ τους.
 	</p>
 
 	<p>
-	Τα directories μπορούν να σημαδευτούν ως "indexed" για ταχύτερες αναζητήσεις σε αυτά και "synchronous" (chattr +S) ώστε όλες οι πράξεις που τα αφορούν να είναι ατομικές (ίσως χρειαστούν αναβάθμιση τα e2fsprogs). Ατομικά επίσης μπορούν να μεταφερθούν υποδέντρα σε άλλες τοποθεσίες, με τη 'mount --move olddir newdir'. Στη νέα έκδοση του πυρήνα υποστήριζονται και τα XFS και JFS filesystems των SGI και IBM αντίστοιχα, του Logical Disk Manager των Windows και του read/write support για NTFS volumes, το οποίο είναι πλέον reentrant safe, υποστηρίζει sparse files και clusters μεγαλύτερα από 4 kB.
+	Τα directories μπορούν να σημαδευτούν ως "indexed" για ταχύτερες αναζητήσεις σε αυτά και "synchronous" (<code>chattr +S</code>) ώστε όλες οι πράξεις που τα αφορούν να είναι ατομικές (ίσως χρειαστούν αναβάθμιση τα e2fsprogs). Ατομικά επίσης μπορούν να μεταφερθούν υποδέντρα σε άλλες τοποθεσίες, με τη <code>mount --move olddir newdir</code>. Στη νέα έκδοση του πυρήνα υποστήριζονται και τα XFS και JFS filesystems των SGI και IBM αντίστοιχα, του Logical Disk Manager των Windows και του read/write support για NTFS volumes, το οποίο είναι πλέον reentrant safe, υποστηρίζει sparse files και clusters μεγαλύτερα από 4 kB.
 	</p>
 
 	<p>
-	Τα swap files πρέπει τώρα να είναι τόσο γρήγορα όσο και τα swap partitions, ενώ ο αριθμός τους μειώθηκε από 64 σε 32. Η προτίμηση του kernel για page cache αντί της mapped μνήμης μπορεί να οριστεί μέσω του /proc/sys/vm/swappiness (<acronym title="Read The Fine Manual">rtfm</acronym> πριν το πειράξετε).
+	Τα swap files πρέπει τώρα να είναι τόσο γρήγορα όσο και τα swap partitions, ενώ ο αριθμός τους μειώθηκε από 64 σε 32. Η προτίμηση του kernel για page cache αντί της mapped μνήμης μπορεί να οριστεί μέσω του <code>/proc/sys/vm/swappiness</code> (<acronym title="Read The Fine Manual">rtfm</acronym> πριν το πειράξετε).
 	</p>
 
-	Στον τομέα των virtual filesytems, με τον καιρό θα υιοθετηθεί το /sys filesystem, το οποίο θα αναπαριστά το device tree (από την σκοπιά του kernel), με παρόμοιο τρόπο που ήδη λειτουργεί το /proc (mount -t sysfs none /sys). Η μορφή του /proc/stat έχει αλλάξει, ενώ μέσω του /proc/sys/kernel/core_pattern μπορεί κανείς να δώσει στυλ στα core dumping του - να ορίσει τον τρόπο που θα ονοματολογούνται τα core αρχεία.
+	Στον τομέα των virtual filesytems, με τον καιρό θα υιοθετηθεί το /sys filesystem, το οποίο θα αναπαριστά το device tree (από την σκοπιά του kernel), με παρόμοιο τρόπο που ήδη λειτουργεί το /proc (<code>mount -t sysfs none /sys</code>). Η μορφή του /proc/stat έχει αλλάξει, ενώ μέσω του /proc/sys/kernel/core_pattern μπορεί κανείς να δώσει στυλ στα core dumping του - να ορίσει τον τρόπο που θα ονοματολογούνται τα core αρχεία.
 
 
-	<h4>Networking</h4>
+	<h3>Networking</h3>
 
 	<p>
 	Στον τομέα του Networking, υποστηρίζεται πλέον το <acronym title="IP Security">IPsec</acronym> για κρυπτογράφηση δεδομένων στο δίκτυο, το IP Virtual Server project και το multicast networking έχει αναβαθμιστεί με νέα χαρακτηριστικά όπως τα <acronym title="Multicast Listener Discovery">MLD</acronym>v2 και <acronym title="Internet Group Management Protocol">IGMP</acronym>v3. Πειραματικά κανείς μπορεί να χρησιμοποιήσει την ανανεωμένη, πιο ασφαλή, scaleable, ολοκληρωμένη και "έξυπνη" v4 του <acronym title="Network File System">NFS</acronym>, τόσο ως client όσο και ως server. Επίσης, υποστηρίζεται εγγενώς το <acronym title="Common Internet Filesystem">CIFS</acronym> υπερσύνολο του SMB πρωτοκόλλου. Αυτό συνεπάγεται υποστήριξη για UNICODE, βελτιωμένο locking αρχείων, hard linking κλπ στα SMB mounts. Τα <acronym title="Andrew File System">AFS</acronym> και InterMezzo έχουν προστεθεί στον κατάλογο των filesystems που μπορεί να χειριστεί εγγενώς ο πυρήνας (αν και έχουν ακόμη δουλειά). 
 	</p>
 
 
-	<h4>'Αλλα χαρακτηριστικά</h4>
+	<h3>Άλλα χαρακτηριστικά</h3>
 
 	<ul>
 		<li>Μεγάλο μέρος του security πλέον ελέγχεται από τον ίδιο τον πυρήνα, χρησιμοποιώντας πιο αναλυτικά δικαιώματα πρόσβασης/εκτέλεσης ώστε σε ένα σύστημα να μπορούν να χρησιμοποιούνται περισσότερα επίπεδα χρηστών αντί μόνο του super-user.</li>
@@ -196,10 +194,10 @@
 	<p>
 	Από την άλλη, ο τρόπος που διαχειρίζεται τη μνήμη ο 2.6 προς το παρών είναι κάπως λιγότερο αποδοτικός, με αποτέλεσμα το πρακτικό πάνω όριο μνήμης να είναι τα 24 GB (αντί των 32 GB του 2.4), η παρακολούθηση νέων συμβάτων κάθε 1ms αντί κάθε 10ms κάνει το σύστημα πιο αργό κατά ~1% και χρειάζεται περισσότερη μνήμη για να τρέξει, γεγονός το οποίο φαίνεται έντονα όταν χρησιμοποιούνται σκληροί δίσκοι σαν επιπλέον μνήμη (Andrew Morton).
 	</p>
+	
+	<hr class="class2hr" />
 
-	<br/><br/>
-
-	<h4>Παραπομπές</h4>
+	<h2>Παραπομπές</h2>
 
 	<ul>
 		<li><a href="http://kniggit.net/wwol26.html">The Wonderful World of Linux 2.6</a> - Joseph Pranevich</li>
@@ -215,6 +213,12 @@
 		<li><a href="http://thomer.com/linux/migrate-to-2.6.html">Migrating to Linux Kernel 2.6</a> - Thomer Gil</li>
 		<li><a href="http://news.com.com/2100-7344_3-5128546.html">Linux gets heart transplant with 2.6.0</a> - news.com</li>
 	</ul>
+	
+	<hr />
+	
+	<div class="alright">
+		<em><a href="mailto: dimitiris@glezos.com">Δημήτρης Γλέζος</a>, 7/1/2004</em>
+	</div>
 
 
 
@@ -226,20 +230,22 @@
 		<li><a href="/old/about/" title="Πληροφορίες σχετικά με εμένα">Περί εμού</a></li>
 		<li><a href="/old/opensource/" title="Ελεύθερο λογισμικό">Ελεύθερο λογισμικό</a></li>
 		<li><a href="/old/epatents/" title="Πατέντες λογισμικού">Πατέντες λογισμικού</a></li>
-		<li><a href="/old/epatents/">Κείμενα</a></li>
+		<li><a href="/old/writings/" title="Κείμενα που έγραψα">Κείμενα</a></li>
 		<li><ul>
 			<li class="sidebar-active">Aloha 2.6 !</li>
 		</ul></li>
 		<li><a href="/old/news/" title="Δρώμενα">Δρώμενα</a></li>
 		<li><a href="/old/stuff/" title="Όλα τα υπόλοιπα">Διάφορα</a></li>
 		<li><a href="/old/contact/" title="Στοιχεία επικοινωνίας">Επικοινωνία</a></li>
-		<li><a href="/old/website/" title="Πληροφορίες ιστοχώρου">Πληροφορίες</a></li>
-
+		<li><a href="/old/website/" title="Πληροφορίες ιστότοπου">Πληροφορίες</a></li>
 	</ul>
-	<a id="webloglink" href="/old/weblog/" tabindex="2" accesskey="2" title="Το ιστολόγιο μου">
+
+	<p><a class="langlink" href="/old/en/" title="Homepage in english / Αρχική σελίδα στα αγγλικά">
+		English (αγγλικά)
+	</a></p>
+	<p><a id="webloglink" href="/old/weblog/" tabindex="2" accesskey="2" title="Το ιστολόγιο μου">
 		<strong>Ιστολόγιο</strong>
-	</a>
-	
+	</a></p>
 </div>
 <div class="clearer">&nbsp;</div>
 
@@ -275,9 +281,8 @@ Glezos</a> |</li>
 title="Accessibility statement of this website">Accessibility statement</a></li>
 	</ul>
 	<span class="floatright">
-	Τελευταία ενημέρωση: Mon Nov 21 14:47:02 2005&nbsp;
+	Last update: Wed May 2 22:57:54 2007&nbsp;
 	</span>
 </div>
 </body>
 </html>
-

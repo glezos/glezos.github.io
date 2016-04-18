@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos » Weblog &raquo; A loving Tx update</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2005 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	<meta name="generator" content="WordPress 2.5.1" />
+	
+	<link rel="stylesheet" href="/old/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/old/weblog/wp-content/themes/glezos/style.css" type="text/css" media="screen" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/old/weblog/feed/" />
+	<link rel="alternate" type="text/xml" title="RSS .92" href="/old/weblog/feed/rss/" />
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="/old/weblog/feed/atom/" />
+	<link rel="accessibility" href="/old/website/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="/old/favicon.ico" type="image/x-icon" />
+	<link rel="author" href="/old/contact/" title="Contact the author" />
+	<link rel="start" href="/old/weblog/" title="Weblog home page" />
+
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/old/weblog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/old/weblog/wp-includes/wlwmanifest.xml" /> 
+<script type='text/javascript' src='/weblog/wp-includes/js/jquery/jquery.js?ver=1.2.3'></script>
+<meta name="generator" content="WordPress 2.5.1" />
+
+
+<!-- JavaScript Pull-Quotes plugin v1.6.5
+	http://striderweb.com/nerdaphernalia/features/wp-javascript-pull-quotes/ -->
+	<link rel="stylesheet" href="/old/weblog/wp-content/plugins/jspullquotes/files/jspullquotes-core.css" type="text/css" />
+	<link rel="stylesheet" href="/old/weblog/wp-content/plugins/jspullquotes/styles/Default.css" type="text/css" />
+	<script type="text/javascript" src="/old/weblog/wp-content/plugins/jspullquotes/files/jspullquotes.js"></script>
+	<script type="text/javascript">
+		var arrOptions = new Array("1", "right", "1", "1", "", "blockquote", "pullquote", "pullquote pqRight");
+		pullQuoteOpts(arrOptions);
+	</script>
+<!-- end pull-quote additions -->
+
+			<link rel="stylesheet" type="text/css" href="/old/weblog/index.php?ak_action=aktt_css" />
+			<script type="text/javascript" src="/old/weblog/index.php?ak_action=aktt_js"></script>
+		
+<link rel="stylesheet" href="/old/weblog/wp-content/plugins/wp-syntax/wp-syntax.css" type="text/css" media="screen" />
+
+	<!-- Google analytics -->
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		_uacct = "UA-264563-1";
+		urchinTracker();
+	</script>
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="/old/" class="simlink" tabindex="1" accesskey="1"><img id="top" width="159" height="67" src="/old/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li><li class="dotcom"><a href="/old/">.com/</a></li><li class="dotcom dotcomactive"><a href="/old/weblog/" accesskey="2">weblog</a></li>
+	</ul>
+	<span id="date">23 <span id="month">νοέ</span> 08</span>
+</div>
+
+	<div id="content" class="widecolumn">
+				
+  	
+		<ul class="post">
+		<li>
+			<h2 id="post-556">A loving Tx update</h2>
+		</li>
+	
+		<li class="entry">
+<p>Yesterday was a great day. After a lot of rock climbing (man, it&#8217;s been a while since I felt the wrath of those 6c steep routes and the cold sweat running on your spine when you&#8217;re way above your last piece of protection!)&#8230; I returned home for some coding.</p>
+	<p>I managed to keep my eyes open for enough time to push together with mmcgrath a new update of Transifex yesterday on our app servers, tagged 0.2. I&#8217;ve been looking forward for this update, since it introduces a bunch of stuff we planned:</p>
+	<ul>
+	<li>We support non-<acronym title="Unicode Transformation Format">UTF</acronym> files now &#8212; both upload and target ones. Particularly important for some of our translators working on latin-based languages who still use ISO-8859-1 for their files (Central Europe, etc).</li>
+	<li>Better integration with our statistics: Each module now has a nice-looking Echo icon linking back to its stats page (either defaults to something, or can be overrided if the module maintainer wants so). Maybe we could offer an iframe to save even more time. Saving time = more work done = less frustraction = happy people!.<br />
+<a class="simlink" href="https://translate.fedoraproject.org/submit/module/yumex"><img class="framed" style="margin: 0.8em 0;" src='/weblog/wp-content/uploads/2008/02/tx-pie.png' alt='Transifex stats link' /></a></p>
+</li>
+	<li>We now have a new &#8216;l10n-admin&#8217; group, so more people can help with Tx&#8217;s maintenance. I&#8217;ll personally make sure to give a proper charter to this group and make our work totally transparent. In addition, members of this team are also granted translation access, so folks from Fedora Infrastrucure can test submissions etc.</li>
+	<li>Under the hood, we&#8217;ve moved to a new shiny server, this time an Enterprise one, which will help us balance our instance on more servers for increased performance.</li>
+	<li>We now have a proper mechanism to push updates, so new features will arrive more often. And some of them are exciting ones!</li>
+	</ul>
+	<p>If you notice any bugs, or have any suggestions/RFEs, don&#8217;t hesitate to file them at BZ 
