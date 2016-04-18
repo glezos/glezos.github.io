@@ -28,7 +28,7 @@ function wptexturize(text) {
 			curl = curl.replace(/'s/g, '&#8217;s');
 			curl = curl.replace(/'(\d\d(?:&#8217;|')?s)/g, '&#8217;$1');
 			curl = curl.replace(/([\s"])'/g, '$1&#8216;');			
-			curl = curl.replace(/(\d+)"/old/g, '$1&Prime;');						
+			curl = curl.replace(/(\d+)"/g, '$1&Prime;');						
 			curl = curl.replace(/(\d+)'/g, '$1&prime;');									
 			curl = curl.replace(/([^\s])'([^'\s])/g, '$1&#8217;$2');	
 			curl = curl.replace(/(\s)"([^\s])/g, '$1&#8220;$2');				

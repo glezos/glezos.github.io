@@ -13,7 +13,7 @@
 
 body
 {
-	background: #7195b6 url("/old/images/bgtile.png") top left repeat;
+	background: #7195b6 url("/images/bgtile.png") top left repeat;
 	color: #FFFFFF;
 	text-align: center;
 	font-family: Verdana, Trebuchet, Lucida, Arial, sans-serif;
@@ -69,9 +69,10 @@ pre {
 	font-family: Verdana, Trebuchet, Lucida, Arial, sans-serif;
 }
 
-code.block, samp.block {
-	border-left: 3px #ddd solid;
-	background: url("/old/images/code.png") top right no-repeat;
+code.block, samp.block,
+div.wp_syntax {
+	border-left: 3px #e0e0e0 solid;
+	background: url("/images/code.png") top right no-repeat;
 	margin-left: 10px;
 	padding-left: 10px;
 	white-space: pre;
@@ -120,20 +121,20 @@ hr
 
 blockquote
 {
-	background: url("/old/images/quotes.png") top left no-repeat;
+	background: url("/images/quotes.png") top left no-repeat;
 	margin: 0;
 	padding: 0 20px 0 33px;
 	border-right: 2px #eee solid;
 }
 
-blockquote + div.cite {
+div.cite {
 	display:block;
 	text-align: right;
 	font-size: 90%;
 	color: #444;
 }
 
-blockquote + div.cite cite {
+div.cite cite {
 	padding: 3px 20px 0 40px;
 	border-top: 2px #eee solid;
 }
@@ -159,7 +160,7 @@ del {
 	background: #FFF;
 	color: #000;
 	border: 2px solid #5680A6;
-	width: 760px;
+	width: 920px;
 	margin: 50px auto 0 auto;
 	padding: 0;
 	text-align: left;
@@ -170,7 +171,7 @@ ul#logo
 	position: relative;
 	float: left;
 	top: -33px;
-	left: 30px;
+	left: 50px;
 	margin: 0;
 	padding: 0
 }
@@ -184,7 +185,7 @@ ul#logo li img {
 li.dotcom
 {
 	position: relative;
-	top: -8px;
+	top: -13px;
 	margin: 0 0 0 -5px;
 	padding: 0;
 	color: #5680A6;
@@ -228,12 +229,12 @@ span#date
 #content
 {
 	float: right;
-	width: 520px;
+  clear: right;
+	width: 660px;
 	min-height: 550px;
 	border: 0;
-	border-left: 1px dotted #DDDDDD;
 	margin: 0;
-	padding: 10px 35px 55px 30px;
+	padding: 10px 50px 55px 30px;
 	text-align: justify;
 	line-height: 1.55em;
 	font-size: 1.2em;
@@ -265,7 +266,7 @@ span#date
 #bottom
 {
 	color: #FFF;
-	width: 740px;
+	width: 910px;
 	margin: 2px auto 30px auto;
 	padding: 3px 10px 3px 10px;
 	font-family: Verdana, Trebuchet, Lucida, Arial, sans-serif;
@@ -353,6 +354,8 @@ span#date
 .alcenter { text-align: center; }
 .alleft { text-align: left; }
 .alright { text-align: right; }
+
+.aligncenter { margin-left: auto; margin-right: auto; }
 
 .note
 {
@@ -480,6 +483,21 @@ div.paragraph-calendar span.large {
 .hide { display: none; }
 
 
+blockquote.flashquote {
+  width: 13em;
+  margin: 1em 0 1em 2em;
+  display: inline;
+  float: right;
+  padding: 1em 0 1em 1em;
+  font-size: 130%;
+  font-style: italic;
+  text-align: left;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  border-right: none;
+}
+
+
 /* ****** Images frames, etc ******* */
 
 a img {
@@ -506,22 +524,22 @@ a.simlink:hover img.framed
 
 /* imagelink: "div a img" sequence with no underlines etc. */
 
-div.imagelink a,
-div.imagelink a:link,
-div.imagelink a:visited,
-div.imagelink a:active,
-div.imagelink a:hover
+.imagelink a,
+.imagelink a:link,
+.imagelink a:visited,
+.imagelink a:active,
+.imagelink a:hover
 {
 	border: 0;
 	text-decoration: none;
 }
 
-div.imagelink a img {
+.imagelink a img {
 	padding: 3px;
 	border: 1px solid #CCC;
 }
 
-div.imagelink a:hover img
+.imagelink a:hover img
 {
 	padding: 3px;
 	border: 1px solid #86A6C2;
@@ -535,7 +553,7 @@ div.imagelink a:hover img
 
 body a[href^='http:'] {
 	padding-right:9px;
-	background-image:url("/old/images/link-out.gif");
+	background-image:url("/images/link-out.gif");
 	background-position:right top;
 	background-repeat:no-repeat;
 }*/
@@ -688,14 +706,15 @@ a#id:hover
 #pi a:active { border: 0; }
 #pi a:hover { border: 0; }
 
-
+div.dialogue dl,
 dl.dialogue {
-	background: url("/old/images/quotes.png") top left no-repeat;
+	background: url("/images/quotes.png") top left no-repeat;
 	margin: 1em 0 0 0;
 	padding: 0 0 0 1em;
 	border-right: 2px #eee solid;
 	padding-right: 20px;
 }
+div.dialogue dl dt,
 dl.dialogue dt {
 	float: left;
 	margin: 0 1em 0 0;
@@ -703,10 +722,12 @@ dl.dialogue dt {
 	text-align: right;
 }
 
+div.dialogue dl dt:after,
 dl.dialogue dt:after {
 	content: ":";
 }
 
+div.dialogue dl dd,
 dl.dialogue dd {
 	margin: 0 0 .5em 11.5em;
 	padding: 0;
@@ -716,6 +737,14 @@ dl.dialogue dd {
 dl.simplebg {
 	background: none;
 	border-right: none;
+}
+
+/***********************************************************
+	Markdown customizations */
+
+table.markdown tr th,
+table.markdown tr td {
+	padding-right: 1em;
 }
 
 

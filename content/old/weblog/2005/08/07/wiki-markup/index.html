@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos » Weblog  &raquo; Wiki markup σε απλές ιστοσελίδες</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2005 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	<meta name="generator" content="WordPress" />
+	
+	<link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/weblog/wp-content/themes/glezos/style.css" type="text/css" media="screen" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/weblog/feed" />
+	<link rel="alternate" type="text/xml" title="RSS .92" href="/weblog/feed/rss" />
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="/weblog/feed/atom" />
+	<link rel="accessibility" href="/website/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="author" href="/contact/" title="Contact the author" />
+	<link rel="start" href="/weblog/" title="Weblog home page" />
+
+	<link rel='stylesheet' href='/weblog/wp-content/plugins/flickr-gallery/flickr-gallery.css?ver=1218875318' type='text/css' media='' />
+<link rel='stylesheet' href='/weblog/wp-content/plugins/flickr-gallery/tab-theme/jquery-ui-1.5.2.css?ver=1.5.2' type='text/css' media='' />
+<link rel='stylesheet' href='/weblog/wp-content/plugins/flickr-gallery/flightbox/jquery.flightbox.css?ver=1153255927' type='text/css' media='' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/weblog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/weblog/wp-includes/wlwmanifest.xml" /> 
+<script type='text/javascript' src='/weblog/wp-includes/js/jquery/jquery.js?ver=1.2.6'></script>
+<script type='text/javascript' src='/weblog/wp-includes/js/jquery/ui.core.js?ver=1.5.2'></script>
+<script type='text/javascript' src='/weblog/wp-includes/js/jquery/ui.tabs.js?ver=1.5.2'></script>
+<script type='text/javascript' src='/weblog/wp-content/plugins/flickr-gallery/flightbox/jquery.flightbox.js?ver=1630038345'></script>
+<meta name="generator" content="WordPress 2.7.1" />
+
+<script language="javascript1.4" type="text/javascript" src="/weblog/wp-content/plugins/audio-player/audio-player.js"></script>
+
+<!-- JavaScript Pull-Quotes plugin v1.6.5
+	http://striderweb.com/nerdaphernalia/features/wp-javascript-pull-quotes/ -->
+	<link rel="stylesheet" href="/weblog/wp-content/plugins/jspullquotes/files/jspullquotes-core.css" type="text/css" />
+	<link rel="stylesheet" href="/weblog/wp-content/plugins/jspullquotes/styles/Default.css" type="text/css" />
+	<script type="text/javascript" src="/weblog/wp-content/plugins/jspullquotes/files/jspullquotes.js"></script>
+	<script type="text/javascript">
+		var arrOptions = new Array("1", "right", "1", "1", "", "blockquote", "pullquote", "pullquote pqRight");
+		pullQuoteOpts(arrOptions);
+	</script>
+<!-- end pull-quote additions -->
+
+<link rel="stylesheet" href="/weblog/wp-content/plugins/wp-syntax/wp-syntax.css" type="text/css" media="screen" />
+<script language="javascript" type="text/javascript" src="/weblog/wp-content/plugins/wpg2/js/dtree.js"></script>
+<link rel="stylesheet" type="text/css" href="/photos/main.php?g2_view=imageframe.CSS&amp;g2_frames=None%7Cbleh"/>
+<link rel="stylesheet" type="text/css" media="screen" href="/weblog/wp-content/plugins/wpg2/css/wpg2.css"/>
+
+	<!-- Google analytics -->
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		_uacct = "UA-264563-1";
+		urchinTracker();
+	</script>
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="/" class="simlink" tabindex="1" accesskey="1"><img id="top" width="159" height="67" src="/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li><li class="dotcom"><a href="/">.com/</a></li><li class="dotcom dotcomactive"><a href="/weblog/" accesskey="2">weblog</a></li>
+	</ul>
+	<span id="date">13 <span id="month">may</span> 09</span>
+</div>
+
+	<div id="content" class="widecolumn">
+				
+  	
+		<ul class="post">
+		<li>
+			<h2 id="post-157">Wiki markup σε απλές ιστοσελίδες</h2>
+		</li>
+	
+		<li class="entry">
+<p>Πρόσφατα αναρωτήθηκα αν θα συνέφερε να χρησιμοποιώ κάποιο wiki-style markup για τις στατικές σελίδες του ιστοχώρου, κυρίως για να δημιουργούνται αυτόματα τα βασικά: παράγραφοι, επικεφαλίδες, λίστες και σύνδεσμοι. Αποδείχτηκε πολύ εύκολο τελικά.</p>
+
+<p>Καταρχάς χρειάστηκε ένα επιπλέον πακέτο στην <acronym title="Hypertext PreProcessing">PHP</acronym>, το Text/Wiki (πακέτο της βιβλιοθήκης <a href="http://pear.php.net">PEAR</a>):</p>
+
+<p><pre class="bash"># pear install text&#95;wiki
+downloading Text&#95;Wiki-1.0.0.tgz ...
+Starting to download Text&#95;Wiki-1.0.0.tgz (47,569 bytes)
+.............done: 47,569 bytes
+install ok: Text&#95;Wiki 1.0.0
+</pre></p>
+
+<p>Στο σημείο αυτό χρειάστηκε να αλλάξω ένα αρχείο της βιβλιοθήκης για να υποστηρίζει σωστά το <acronym title="Unicode Transformation Format">UTF</acronym>-8 encoding, ακολουθώντας τις οδηγίες στα <a href="http://wiki.ciaweb.net/yawiki/index.php?area=Text_Wiki&#038;page=UserDocs">σχόλια της τεκμηρίωσης της βιβλιοθήκης</a>.</p>
+
+<p>Το δεύτερο βήμα ήταν να φτιάξω μια συνάρτηση η οποία θα <a href="/box/code/wikitext-function.txt">καλεί τη βιβλιοθήκη και θα μετατρέπει ένα wiki-κείμενο σε <acronym title="eXtensible HyperText Markup Language - HTML reformulated as XML">XHTML</acronym></a>.</p>
+
+<p>Αυτό ήταν. Για να δούμε με <a href="/box/code/wikitext-example.txt">ένα παράδειγμα</a>&#8230;</p>
+
+<p>&#8230;τυμπανοκρουσίες αγωνίας πριν το rendering&#8230;</p>
+
+<hr />
+
+
+<div class="wp_syntax"><div class="code"><pre class="markdown" style="font-family:monospace;">**Γειά! Είμαι ένα παράδειγμα κειμένου wiki.**
+&nbsp;
+Αυτό το κείμενο περιέχει //emphasized// και **strong** κείμενο. Επίσης, @@--- αυτό διαγράφηκε @@ και @@ +++ αυτό εισήχθηκε@@ μετά τη συγγραφή του.
+&nbsp;
++++ Επικεφαλίδα επιπέδου 3
+++++ Επικεφαλίδα επιπέδου 4
+&nbsp;
+# Νούμερο 1
+ * Λίστα
+ * Λίστα
+  * Υπο-λίστα
+   # Υπο-υπο-αριθμός
+   # Υπο-υπο-αριθμός
+# Νούμερο 2
+ * Λίστα
+ * Λίστα
+&nbsp;
+Αυτό εδώ είναι κανονικό κείμενο
+&nbsp;
+&gt; Μπλοκ κειμένου (blockquote)
+&nbsp;
+&gt; Ακόμη ένα μπλοκ, το οποίο περιέχει...
+&gt;&gt; Ένα εσωτερικό μπλοκ. Λα λα λα, όλα καλά \
+όλα ανθηρά!
+&nbsp;
+Πίσω στο κανονικό κείμενο.</pre></div></div>
+
+
+<hr />
+
+<p>Έτοιμο! Για του λόγου το αληθές, η <a href="/">αρχική σελίδα</a> του ιστοχώρου είναι γραμμένη σε <del><a href="/box/code/index.wikimarkup.text">wiki-format</a></del> <ins>Markdown</ins> πλέον.</p>
+
+<p>Προφανώς, δεν πρόκειται να αντικαταστήσει πλήρως την χειρόγραφη <acronym title="HyperText Markup Language">HTML</acronym>. Γι&#8217; αυτό, όπου βλέπεις πως δε σε βολεύει, ρίχνεις ένα ζευγάρι διπλών backticks (<code>don't-parse-me-please</code>) και γράφεις ό,τι θα έγραφες κανονικά (από HTML μέχρι και PHP).</p>
+
+<p>Η βιβλιοθήκη θέλει λίγο ρεγουλάρισμα φυσικά. Ήδη την πείραξα ώστε να υποστηρίζει σχετικά <acronym title="Uniform Resource Locator">URL</acronym> (χωρίς http:// μπροστά). Επίσης, σε μια πιο καθαρή προσέγγιση θα μπορούσε κανείς να περικλείσει το wiki κείμενο σε δύο <acronym title="eXtensible Markup Language">XML</acronym> tags (π.χ. <code>&lt;wikitext language="php"&gt;μπλα μπλα&lt;/wikitext&gt;</code>), ώστε το αρχείο να περιέχει καθαρή XML αντί ανακατεμένες HTML+PHP.</p>
+
+<p>Ό,τι χρειαστεί, στην πορεία&#8230;</p>	
+		</li>
+		<li class="postmetadata">
+				afternoon, Κυριακή 7 Αυγούστου 2005				<span title="3 χρόνια και 9 μήνες πριν"><img alt="date" src="/images/clock.gif" width="9" height="11" /></span>
+				<br/>
+				[ <a href="/weblog/category/website" title="View all posts in Website" rel="category tag">Website</a> ]
+				| <img alt="link" src="/images/link.gif" width="7" height="7" />
+					<a href="/weblog/2005/08/07/wiki-markup" rel="bookmark" title="Permanent link to 'Wiki markup σε απλές ιστοσελίδες'">Permalink</a>
+									| <a href="#respond">Comment!</a>
+				
+		</li>
+		</ul>
+
+	
+	<h2 id="comments">2 σχόλια »</h2> 
+
+	<ol class="commentlist">
+	
+		<li id="comment-325" class="alt" >
+		<ul class="nobullet">
+			<li class="comment-numbering"><a href="#comment-325" title="Μόνιμος σύνδεσμος σ' αυτό το σχόλιο">#1</a></li>
+			<li class="comment-cite"><cite>Άγγελος Ορφανάκος</cite></li>
+			<li class="comment-metadata">
+				early in the afternoon, Τρίτη 9 Αυγούστου 2005
+				<span title="1 ημέρα και 21 ώρες after the post"><img alt="date" src="/images/clock.gif" width="9" height="11" /></span>
+			</li>
+			<li>
+<p>Το <a href="http://daringfireball.net/projects/markdown/" rel="nofollow">Markdown</a> είναι επίσης καλό, ενώ υπάρχει ήδη <a href="http://www.michelf.com/projects/php-markdown/" rel="nofollow">υλοποίηση σε <acronym title="Hypertext PreProcessing">PHP</acronym></a>.</p>
+			</li>
+		</ul>
+
+		</li>
+		
+		<li id="comment-326" >
+		<ul class="nobullet">
+			<li class="comment-numbering"><a href="#comment-326" title="Μόνιμος σύνδεσμος σ' αυτό το σχόλιο">#2</a></li>
+			<li class="comment-cite"><cite class="weblog-author"><a href='/weblog/' rel='external nofollow' class='url'>Δημήτρης Γλέζος</a></cite></li>
+			<li class="comment-metadata">
+				early in the afternoon, Τρίτη 9 Αυγούστου 2005
+				<span title="1 ημέρα και 22 ώρες after the post"><img alt="date" src="/images/clock.gif" width="9" height="11" /></span>
+			</li>
+			<li>
+<p>Διάολε.</p>
+<p>Δεν είχα προσέξει ότι το Markdown είχε υλοποίηση σε <acronym title="Hypertext PreProcessing">PHP</acronym>.  :#</p>
+			</li>
+		</ul>
+
+		</li>
+			</ol>
+
+ 
+
+<hr />
+
+
+
+<h3 id="respond">Comment!</h3>	
+<div id="commenting">
+
+	<form action="/weblog/wp-comments-post.php" method="post" id="commentform">
+
+	<div id="commentinputs">	
+	
+		<p>
+		<label for="author">Name</label><br />
+		<input type="text" name="author" id="author" value="" size="20" tabindex="8" />
+	</p>
+	<p>	
+		<label for="email">e-mail</label><br />
+		<input type="text" name="email" id="email" value="" size="20" tabindex="9" />
+	</p>
+	<p>	
+		<label for="url">Website</label><br />
+		<input type="text" name="url" id="url" value="" size="20" tabindex="10" />
+	</p>
+		</div>
+
+	<div id="commentadvices">
+		<p><em>Feel free to express yourselves!</em></p>
+		<p><strong>Please read the <a href="/weblog/about/#comments">comment policy</a> before commenting.</strong></p>
+		<p>Your email address will never be published. It is only asked to send you a personal email if needed. I hate spam too.</p>
+		<p><strong>XHTML</strong> tags allowed: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; &lt;pre lang=&quot;&quot; line=&quot;&quot; escaped=&quot;&quot;&gt; </code>. For block quotes use <code>&lt;blockquote&gt;</code>.</p>
+	</div>
+	
+	<div class="clearer">&nbsp;</div>
+
+	<p>
+		<label for="comment">Comment</label><br/>
+		<textarea name="comment" id="comment" cols="80" rows="15" tabindex="11"></textarea>
+	</p>
+
+	<div class="txtareasize">
+		<img src="/images/reduceH.gif" onkeypress="document.getElementById('comment').rows -= 4;" onclick="document.getElementById('comment').rows -= 4;" title="Σμίκρυνση χώρου σχολίων" alt="Reduce textarea size" />
+		<img src="/images/enlargeH.gif" onkeypress="document.getElementById('comment').rows += 4;" onclick="document.getElementById('comment').rows += 4;" title="Μεγέθυνση χώρου σχολίων" alt="Increase textarea size" />
+	</div>
+	<p>
+		<input name="submit" type="submit" id="submit" tabindex="12" value="Comment!" />
+		<input type="hidden" name="comment_post_ID" value="157" />
+<input type="hidden" id="sk2_time" name="sk2_time" value="1242205248" /><input type="hidden" id="sk2_ip" name="sk2_ip" value="67.202.55.193" /><input type="hidden" id="sk2_payload" name="sk2_payload" value="fc41a2fe0c80deab05265cce293bcbc2" /><input type="hidden" id="sk2_my_js_check1" name="sk2_my_js_check1" value="1sb2dm844j" />
+<input type="hidden" id="sk2_my_js_check2" name="sk2_my_js_check2" value="c114ce9d4bd593e270d0cabf62ebcc16" />
+<script type="text/javascript">
+<!--
+	document.write('<input type="hidden" id="sk2_my_js_payload" name="sk2_my_js_payload" value="');
+	document.write(Math.round ( Math.abs((Math.round ( Math.abs((Math.round ( Math.abs(Math.round ( Math.abs(Math.round ( Math.abs(1 % 36)) / 9)) / 13)) - 33) / 11)) - 26))));
+	document.write('" />');
+-->
+</script>
+	</p>
+	</form>
+	
+	<div id="preview-wrapper">
+			</div>
+
+</div>
+
+	
+	
+		<hr/>
+
+		<ul class="cols3 simpleblockul">
+		<li class="left">
+			← <a href="/weblog/2005/08/06/research-proposal">Research Proposal</a>&nbsp;
+		</li>
+		<li class="right">
+			<a href="/weblog/2005/08/08/logo-images">Λογότυπο και desktop backgrounds</a> →		</li>
+		<li>
+			↑ <a href="/weblog/">Return</a>
+		</li>
+		</ul>
+	</div>
+
+	<div id="sidebar">
+		<ul>
+
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="/about/" tabindex="3">About the author</a></li>
+				<li><a href="/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="/contact/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li><a href="/weblog/feed/">All articles</a> (<a href="/weblog/feed/atom/">atom</a>)</li>
+				<li><a href="/weblog/feed/?cat=-24">Main articles</a> (<a href="/weblog/feed/atom/?cat=-24">atom</a>)</li>
+				<li><a href="/weblog/category/minipost/feed">Mini-posts</a> (<a href="/weblog/category/minipost/feed/atom/">atom</a>)</li>
+				<li><a href="/weblog/comments/feed/">Comments</a> (<a href="/weblog/comments/feed/atom/">atom</a>)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+		<div class="poetry">
+		<p>
+			CODE IS POETRY.
+			THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+			AND STATES <a href="/website/accessibility/">EQUALLY ACCESSILE</a> BY EVERYONE.
+		</p>
+
+		</div>
+
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+	
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+	<span class="floatright">
+	Last post: May 12 2009, 18:51 CDT	</span>
+</div>
+
+
+			<script type="text/javascript">
+				jQuery(document).ready(function(){
+					jQuery("img.flickr.square,img.flickr.thumbnail,img.flickr.small").flightbox();
+				});
+			</script>
+		
+</body>
+</html>

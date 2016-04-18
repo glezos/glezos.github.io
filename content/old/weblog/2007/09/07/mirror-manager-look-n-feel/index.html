@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos » Weblog &raquo; Fedora websites look-n-feel: Mirror manager</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2005 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	<meta name="generator" content="WordPress 2.1" />
+	
+	<link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/weblog/wp-content/themes/glezos/style.css" type="text/css" media="screen" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/weblog/feed/" />
+	<link rel="alternate" type="text/xml" title="RSS .92" href="/weblog/feed/rss/" />
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="/weblog/feed/atom/" />
+	<link rel="accessibility" href="/website/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="author" href="/contact/" title="Contact the author" />
+	<link rel="start" href="/weblog/" title="Weblog home page" />
+
+		<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/weblog/xmlrpc.php?rsd" />
+<script type='text/javascript' src='/weblog/wp-includes/js/tw-sack.js?ver=1.6.1'></script>
+<script type='text/javascript' src='/weblog/wp-content/plugins/ajax-comment-preview/ajax-comment-preview-js.php?ver=1.21189990941'></script>
+
+	<script src="/weblog/wp-admin/quicktags.js" type="text/javascript"></script>
+	<script src="/weblog/wp-content/plugins/comment_quicktags.php" type="text/javascript"></script>
+
+<!-- JavaScript Pull-Quotes plugin v1.6.5
+	http://striderweb.com/nerdaphernalia/features/wp-javascript-pull-quotes/ -->
+	<link rel="stylesheet" href="/weblog/wp-content/plugins/jspullquotes/files/jspullquotes-core.css" type="text/css" />
+	<link rel="stylesheet" href="/weblog/wp-content/plugins/jspullquotes/styles/Default.css" type="text/css" />
+	<script type="text/javascript" src="/weblog/wp-content/plugins/jspullquotes/files/jspullquotes.js"></script>
+	<script type="text/javascript">
+		var arrOptions = new Array("1", "right", "1", "1", "", "blockquote", "pullquote", "pullquote pqRight");
+		pullQuoteOpts(arrOptions);
+	</script>
+<!-- end pull-quote additions -->
+
+	<!-- Google analytics -->
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		_uacct = "UA-264563-1";
+		urchinTracker();
+	</script>
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="/" class="simlink" tabindex="1" accesskey="1"><img id="top" width="159" height="67" src="/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li><li class="dotcom"><a href="/">.com/</a></li><li class="dotcom dotcomactive"><a href="/weblog/" accesskey="2">weblog</a></li>
+	</ul>
+	<span id="date">10 <span id="month">οκτ</span> 07</span>
+</div>
+
+	<div id="content" class="widecolumn">
+				
+  	
+		<ul class="post">
+		<li>
+			<h2 id="post-509">Fedora websites look-n-feel: Mirror manager</h2>
+		</li>
+	
+		<li class="entry">
+<p><img class="floatleft" src="http://translate.fedoraproject.org/data/fedora/icons/face-monkeyL.png" alt="Monkey face" /></p>
+<p>Lately a lot of work has been done on increasing the usability of the Fedora websites &#8212; I&#8217;ve blogged about some of our efforts concerning the wiki in the past <a href="/weblog/2007/03/13/wiki-work/">[1]</a>, <a href="/weblog/2007/03/19/wiki-headings/">[2]</a>. We&#8217;ve been using web apps more and more to capture information and knowledge, and to provide functionality to developers and users. A bunch of great web-based infrastructure tools were written from various Fedora code monkeys that handle account administrative tasks, package building and updating, knowledge sharing, mirrors management, and translation coordination. Basically, we are on tools building spree!</p>
+<p>So, when designing the template of <a href="http://fedoraproject.org/">fedoraproject.org</a> and the content style of <a href="http://translate.fedoraproject.org/">translate.fpo</a>, we kept in mind that a common look-n-feel between all our web resources would be desirable for everyone: having a consistent, usable, high-quality web look-n-feel across the project is <em>a good thing</em>™. The idea is that all Fedora websites and web apps &#8220;feel&#8221; the same, even if they use completely different technologies underneath.</p>
+<p>Take our mirror manager for example. Here&#8217;s a <a href="http://git.fedoraproject.org/?p=hosted/mirrormanager;a=commit;h=97a91ebe493877c50eece140e920dea1a724ffdc">small patchset</a> to the templates that landed the other day, wrapping the content in the header-n-footer theme of fedoraproject.org.</p>
+<div class="alcenter"><a href="http://mirrors.fedoraproject.org/publiclist/"><img class="framed" title="New mirrormanager look" src='/weblog/wp-content/uploads/2007/08/mm3.png' alt='mm3.png' /></a></div>
+<p>It basically inherits from the general <a href="http://fedoraproject.org/">fedoraproject.org</a> template, but having smaller text to convey lots of information compared to the marketing-oriented big text of the main page. Using icons to quickly capture information is often used and people like it because they can identify the resource more quickly, navigate more intuitively, and get less often disoriented in a web resource.</p>
+<p>The old design could need some love, and <a href="http://fedoraproject.org/wiki/MattDomsch">Matt Domsch</a> (the mirror wrangler) gladly accepted tweaks to the way we organize information on the page. Here&#8217;s how a table on the public mirror list looked like before:</p>
+<div class="alcenter"><img title="Old mirrors filter" class="framed" src='/weblog/wp-content/uploads/2007/08/mm1.png' alt='mm1.png' /></div>
+<p>It&#8217;s a filter for the giant mirror list we have. Since it&#8217;s not main content, it&#8217;s probably better if it didn&#8217;t take a big space from the width of a 1024-width page. Also, incremental tables usually span downwards (in rows), mainly because we&#8217;re used in vertical scrolling instead of horizontal. Finally, the table borders aren&#8217;t really important to spend so many (valuable) black pixels there, and so are the underlines.</p>
+<p><img class="floatright framed" style="float: right; margin-top: -2em;" title="New mirrors filter" src='/weblog/wp-content/uploads/2007/08/mm2.png' alt='mm2.png' /></p>
+<p>On the right is how the new filter looks like. Having the table slim and floating on the right of the page, the user can follow the content first and then catch the filter only if they need to do so. A caption at the top makes sure that even a cropped screenshot like this one makes sense to everyone, and the alternate row colors work better for separating rows, since lines increase contrast in places that are not readable, which reduces the accessibility of the information (in this case, the text itself).</p>
+<p>These small details play an important role in helping users find what the want more easily, and spend more time on our website. Feeling good when browsing is an often neglected, but astonishingly vital part of being productive and efficient, both as an information provider but also as an information consumer.</p>
+<p>At some point, we could separate the basic templating styles from the app-specific ones, so that each app can choose what to override and what common style/element to leave in peace. Common templates in <a href="http://kid-templating.org/">kid</a>, <a href="http://genshi.edgewall.org/">genshi</a> or any other templating language will be packaged in a common RPM, which will be required from our web apps, and <code>yum install foo</code> will simply require, say, <code>fedora-websites-common</code>. This way, each web server can have the set of themes and styles locally with no need to worry that when one web server fails some other website will look weird, and also updating all our websites for a common element (eg. our footer text) could be as easy as pushing an update of the RPM package.</p>	
+		</li>
+		<li class="postmetadata">
+				μες τη νύχτα, Πέμπτη 6 Σεπτεμβρίου 2007				<span title="1 μήνα πριν"><img alt="date" src="/images/clock.gif" width="9" height="11" /></span>
+				<br/>
+				[ <a href="/weblog/category/foss/fedora/" title="View all posts in Fedora" rel="category tag">Fedora</a> ]
+				| <img alt="link" src="/images/link.gif" width="7" height="7" />
+					<a href="/weblog/2007/09/07/mirror-manager-look-n-feel/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Fedora websites look-n-feel: Mirror manager'">Σύνδεσμος</a>
+									| <a href="#respond">Σχολιάστε!</a>
+				
+		</li>
+		</ul>
+
+	
+	<h2 id="comments">4 σχόλια »</h2> 
+
+	<ol class="commentlist">
+	
+		<li id="comment-8713" class="alt" >
+		<ul class="nobullet">
+			<li class="comment-numbering"><a href="#comment-8713" title="Μόνιμος σύνδεσμος σ' αυτό το σχόλιο">#1</a></li>
+			<li class="comment-cite"><cite>Máirín</cite></li>
+			<li class="comment-metadata">
+				μες τη νύχτα, Πέμπτη 6 Σεπτεμβρίου 2007
+				<span title="1 ώρα και 56 λεπτά  μετά την καταχώρηση"><img alt="date" src="/images/clock.gif" width="9" height="11" /></span>
+			</li>
+			<li>
+<p>I wonder, would it make more sense to list releases in decreasing rather increasing order? It seems folks might be more interested in the most recent releases than the older ones.</p>
+<p>Actually even better might be to only list the currently-supported releases and hide the older ones behind an &#8216;archive&#8217; link&#8230;</p>
+<p>EPEL maybe should not be as prominent either?</p>
+<p>Just some ideas!</p>
+			</li>
+		</ul>
+
+		</li>
+		
+		<li id="comment-8718" >
+		<ul class="nobullet">
+			<li class="comment-numbering"><a href="#comment-8718" title="Μόνιμος σύνδεσμος σ' αυτό το σχόλιο">#2</a></li>
+			<li class="comment-cite"><cite class="weblog-author"><a href='/weblog/' rel='external nofollow'>Δημήτρης Γλέζος</a></cite></li>
+			<li class="comment-metadata">
+				ξημερώματα, Παρασκευή 7 Σεπτεμβρίου 2007
+				<span title="2 ώρες και 48 λεπτά  μετά την καταχώρηση"><img alt="date" src="/images/clock.gif" width="9" height="11" /></span>
+			</li>
+			<li>
+<p>Good ideas Máirín! :)</p>
+<p>Thought of having <abbr title="Extra Packages for Enterprise Linux">EPEL</abbr> as well, but there&#8217;s only so much one can (should) do in the template, really. The &#8220;archive&#8221; link is a must, and sounds like something that should probably be done with Javascript with no call to the server.</p>
+<p><acronym title="By The Way">BTW</acronym>, anyone who&#8217;d like to hack something, two related files are <a href="https://hosted.fedoraproject.org/projects/mirrormanager/browser/mirrors/mirrors/templates/publiclist.kid" rel="nofollow">publiclist.kid</a> and its controller, <a href="https://hosted.fedoraproject.org/projects/mirrormanager/browser/mirrors/mirrors/mirrorlist.py" rel="nofollow">mirrorlist.py</a>.</p>
+			</li>
+		</ul>
+
+		</li>
+		
+		<li id="comment-8732" class="alt" >
+		<ul class="nobullet">
+			<li class="comment-numbering"><a href="#comment-8732" title="Μόνιμος σύνδεσμος σ' αυτό το σχόλιο">#3</a></li>
+			<li class="comment-cite"><cite><a href='http://paul.frields.org/' rel='external nofollow'>Paul W. Frields</a></cite></li>
+			<li class="comment-metadata">
+				μεσημέρι, Παρασκευή 7 Σεπτεμβρίου 2007
+				<span title="11 ώρες και 2 λεπτά  μετά την καταχώρηση"><img alt="date" src="/images/clock.gif" width="9" height="11" /></span>
+			</li>
+			<li>
+<p>Dimitris,</p>
+<p>This is a great idea and probably a little overdue.  It probably doesn&#8217;t get said enough, but you do such amazing work for the Websites team, L10N, Docs, and others.  Thanks for making so many improvements over the last year or so!</p>
+			</li>
+		</ul>
+
+		</li>
+		
+		<li id="comment-8740" >
+		<ul class="nobullet">
+			<li class="comment-numbering"><a href="#comment-8740" title="Μόνιμος σύνδεσμος σ' αυτό το σχόλιο">#4</a></li>
+			<li class="comment-cite"><cite><a href='http://mmcgrath.net/' rel='external nofollow'>Mike McGrath</a></cite></li>
+			<li class="comment-metadata">
+				νωρίς το απόγευμα, Παρασκευή 7 Σεπτεμβρίου 2007
+				<span title="13 ώρες και 42 λεπτά  μετά την καταχώρηση"><img alt="date" src="/images/clock.gif" width="9" height="11" /></span>
+			</li>
+			<li>
+<p>This stuff looks absolutely great.  Thanks for the work you&#8217;ve done with all of this stuff.</p>
+			</li>
+		</ul>
+
+		</li>
+			</ol>
+
+ 
+
+<hr />
+
+
+
+<h3 id="respond">Σχολιάστε!</h3>	
+<div id="commenting">
+
+	<form action="/weblog/wp-comments-post.php" method="post" id="commentform">
+
+	<div id="commentinputs">	
+	
+		<p>
+		<label for="author">Ονοματεπώνυμο</label><br />
+		<input type="text" name="author" id="author" value="" size="20" tabindex="8" />
+	</p>
+	<p>	
+		<label for="email">e-mail</label><br />
+		<input type="text" name="email" id="email" value="" size="20" tabindex="9" />
+	</p>
+	<p>	
+		<label for="url">Ιστοσελίδα</label><br />
+		<input type="text" name="url" id="url" value="" size="20" tabindex="10" />
+	</p>
+		</div>
+
+	<div id="commentadvices">
+		<p><em>Νιώστε ελεύθερα να πείτε τη γνώμη σας!</em></p>
+		<p><strong>Παρακαλώ διαβάστε την <a href="/weblog/about/#comments">πολιτική σχολίων</a> πριν σχολιάσετε.</strong></p>
+		<p>Η email διεύθυνση σας δεν θα δημοσιοποιηθεί ποτέ. Το πεδίο υπάρχει απλά για να σας στείλω κάποια απάντηση αν θελήσω. Να 'στε σίγουροι, απεχθάνομαι κι εγώ το spam.</p>
+		<p><strong>XHTML</strong> ετικέτες που επιτρέπονται: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; </code>. Για τις παραθέσεις χρησιμοποιήστε <code>&lt;blockquote&gt;</code> HTML ετικέτες.</p>
+	</div>
+	
+	<div class="clearer">&nbsp;</div>
+
+	<p>
+		<label for="comment">Σχόλιο</label><br/>
+		<script type="text/javascript">edToolbar();</script><textarea name="comment" id="comment" cols="80" rows="15" tabindex="11"></textarea><script type="text/javascript">var edCanvas = document.getElementById('comment');</script>
+	</p>
+
+	<div class="txtareasize">
+		<img src="/images/reduceH.gif" onkeypress="document.getElementById('comment').rows -= 4;" onclick="document.getElementById('comment').rows -= 4;" title="Σμίκρυνση χώρου σχολίων" alt="Reduce textarea size" />
+		<img src="/images/enlargeH.gif" onkeypress="document.getElementById('comment').rows += 4;" onclick="document.getElementById('comment').rows += 4;" title="Μεγέθυνση χώρου σχολίων" alt="Increase textarea size" />
+	</div>
+	<p>
+		<input name="submit" type="submit" id="submit" tabindex="12" value="Καταχώρηση" />
+		<input type="hidden" name="comment_post_ID" value="509" />
+<input type="hidden" id="sk2_my_js_check1" name="sk2_my_js_check1" value="gkrss7tcqs" />
+<input type="hidden" id="sk2_my_js_check2" name="sk2_my_js_check2" value="47ed0a8a04a19ee3105e3a86c833b7ab" />
+<script type="text/javascript">
+<!--
+	document.write('<input type="hidden" id="sk2_my_js_payload" name="sk2_my_js_payload" value="');
+	document.write(Math.round ( Math.abs((((Math.round ( Math.abs((1 + 13) % 28)) - 26) - 23) * 36))));
+	document.write('" />');
+-->
+</script>
+<input type="hidden" id="sk2_time" name="sk2_time" value="1192065680" /><input type="hidden" id="sk2_ip" name="sk2_ip" value="208.70.24.236" /><input type="hidden" id="sk2_payload" name="sk2_payload" value="e16f905aac3e9154c8c877d4a606fa65" /><input name="acp-preview" type="button" id="acp-preview" tabindex="13" value="Προεπισκόπηση" /><div id="ajax-comment-preview"></div>	</p>
+	</form>
+	
+	<div id="preview-wrapper">
+			</div>
+
+</div>
+
+	
+	
+		<hr/>
+
+		<ul class="cols3 simpleblockul">
+		<li class="left">
+			← <a href="/weblog/2007/09/04/flashback-europarl-03/">Flashback: Βρυξέλλες &#8216;03</a>&nbsp;
+		</li>
+		<li class="right">
+			<a href="/weblog/2007/09/07/django-sprint/">Django sprint</a> →		</li>
+		<li>
+			↑ <a href="/weblog/">Επιστροφή</a>
+		</li>
+		</ul>
+	</div>
+
+	<div id="sidebar">
+		<ul>
+
+			<li>
+			<h2>ΕΠΙΛΟΓΕΣ</h2>
+			<ul>
+				<li><a href="/weblog/" tabindex="2">Αρχική σελίδα weblog</a></li>
+				<li><a href="/about/" tabindex="3">Ο Δημήτρης Γλέζος</a></li>
+				<li><a href="/weblog/about/" tabindex="4">Το ιστολόγιο αυτό</a></li>
+				<li><a href="/weblog/archives/" tabindex="5">Αρχείο καταχωρήσεων</a></li>
+				<li><a href="/contact/" tabindex="6">Επικοινωνία</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="/weblog/">
+			<h2><label for="sidesearch">ΑΝΑΖΗΤΗΣΗ</label></h2>
+			<div><input size="13" type="text" value="(κείμενο)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>ΠΑΡΟΧΕΣ XML</h2>
+			<ul>
+				<li><a href="/weblog/feed/">Καταχωρήσεις</a> (<a href="/weblog/feed/atom/">Atom</a>)</li>
+				<li><a href="/weblog/comments/feed/">Σχόλια</a></li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>ΚΟΙΝΟΤΗΤΕΣ</h2>
+
+			<h3>Ανήκω</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">Πλανήτης ΕΛΛΑΚ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">Πλανήτης Fedora</a></li>
+			</ul>
+			</li>
+		</ul>
+
+		<div class="poetry">
+		<p>
+			Ο ΚΩΔΙΚΑΣ ΕΙΝΑΙ ΠΟΙΗΣΗ.
+			Ο ΙΣΤΟΧΩΡΟΣ ΧΡΗΣΙΜΟΠΟΙΕΙ ΜΟΝΟ ΟΡΘΗ <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> ΚΑΙ <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+			ΚΑΙ ΔΗΛΩΝΕΙ <a href="/website/accessibility/">ΙΣΟΤΙΜΑ ΠΡΟΣΒΑΣΙΜΟΣ</a> ΑΠΟ ΟΛΟΥΣ.
+		</p>
+
+		</div>
+
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+	
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+	<span class="floatright">
+	Τελευταία καταχώρηση: October 7 2007, 21:55 PDT	</span>
+</div>
+
+
+
+</body>
+</html>

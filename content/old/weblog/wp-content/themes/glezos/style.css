@@ -2,7 +2,7 @@
 Theme Name: Glezos
 Theme URI: /weblog/
 Description: Wordpress theme for website of Dimitris Glezos
-Version: 1.1
+Version: 1.2
 Author: Dimitris Glezos
 Author URI: /
 
@@ -55,7 +55,7 @@ textarea:focus {
 }
 
 #content {
-	width: 500px;
+	width: 640px;
 	min-height: 1100px;
 }
 
@@ -67,8 +67,7 @@ textarea:focus {
 	margin: 0;
 	padding: 15px 15px 10px 15px;
 	font-family: Verdana, Trebuchet, Lucida, Arial, sans-serif;
-	font-size: 0.9em;
-	line-height: 1.55em;
+	line-height: 1.5em;
 }
 
 #miniposts h2 {
@@ -107,6 +106,9 @@ textarea:focus {
 	margin-right: 2px;
 	content: '» ';
 }
+
+#miniposts p { margin-top: 0; display: inline; }
+#miniposts span.meta { color: #888; }
 
 
 
@@ -225,10 +227,9 @@ textarea:focus {
 }
 #commenting div#commentinputs {
 	float: left;
-	border-right: 1px solid #ddd;
 	padding-right: 15px;
 	margin: 0 15px 20px 0;
-	min-height: 22em;
+	width: 17em;
 }
 
 #commenting div.txtareasize {
@@ -265,7 +266,7 @@ textarea:focus {
 #commenting textarea#comment {
 	margin: -1px 0 0.5em 0;
 	font-family: Georgia, "Bitstream Vera Serif", Utopia, "Times New Roman", times, serif;
-	width: 467px;
+	width: 100%;
 	font-size: 1.1em;
 	padding: 0.5em;
 }
@@ -429,6 +430,16 @@ ol.commentlist > li > ul > li.comment-numbering a {
 
 ol.commentlist li > ul > li.comment-numbering a:hover { color: #86A6C2; }
 
+
+ol.commentlist > li > ul > li > ul > li {
+		list-style-image: url(/images/list_dot.png);
+}
+
+ol.commentlist > li > ul > li > ul > li > ul > li {
+		list-style-image: url(/images/list_dot_sec.png);
+}
+
+
 /* alternating comment properties */
 .alt { /* background: #eff3f7; */ }
 .alt .comment-numbering { /* color: #e5e5e5; */ }
@@ -534,6 +545,7 @@ div.last-stuff ul li dd:before {
 
 
 .post div.codehl { font-size: 0.9em; }
+
 
 /***********************************************************
     Hacks
