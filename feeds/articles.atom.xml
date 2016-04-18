@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dimitris Glezos' Personal website</title><link href="http://glezos.github.io/" rel="alternate"></link><link href="http://glezos.github.io/feeds/articles.atom.xml" rel="self"></link><id>http://glezos.github.io/</id><updated>2010-01-27T00:00:00-08:00</updated><entry><title>Single-merge hg rebase --collapseDate: 2010-01-27 09:23:01</title><link href="http://glezos.github.io/single-merge-hg-rebase-collapsedate-2010-01-27-092301.html" rel="alternate"></link><published>2010-01-27T00:00:00-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-01-27:single-merge-hg-rebase-collapsedate-2010-01-27-092301.html</id><summary type="html">&lt;dl&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dimitris Glezos' Personal website</title><link href="http://dimitris.glezos.com/" rel="alternate"></link><link href="http://dimitris.glezos.com/feeds/articles.atom.xml" rel="self"></link><id>http://dimitris.glezos.com/</id><updated>2010-01-27T00:00:00-08:00</updated><entry><title>Single-merge hg rebase --collapseDate: 2010-01-27 09:23:01</title><link href="http://dimitris.glezos.com/single-merge-hg-rebase-collapsedate-2010-01-27-092301.html" rel="alternate"></link><published>2010-01-27T00:00:00-08:00</published><author><name>glezos-blog</name></author><id>tag:dimitris.glezos.com,2010-01-27:single-merge-hg-rebase-collapsedate-2010-01-27-092301.html</id><summary type="html">&lt;dl&gt;
 &lt;dt&gt;category&lt;/dt&gt;
 &lt;dd&gt;
 &lt;p&gt;text&lt;/p&gt;
@@ -39,7 +39,7 @@ Here's how the tree looks before the strip:&lt;/p&gt;
     o o  Ha,Hb
     | |
     o o&lt;/p&gt;
-&lt;/p&gt;</summary></entry><entry><title>QuoteDate: 2010-01-25 14:35:00</title><link href="http://glezos.github.io/quotedate-2010-01-25-143500.html" rel="alternate"></link><published>2010-01-25T00:00:00-08:00</published><author><name>glezos-blog</name></author><id>tag:glezos.github.io,2010-01-25:quotedate-2010-01-25-143500.html</id><summary type="html">&lt;dl&gt;
+&lt;/p&gt;</summary></entry><entry><title>QuoteDate: 2010-01-25 14:35:00</title><link href="http://dimitris.glezos.com/quotedate-2010-01-25-143500.html" rel="alternate"></link><published>2010-01-25T00:00:00-08:00</published><author><name>glezos-blog</name></author><id>tag:dimitris.glezos.com,2010-01-25:quotedate-2010-01-25-143500.html</id><summary type="html">&lt;dl&gt;
 &lt;dt&gt;category&lt;/dt&gt;
 &lt;dd&gt;
 &lt;p&gt;quote&lt;/p&gt;
