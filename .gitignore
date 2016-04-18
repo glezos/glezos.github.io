@@ -1,0 +1,13 @@
+syntax: glob
+develop_server.sh
+output
+*.pid
+*.pyc
+*.pyo
+.DS_Store
+.sass-cache
+*~
+*.swp
+*.swo
+.idea/
+cache/
