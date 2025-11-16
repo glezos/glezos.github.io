@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Look ma, no tables!</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+	
+
+		<ul class="post">
+		<li>
+
+			<h2 id="post-1566"><a href="https://dimitris.glezos.com:8000/weblog/2003/12/16/look-ma-no-tables/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Look ma, no tables!'">Look ma, no tables!</a></h2>
+		</li>
+		<li class="entry"><p>Από σήμερα το layout τόσο της <a href="/">ιστοσελίδας μου</a> όσο και του weblog είναι φτιαγμένο καθαρά με CSS, <a href="http://glish.com/css/">χωρίς τη χρήση tables</a>, ενώ και τα δύο είναι valid XHTML. Η μετάβαση δε μπορώ να πω ότι ήταν όσο εύκολη περίμενα να είναι, κυρίως γιατί θέλω τα πράγματα να ‘ναι από ‘δω κι από κει, αλλά μετά από λίγα ζόρια έκατσε και άξιζε τον κόπο με το παραπάνω.</p>
+<p><img alt="studying CSS" src="/box/studying_css.png"></p>
+<p>Όλα ξεκίνησαν μ’ εκείνη την επίμονη βαρεμάρα ενός απογεύματος που δεν έλεγε να τελειώσει που τη βρίσκει κανείς συχνά σ’ εμάς τους κομπιουεράδες. Βρέθηκα να παίζω με τα χρώματα στο gimp για αρκετή ώρα.. Ε κάποια στιγμή φάνηκε να βγαίνει κάτι όμορφο..</p>
+<p>Και λέω.. “Αφού θα φορέσεις τις γαλότσες και θα χωθείς μες την HTML, δε χώνεσαι με το σωστό τρόπο;” (λέγε με valid <a href="http://www.w3.org/Style/CSS/">CSS</a>/<a href="http://www.w3.org/TR/xhtml1/">XHTML</a>)…</p>
+<p>Οι πίνακες μπήκαν στην HTML για ένα και μόνο λόγο: Για την παρουσιάση tabular δεδομένων. Από τη στιγμή όμως που υπάρχει και το μαγικό border=”0″, οι web designers άρχισαν να τους χρησιμοποιούν για να τοποθετούν τα αντικείμενα της σελίδας τους εκεί που θέλουν. Αν και αυτό πετυγχαίνει παράγοντας το επιθυμητό αποτέλεσμα, έχει ένα δυσάρεστο side-effect: Ο κώδικας παρουσίασης και τα ίδια τα δεδομένα βρίσκονται στο ίδιο αρχείο, μπλεγμένα μεταξύ τους. Ο web developer αναγκάζεται να έχει μες τα πόδια του κομμάτια ολόκληρα HTML, εκεί που θα έπρεπε να έχει το πολύ-πολύ μερικά custom tags για να παράγει τα δεδομένα στην ιστοσελίδα.</p>
+<p>Το πρόβλημα λοιπόν ανάγεται στο εξής: Τα δεδομένα οφείλουν και πρέπει να διαχωρίζονται από την αναπαράσταση τους.</p>
+<p>Αυτό γίνεται με τη χρήση των CSS. Αν και υπάρχουν προ πολλού (οι ΙΕ, NN3 υποστήριζαν CSS1 ενώ οι IE4/NN4 υποστήριζαν CSS2), τα τελευταία 1-2 χρόνια φαίνεται πιο επιτακτική η ανάγκη χρήσης τους.</p>
+<p>Πλεονεκτήματα των CSS:</p>
+<ul>
+<li>Χρησιμοποιώντας CSS οι σελίδες φορτώνουν πιο γρήγορα (λιγότερος κώδικας, τα CSS γίνονται cached)</li>
+<li>Το κόστος για το hosting μειώνεται μια και μειώνεται το απαιτούμενο bandwidth (και στο ένα τρίτο!)</li>
+<li>Οι σελίδες είναι πιο ευέλικτες για επανασχεδίαση</li>
+<li>Ομειογενής σχεδίαση του website, αφού μια αλλαγή μπορεί να επιρεάσει πολλές (ή όλες) τις σελίδες του website.</li>
+<li>Οι σελίδες είναι περισσότερο προσβάσιμες από ανθρώπους με σωματικές αναπηρίες (με ένα κλικ μπορεί το χρώμα των γραμμάτων να γίνει πιο έντονο) και από ανθρώπους που χρησιμοποιούν άλλους viewers και browsers για το σερφάρισμα τους</li>
+<li>Οι μηχανές αναζήτησης δίνουν ψηλότερη βαθμολογία στη σελίδα</li>
+<li>Σαν bonus, έχεις και ένα ίματζ αβαντάζ πως ακολουθείς παγκόσμια πρότυπα ;)</li>
+</ul>
+<p>Όπως καταλαβαίνετε, αν και το learning curve είναι λίγο απότομο, αξίζει τον κόπο με το παραπάνω. Γιατί είναι καλύτερα όταν υπάρχει ένα κοινό πλαίσιο σχεδιασμού και διαδραστικότητας σ’αυτά που κάνουμε..</p>
+<p>Resources:</p>
+<ul>
+<li><a href="http://glish.com/css/">Look ma, no tables!</a> – Eric Costello</li>
+<li><a href="http://www.mako4css.com/">The CSShark Answers FAQs</a> – MaKo</li>
+<li><a href="http://www.meyerweb.com/eric/css/edge/">CSS/edge</a> – Eric Meyer</li>
+<li><a href="http://www.alistapart.com/stories/journey/">From Table Hacks to CSS Layout</a> – Jeffrey Zeldman/alistapart</li>
+<li><a href="http://www.webreference.com/authoring/style/sheets/layout/advanced/">Advanced CSS Layouts</a> – webreference.com</li>
+<li><a href="http://www.w3.org/Style/CSS/">W3C CSS Spec</a></li>
+</ul></li>
+		<li class="postmetadata">
+				at night, Tuesday 16 December 2003 
+				<span title=" 21 years, 11 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/website/"
+				       title="View all posts tagged Website"
+				       rel="tag">Website</a>				| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2003/12/16/look-ma-no-tables/#respond" title="Comment on Look ma, no tables!">Look ma, no tables! (Comment!)</a>
+		</li>
+		</ul>
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+</div>
+
+</body>
+</html>

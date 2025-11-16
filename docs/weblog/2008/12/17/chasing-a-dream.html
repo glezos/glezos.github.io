@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Chasing a dream</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+	
+
+		<ul class="post">
+		<li>
+
+			<h2 id="post-1566"><a href="https://dimitris.glezos.com:8000/weblog/2008/12/17/chasing-a-dream/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Chasing a dream'">Chasing a dream</a></h2>
+		</li>
+		<li class="entry"><p>I was always enthusiastic about starting new projects, but it was only in the past couple of years that I got psyched to start <a href="http://www.indifex.com/">my own company</a>.</p>
+<p>Projects like <a href="http://transifex.org/">software</a>, <a href="http://fedoraproject.gr/">communities</a>, even <a href="http://epatents.hellug.gr/">politics</a> sounded fun. While I had the entrepreneur bug for non-profit stuff, it was hidden for business. I’ve been fortunate to have really good jobs involving interesting projects and some fine hackers and managers around me. When I was in need for a change, I’d happily freelance or take some time off enjoying building stuff in my house, painting or maybe rock climbing for a while.</p>
+<h3 id="the-bug">The bug</h3>
+<p>For the past months I’ve been spending quite some time on <a href="http://transifex.org/">Transifex</a>. It started as a hack to integrate Fedora’s versioning systems, then we turned it into a translation submission web service, and translators started using it as a compliment to their workflow. You know you’re doing something useful when smart guys like Mozilla’s <a href="http://www.0xdeadbeef.com/weblog/?p=298">Chris Blizzard</a> and rock-star software projects like the <a href="http://www.packagekit.org/">default packaging frontend</a> and <a href="http://pulseaudio.org/">sound server</a> for Linux distros find it ultra-useful.</p>
+<p>You don’t often get the chance to change a <em>core bit</em> in an established technology like open source software localization. But when you actually do get the chance, it’s amazing how many paths open up. Hackers from GNOME and Debian and OLPC and Maemo and Wikipedia did not only like the idea behind upstream-friendly translation submissions, but they started thinking how it could fit into their infrastructure and workflow and how to extend it with new functionality. Folks around the world generously invited us to conferences to talk about our technology and plans, and guys from open source media like the popular LWN published <a href="http://lwn.net/Articles/256144/">interviews</a> with us. Discussions with friends of the entrepreneur breed often went “wow” with the potential of the technology and were impressed that Tx was past the prototype stage and already into production.</p>
+<h3 id="the-turning-point">The turning point</h3>
+<blockquote>
+<p>It’s a win-win situation. I’ve been very impressed with Transifex so far, it makes translations pretty trivial.</p>
+</blockquote>
+<p>Richard Hughes, PackageKit maintainer</p>
+<p>At some point, it became clear that we had the chance to make a big difference to a lot of people with Transifex. Translations are hard, and I’d bet anything that we can make them easier. Or, for a more modest approach, “make them suck less”.</p>
+<p>For a long time the following question was spinning in my mind: “How can we build an <strong>open translation platform</strong> for software?” Starting from the assumption that translators are not tied into a specific project but are shared across them, how would the ultimate translation platform look like? I’d discuss it with people in conferences and startup meetings, drawing endless sketches of the architecture. We’d even talk it over in interviews with Google and Red Hat.</p>
+<p>The goal is to build an efficient platform where producers of software, documents or web services can reach out to established localization communities to receive high-quality translations, which are then stored directly on the source repository of the product.</p>
+<p>By far the best way to know if your idea is going to work is to try it out and see. Get a group of code hackers together and give it a try. And what better way to experiment this than <em>creating a startup</em> and hack your way through the challenges?</p>
+<h3 id="the-project-and-the-startup">The project and the startup</h3>
+<p><strong><a href="http://transifex.net/">Transifex.net</a></strong> is the materialization of our vision. We’re developing a hosted version of Transifex, a common place where content providers can get their resources localized and translators can get together and find the tools they need to receive and submit back translatable content. To get there, we’ve re-written Transifex <em>from scratch</em> in the past months. We’ve re-engineering most of the concepts in it with one goal: create a solid base to accommodate the needs of most software projects.</p>
+<p>Transifex will remain open source and continue being openly developed by our community at <a href="http://transifex.org/">transifex.org</a>. If you’re in doubt about the open source development model, take a look at <a href="http://ma.tt/2008/01/act-two/">how great WordPress is doing</a>.</p>
+<p>Transifex.net is what WordPress.com is for WordPress. It’s a hosted version providing a hassle-free, social-enabled, batteries-included service. The open source version is still available for anyone wanting to host his own instance and we’re here to help him support it if needed.</p>
+<p><strong><a href="http://www.indifex.com/">Indifex</a></strong> is the company we founded to make this vision a reality. Indifex’s name, like Transifex, origins from latin and refers to something like <em>‘information craftsmen’</em> — it’s catchy and we dig it. And besides, we had to give it a name. =)</p>
+<p>We’re a handful of passionate coders and open source geeks. We get high by fixing stuff and our office is lit up by technology flamewars almost every day. If you’re into these kind of kinky stuff too (modern web app frameworks, versioning systems, extreme programming, fast-paced work, pizza-only diet), take a look at the <a href="http://www.indifex.com/jobs/">job openings</a> we’ve got.</p>
+<p>Indifex has received a fair amount of seed money to get us up and going for a while. If you’re into early-stage investments and would like to help us change the world, drop me an email at <em>glezos@indifex.com</em>.</p>
+<h3 id="our-roadmap">Our roadmap</h3>
+<p>So what are we planning for the next months?</p>
+<p>We’re currently focusing on Transifex’s features which are most useful for translators. Soon we’ll roll out transifex.net in private beta to a few folks, in order to receive valuable feedback from the people who will likely make an extensive use of the service. At this time we’ll focus on bug squashing and product stabilization.</p>
+<p>We’ll then gradually give out more invitations, re-iterating the process until we have something ready for public availability. Following the “release early, release often”, we hope to get there sooner than later.</p>
+<p>That’s it from me. Now you can go and <a href="http://transifex.net/">subscribe to our beta program</a>, follow us on our <a href="http://blog.transifex.net/">blog</a> and <a href="http://twitter.com/transifex">Twitter</a>, or take a look at the <a href="http://www.indifex.com/jobs/">job openings</a> we have.</p>
+<p>Wrapping up with a quote from one of the first folks who believed in the dream.</p>
+<blockquote>
+<p>Because of how well Transifex is integrated as a technical and social solution, it has the chance to start a mini revolution in translation of libre/free and open source software.</p>
+</blockquote>
+<p>Karsten Wade, Fedora Documentation Project</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 17 December 2008 
+				<span title=" 16 years, 10 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/indifex/"
+				       title="View all posts tagged indifex"
+				       rel="tag">Indifex</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/transifex/"
+				       title="View all posts tagged Transifex"
+				       rel="tag">Transifex</a>				| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/12/17/chasing-a-dream/#respond" title="Comment on Chasing a dream">Chasing a dream (Comment!)</a>
+		</li>
+		</ul>
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+</div>
+
+</body>
+</html>

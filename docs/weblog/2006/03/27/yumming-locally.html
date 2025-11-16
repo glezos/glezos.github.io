@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » FC5: Yumming locally</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+	
+
+		<ul class="post">
+		<li>
+
+			<h2 id="post-1566"><a href="https://dimitris.glezos.com:8000/weblog/2006/03/27/yumming-locally/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'FC5: Yumming locally'">FC5: Yumming locally</a></h2>
+		</li>
+		<li class="entry"><p>Εγκαθιστώντας το <a href="http://fedoraproject.org/wiki/FC5ReleaseSummary">νέο Fedora Core 5</a> στο iBook χρειάστηκε να προσθέσω μερικά ακόμη προγράμματα, <em>μετά</em> που είχε ολοκληρωθεί η εγκατάσταση του λειτουργικού.</p>
+<h3 id="_1">Το πρόβλημα</h3>
+<p>Έχοντας μια ταπεινή aDSL και ένα διόλου ευκαταφρόντητο όγκο επιπλέον προγραμμάτων να εγκαταστήσω (μ’ αρέσουν οι quick n’ dirty εγκαταστάσεις), έπρεπε να το κάνω από το DVD κι όχι από το Διαδίκτυο. Δυστυχώς ή ευτυχώς, μετά την εγκατάσταση, το yum ορίζει ως προκαθορισμένα repositories τα διαδικτυακά κι όχι τα τοπικά. (Και μάλλον καλά κάνει: αφού τα Updates και τα Extras είναι στο Διαδίκτυο, γιατί να μην είναι και το Core;)</p>
+<h3 id="_2">Η προσέγγιση</h3>
+<p>Το yum υποστηρίζει localinstall πακέτων, σαν το παλιό, κακό <code>rpm -Ivh</code>. Ωστόσο, επιβεβαιώνοντας τη φήμη μου πως πλέον προτιμώ τα GUI από το command-line, θέλησα να χρησιμοποιήσω ένα εκ των γαμηστερών παραθυρικών εφαρμογών διαχείρισης πακέτων: Είτε το ολοκαίνουριο <a href="http://fedoraproject.org/wiki/Tours/FedoraCore5/007_Pirut">pirut</a> ή το <a href="http://yumex.python-hosting.com/">yumex</a>. Δυστυχώς, κανένα εκ των οποίων δεν έχει επιλογή να χρησιμοποιήσει ένα CD/DVD/.iso (είναι ωστόσο στα TODO του τελευταίου!).</p>
+<h3 id="_3">Η λύση</h3>
+<p>Για όσους λοιπόν δεν έχουν καμία όρεξη να εγκαθιστούν οικογένειες προγραμμάτων (σαν να λέμε, υποστήριξη Java ή TeX) από το command-line, ακολουθεί μια λύση:</p>
+<ol>
+<li>Έστω ότι το DVD γίνεται mounted στο <code>/media/dvd</code>. Δημιουργήστε το <code>/etc/yum.repos.d/local.repo</code> με τα εξής περιεχόμενα:</li>
+</ol>
+<p><code>[Local-disk]
+   name=Fedora Core $releasever - $basearch
+   baseurl=file:///media/dvd
+   enabled=0
+   gpgcheck=1
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora
+   file:///etc/pki/rpm-gpg/RPM-GPG-KEY</code>
+2. Για να χρησιμοποιήσετε αυτό το repository αντί το προκαθορισμένο που βρίσκεται ένα modem και κάτι KB/s μακριά, ρυθμίστε <code>enabled=1</code> σε αυτό το αρχείο και ταυτόχρονα <code>enabled=0</code> στο <code>[core]</code> κομμάτι του <code>/etc/yum.repos.d/fedora-core.repo</code>.
+3. Τώρα το yum, το pirut και το yumex “βλέπουν” το DVD σαν default repository. Κάντε τη δουλειά σας ήσυχα και γρήγορα. Όταν τελειώσετε και θέλετε να αφαιρέσετε το DVD, επαναφέρετε τις <code>enabled</code> ρυθμίσεις στις προηγούμενες τους καταστάσεις (local=0, core=1).</p>
+<p>Φυσικά, τα παραπάνω ισχύουν και για όσους δεν έφτιαξαν ένα DVD αλλά κράτησαν το .iso στο δίσκο τους για μελλοντική χρήση (με κάτι του στυλ <code>sudo mount -o loop FC5-DVD.iso /media/fc5-iso/</code>).</p>
+<p><em>Update: Με κάθε αλλαγή του repository, ένα <code>yum clean all</code> δε θα ήταν καθόλου άσχημη ιδέα…</em></p></li>
+		<li class="postmetadata">
+				at night, Monday 27 March 2006 
+				<span title=" 19 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>				| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2006/03/27/yumming-locally/#respond" title="Comment on FC5: Yumming locally">FC5: Yumming locally (Comment!)</a>
+		</li>
+		</ul>
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+</div>
+
+</body>
+</html>

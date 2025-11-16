@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Εγκατάσταση λογισμικού: linux & windows</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+	
+
+		<ul class="post">
+		<li>
+
+			<h2 id="post-1566"><a href="https://dimitris.glezos.com:8000/weblog/2005/07/03/software-installation/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Εγκατάσταση λογισμικού: linux & windows'">Εγκατάσταση λογισμικού: linux & windows</a></h2>
+		</li>
+		<li class="entry"><p>Συχνά σε συζητήσεις, φίλοι με ενημερώνουν για το πόσο δύσκολη είναι η εγκατάσταση επιπλέον λογισμικού στο linux σε σχέση με τα windows.</p>
+<p>Στα windows τα πράγματα είναι πολύ απλά: Σε μια τυπική (απόλυτα νόμιμη) περίπτωση ο χρήστης αναζητά στο διαδίκτυο το πρόγραμμα ή την εταιρία, πληοηγείται στην ιστοσελίδα της εταιρίας να βρει τον σύνδεσμο για το κατέβασμα του προγράμματος, συμφωνεί στην άδεια για το download, πιθανότατα συμπληρώνει τα στοιχεία του για να πάρει σε email τον σύνδεσμο με την ακριβή τοποθεσία του κατεβάσματος. Όταν το κατεβάζει, διαβάζει την EULA (αρκετά μεγάλη συνήθως), κάνει μόνο καμιά 10αριά κλικ στον οδηγό εγκατάστασης και είναι έτοιμος. Για την ενεργοποίηση του προγράμματος, ο χρήστης πλοηγείται στην ιστοσελίδα της εταιρίας, βρίσκει τις φόρμες αγοράς του προϊόντος, εισάγει τα στοιχεία του και τον αριθμό της πιστωτικής του κάρτας, ανοίγει το πρόγραμμα αλληλογραφίας του για να διαβάσει το email με τον κωδικό πρόσβασης και τον εισάγει στο πρώτο παράθυρο στην έναρξη του προγράμματος.</p>
+<p>(Το τελευταίο βήμα μπορεί να αντικατασταθεί με πλοήγηση σε σελίδες με κωδικούς και προγράμματα “σπασίματος” του λογισμικού, δοκιμές διαφόρων κωδικών που μπορεί να μην δουλεύουν, πιθανή αναζήτηση άλλων κωδικών σε peer-2-peer προγράμματα και τέλος παράνομο “σπάσιμο” του λογισμικού. Αν επιλέξει να παρανομήσει, ο χρήστης μπορεί μάλιστα να γλυτώσει την ανάγνωση της EULA κάνοντας κλικ στο “Δέχομαι” χωρίς να την έχει διαβάσει).</p>
+<p>Σήμερα λοιπόν, κατά την εγκατάσταση του διανυσματικού προγράμματος σχεδίασης <a href="http://www.inkscape.org/">Inkscape</a> στο linux (διανομή Fedora Core), αποφάσισα να καταγράψω όσο πιο αναλυτικά μπορώ όλα τα βήματα που χρειάστηκαν, ώστε όσοι σκοπεύουν να μεταβούν από windows σε linux, να χρησιμοποιήσουν για ευκολία αυτό τον πλήρη οδηγό απόκτησης και εγκατάστασης του προγράμματος αυτού.</p>
+<p>Ακολουθούν όλα τα βήματα. Με έντονο χρώμα σημειώνεται η είσοδος του χρήστη (πληκτρολόγιο και ποντίκι).</p>
+<h3 id="1">Βήμα 1</h3>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">root</span><span class="err">@</span><span class="n">glezos</span><span class="w"> </span><span class="o">~</span><span class="p">]</span><span class="c1"># yum install inkscape</span>
+<span class="err">…</span>
+<span class="o">==============================================/==========</span>
+<span class="w"> </span><span class="n">Package</span><span class="w">                 </span><span class="n">Arch</span><span class="w">       </span><span class="n">Version</span><span class="w">        </span><span class="n">Size</span>
+<span class="o">==============================================/==========</span>
+<span class="n">Installing</span><span class="p">:</span>
+<span class="w"> </span><span class="n">inkscape</span><span class="w">                </span><span class="n">i386</span><span class="w">       </span><span class="mf">0.41</span><span class="o">-</span><span class="mi">7</span><span class="w">         </span><span class="mf">5.8</span><span class="w"> </span><span class="n">M</span>
+<span class="n">Installing</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">dependencies</span><span class="p">:</span>
+<span class="w"> </span><span class="n">gc</span><span class="w">                      </span><span class="n">i386</span><span class="w">       </span><span class="mf">6.4</span><span class="o">-</span><span class="mi">3</span><span class="w">          </span><span class="mi">119</span><span class="w"> </span><span class="n">k</span>
+<span class="w"> </span><span class="n">glibmm24</span><span class="w">                </span><span class="n">i386</span><span class="w">       </span><span class="mf">2.6</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="w">        </span><span class="mi">142</span><span class="w"> </span><span class="n">k</span>
+<span class="w"> </span><span class="n">gtkmm24</span><span class="w">                 </span><span class="n">i386</span><span class="w">       </span><span class="mf">2.6</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="mi">2</span><span class="w">        </span><span class="mi">948</span><span class="w"> </span><span class="n">k</span>
+<span class="w"> </span><span class="n">libsigc</span><span class="o">++</span><span class="mi">20</span><span class="w">             </span><span class="n">i386</span><span class="w">       </span><span class="mf">2.0</span><span class="o">.</span><span class="mi">11</span><span class="o">-</span><span class="mi">1</span><span class="w">        </span><span class="mi">38</span><span class="w"> </span><span class="n">k</span>
+<span class="err">…</span>
+<span class="n">Total</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">size</span><span class="p">:</span><span class="w"> </span><span class="mf">7.0</span><span class="w"> </span><span class="n">M</span>
+<span class="n">Is</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">ok</span><span class="w"> </span><span class="p">[</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">]:</span><span class="w"> </span><span class="n">y</span>
+<span class="err">…</span>
+<span class="n">Installed</span><span class="p">:</span><span class="w"> </span><span class="n">inkscape</span><span class="o">.</span><span class="n">i386</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">0.41</span><span class="o">-</span><span class="mi">7</span>
+<span class="n">Dependency</span><span class="w"> </span><span class="n">Installed</span><span class="p">:</span><span class="w"> </span><span class="n">gc</span><span class="o">.</span><span class="n">i386</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">6.4</span><span class="o">-</span><span class="mi">3</span><span class="w"> </span><span class="n">glibmm24</span><span class="o">.</span><span class="n">i386</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">2.6</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">gtkmm24</span><span class="o">.</span><span class="n">i386</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">2.6</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="mi">2</span><span class="w"> </span><span class="n">libsigc</span><span class="o">++</span><span class="mf">20.</span><span class="n">i386</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">11</span><span class="o">-</span><span class="mi">1</span>
+</code></pre></div>
+
+<p>Complete!
+[root@glezos ~]#</p>
+<h3 id="2">Βήμα 2</h3>
+<p>Πλοήγηση στο Applications → Graphics → Inkspace. (<strong>3 κλικ</strong>)</p>
+<h3 id="_1">(τέλος)</h3>
+<hr>
+<p>Εναλλακτικά, μπορεί κανείς να γλτώσει το γράψιμο των τεσσάρων λέξεων στη κονσόλα του βήματος 1:</p>
+<h3 id="1_1">Βήμα 1α</h3>
+<p>Πλοήγηση στο Desktop → System Settings → Synaptic Package Manger. (<strong>3 κλικ</strong>)</p>
+<h3 id="1_2">Βήμα 1β</h3>
+<p>Κλικ στο αναζήτηση πακέτων, εισαγωγή “inkspace”, επιλογή “Inkspace” με διπλό κλικ, κλικ στο Apply. (<strong>4 κλικ, 1 φράση</strong>).</p>
+<hr>
+<p>(τέλος αναλυτικού οδηγού εγκατάστασης λογισμικού στο linux)</p></li>
+		<li class="postmetadata">
+				at night, Sunday 3 July 2005 
+				<span title=" 20 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>				| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/03/software-installation/#respond" title="Comment on Εγκατάσταση λογισμικού: linux & windows">Εγκατάσταση λογισμικού: linux & windows (Comment!)</a>
+		</li>
+		</ul>
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+</div>
+
+</body>
+</html>

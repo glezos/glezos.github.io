@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Release engineering and translations</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+	
+
+		<ul class="post">
+		<li>
+
+			<h2 id="post-1566"><a href="https://dimitris.glezos.com:8000/weblog/2008/09/23/release-engineering-and-translations/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Release engineering and translations'">Release engineering and translations</a></h2>
+		</li>
+		<li class="entry"><p>Here’s the tricky part about translations and release engineering.</p>
+<p>Software is written. Software is packaged, released. And users use it. Some of these users do not have English as a native language. This group is around 90% of Earth’s population and around 70% of the Internet’s users. Obviously, they’d prefer the UI and Docs in their native language. In fact, more than 60% of Fedora’s users do not use an English desktop. They use a translated one. Spanish, German, Punjabi. Installer, GUIs, documentation, booting, error messages.</p>
+<p>We care about those Fedora users. Heck, they could be something like 4 millions of them. And that’s why L10n projects exist. That’s why there are more than 400 active <a href="http://translate.fedoraproject.org/">Fedora translators</a> contibuting in <em>a lot</em> of languages. Anaconda, the Fedora installer, is shipped to more than 60 languages (counting only those with a considerable completion percentage). The Fedora website speaks more than 20 languages. Considering that this is almost exclusively volunteer community work, I’d say our groups of translators are doing an amazing job.</p>
+<p>Being one myself, before starting hacking on our <a href="http://transifex.org/">Localization Infrastructure</a>, I can’t say it’s an easy job. Usually one has to track a big number of projects, and request access for all of them (last time I counted I had 15+ hosts to monitor). Then, a translator tries to use automated ways to find when, where and how many strings have been changed. Get the files, translate them, send them back. Repeat every few days.</p>
+<p><a href="http://en.wikipedia.org/wiki/The_Persistence_of_Memory"><img alt="The Persistence of Memory (Salvador Dalí)" src="/weblog/wp-content/uploads/2008/09/the_persistence_of_memory.jpg" title="The Persistence of Memory (Salvador Dalí)"></a></p>
+<p>So, <strong>what are these guys asking from us</strong>? (Besides better tools), they ask for two basic things, basically:</p>
+<ol>
+<li>Please let me know of a date (let’s call it <em>string freeze</em>) when you will complete your work in modifying the strings of your application. Then I can make sure to get your app 100% localized, since it’s impossible for me to work if you change them all the time.</li>
+<li>Please let me know of a date (let’s call it <em>translation deadline</em>) until which I can send contributions to be included in the release. There isn’t much meaning for me to spend my nights after $dayjob if my work isn’t going to be included in the next release.</li>
+</ol>
+<p>Adding these two dates (<a href="https://fedoraproject.org/wiki/L10N/Freezes#String_freeze">’string freeze’</a>), and <a href="https://fedoraproject.org/wiki/L10N/Freezes#Translation_Deadline">‘translation deadline’</a>) on any project’s schedule is the minimal thing the translators ask. Adding them on the Fedora Schedule was one of the first big changes I sailed to do in the quest to improve Fedora’s (nonexistent until then) L10n workflow.</p>
+<p>A distribution is a highly complex project in terms of synchronization and homogeneity — more complex than a lot of big projects out there. We’re still working on making everything actually take place, and get all the people involved follow the guidelines and policies. Even so, I think we’ve come a long way since the old days.</p>
+<p>Continuing to improve our processes, the <a href="http://fedoraproject.org/wiki/L10N/SteeringCommittee">Fedora Localization Steering Committee</a> recently led a communication effort to change Fedora 10’s schedule. We want to make sure translations done by the deadline <em>will</em> end up in the release, so we <a href="https://www.redhat.com/archives/fedora-devel-announce/2008-September/msg00013.html">moved the translation deadline</a> one week earlier. This way, developers will have a period of one week to check their repository for any newly landed translations since the last build, grab them and issue a new build. The new build should, of course, happen before the development freeze.</p>
+<p>But then again, mainly due to Fedora’s complexity as a project, it’s a challenge to make sure that those new builds actually happen. To help us in that task, we’ll need a script that works somewhat like this:</p>
+<ol>
+<li>Input: A list of packages, the translation deadline.
+   Output: A list of packages which were not rebuilt to included translations submitted before the deadline. Next to each package we need the maintainer’s email and a randomly generated list of swear words.</li>
+<li>Query <a href="http://koji.fedoraproject.org/koji/">koji</a> (the Fedora build system) for the set of packages. Get the latest build of each of them and check if its date is before the deadline.</li>
+<li>For each package that hasn’t issued a build, find out if translations have actually been submitted since the last build (if they haven’t, no need to build). To do so, query Transifex to find out the last date a PO file has changed.</li>
+<li>If a translation has been sent, use <code>python-bugzilla</code> (and maybe <a href="https://admin.fedoraproject.org/pkgdb">Fedora’s Package Database</a> to automatically open a bug report against the product. Mark the bug report as a blocker (or target) for the next release of Fedora.</li>
+</ol>
+<p>If this sounds like a nice challenge for you, do <a href="/contact/en">drop me an email</a>.</p>
+<p>Next TODOs for me and FLSCo:</p>
+<ul>
+<li>-7 days from Translation Deadline: Check if any developer has broken the freeze without following the policy.</li>
+<li>-4 days from Translation Deadline: Send a reminder to fedora-trans-announce to remind people to wrap up.</li>
+<li>+1 day after Translation Deadline: Send an email to -devel-announce requesting all packages Fedora is upstream for to issue a new build. Maybe write a script to open bug reports for all.</li>
+<li>2 days before the Development Freeze: Check if packages have been rebuilt.</li>
+</ul>
+<p>And I think that’s it for today’s RelEng+Translations_Howto and personal reminders for the next weeks.</p>
+<p><a href="http://en.wikipedia.org/wiki/Image:Salvador_Dali_A_(Dali_Atomicus)_09633u.jpg"><img alt="Salvador Dalí -- Leda Atomica" src="/weblog/wp-content/uploads/2008/09/salvador_dali_a_dali_atomicus_09633u.jpg" title="Salvador Dalí -- Leda Atomica"></a>
+Salvador Dalí — Dali Atomimicus<br>
+(photo: Philippe Halsman)</p></li>
+		<li class="postmetadata">
+				at night, Tuesday 23 September 2008 
+				<span title=" 17 years, 1 month ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>				| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/09/23/release-engineering-and-translations/#respond" title="Comment on Release engineering and translations">Release engineering and translations (Comment!)</a>
+		</li>
+		</ul>
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+</div>
+
+</body>
+</html>

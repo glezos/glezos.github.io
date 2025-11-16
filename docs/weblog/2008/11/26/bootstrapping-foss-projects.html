@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Επιτυχημένα έργα ΕΛΛΑΚ: Bootstrapping</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+	
+
+		<ul class="post">
+		<li>
+
+			<h2 id="post-1566"><a href="https://dimitris.glezos.com:8000/weblog/2008/11/26/bootstrapping-foss-projects/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Επιτυχημένα έργα ΕΛΛΑΚ: Bootstrapping'">Επιτυχημένα έργα ΕΛΛΑΚ: Bootstrapping</a></h2>
+		</li>
+		<li class="entry"><p>Ο φίλος μου <a href="http://begemott.deviantart.com/">Αλέξανδρος</a> μου ζήτησε μερικές συμβουλές σχετικά με το “άνοιγμα” μιας εφαρμογής σε ελεύθερο λογισμικό. Ξέθαψα το παρακάτω κείμενο με μερικές σκέψεις επ’ αυτού του θέματος.</p>
+<hr>
+<p>Είναι γεγονός ότι δεν είναι απλή υπόθεση να χτίσει κανείς ένα επιτυχημένο έργο ελεύθερου λογισμικού. Οι προκλήσεις που αντιμετωπίζει σαν maintainer είναι πολλών μορφών και εμφανίζονται σε διαφορετικές στιγμές, ενώ αρκετές από αυτές σε εκπλήσσουν. Δεν είναι τυχαίο λοιπόν που ίσως 9 στα 10 έργα ελεύθερου λογισμικού αποτυγχάνουν — είτε αυτό είναι από εγκατάλειψη των developers, αδιαφορία από τους χρήστες, έλευση ενός καλύτερου ανταγωνιστή, ή κάτι άλλο. Το ερώτημα είναι, φυσικά, δεδομένων αυτών, ποια είναι τα σημαντικότερα βήματα που πρέπει να ακολουθήσει ένας developer για να κάνει το έργο του να πετύχει;</p>
+<p>Μια βασική αρχή που πρέπει να ακολουθεί ένας open source maintainer σε όλη τη διάρκεια του έργου του, και ειδικά στα πρώτα βήματα, είναι το KISS: Keep it simple, stupid. Με προεκτάσεις μέχρι τη φιλοσοφική αρχής του “Ξυραφιού του Όκαμ”, η κλασική αυτή σχεδιαστική αρχή του UNIX είναι βέβαιο ότι θα βοηθήσει ένα έργο να αναπτυχθεί σταθερά. Αν υπάρχει κάποιο υπάρχον έργο που μπορεί να βελτιωθεί με νέα χαρακτηριστικά, πιθανώς να αξίζει περισσότερο μια τέτοια προσέγγιση παρά μια επανεφεύρεση του τροχού.</p>
+<p>Ίσως το καλύτερο σημείο να ξεκινήσει κανείς είναι να καταλάβει τη φύση της ανάπτυξης κώδικα ελεύθερου λογισμικού. Η πεμπτουσία του συστήματος αυτού είναι να αρέσει σε άλλους developers να συχνάζουν στο έργο. Ίσως το σημαντικότερο έργο που έχει να κάνει ο maintainer είναι να καταλαβαίνει τα κίνητρα τους, τι τους παρακινεί και γιατί βρίσκουν το δικό του έργο σούπερ. Να φροντίζει να συνεχίσουν να υπάρχουν ενδιαφέροντα προβλήματα να λυθούν, ή a la Eric Raymond, να υπάρχουν πάντα “itches to be scratched”. Όπως μου είχε πει μια φορά ο Max Spevack, πρώην Fedora Project Leader, όταν τον ρώτησα ποιος νιώθει ότι είναι ο στόχος της δουλειάς του, “ο ρόλος του leader είναι να μετακινεί εμπόδια ούτως ώστε εσύ, ο developer, να μπορείς να δημιουργείς ελεύθερα”.</p>
+<p>Ένα σημαντικό πρώτο βήμα είναι το αρχείο README. Ένα καλό τέτοιο αρχείο δηλώνει τον σκοπό του έργου (mission statement), τους στόχους και τα use cases. Αρκετές φορές καλό είναι να αναφέρεται και το τι δεν είναι το έργο (ξανά το KISS). Δεδομένου του ότι ίσως η μεγαλύτερη πρόκληση του έργου είναι αυξήσει τον αριθμό των developers, η σημασία του αρχείου αυτού είναι μάλλον μεγάλη. Σε έναν ιδανικό κόσμο θα υπάρχουν σχέδια υλοποίησης και roadmap, αλλά η αλήθεια να λέγεται, το αρχείο δε χρειάζεται να είναι απόλυτα πλήρες από την αρχή.</p>
+<p>Η επιλογή άδειας χρήσης (αρχείο LICENCE ή COPYING) είναι επίσης κάτι σημαντικό, αφού μπορεί να επηρεάσει τη συνδεσιμότητα του έργου με άλλα έργα και βιβλιοθήκες, ενώ δεν είναι εύκολο να αλλάξει στην πορεία. Ευτυχώς έχουμε στη διάθεση μας τις 5-6 σημαντικότερες άδειες που λογικά καλύπτουν το 99% των νέων έργων.</p>
+<p>Με αυτά τα δύο — και προαιρετικά ίσως κάποιο βασικό, μίνιμαλ κώδικα — το freshmeat ή το sourceforge είναι ό,τι καλύτερο για ένα πρώτο “σπίτι” για το έργο και τις λύσεις που προτείνει. Μια mailing list (παρέχεται είτε από το sf, είτε πάμε σε Google groups, κλπ) και ένα URL για περισσότερες πληροφορίες, είναι ό,τι χρειαζόμαστε για την δημοσιοποίηση. Συνεχίζοντας την υιοθέτηση ιστορικά νευραλγικής σημασίας αρχών του UNIX, έτσι κι εμείς θα ακολουθήσουμε το “release early, release often”: όσο πιο νωρίς το ανακοινώσουμε τόσο πιο ποιοτικός θα είναι ο κώδικας μας, αλλά και τόσο πιο γρήγορα θα έρθουν τα άτομα στην παρέα (the more, the merrier), τα σχόλια, το testing, και (ας ελπίσουμε όχι στη δική μας περίπτωση) σύνδεσμοι σε άλλα έργα που κάνουν ακριβώς το ίδιο που θέλουμε. Με αυτά υπόψιν, στέλνουμε ένα μικρό email σε σχετικές ομάδες συζητήσεων που θα έχουν lurkers που μπορεί να ενδιαφέρονται στο έργο: στόχος μας, ξανά, είναι οι developers (κι όχι οι χρήστες).</p>
+<p>Αυτό ήταν. Φυτεύουμε το σπόρο αυτό και ρόλος μας είναι να βοηθήσουμε το έργο να εξελιχτεί σε ένα ζωντανό οργανισμό. Από αυτό το σημείο και μετά, στους ρόλους του maintainer είναι κι αυτός του στοργικού κηπουρού, του ποιμένα και πατέρα.</p>
+<p>Μύηση παιδιών στη θρησκία και στις λειτουργίες του Τζαμιού</p>
+<p>Κωσταντινούπολη 2008 (GUADEC ’08)</p>
+<hr>
+<p>(Το κείμενο δημοσιεύτηκε αρχικά στην τακτική στήλη του συγγραφέα στο <a href="http://www.linuxformat.gr/">ελληνικό Linux Format</a>, τεύχος Σεπτεμβρίου-Οκτωβρίου 2008.)</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 26 November 2008 
+				<span title=" 16 years, 11 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux-format/"
+				       title="View all posts tagged Linux Format"
+				       rel="tag">Linux Format</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/random/"
+				       title="View all posts tagged Random"
+				       rel="tag">Random</a>				| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/11/26/bootstrapping-foss-projects/#respond" title="Comment on Επιτυχημένα έργα ΕΛΛΑΚ: Bootstrapping">Επιτυχημένα έργα ΕΛΛΑΚ: Bootstrapping (Comment!)</a>
+		</li>
+		</ul>
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+</div>
+
+</body>
+</html>

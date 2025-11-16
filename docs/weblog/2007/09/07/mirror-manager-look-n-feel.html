@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Fedora websites look-n-feel: Mirror manager</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+	
+
+		<ul class="post">
+		<li>
+
+			<h2 id="post-1566"><a href="https://dimitris.glezos.com:8000/weblog/2007/09/07/mirror-manager-look-n-feel/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Fedora websites look-n-feel: Mirror manager'">Fedora websites look-n-feel: Mirror manager</a></h2>
+		</li>
+		<li class="entry"><p><img alt="Monkey face" src="http://translate.fedoraproject.org/data/fedora/icons/face-monkeyL.png"></p>
+<p>Lately a lot of work has been done on increasing the usability of the Fedora websites — I’ve blogged about some of our efforts concerning the wiki in the past <a href="/weblog/2007/03/13/wiki-work/">[1]</a>, <a href="/weblog/2007/03/19/wiki-headings/">[2]</a>. We’ve been using web apps more and more to capture information and knowledge, and to provide functionality to developers and users. A bunch of great web-based infrastructure tools were written from various Fedora code monkeys that handle account administrative tasks, package building and updating, knowledge sharing, mirrors management, and translation coordination. Basically, we are on tools building spree!</p>
+<p>So, when designing the template of <a href="http://fedoraproject.org/">fedoraproject.org</a> and the content style of <a href="http://translate.fedoraproject.org/">translate.fpo</a>, we kept in mind that a common look-n-feel between all our web resources would be desirable for everyone: having a consistent, usable, high-quality web look-n-feel across the project is <em>a good thing</em>™. The idea is that all Fedora websites and web apps “feel” the same, even if they use completely different technologies underneath.</p>
+<p>Take our mirror manager for example. Here’s a <a href="http://git.fedoraproject.org/?p=hosted/mirrormanager;a=commit;h=97a91ebe493877c50eece140e920dea1a724ffdc">small patchset</a> to the templates that landed the other day, wrapping the content in the header-n-footer theme of fedoraproject.org.</p>
+<p><a href="http://mirrors.fedoraproject.org/publiclist/"><img alt="mm3.png" src="/weblog/wp-content/uploads/2007/08/mm3.png" title="New mirrormanager look"></a></p>
+<p>It basically inherits from the general <a href="http://fedoraproject.org/">fedoraproject.org</a> template, but having smaller text to convey lots of information compared to the marketing-oriented big text of the main page. Using icons to quickly capture information is often used and people like it because they can identify the resource more quickly, navigate more intuitively, and get less often disoriented in a web resource.</p>
+<p>The old design could need some love, and <a href="http://fedoraproject.org/wiki/MattDomsch">Matt Domsch</a> (the mirror wrangler) gladly accepted tweaks to the way we organize information on the page. Here’s how a table on the public mirror list looked like before:</p>
+<p><img alt="mm1.png" src="/weblog/wp-content/uploads/2007/08/mm1.png" title="Old mirrors filter"></p>
+<p>It’s a filter for the giant mirror list we have. Since it’s not main content, it’s probably better if it didn’t take a big space from the width of a 1024-width page. Also, incremental tables usually span downwards (in rows), mainly because we’re used in vertical scrolling instead of horizontal. Finally, the table borders aren’t really important to spend so many (valuable) black pixels there, and so are the underlines.</p>
+<p><img alt="mm2.png" src="/weblog/wp-content/uploads/2007/08/mm2.png" title="New mirrors filter"></p>
+<p>On the right is how the new filter looks like. Having the table slim and floating on the right of the page, the user can follow the content first and then catch the filter only if they need to do so. A caption at the top makes sure that even a cropped screenshot like this one makes sense to everyone, and the alternate row colors work better for separating rows, since lines increase contrast in places that are not readable, which reduces the accessibility of the information (in this case, the text itself).</p>
+<p>These small details play an important role in helping users find what the want more easily, and spend more time on our website. Feeling good when browsing is an often neglected, but astonishingly vital part of being productive and efficient, both as an information provider but also as an information consumer.</p>
+<p>At some point, we could separate the basic templating styles from the app-specific ones, so that each app can choose what to override and what common style/element to leave in peace. Common templates in <a href="http://kid-templating.org/">kid</a>, <a href="http://genshi.edgewall.org/">genshi</a> or any other templating language will be packaged in a common RPM, which will be required from our web apps, and <code>yum install foo</code> will simply require, say, <code>fedora-websites-common</code>. This way, each web server can have the set of themes and styles locally with no need to worry that when one web server fails some other website will look weird, and also updating all our websites for a common element (eg. our footer text) could be as easy as pushing an update of the RPM package.</p></li>
+		<li class="postmetadata">
+				at night, Friday 7 September 2007 
+				<span title=" 18 years, 2 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>				| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/09/07/mirror-manager-look-n-feel/#respond" title="Comment on Fedora websites look-n-feel: Mirror manager">Fedora websites look-n-feel: Mirror manager (Comment!)</a>
+		</li>
+		</ul>
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+</div>
+
+</body>
+</html>

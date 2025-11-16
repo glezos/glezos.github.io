@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Tag: Tech/web</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+  <h2 class="pagetitle">Tag archive: Tech/web</h2>
+	
+
+
+
+
+		<ul class="post text">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2010/05/18/gnome-user-pass/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Typing my pass instead of root in GNOME'">Typing my pass instead of root in GNOME</a>
+			</h2>
+		</li>
+		<li class="entry"><p>I'm an avid fan of using sudo when needed and avoiding typing my root password. In the command-line this works fairly easy:</p>
+<div class="highlight"><pre><span></span><code><span class="n">su</span><span class="w"> </span><span class="o">-</span>
+<span class="n">usermod</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="n">G</span><span class="w"> </span><span class="n">wheel</span><span class="w"> </span><span class="n">MYUSERNAME</span>
+<span class="n">visudo</span>
+<span class="cp"># Uncomment the following line:</span>
+<span class="nf">%wheel</span><span class="w">  </span><span class="n">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span><span class="w">       </span><span class="n">ALL</span>
+</code></pre></div>
+
+<p>In GNOME, the above won't 'just work' due to the (fortunate) existence of PolicyKit. You're always asked for your root password instead of your user password. Configuration used to involve <a href="http://dimitris.glezos.com/weblog/2009/03/28/sudo-policykit">editing PolicyKit.conf</a>. In newer versions of Fedora, a new PolicyKit is shipped, with improved setup for policies and configurations.</p>
+<p>After some searching around, I figured out I need to install <code>polkit-gnome</code>. We now have a special group called 'desktop_admin_r', and polkit is already setup to read from that group the desktop admins. So the new way to make GNOME ask your password instead of the root one, the following commands should just work:</p>
+<div class="highlight"><pre><span></span><code>sudo yum install polkit-gnome
+usermod -a -G desktop_admin_r mits
+</code></pre></div>
+
+<p>For the record, gksudo is something completely different. And more evil. =/</p></li>
+		<li class="postmetadata">
+				in the morning, Tuesday 18 May 2010 
+				<span title=" 15 years, 5 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged tech/web"
+				       rel="tag">Tech/web</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged foss"
+				       rel="tag">Foss</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2010/05/18/gnome-user-pass/#respond" title="Comment on Typing my pass instead of root in GNOME">Typing my pass instead of root in GNOME (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post video">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2010/05/10/extwp-video/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'vimeo.com'">vimeo.com</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="http://vimeo.com/11547575">via</a></p>
+<p>Στη FOSSComm είχα την ευκαιρία να δώσω μια παρουσίαση γύρω από ακραία σενάρια Web Development, εστιάζοντας γύρω από το Large/Popular Open Source Project &amp; Release management.</p>
+<p>Χθες, στην τοπική ομάδα Python στην Πάτρα, δόθηκε ένα καθαρό τεχνικό incarnation της παρουσίασης για το πώς χτίζεται και γίνεται deployed ένα scalable web application, με παραδείγματα από Python/Django. Για όσους ενδιαφέρονται, οι σημειώσεις και το βίντεο από την παρουσίαση είναι διαθέσιμα:</p>
+<p>http://bit.ly/tsp0507
+ http://vimeo.com/11547575</p>
+<object type="application/x-shockwave-flash" data="http://vimeo.com/moogaloop.swf" width="250" height="141"><param name="allowscriptaccess" value="always"/><param name="allowfullscreen" value="true"/><param name="movie" value="http://vimeo.com/moogaloop.swf"/><param name="flashvars" value="clip_id=11547575&server=vimeo.com&fullscreen=1&show_title=1&show_byline=1&show_portrait=1&color=00ADEF"/></object>
+<object type="application/x-shockwave-flash" data="http://vimeo.com/moogaloop.swf" width="400" height="225"><param name="allowscriptaccess" value="always"/><param name="allowfullscreen" value="true"/><param name="movie" value="http://vimeo.com/moogaloop.swf"/><param name="flashvars" value="clip_id=11547575&server=vimeo.com&fullscreen=1&show_title=1&show_byline=1&show_portrait=1&color=00ADEF"/></object>
+<object type="application/x-shockwave-flash" data="http://vimeo.com/moogaloop.swf" width="500" height="281"><param name="allowscriptaccess" value="always"/><param name="allowfullscreen" value="true"/><param name="movie" value="http://vimeo.com/moogaloop.swf"/><param name="flashvars" value="clip_id=11547575&server=vimeo.com&fullscreen=1&show_title=1&show_byline=1&show_portrait=1&color=00ADEF"/></object></li>
+		<li class="postmetadata">
+				in the morning, Monday 10 May 2010 
+				<span title=" 15 years, 6 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2010/05/10/extwp-video/#respond" title="Comment on vimeo.com">vimeo.com (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/09/21/rock-paper-scissors-spock-lizard/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Rock Paper Scissors Spock Lizard'">Rock Paper Scissors Spock Lizard</a>
+			</h2>
+		</li>
+		<li class="entry"><p>“Scissors cuts Paper covers Rock crushes Lizard poisons Spock smashes Scissors decapitates Lizard eats Paper disproves Spock vaporizes Rock crushes Scissors.” (via @mperedim)</p></li>
+		<li class="postmetadata">
+				at night, Monday 21 September 2009 
+				<span title=" 16 years, 1 month ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/random/"
+				       title="View all posts tagged Random"
+				       rel="tag">Random</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/09/21/rock-paper-scissors-spock-lizard/#respond" title="Comment on Rock Paper Scissors Spock Lizard">Rock Paper Scissors Spock Lizard (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/09/19/maemo-summit/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Maemo Summit'">Maemo Summit</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Yeehaa! I’m going to the <a href="http://maemo.org/news/events/maemo_summit_2009/">Maemo Summit</a> baby! Amsterdam, long time no see! #maesum</p></li>
+		<li class="postmetadata">
+				at night, Saturday 19 September 2009 
+				<span title=" 16 years, 1 month ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/personal/"
+				       title="View all posts tagged Personal"
+				       rel="tag">Personal</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/09/19/maemo-summit/#respond" title="Comment on Maemo Summit">Maemo Summit (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/09/04/django-conference/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Django Conference!'">Django Conference!</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Getting ready for DjangoCon baby. Portland, here I come.</p></li>
+		<li class="postmetadata">
+				at night, Friday 4 September 2009 
+				<span title=" 16 years, 2 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/09/04/django-conference/#respond" title="Comment on Django Conference!">Django Conference! (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/08/22/the-narcotic-known-as-open-source/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'The narcotic known as ‘open source’'">The narcotic known as ‘open source’</a>
+			</h2>
+		</li>
+		<li class="entry"><p>“Open-source: A stimulant of the central nervous system, tolerance reuptake inhibitor, reliance suppressant and cargo-cult inhibitor. Because of the way it strongly affects the left-brain pathways responsible for the feelings of independence, autonomy, self-determination and confidence, open-source can be highly addictive. Also referred with the street name ‘realization fix’, its long-term use can cause culture-shocks that other models still exist.”</p>
+<p><img alt="red-pill-or-blue-pill" src="/weblog/wp-content/uploads/2009/08/red-pill-or-blue-pill.jpg" title="red-pill-or-blue-pill"></p></li>
+		<li class="postmetadata">
+				at night, Saturday 22 August 2009 
+				<span title=" 16 years, 2 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/humor/"
+				       title="View all posts tagged Humor"
+				       rel="tag">Humor</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/08/22/the-narcotic-known-as-open-source/#respond" title="Comment on The narcotic known as ‘open source’">The narcotic known as ‘open source’ (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/08/18/git-oh-git/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Git, oh git.'">Git, oh git.</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Quotes (read: rants) seen today on IRC on git’s bad user interface:</p>
+<blockquote>
+<p>There’s a clear distinction between git ‘the content-based distributed filesystem’ (which might as well be the greatest thing since sliced bread) and git ‘the user interface for the backend’ (which might as well be the most chaotic thing after Big Bang).</p>
+<p>Whenever I try to use git, I feel major PEBKAC waves taking place.</p>
+<p>Like they say: A doctor can usually ‘bury’ his bad design. An architect can only suggest planting a thick ivy.</p>
+</blockquote>
+<p><a href="http://www.flickr.com/photos/21518596@N00/13909314/" title="Ivy covered house 1"><img alt="Ivy covered house 1" src="http://farm1.static.flickr.com/14/13909314_1d6555b104.jpg"></a><br>
+(<a href="http://creativecommons.org/licenses/by-sa/2.0/" title="Published under a Creative Commons licence">cc</a>) by <a href="http://www.flickr.com/photos/21518596@N00/13909314/" title="chidorian">chidorian</a></p></li>
+		<li class="postmetadata">
+				at night, Tuesday 18 August 2009 
+				<span title=" 16 years, 2 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/humor/"
+				       title="View all posts tagged Humor"
+				       rel="tag">Humor</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/08/18/git-oh-git/#respond" title="Comment on Git, oh git.">Git, oh git. (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/06/24/busy-happy-june/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Busy, happy June'">Busy, happy June</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Log of past couple of weeks or so:</p>
+<ul>
+<li>Had the opportunity to present our work with Transifex at a press conference of the Greek Open Source Company (also known as EELLAK), being broadcasted live and showcasing some big FOSS projects led by Greek teams and companies. Besides talking about our recent progress and requests from our customers, I had the chance to meet some hacker friends who build enterprise and government-level solutions, also utilizing Amazon Web Services for complex tasks. I love discussions between folks using completely different technologies who try to find patterns between them to improve their own work. Fantastic.</li>
+</ul>
+<p>After the press conference I stayed a bit longer and discussed with the EELLAK board their community architecture, communicating how popular and successful communities abroad operate. Our focus with EELLAK is to be a catalyst and accelerator for the Greek Community, supporting its operations and motivating for more work and results. The presence of such an entity behind communities, even so loosely-coupled as a country-wide one has proved to be a great accelerator factor in a lot of cases.
+* The annual Venture Capital Forum took place in Athens last week, and we took the opportunity to identify possible partners that could share the vision we have at Indifex and bring value to our team. I had the chance to meet some very interesting people, including representatives from a few VCs who were interested in exploring the possibility to invest in Indifex.</p>
+<p>The general feeling at the conference from most entrepreneurs (and established startups) was that the VC land in Greece is quite risk-averse (read: techophobics?). There are quite a few technology companies with leading, disrupting technologies in Greece, however very, very few big Greek investors are willing at this point to take this adventurous and exciting path. Which makes sense if one doesn’t like the excitement and adrenaline of changing the world and competing with software giants.</p>
+<p>But really, I’m <strong>positive</strong> there are people out there who want to put their money in revolutionary companies with global audiences.
+* The annual Greek Open Source Developers’ Conference took place in Athens last week. Unfortunately I wasn’t able to attend and <a href="http://conf.ellak.gr/2009/presentations/session1/transifex.pdf">present Lotte</a> (greek) but <a href="http://twitter.com/mperedim">John</a> was there and presented how Indifex is adopting Open Source to help its customers solve their localization and content management needs. Really, I can’t imagine how we could have achieved half of our goals if we weren’t walking the open source road.</p>
+<p>Finally, I was able to wrap-up things for a week and travel to Berlin for LinuxTag and FUDCon. I’m feeling very excited to meet again with good friends and new people.</p>
+<p><a href="http://www.flickr.com/photos/51035823282@N01/411821495/" title="verde amarelo"><img alt="verde amarelo" src="http://farm1.static.flickr.com/160/411821495_665deb7fd3.jpg"></a><br>
+(<a href="http://creativecommons.org/licenses/by/2.0/" title="Published under a Creative Commons licence">cc</a>) by <a href="http://www.flickr.com/photos/51035823282@N01/411821495/" title="alexdecarvalho">alexdecarvalho</a></p></li>
+		<li class="postmetadata">
+				at night, Wednesday 24 June 2009 
+				<span title=" 16 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/06/24/busy-happy-june/#respond" title="Comment on Busy, happy June">Busy, happy June (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/06/12/similar-images/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Similar images'">Similar images</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Playing around <a href="http://similar-images.googlelabs.com/">Google Similar Images</a>. Very useful. I remember playing around this technology 5+ years ago with IBM DB2 Extenders. It’s amazing to see how much time a research-like cutting-edge technology needs to come to the masses.</p></li>
+		<li class="postmetadata">
+				at night, Friday 12 June 2009 
+				<span title=" 16 years, 5 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/06/12/similar-images/#respond" title="Comment on Similar images">Similar images (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/06/01/on-critisism/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'On criticism'">On criticism</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Great project leaders not only accept criticism, they encourage it. They understand that their project’s worst enemy is stagnation, which comes from apathy, oppression, and not enough feedback.</p></li>
+		<li class="postmetadata">
+				at night, Monday 1 June 2009 
+				<span title=" 16 years, 5 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/quotes/"
+				       title="View all posts tagged Quotes"
+				       rel="tag">Quotes</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/06/01/on-critisism/#respond" title="Comment on On criticism">On criticism (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/05/08/transifex-appliance-on-cloud-computing/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Transifex appliance on cloud computing'">Transifex appliance on cloud computing</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Testing a Transifex appliance running on Amazon’s EC2 for customers. <a href="http://www.rpath.com/corp/">rPath</a> rocks.</p></li>
+		<li class="postmetadata">
+				at night, Friday 8 May 2009 
+				<span title=" 16 years, 6 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/transifex/"
+				       title="View all posts tagged Transifex"
+				       rel="tag">Transifex</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/05/08/transifex-appliance-on-cloud-computing/#respond" title="Comment on Transifex appliance on cloud computing">Transifex appliance on cloud computing (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/05/03/tx-interview-on-greek-radio/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Tx interview on greek radio'">Tx interview on greek radio</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Tx was featured on a popular Greek radio station past week. I really enjoyed the discussion, where we had the opportunity to talk about the importance of universal access of information, open source and digital rights, beautiful code and entrepreneurship.</p></li>
+		<li class="postmetadata">
+				at night, Sunday 3 May 2009 
+				<span title=" 16 years, 6 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/transifex/"
+				       title="View all posts tagged Transifex"
+				       rel="tag">Transifex</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/05/03/tx-interview-on-greek-radio/#respond" title="Comment on Tx interview on greek radio">Tx interview on greek radio (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/04/15/mozilla-praise-ctrl-select/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Mozilla praise: Ctrl-select'">Mozilla praise: Ctrl-select</a>
+			</h2>
+		</li>
+		<li class="entry"><p>I just <em>love</em> Firefox’s ability to control-select certain cells from a table in a page.</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 15 April 2009 
+				<span title=" 16 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/04/15/mozilla-praise-ctrl-select/#respond" title="Comment on Mozilla praise: Ctrl-select">Mozilla praise: Ctrl-select (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/03/29/new-books-spring-09-bookshelf/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'New books: Spring ’09 bookshelf'">New books: Spring ’09 bookshelf</a>
+			</h2>
+		</li>
+		<li class="entry"><p>New books arrival for <a href="http://www.indifex.com/">our</a> bookshelf.</p>
+<ul>
+<li>Peopleware: Productive Projects and Teams (Tom DeMarco and Timothy Lister)</li>
+<li>It’s not how good you are, it’s how good you want to be (Paul Arden)</li>
+<li>A Smile in the Mind: Witty Thinking in Graphic Design (Beryl McAlhone and David Stuart)</li>
+<li>Reality Check: The Irreverent Guide to Outsmarting, Outmanaging, and Outmarketing Your Competition (Guy Kawasaki)</li>
+<li>Never Eat Alone: And Other Secrets to Success, One Relationship at a Time (Keith Ferrazzi and Tahl Raz)</li>
+</ul>
+<p><a href="http://www.flickr.com/photos/24183489@N00/395079584/" title="La caverne aux livres"><img alt="La caverne aux livres" src="http://farm1.static.flickr.com/160/395079584_33463854a2.jpg"></a><br>
+(<a href="http://creativecommons.org/licenses/by-sa/2.0/" title="Published under a Creative Commons licence">cc</a>) by <a href="http://www.flickr.com/photos/24183489@N00/395079584/" title="gadl">gadl</a></p></li>
+		<li class="postmetadata">
+				at night, Sunday 29 March 2009 
+				<span title=" 16 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/booksmusicfilms/"
+				       title="View all posts tagged Books/Music/Films"
+				       rel="tag">Books/music/films</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/indifex/"
+				       title="View all posts tagged indifex"
+				       rel="tag">Indifex</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/03/29/new-books-spring-09-bookshelf/#respond" title="Comment on New books: Spring ’09 bookshelf">New books: Spring ’09 bookshelf (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/03/28/amsterdam-baby/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Amsterdam, baby!'">Amsterdam, baby!</a>
+			</h2>
+		</li>
+		<li class="entry"><p>I have been looking forward to this trip for quite a while. My travel has been reduced lately, as I’m preoccupied with all the great stuff happening at the Indiplex. Long hours of hacking and designing, planning and talking with clients — not much time to think and interrupt the spree.</p>
+<p>But coming to Amsterdam for a week-long hackfest/brainstorm-fest with Max was just an ingenious idea to pass. The flattering comments about Max’s hospitality, house and Amsterdam itself made me much excited about the idea.</p>
+<p>A consequence of working in a dynamic startup at which you’re having the time of your life, is that your sleep hours get reduced. At some points, they get reduced <em>a lot</em>. While [releasing with the sunrise][1] is indeed a great feeling, a man needs to get a proper sleep every a few days. I could use some rest at this moment, so being in Amsterdam makes it the best excuse to just say “I’ll try to get some rest in the weekend”.</p>
+<p>And this is exactly what I’ll do. No coding for this weekend. I swear.</p>
+<p><a href="http://www.flickr.com/photos/12836528@N00/2577006675/" title="Reflections"><img alt="Reflections" src="http://farm4.static.flickr.com/3057/2577006675_b5dd38dca6.jpg"></a><br>
+(<a href="http://creativecommons.org/licenses/by/2.0/" title="Published under a Creative Commons licence">cc</a>) by <a href="http://www.flickr.com/photos/12836528@N00/2577006675/" title="kevindooley">kevindooley</a></p></li>
+		<li class="postmetadata">
+				at night, Saturday 28 March 2009 
+				<span title=" 16 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/03/28/amsterdam-baby/#respond" title="Comment on Amsterdam, baby!">Amsterdam, baby! (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/03/26/transifex-on-lwnnet-weekly-edition/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Transifex on LWN.net Weekly Edition'">Transifex on LWN.net Weekly Edition</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Transifex featured on the current LWN.net weekly edition: “<a href="http://lwn.net/Articles/324413/">Easing software Localization with Transifex</a>” (subscriber-only for now)</p></li>
+		<li class="postmetadata">
+				at night, Thursday 26 March 2009 
+				<span title=" 16 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/03/26/transifex-on-lwnnet-weekly-edition/#respond" title="Comment on Transifex on LWN.net Weekly Edition">Transifex on LWN.net Weekly Edition (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/03/16/media-camp-athens-2-recap/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Media Camp Athens 2 — Recap'">Media Camp Athens 2 — Recap</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Με 4 ώρες ύπνο (επί 3 ημέρες) το Σάββατο πρωί κατέβηκα στο <a href="http://www.flickr.com/photos/nektar/3358942089/">Media Camp 2</a>. Βλέποντας στο pre-registration αρκετά γνωστά ονόματα από <a href="http://www.flickr.com/photos/nektar/3358903391/">developers</a> και <a href="http://www.flickr.com/photos/nektar/3359705666/sizes/l/">entrepreneurs</a> καθώς και μια ενέργεια ζωντανών κοινοτήτων σαν του <a href="http://www.mydrupal.gr/">Drupal</a>, αποφάσισα να κατέβω στο event.</p>
+<p><a href="http://www.flickr.com/photos/57782380@N00/3358895523/" title="MediaCamp"><img alt="MediaCamp" src="http://farm4.static.flickr.com/3651/3358895523_bb9867f8f8_m.jpg"></a></p>
+<p>Οικοδεσπότης το πολλά υποσχόμενο, διαφημιζόμενο, και πολλά εμμέσως πληρωμένο Microsoft Innovation Centre. Πολύ χάρηκα όταν έμαθα ότι το MC2 θα φιλοξενηθεί εκεί, αφού δίνει μια ευκαιρία στην Microsoft να ακούσει για τις νέες ιδέες και τεχνολογίες που είναι δημοφιλείς στο Internet (lightweight apps, modern languages, loosly-coupled services, <a href="http://www.flickr.com/photos/nektar/3359723404/">open source</a> methodologies) και, developers-θέλοντος και δεινοσαυρικών-managers επιτρέποντος, να βοηθήσουν την εταιρία να αντεπεξέλθει στις <a href="/weblog/2009/03/16/new-ms-hellas-slogan">απαιτήσεις των σύγχρονων developers</a> και χρηστών των προϊόντων της. Rants aside, ευχαριστούμε τη Microsoft για την πολύ ζεστή φιλοξενία, καθώς και τους υπόλοιπους χορηγούς (καφές, σάντουιτς, πίτσες, κλπ).</p>
+<p><a href="http://www.flickr.com/photos/57782380@N00/3358913019/" title="MediaCamp"><img alt="MediaCamp" src="http://farm4.static.flickr.com/3465/3358913019_c2d14b6cc1_m.jpg"></a></p>
+<p>Χάρη στην πολύ καλή προετοιμασία των Bill και <a href="http://twitter.com/ThirdEye3">Κωνσταντίνα</a>, όλα ήταν έτοιμα το πρωί όταν φτάσαμε. Πιάσαμε σύντομα τα startup-ικά με τον Γιώργο Τζιραλή με ωραίο εσπρεσσάκι στην ταράτσα/βεράντα του κτιρίου με θέα την πολυάσχολη Βασιλίσσης Σοφίας. Με το Γιώργο το Σάββατο θα μιλήσαμε για θέματα από bootsrapping σε exit strategies, recruiting σε management, venture capital σε actual business. Με τον <a href="http://vrypan.net/">Παναγιώτη Βρυώνη</a> καλύψαμε όλες τις hot ιδέες που μας κατέβηκαν τελευταία στο κεφάλι, από projects του ενός ΣΚ (από αυτά που άλλοι θα έφτιαχναν startup ειδικά για αυτό) μέχρι και άλλα που θα ήθελαν δικό τους business plan. Good stuff.</p>
+<p>Η <a href="http://www.flickr.com/photos/istor/3353742425/">συνεδρία μου</a> με θέμα “Open Source and Startups” με σαφή παραδείγματα στο πώς το χρησιμοποιούμε στην <a href="http://www.indifex.com/">Indifex</a> για να κάνουμε ωραία πράγματα, πήγε πολύ καλά. Η προσέλευση ήταν πολύ καλή και έγιναν μερικές πολύ καλές ερωτήσεις οι οποίες φώτιζαν νέες πτυχές του θέματος. Χάρηκα που είχα την ευκαιρία να μιλήσω για αυτό το θέμα, αφού γενικώς υπάρχει η αντίληψη ότι το ελεύθερο λογισμικό είναι κάτι για “χομπίστες”, και σε αντιπαραβολή για αυτό μίλησα πώς βοήθησε την εταιρία μας να φτιάξει ένα προϊόν το οποίο χειρίζεται δεδομένα που φτάνουν σε 5εκ χρήστες, να δημιουργήσει μια φοβερή ομάδα από code hackers, και να την εκπαιδεύσει στη παραγωγική χρήση μερικών από των πιο leading-edge και hot τεχνολογιών στον τομέα του developing και system administration που υπάρχουν (Pyhton/Django, Distributed Versioning Systems, Amazon Web Services, Automated App Testing, κλπ).</p>
+<p><a href="http://www.flickr.com/photos/57782380@N00/3359759488/" title="MediaCamp"><img alt="MediaCamp" src="http://farm4.static.flickr.com/3464/3359759488_2c2cd461ac_m.jpg"></a></p>
+<p>Σε μια ad-hoc διάθεση, αποφάσισα να κάνω ένα <a href="http://www.flickr.com/photos/vrypan/3355259880/">δεύτερο session</a> σχετικά με Web Frameworks, παρέα με τον <a href="http://twitter.com/KCorax" title="Γιώργος Κασσελάκης, έτσι για να τον κάνω να αλλάξει nick!">Κόρακα</a>. Με μια έντονη παρουσία του Drupal στο barcamp, η πρόταση ενός “anti-Drupal” session ήταν υπερβολικά δελεαστική ιδέα για να την προσπεράσουμε. Έτσι οργανώσαμε μια παρουσίαση/συζήτηση για τα εργαλεία που χρησιμοποιούν οι αληθινοί άντρες :P. Πέραν της πλάκας, μιλήσαμε για τις επιλογές από abstraction systems που έχει στη διάθεση του ένας web developer (και ο πελάτης, φυσικά), τα μέρη που ταιριάζει το χτίσιμο πάνω από ένα CMS, το τι συνεπάγεται αυτό και τους περιορισμούς που φέρνει μαζί του. Σε αντιπαραβολή βάλαμε τα web frameworks (Django, Ruby on Rails, CakePHP) και τα πλεονεκτήματα που φέρνουν στα διάφορα context που προκύπτουν από τις ανάγκες των πελατών.</p>
+<p>Αυτά! Overall a great Saturday, με πολλή ενέργεια και νέες ιδέες.</p>
+<p>~glezos happy.</p>
+<p><a href="http://www.flickr.com/photos/57782380@N00/3358920731/" title="MediaCamp"><img alt="MediaCamp" src="http://farm4.static.flickr.com/3464/3358920731_96068121f4.jpg"></a><br>
+all photos (<a href="http://creativecommons.org/licenses/by/2.0/" title="Published under a Creative Commons licence">cc</a>) by <a href="http://www.flickr.com/photos/57782380@N00/3358920731/" title="nsyll">nsyll</a></p></li>
+		<li class="postmetadata">
+				at night, Monday 16 March 2009 
+				<span title=" 16 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/indifex/"
+				       title="View all posts tagged indifex"
+				       rel="tag">Indifex</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/03/16/media-camp-athens-2-recap/#respond" title="Comment on Media Camp Athens 2 — Recap">Media Camp Athens 2 — Recap (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/03/04/transifex-media-camp-athens/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Transifex @ Media Camp Athens'">Transifex @ Media Camp Athens</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Talk title for @<a href="http://www.mediacamp.gr/">MediaCampAthens</a>: “Dr. OpenSource or: How I Learned to Stop Worrying and Love the Startup. The Transifex case.”</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 4 March 2009 
+				<span title=" 16 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/03/04/transifex-media-camp-athens/#respond" title="Comment on Transifex @ Media Camp Athens">Transifex @ Media Camp Athens (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/02/13/camelot-project/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Camelot Project'">Camelot Project</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="http://www.conceptive.be/projects/camelot">Camelot Project</a> looks really sexy (<a href="http://www.conceptive.be/projects/camelot">slide deck</a>).</p></li>
+		<li class="postmetadata">
+				at night, Friday 13 February 2009 
+				<span title=" 16 years, 9 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/02/13/camelot-project/#respond" title="Comment on Camelot Project">Camelot Project (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2009/02/12/indifex-hiring/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Indifex hiring'">Indifex hiring</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Looking for some ace developers for <a href="http://www.indifex.com/">Indifex</a>. Know a good open-source code hacker? Point him towards our direction. <a href="http://www.indifex.com/jobs/">http://www.indifex.com/jobs/</a></p></li>
+		<li class="postmetadata">
+				at night, Thursday 12 February 2009 
+				<span title=" 16 years, 9 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/indifex/"
+				       title="View all posts tagged indifex"
+				       rel="tag">Indifex</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2009/02/12/indifex-hiring/#respond" title="Comment on Indifex hiring">Indifex hiring (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+  <div class="pagination">
+    <p class="floatleft"><a class="btn" href="https://dimitris.glezos.com:8000/weblog/tag/techweb/index2.html">
+      ← Older Posts
+    </a></p>
+  </div>
+
+<p class="alcenter">
+	<a href="/weblog/archives/">Post archive</a>
+</p>
+
+
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+    <span class="floatright">
+            Last post: in the morning, Tuesday 18 May 2010
+            <span title=" 15 years, 5 months ago">@</span>
+    </span>
+</div>
+
+</body>
+</html>

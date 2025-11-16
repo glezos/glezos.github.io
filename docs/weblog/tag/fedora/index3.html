@@ -1,0 +1,649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Tag: Fedora</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+  <h2 class="pagetitle">Tag archive: Fedora</h2>
+	
+
+
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/06/14/working-on-flp/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Working on Fedora L10n'">Working on Fedora L10n</a>
+			</h2>
+		</li>
+		<li class="entry"><p><img alt="flags" src="/weblog/wp-content/uploads/2007/06/system-config-language.png"></p>
+<p>In the last few days I’ve been working on Fedora’s L10n infrastructure. Not all of it was exciting, but we <em>really</em> need to increase the quality of our international desktops.</p>
+<p>Why? Well, for start, Lord Smolt informs that <a href="http://smolt.fedoraproject.org/stats">3 out of 10 registered systems are non-English</a>, and I estimate another 2/10 of the en_US have localized desktop sessions (so that users won’t be facing encoding problems on the command-line). That’s <em>50% of the systems</em>, although the numbers are probably much higher (of the <a href="http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers#World_Language_Ranking">top 10 spoken languages in the world</a>, English is a mere 12%). Also, the Fedora Localization Project (FLP) is one of our biggest groups of contributors: AFAIK, more than 2000 people have contributed translations to Fedora, and the active translators are probably more than 300. Besides, with the arrival of OLPC, the importance of localized desktops is more evident than ever.</p>
+<p>Internationalization (i18n) and localization (L10n) are basically ways of adapting resources for non-native environments (different locales), of various nations and cultures. i18n is the process of building a resource making no assumptions on the locale; for example write software using the <a href="http://www.gnu.org/software/gettext/manual/">gettext</a> library to export translatable strings to translators. L10n is the actual process of adapting the resource to a particular locale, for example with translations. Basically they are both the same thing; i18n is the technical part of L10n.</p>
+<p>The truth is that Fedora has a lot of problems in this area. A bunch of our software have i18n problems and can’t be localized. Until recently, font rendering was very ugly in non-latin alphabets and on the command-line greek support was broken. Can you imagine the frustration of a french person who opens up the Help menu of <code>system-config-network</code> and finds a completely incomprehensible text there? On the L10n side, translators need to sign up for two different systems and jump through hoops to translate software hosted on different SCMs.</p>
+<p>So, what have we done in the to make our processes better?</p>
+<ul>
+<li>We created a ‘cvsl10n’ group in our account system, which identifies all translators, and put up <a href="http://fedoraproject.org/wiki/L10N/Join">/wiki/L10N/Join</a> which describes the steps to become a member.</li>
+<li>We are moving our L10N infrastructure on public systems (yay for openness!). The Docs Project spearheaded this process, and handled translations by giving RW access to ‘cvsl10n’ to all its <code>*/po/</code> directories. A translation contribution became a simple <code>cvs commit &lt;docs-module&gt;/po/lang.po</code> away for any translator. F7 docs were translated in more languages than the FC6 ones.</li>
+<li>We’ve identified <a href="http://fedoraproject.org/wiki/L10N/Teams">language teams</a> and maintainers, in order to keep communication channels between teams flowing and fragmentation low.</li>
+<li>Fedora L10n is planned to become a product in bugzilla, so that bugs for translations can be filed and assigned directly to the people who can actually fix them (ie. not the developer).</li>
+<li>And finally, we are building an exciting new front-end to L10n, to replace the rusty <code>i18n.redhat</code> one. Besides translation statistics, it presents i18n errors of the module and urges people to code using the standard libraries, which increase interoperability. It also supports Subversion, Mercurial, and GIT repos. You can give it a spin at the testing system we’ve put up:</li>
+</ul>
+<p><a href="http://publictest4.fedora.redhat.com/">http://publictest4.fedora.redhat.com/</a></p>
+<p>We’ve got some exciting times ahead of us, which will give Fedora, and hopefully many downstream and upstream projects the opportunity to increase their reach <em>a lot</em>.</p></li>
+		<li class="postmetadata">
+				at night, Thursday 14 June 2007 
+				<span title=" 18 years, 5 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/06/14/working-on-flp/#respond" title="Comment on Working on Fedora L10n">Working on Fedora L10n (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/06/03/f7-ntua-mirror/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'NTUA/CEID mirrors και Fedora 7'">NTUA/CEID mirrors και Fedora 7</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Γρήγορη σημείωση: το ΕΜΠ έχει ενημερώσει τον mirror του <a href="ftp://ftp.ntua.gr/pub/linux/fedora/linux/releases/7">με το Fedora 7</a> (ελπίζω σύντομα να φιλοξενηθούν και τα updates) και έχει αναρτηθεί στην (αυτόματα ενημερωμένη) <a href="http://mirrors.fedoraproject.org/publiclist/Fedora/7/">λίστα των mirrors του F7</a>. Επίσης πλέον και το <a href="http://www.ceid.upatras.gr/">CEID</a> (<a href="ftp://ftp.ceid.upatras.gr/pub/fedora/linux/releases/7/">ftp</a>)! Ένα ευχαριστώ στα παιδιά των κέντρου διαχείρισης δικτύων και του καουμπόι των mirror μας <a href="http://fedoraproject.org/wiki/MattDomsch">Matt Domsch</a>.</p></li>
+		<li class="postmetadata">
+				at night, Sunday 3 June 2007 
+				<span title=" 18 years, 5 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/06/03/f7-ntua-mirror/#respond" title="Comment on NTUA/CEID mirrors και Fedora 7">NTUA/CEID mirrors και Fedora 7 (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/05/31/f7-todo/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Fedora 7 — αποψινές δουλειές'">Fedora 7 — αποψινές δουλειές</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Σήμερα λοιπόν <a href="http://fedoraproject.gr/info/fedora7">κυκλοφόρησε το Fedora 7</a>. Yay! :-)</p>
+<p>Δουλειές που ~~θέλω να κάνω~~ έκανα ψες και απόψε:</p>
+<ul>
+<li><img alt="Checkmark" src="/weblog/wp-content/uploads/2007/06/checkmark1.png"> Ενημέρωση του <a href="http://fedoraproject.gr/">fedoraproject.gr</a> (αρχική σελίδα, σύνδεσμοι, highlights)</li>
+<li><img alt="Checkmark" src="/weblog/wp-content/uploads/2007/06/checkmark1.png"> Αποστολή email σε διαχειριστές ελληνικών mirror για το <a href="http://fedoraproject.org/wiki/Infrastructure/Mirroring">νέο σύστημα διαχείρισης mirrors</a> του F7+</li>
+<li><img alt="Checkmark" src="/weblog/wp-content/uploads/2007/06/checkmark1.png"> Αναφορά σφάλματος για την <a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=241975">έλλειψη των relnotes από το ISO</a>.</li>
+<li><img alt="Checkmark" src="/weblog/wp-content/uploads/2007/06/checkmark1.png"> Εγγραφή στην <a href="http://www.guadec.org/">GUADEC</a> (άσχετο)</li>
+<li><img alt="Checkmark" src="/weblog/wp-content/uploads/2007/06/checkmark1.png"> Διόρθωση και ενημέρωση των ελληνικών <a href="http://docs.fedoraproject.org/release-notes/f7/">σημειώσεων κυκλοφορίας</a> και σύνδεση στη νέα έκδοση</li>
+<li><img alt="Checkmark" src="/weblog/wp-content/uploads/2007/06/checkmark1.png"> Αποστολή ελληνικής ανακοίνωσης σε λίστες ηλ. ταχυδρομείου</li>
+</ul></li>
+		<li class="postmetadata">
+				at night, Thursday 31 May 2007 
+				<span title=" 18 years, 5 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/05/31/f7-todo/#respond" title="Comment on Fedora 7 — αποψινές δουλειές">Fedora 7 — αποψινές δουλειές (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/05/04/fpgr-f7/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'fedoraproject.gr και Fedora 7'">fedoraproject.gr και Fedora 7</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Μια και πλησιάζει η ημέρα κυκλοφορίας του Fedora 7 (σε καμιά εικοσαριά μέρες, yay!), σήμερα ενημερώσαμε τον <a href="http://fedoraproject.gr/">ελληνικό ιστότοπο του Fedora</a> με πληροφορίες για τη νέα έκδοση. Διαβάστε <a href="http://fedoraproject.gr/info/fedora7">τι καινούριο επιφυλάσσει η νέα έκδοση</a> και δοκιμάστε την με τα εύκολα στη χρήση και με δυνατότητα εγκατάστασης, “ζωντανά” (live) CDs.</p>
+<p><a href="http://fedoraproject.gr/" title="Home of Fedora Greece"><img alt="Fedora 7" src="/weblog/wp-content/uploads/2007/05/f7-promote3.png"></a></p></li>
+		<li class="postmetadata">
+				at night, Friday 4 May 2007 
+				<span title=" 18 years, 6 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/05/04/fpgr-f7/#respond" title="Comment on fedoraproject.gr και Fedora 7">fedoraproject.gr και Fedora 7 (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/04/22/summit-california/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Summit, California et al'">Summit, California et al</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Το δυσκολότερο εμπόδιο ξεπεράστηκε (εγκρίθηκε η βίζα με τη δεύτερη) οπότε μπορώ να το ανακοινώσω ελεύθερα πλέον χωρίς ενδοιασμούς:</p>
+<p>Σε ~~2~~ 1 ~~βδομάδα~~ ημέρα θα είμαι στο <a href="http://www.redhat.com/promo/summit/2007/">Red Hat Summit</a>!</p>
+<p><a href="http://redhat.com/promo/summit/"><img alt="red hat summit 07" src="/weblog/wp-content/uploads/2007/04/rh-summit1.png"></a></p>
+<p>California here I come! :-)</p></li>
+		<li class="postmetadata">
+				at night, Sunday 22 April 2007 
+				<span title=" 18 years, 6 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/personal/"
+				       title="View all posts tagged Personal"
+				       rel="tag">Personal</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/04/22/summit-california/#respond" title="Comment on Summit, California et al">Summit, California et al (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/04/13/gsoc-acceptance/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Rockin’ the summer with GSoC'">Rockin’ the summer with GSoC</a>
+			</h2>
+		</li>
+		<li class="entry"><p><img alt="Fedora Google Summer of Code banner" src="/weblog/wp-content/uploads/2007/04/fedora-gsoc-small.png"></p>
+<p>Decided to spend some of my summer free time creatively on Fedora with GSoC. In the middle of the application process, it hit me to participate as a student instead of as a mentor. So, found out yesterday that <a href="http://code.google.com/soc/fedora/appinfo.html?csaid=AD7CBA69B2D19FE3">my app got accepted</a>. <strong>Yay!</strong> Seems it’ll be a rocking summer after all.</p></li>
+		<li class="postmetadata">
+				at night, Friday 13 April 2007 
+				<span title=" 18 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/04/13/gsoc-acceptance/#respond" title="Comment on Rockin’ the summer with GSoC">Rockin’ the summer with GSoC (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/03/20/gsoc-l10n/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'GSoC project: Fedora L10n platform'">GSoC project: Fedora L10n platform</a>
+			</h2>
+		</li>
+		<li class="entry"><p>There’s a <a href="http://fedoraproject.org/wiki/SummerOfCode/">GSoC</a> <a href="http://fedoraproject.org/wiki/FedoraBounties#L10NPlatform">project proposal</a> for an upstream-friendly L10N Web tool (UI) for Fedora. If you are a Python monkey that would like to help the lives of Fedora’s 2000+ translators, increase our language coverage and receive a stripend of €3000 for it, check it out. (Greek: Εσύ, Έλληνα φοιτητή, τι θα κάνεις αυτό το καλοκαίρι;)</p></li>
+		<li class="postmetadata">
+				at night, Tuesday 20 March 2007 
+				<span title=" 18 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/03/20/gsoc-l10n/#respond" title="Comment on GSoC project: Fedora L10n platform">GSoC project: Fedora L10n platform (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/03/19/wiki-headings/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Wiki headings bg change'">Wiki headings bg change</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="http://fedoraproject.org/wiki/Distribution"><img alt="Fedora wiki heading background tweaks" src="/weblog/wp-content/uploads/fpo-headings.png"></a></p>
+<p>I had an itch. It shouted in my ear “scratch me, scratch me!”. Couldn’t stand it. I really had to.</p>
+<p>Now I feel much better.</p>
+<p>Hope you do too.</p></li>
+		<li class="postmetadata">
+				at night, Monday 19 March 2007 
+				<span title=" 18 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/03/19/wiki-headings/#respond" title="Comment on Wiki headings bg change">Wiki headings bg change (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/03/13/wiki-work/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Wiki work'">Wiki work</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Spent some hours in the last days fixing various stuff on the <a href="http://fedoraproject.org/wiki/">Fedora wiki</a>.</p>
+<p>What we’ve been up to? Well, some weeks ago we upgraded the wiki to version 1.5.7, with support for Docbook export and reStructuredText. We’ve introduced some CSS-foo which render the text more readable and the wiki more usable (bigger text, better separation of headings) etc. Hope you like ‘em. :-)</p>
+<p>Of course, as expected, these actions introduced bugs, and some of them are still visible. Ahh, the joy of upgrading… Most of them are now fixed, with the lists’ one (strange indenting, mixed lists didn’t work) just a while ago. Drop a note if you see something strange. (<a href="http://fedora-tchung.blogspot.com">Tchung</a>, sorry it took us so long!)</p>
+<p>Also, recently we introduced the following two <em>major</em> changes on the wiki:</p>
+<ol>
+<li>Parent-page navigation (Page » Sub » SubSub) is now provided by moin on top of pages and doesn’t need manual crafting.</li>
+<li><code>[[TableOfContents]]</code> now includes its own bounding box and heading.</li>
+</ol>
+<p>These two changes mean many pages might need editing. So, here are two respective requests:</p>
+<ol>
+<li>Most probably your project’s pages have a hard-coded navigation string on top of them; you would want to get rid of that now.</li>
+<li>If they still have a TOC header (say, <code>==Contents==</code>) before the actual <code>[[TableOfContent]]</code> command, get rid of that too.</li>
+</ol>
+<p>Please do the same for any similar page you stumble upon. If we catch you not doing it, you’ll have to answer to the Board.</p>
+<p>Finally, two more minor things we did:</p>
+<ul>
+<li>Replaced the <a href="http://fedoraproject.org/wiki/HelpOnSmileys">Wiki Smilies</a> with the fancy ones from Echo iconset. Yay!</li>
+<li>Made the Fedora logo on the wiki a link back home.</li>
+</ul>
+<p>That’s it for now. Stay tuned.</p>
+<p><em>PS: Self-introductions and related stuff will have to wait for another time.</em></p>
+<p><strong>Update 13/3:</strong> I should note that any changes having to do with <em>appearence</em> take place on the ‘kindofblue’ theme.</p></li>
+		<li class="postmetadata">
+				at night, Tuesday 13 March 2007 
+				<span title=" 18 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/03/13/wiki-work/#respond" title="Comment on Wiki work">Wiki work (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/02/17/fdsco-elections/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'FDSCo: Εκλογές'">FDSCo: Εκλογές</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Το <a href="http://fedoraproject.org/wiki/DocsProject">Έργο Τεκμηρίωσης Fedora</a> (FDP) έχει να καυχιέται για αρκετά επιτεύγματα. Η σκληρή δουλειά όλων έχει δώσει στο Fedora τον τίτλο της διανομής με τις πιο πλήρεις <a href="http://fedora.redhat.com/docs/release-notes/fc6/el/">σημειώσεις κυκλοφορίας</a> και στην ίδια την ομάδα, τον τίτλο ίσως της πιο φιλικής ομάδας του Fedora. Yay! :-)</p>
+<p>Ένας από τους στόχους μας είναι να έχουμε όσο πιο διάφανες και δημοκρατικές διαδιασίες γίνεται κι έτσι αποφασίσαμε να προχωρήσουμε στην <a href="http://fedoraproject.org/wiki/DocsProject/SteeringCommittee">εκλογή της οργανωτικής επιτροπής</a> του έργου (FDSCo), με ψηφοφόρους τα μέλη του έργου τεκμηρίωσης (άτομα στην ομάδα χρηστών <code>cvsdocs</code>).</p>
+<p>Σήμερα λοιπόν <a href="http://www.redhat.com/archives/fedora-docs-list/2007-February/msg00093.html">ανοίξαμε τις κάλπες</a> για την εκλογή της πρώτης FDSCo και θα παραμείνουν ανοιχτές για τις επόμενες 10 ημέρες.</p>
+<p>Και οι δύο παροιμίες της ημέρας:</p>
+<ul>
+<li><a href="http://fedoraproject.org/wiki/DocsProject/SteeringCommittee/Nominations#head-3b119c55d0ed01fed9ce4e4c412813515ea6c8b7">Λείπει ο Μάρτης από τη Σαρακοστή</a>;</li>
+<li><a href="/research/en">Όλα τα ‘χε η Μαργιωρή</a> ο φερετζές της έλειπε.</li>
+</ul>
+<p><strong>Ενημέρωση 10/3:</strong> <a href="http://www.redhat.com/archives/fedora-docs-list/2007-February/msg00164.html">Τα αποτελέσματα των εκλογών βγήκαν</a> και ψηφίστηκα για <a href="http://fedoraproject.org/wiki/DocsProject/SteeringCommittee">συμμετοχή στην FDSCo</a> για ένα χρόνο! Yay! Για τα σχέδια για τη συμβολή μου ανατρέξτε στον παραπάνω σύνδεσμο περί Μάρτη και Σαρακοστής. =)</p></li>
+		<li class="postmetadata">
+				at night, Saturday 17 February 2007 
+				<span title=" 18 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/02/17/fdsco-elections/#respond" title="Comment on FDSCo: Εκλογές">FDSCo: Εκλογές (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/02/02/fedora-telegraph/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Τηλέγραφος: Fedora stats'">Τηλέγραφος: Fedora stats</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Ενημέρωση για <a href="http://fedoraproject.org/wiki/Statistics">στατιστικά του Fedora Core 6</a>. Στοπ. Κοντά 1.5 εκατομμύριο εγκαταστάσεις σε 3 μήνες. 100 χιλιάδες νέες εγκαταστάσεις τη βδομάδα. 14 χιλιάδες κάθε μέρα. 10 το λεπτό. Καθόλου άσχημα :-)</p></li>
+		<li class="postmetadata">
+				at night, Friday 2 February 2007 
+				<span title=" 18 years, 9 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/02/02/fedora-telegraph/#respond" title="Comment on Τηλέγραφος: Fedora stats">Τηλέγραφος: Fedora stats (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2006/12/01/andromi/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Αναδρομή'">Αναδρομή</a>
+			</h2>
+		</li>
+		<li class="entry"><p><img alt="Tux counting" src="/photos/1814-2/tux-counting.jpg"></p>
+<p>Εντελώς τυχαία ανακάλυψα πως σήμερα κλείνουν 6 μήνες από τότε που άνοιξα λογαριασμό στο Έργο Fedora. Από περιέργεια επέλεξα τα εξερχόμενα μηνύ»ματα μου προς το Έργο και η απαρίθμηση τους με άφησε με ανοιχτό το στόμα: <strong>350</strong>…</p>
+<p>Αναρωτιέμαι πώς θα ήταν τα πράγματα αν αυτές τις βραδινές ώρες τις ξόδευα κάπου αλλού… όπως πχ. στο διδακτορικό μου…</p></li>
+		<li class="postmetadata">
+				at night, Friday 1 December 2006 
+				<span title=" 18 years, 11 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2006/12/01/andromi/#respond" title="Comment on Αναδρομή">Αναδρομή (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2006/10/30/fc6-release/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Fedora Core 6 is out'">Fedora Core 6 is out</a>
+			</h2>
+		</li>
+		<li class="entry"><p><img alt="None" src="/photos/1659-1/fedora-logo.png"></p>
+<p>Για όσους δεν τα έμαθαν τα νέα, το ολοκαίνουριο και απαστράπτον <a href="http://fedoraproject.gr/info/fc6">Fedora Core 6</a> κυκλοφορεί εδώ και λίγες μέρες! Το φορτίο στους εξυπηρετητές τις πρώτες μέρες της κυκλοφορίας ήταν απροσδόκητο.</p>
+<p>Διαβάστε τα πάντα στην <a href="http://fedoraproject.gr/info/fc6/announcement">ανακοίνωση της ελληνικής ομάδας Fedora</a> και κατεβάστε και δοκιμάστε το. Μπορείτε να την προωθήσετε ελεύθερα σε λίστες, forums, στα ιστολόγια σας κλπ. ;-)</p>
+<p>Είμαι <em>πάρα</em> πολύ ενθουσιασμένος για αυτήν την έκδοση, αφού ρίξαμε πολλή προσπάθεια (= πολλά ξενύχτια) για να γίνει όσο καλύτερη και πιο εξελληνισμένη γίνεται. Το ίδιο ισχύει και για το <a href="http://fedoraproject.gr/">fedoraproject.gr</a>, το οποίο σηκώσαμε κι αυτό πριν μερικές ημέρες. Η <a href="http://fedoraproject.org/wiki/DocsProject/BrowserStartPage">αρχική σελίδα του περιηγητή</a> έχει λάβει πολύ καλά σχόλια, κάτι για το οποίο δε θα κρύψω τη μεγάλη μου χαρά και ίσως μια μικρή υπερηφάνια.. :-)</p>
+<p>Enjoy, people! <strong><a href="http://fedoraproject.gr/about">Get involved</a></strong>!</p>
+<p><img alt="None" src="/photos/1732-2/fc6-smallshot.png">Μίνι-στιγιμότυπο της επιφάνειας εργασίας μου<br>
+(ελληνικό FC6, GNOME, Beryl/AIGLX)</p></li>
+		<li class="postmetadata">
+				at night, Monday 30 October 2006 
+				<span title=" 19 years ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2006/10/30/fc6-release/#respond" title="Comment on Fedora Core 6 is out">Fedora Core 6 is out (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2006/09/14/fc6-browser-splash/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Νέα αρχική σελίδα περιηγητή στο Fedora Core 6'">Νέα αρχική σελίδα περιηγητή στο Fedora Core 6</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Τις τελευταίες μέρες στο <a href="http://fedoraproject.org/wiki/DocsProject">έργο τεκμηρίωσης του Fedora</a> σκεφτόμαστε να αλλάξουμε την αρχική σελίδα του περιηγητή στο Fedora Core 6 σε κάτι πιο χρήσιμο. Μέχρι τώρα η σελίδα αυτή είχε τις <a href="http://fedora.redhat.com/docs/release-notes/fc5/">σημειώσεις κυκλοφορίας</a>, οι οποίες, αν και πολύ χρήσιμες γενικώς, είναι μάλλον άστοχες σαν αρχική σελίδα του περιηγητή ενός χρήστη και συνήθως αραχνιάζουν εκεί γιατί απλά δεν έχεις κάτι καλύτερο για να τις αντικαταστήσεις.</p>
+<p>Όλα άρχισαν πριν τις διακοπές με ένα <a href="https://www.redhat.com/archives/fedora-docs-list/2006-July/msg00151.html">email μου στη λίστα</a>. Η ιδέα φαίνεται να άρεσε σε όλους, έτσι πιάσαμε δουλειά πολύ γρήγορα, αν και πλησίαζαν απειλητικά οι προθεσμίες για το FC6T3. Η <a href="/box/foss/fc6-browser-splash/">πρώτη μορφή της σελίδας</a> ήταν γεγονός λίγες μέρες μετά, ώστε να δείξω στους υπόλοιπους τι είχα στο μυαλό μου (τα αγγλικά μου δε φαίνεται να είναι και πολύ κατανοητά στις ξένες λίστες…).</p>
+<p><a href="/box/foss/fc6-browser-splash/"><img alt="Fedora Core 6 splash page draft" src="/photos/1721-2/fc6-splash-v3.png"></a></p>
+<p>Δημιουργήθηκε αμέσως η <a href="http://fedoraproject.org/wiki/DocsProject/FirefoxDefaultSplash">σελίδα συντονισμού</a> στο wiki και αναρτήσαμε ένα <a href="http://fedoraproject.org/wiki/DocsProject/Schedule#splash-page-schedule">πρόγραμμα δραστηριοτήτων</a> για να ξέρουμε τι μας γίνεται. Οι διορθώσεις ήρθαν αμέσως και το <a href="http://www.redhat.com/archives/fedora-art-list/2006-September/msg00101.html">email στην καλλιτεχνική ομάδα</a> έφυγε για να πάρουμε τη γνώμη τους και να έχουμε ένα θέμα στο ύφος του προεπιλεγμένου θέματος του Fedora Core 6.</p>
+<p>Μάλιστα, σχεδιάζουμε να ενσωματώσουμε αυτό το αρχείο στο δικό μας πακέτο στο Fedora Core, έτσι θα μπορεί ο χρήστης να λαμβάνει ενημερώσεις αυτής της σελίδας και μεταξύ των κυρίως εκδόσεων του Core. Με αυτό τον τρόπο, μέσω της σελίδας τοπικής τεκμηρίωσης που φτιάχνουμε, θα μπορούμε να ενημερώνουμε το χρήστη για νέα σχετικά με την τεκμηρίωση, όπως ύπαρξη νέων οδηγών κλπ.</p>
+<p>Αυτή τη στιγμή είμαστε ήδη μπροστά στο χρονοδιάγραμμα μας, το οποίο είναι καλό! Χθες βράδυ <a href="http://www.redhat.com/archives/fedora-docs-list/2006-September/msg00040.html">βελτίωσα την πρώτη μορφή της σελίδας</a>: πλέον είναι πιο σωστά δομημένη, χρησιμοποιεί ορθή XHTML 1.0 Strict και ικανοποιεί τις απαιτήσεις επιπέδου “AAA” του WCAG. Άλλα μέλη της ομάδας έσπευσαν στο συντονισμό με τους υπεύθυνους κυκλοφορίας του Fedora και άλλα στη <a href="http://www.redhat.com/archives/fedora-docs-list/2006-September/msg00030.html">ρύθμιση των εργαλείων μας</a>.</p>
+<p>Ο στόχος είναι να μεταφέρουμε την HTML σε DocBook ώστε πριν την εξαγωγή να γίνει μετάφραση στις διάφορες γλώσσες. Μια και αυτή η σελίδα αποτελεί μία από τις πιο σημαντικές πηγές πληροφορίες ολόκληρης της επιφάνειας εργασίας του χρήστη, πρέπει να φροντίσουμε να έχει τη μέγιστη δυνατή τοπικοποίηση. Μια από τις επόμενες μέρες πρέπει να στείλουμε ένα email μάλλον για να ξυπνήσουν οι μεταφραστές από τώρα.</p>
+<p>…</p>
+<p>Τι μπορεί να κάνει ένα email ε;</p>
+<p>Ω ναι… είναι ωραίο το ελεύθερο λογισμικό!</p></li>
+		<li class="postmetadata">
+				at night, Thursday 14 September 2006 
+				<span title=" 19 years, 2 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2006/09/14/fc6-browser-splash/#respond" title="Comment on Νέα αρχική σελίδα περιηγητή στο Fedora Core 6">Νέα αρχική σελίδα περιηγητή στο Fedora Core 6 (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2006/07/21/dejavu-in-fedora-core/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Η DejaVu γραμματοσειρά στο Fedora Core'">Η DejaVu γραμματοσειρά στο Fedora Core</a>
+			</h2>
+		</li>
+		<li class="entry"><p><img alt="Dejavu fonts" src="http://dejavu.sourceforge.net/wiki/skins/common/images/dejavu_logo2.png"></p>
+<p>Μετά από μια μεγάλη προσπάθεια εκ μέρους της <a href="http://fedoraproject.org/wiki/L10N/Teams/Greek">ομάδας εξελληνισμού του Fedora</a> και αρκετών άλλων ατόμων, η γραμματοσειρά <a href="http://dejavu.sourceforge.net/">DejaVu</a> έγινε η προεπιλεγμένη γραμματοσειρά του Fedora. Αυτό σημαίνει ότι το Fedora Core 6 θα έχει πλήρη υποστήριξη για ελληνικά: Από την εγκατάσταση μέχρι και την επιφάνεια εργασίας.</p>
+<p>Οι τρεις σημαντικότερες αναφορές σφαλμάτων στο bugzilla (<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=170218">#170218</a>,
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=193872">#193872</a>, <a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=196328">#196328</a> έκλεισαν σήμερα ως “Closed, Fixed in Rawhide”. Τελικώς επιλέγηκε για ενσωμάτωση η DejaVu <em>LGC</em>, η οποία περιέχει μόνο λατινικά, ελληνικά και κυριλλικά, μια και τα αραβικά δημιουργούσαν πρόβλημα και χρειάζονταν patches στο fontconfig.</p>
+<p>Ελπίζω η συμπερίληψη της να πρόλαβε το <a href="http://fedoraproject.org/wiki/Core/Schedule">freeze του FC6-test2</a> το οποίο βγαίνει σε μερικές ημέρες.</p>
+<p>Ένα μεγάλο <strong>μπράβο</strong> πάει στο <a href="http://simos.info/blog/">Σίμο Ξενιτέλλη</a> για την απίστευτη δουλειά που έκανε για αυτό το θέμα.</p></li>
+		<li class="postmetadata">
+				at night, Friday 21 July 2006 
+				<span title=" 19 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2006/07/21/dejavu-in-fedora-core/#respond" title="Comment on Η DejaVu γραμματοσειρά στο Fedora Core">Η DejaVu γραμματοσειρά στο Fedora Core (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2006/07/02/xosimo/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Χώσιμο'">Χώσιμο</a>
+			</h2>
+		</li>
+		<li class="entry"><blockquote>
+<p>This is a reminder, sent out once a month, about your redhat.com mailing list memberships.</p>
+<p>Lists for dimitris@glezos.com:</p>
+<ul>
+<li>fedora-devel-list@redhat.com</li>
+<li>fedora-art-list@redhat.com</li>
+<li>fedora-marketing-list@redhat.com</li>
+<li>fedora-i18n-list@redhat.com</li>
+<li>fedora-desktop-list@redhat.com</li>
+<li>fedora-websites-list@redhat.com</li>
+<li>fedora-trans-el@redhat.com</li>
+<li>fedora-ambassadors-list@redhat.com</li>
+<li>fedora-announce-list@redhat.com</li>
+<li>fedora-extras-list@redhat.com</li>
+<li>fedora-trans-list@redhat.com</li>
+<li>fedora-docs-list@redhat.com</li>
+</ul>
+</blockquote>
+<p>Χμ. Είτε έχω ο κα(η)μένος την τάση να χώνομαι πολύ, είτε οι τύποι του <a href="http://fedoraproject.org/">fedora</a> έχουν την τάση να σε χώνουν πολύ.</p>
+<p>Υποθέτω πως συμβαίνει λίγο κι απ’ τα δύο…</p></li>
+		<li class="postmetadata">
+				at night, Sunday 2 July 2006 
+				<span title=" 19 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2006/07/02/xosimo/#respond" title="Comment on Χώσιμο">Χώσιμο (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+  <div class="pagination">
+    <p class="floatright"><a class="btn" href="https://dimitris.glezos.com:8000/weblog/tag/fedora/index2.html">
+      Newer Posts →
+    </a></p>
+  </div>
+
+<p class="alcenter">
+	<a href="/weblog/archives/">Post archive</a>
+</p>
+
+
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+    <span class="floatright">
+            Last post: at night, Wednesday 15 July 2009
+            <span title=" 16 years, 4 months ago">@</span>
+    </span>
+</div>
+
+</body>
+</html>

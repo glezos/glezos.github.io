@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Busy and fun weekend with L10n stuff? You bet.</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+	
+
+		<ul class="post">
+		<li>
+
+			<h2 id="post-1566"><a href="https://dimitris.glezos.com:8000/weblog/2008/01/28/weekend-bugfixing/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Busy and fun weekend with L10n stuff? You bet.'">Busy and fun weekend with L10n stuff? You bet.</a></h2>
+		</li>
+		<li class="entry"><p>I just got into my new apartment. Important services were installed first: power, internet, heating. Important stuff were moved then: Desk, espresso machine and grinder. Now I can work from the new place and sleep or cook a pizza at my friend’s house for a few more days, until the new furniture and appliances arrive.</p>
+<p>The weekend was a very productive one, got the chance to fix a bunch of Fedora Localization TODOs, and ~<a href="https://bugzilla.redhat.com/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;product=Fedora+Localization&amp;query_format=advanced&amp;bug_status=CLOSED&amp;long_desc_type=substring&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;fixed_in_type=allwordssubstr&amp;fixed_in=&amp;qa_whiteboard_type=allwordssubstr&amp;qa_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;emailassigned_to1=1&amp;emailtype1=exact&amp;email1=&amp;emailassigned_to2=1&amp;emailreporter2=1&amp;emailqa_contact2=1&amp;emailcc2=1&amp;emailtype2=exact&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;changedin=3&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">15 bugs</a>, some of them pretty important for people’s work. Let’s see:</p>
+<ol>
+<li><a href="http://translate.fedoraproject.org/teams/kn">Kannada</a>, <a href="http://translate.fedoraproject.org/teams/id">Indonesian</a>, and <a href="http://translate.fedoraproject.org/teams/it">Italian</a> teams were created, people have stepped up as maintainers for them. We’ve put their details on <a href="http://translate.fedoraproject.org/">translate.fpo</a>, so that people can easily see how to submit corrections and bug reports, and how to join the teams.</li>
+</ol>
+<p>With these, we have more than 34 active teams and a total of ~75 languages.
+2. We now have all the shipped <a href="http://docs.fedoraproject.org/">Fedora Docs</a>, <a href="http://translate.fedoraproject.org/module/system-config-network">system-config-network</a> and <a href="http://translate.fedoraproject.org/module/yumex">yumex</a> accepting translations from Transifex. Especially with the case of the last two, translation submissions no longer need to be sent with emails/bug reports, nor the developer needs to have account associations for every translator wanting to send something. Get these babies to 100%!
+3. <a href="http://translate.fedoraproject.org/">translate.fedoraproject.org</a> is now also available in Italian and Greek. Thanks to Francesco Tombolini for the Italian version.
+4. Having questions pop up on fedora-trans-list all the time, I went on and created a <a href="http://fedoraproject.org/wiki/L10N/FAQ">single FAQ page</a>. While I prefer a proper documentation than FAQs, this stuff work great as a reference point. Next step: move finalized text from there over to the <a href="http://docs.fedoraproject.org/translation-quick-start-guide/">Fedora Translation Quick Start guide</a>, since it’s in DocBook and already translated in many languages.
+5. Together with <a href="http://fedoraproject.org/wiki/BartCouvreur">Bart</a>, we moved all content from wiki/L10N/Teams over to the XML files producing <a href="http://translate.fedoraproject.org/teams/">translate.fpo/teams/</a>. From now on, we’ll add each new team’s information on the dynamic website instead of the wiki: it’s more easy to maintain, and localizable.
+6. Finally, and probably most exciting, a remote command line interface to Transifex has made its first connection over HTTP.</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">tx</span><span class="w"> </span><span class="o">--</span><span class="n">list</span><span class="o">-</span><span class="n">modules</span><span class="w"> </span><span class="o">-</span><span class="n">v</span>
+<span class="n">Creating</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">transifex</span><span class="p">.</span><span class="n">shuttle</span><span class="p">:</span><span class="mi">8084</span><span class="o">/</span><span class="n">module</span><span class="o">/</span><span class="err">?</span><span class="n">tg_format</span><span class="o">=</span><span class="n">json</span>
+<span class="k">Module</span><span class="w"> </span><span class="nn">name</span><span class="w">                              </span><span class="n">Description</span>
+<span class="n">testmodule</span><span class="o">-</span><span class="n">cvs</span><span class="w">                           </span><span class="n">A</span><span class="w"> </span><span class="n">CVS</span><span class="w"> </span><span class="n">testing</span><span class="w"> </span><span class="k">module</span>
+<span class="nn">testmodule</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">revisor</span><span class="w">                   </span><span class="n">A</span><span class="w"> </span><span class="n">Git</span><span class="w"> </span><span class="n">testing</span><span class="w"> </span><span class="k">module</span>
+<span class="nn">testmodule</span><span class="o">-</span><span class="n">hg</span><span class="o">-</span><span class="n">smolt</span><span class="w">                      </span><span class="n">A</span><span class="w"> </span><span class="n">Mercurial</span><span class="w"> </span><span class="n">testing</span><span class="w"> </span><span class="k">module</span>
+<span class="nn">testmodule</span><span class="o">-</span><span class="n">svn</span><span class="w">                           </span><span class="n">A</span><span class="w"> </span><span class="n">Subversion</span><span class="w"> </span><span class="n">testing</span><span class="w"> </span><span class="k">module</span>
+</code></pre></div>
+
+<p>More to come!</p>
+<p><img alt="Home-made pizza picture" src="/photos/3294-2/dsc_2101.jpg" title="Mmmmmm!"><br>
+Home-made pizza</p>
+<p><strong>Update, 2 hours later:</strong> Oh, and another fix I was just reminded (thanks ricky): We found the bug that caused Subversion modules behaving strangely and now they are working again.</p></li>
+		<li class="postmetadata">
+				at night, Monday 28 January 2008 
+				<span title=" 17 years, 9 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>				| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/01/28/weekend-bugfixing/#respond" title="Comment on Busy and fun weekend with L10n stuff? You bet.">Busy and fun weekend with L10n stuff? You bet. (Comment!)</a>
+		</li>
+		</ul>
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+</div>
+
+</body>
+</html>

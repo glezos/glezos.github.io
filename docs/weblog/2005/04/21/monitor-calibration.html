@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Monitor calibration</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+	
+
+		<ul class="post">
+		<li>
+
+			<h2 id="post-1566"><a href="https://dimitris.glezos.com:8000/weblog/2005/04/21/monitor-calibration/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Monitor calibration'">Monitor calibration</a></h2>
+		</li>
+		<li class="entry"><p>Όποιος δεν έχει ρυθμίσει/βαθμονομήσει (calibrate) την οθόνη στην οποία δουλεύει, ειδικά αν σε αυτή βλέπει εικόνες, φωτογραφίες, ταινίες, ιστοχώρους, τότε είναι καταδικασμένος να τα βλέπει όλα, μα όλα λάθος.</p>
+<p>Και όταν λέμε λάθος εννοούμε πως βλέπει κάτι άλλο από αυτό που θα έπρεπε να βλέπει. Αν εκτυπώσει ένα στιγμιότυπο της οθόνης του στον εκτυπωτή, θα δει κάτι εντελώς διαφορετικό από αυτό που δείχνει η οθόνη του: Άλλη φωτεινότητα, άλλο άσπρο, άλλη διαβάθμιση και άλλες αποχρώσεις. Κλασικό παράδειγμα είναι αυτό που η ίδια εικόνα δείχνει πιο σκοτεινή από τον ένα υπολογιστή στον άλλο. Και φυσικά, το ίδιο “λάθος” φαίνονται και όλοι οι ιστοχώροι που επισκέπτεται.</p>
+<p>Γι’ αυτό καλοί μου άνθρωποι, κάντε calibrate τις οθόνες σας!</p>
+<p>Οι windows-άδες, το πιο πιθανόν είναι να έχουν πάρει από κάποιο γνωστό τους το Adobe Photoshop στα μουλωχτά, το οποίο έρχεται με το Adobe Gamma το οποίο κάνει τη δουλειά. Λίγο παράνομα φυσικά.. τσας.</p>
+<p>Οι μάγκες του Mac OS X μπορούν να πάνε στο System Properties → Display και να την κάνουν calibrate από ‘κει εύκολα.</p>
+<p>Για τους linux-άδες, θα ακολουθήσουμε την πιο ακριβή και do-it-yourself έκδοση του καλιμπραρίσματος:</p>
+<ul>
+<li>Ρυθμίστε τη θερμοκρασία της οθόνης στους 6.500K (ή κρατήστε ένα άσπρο χαρτί στο φως του ήλιου και ρυθμίστε το άσπρο της οθόνης να είναι ίδιο με αυτό του χαρτιού).</li>
+<li>Βάλτε το contrast της οθόνης στο 100% (ή λίγο μικρότερο αν έχετε <em>πολύ</em> φωτεινή οθόνη).</li>
+<li>Βάλτε μαύρο φόντο στο desktop σας (ή βγείτε σε κονσόλα) και μειώστε το brightness μέχρι το σημείο που σταματά να μαυρίζει άλλο το “μαύρο” σας.</li>
+<li>Δείτε <a href="http://www.normankoren.com/Gamma_black_new.png">αυτό</a>: Πρέπει η “Black A” στήλη να γίνεται εντελώς μαύρη περίπου στο ύψος του 2.2.</li>
+<li>Τρέξτε σε μια κονσόλα το εξής: <code>xgamma -gamma 1.136</code>. Στην εικόνα GAMMA, οι ριγέ στήλες πρέπει να σμίγουν στο ύψος του 2.2 (βοηθά αν μισοκλείσετε τα μάτια σας και δείτε από μακριά την οθόνη). Αν όχι, αλλάξετε την τελευταία τιμή μέχρι να το πετύχετε.</li>
+<li>Ρυθμίστε το σύστημα σας ώστε να εκκινεί τα X κάθε φορά με αυτή την ρύθμιση – πχ βάλτε την παραπάνω εντολή σαν GNOME/KDE startup program (π.χ. gnome-session-properties) ή κατ’ ευθείαν στο Monitor section του xorg.conf σας.</li>
+<li>Τέλος.</li>
+</ul>
+<p>Δείτε το αναλυτικό άρθρο “<a href="http://applications.linux.com/article.pl?sid=05/02/07/2244242">Looking good: Monitor calibration under X</a>” του Nathan Willis.</p></li>
+		<li class="postmetadata">
+				at night, Thursday 21 April 2005 
+				<span title=" 20 years, 6 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/random/"
+				       title="View all posts tagged Random"
+				       rel="tag">Random</a>				| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/04/21/monitor-calibration/#respond" title="Comment on Monitor calibration">Monitor calibration (Comment!)</a>
+		</li>
+		</ul>
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+</div>
+
+</body>
+</html>

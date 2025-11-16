@@ -1,0 +1,810 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Tag: Tech/web</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+  <h2 class="pagetitle">Tag archive: Tech/web</h2>
+	
+
+
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/06/14/virtual-properties/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Tip of the day: Virtual object properties'">Tip of the day: Virtual object properties</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Here’s a trick I learned today from <a href="http://ctrochalakis.org/blog/">Chris</a> that’s worth sharing: creating “virtual” attributes for objects (in need for a better wording).</p>
+<p>Here’s a use-case: we have a person with a Name and a Surname — how could we access its full name in one string like <code>person.full_name</code>? You could do that with Python’s <code>@property</code> decorator:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="k">object</span><span class="p">)</span><span class="err">:</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">surname</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span>
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">surname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">surname</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="nv">@property</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">full_name</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="ss">&quot;%s %s&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">surname</span><span class="p">)</span>
+<span class="w"> </span>
+<span class="n">p</span><span class="o">=</span><span class="n">Person</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Doe&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">surname</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Doe&#39;</span><span class="p">)</span>
+<span class="w"> </span>
+<span class="k">print</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">full_name</span>
+<span class="n">John</span><span class="w"> </span><span class="n">Doe</span>
+</code></pre></div>
+
+<p>Without the decorator we would need to access the string as <code>person.full_name()</code>, instead of the simpler and more intuitive <code>person.full_name</code>. Pretty neat.</p></li>
+		<li class="postmetadata">
+				at night, Saturday 14 June 2008 
+				<span title=" 17 years, 5 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/06/14/virtual-properties/#respond" title="Comment on Tip of the day: Virtual object properties">Tip of the day: Virtual object properties (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/06/05/framework-stats/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Meaningless framework statistics'">Meaningless framework statistics</a>
+			</h2>
+		</li>
+		<li class="entry"><table>
+<thead>
+<tr>
+<th>IRC Channel</th>
+<th>Users</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#python</td>
+<td>604</td>
+</tr>
+<tr>
+<td>#ruby</td>
+<td>204</td>
+</tr>
+<tr>
+<td>#django</td>
+<td>468</td>
+</tr>
+<tr>
+<td>#rubyonrails</td>
+<td>349</td>
+</tr>
+<tr>
+<td>#turbogears</td>
+<td>51</td>
+</tr>
+</tbody>
+</table></li>
+		<li class="postmetadata">
+				at night, Thursday 5 June 2008 
+				<span title=" 17 years, 5 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/06/05/framework-stats/#respond" title="Comment on Meaningless framework statistics">Meaningless framework statistics (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/05/20/ocp1-recap/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Open Coffee Patras I — Recap and photos'">Open Coffee Patras I — Recap and photos</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Πάνε περίπου 2 μήνες όταν συνάντησα το <a href="http://gtziralis.googlepages.com/">Γιώργο Τζιραλή</a> στην Αθήνα, <a href="/photos/various/fosscomm08/dsc_3750.jpg.html">στο fosscomm ’08</a>. Συμπάθησα αμέσως τον ίδιο και τον τρόπο που βλέπει την επιχειρηματικότητα στην Ελλάδα, έτσι είπαμε χωρίς πολλά πολλά “γιατί δεν κάνουμε ένα Open Coffee στην Πάτρα”;</p>
+<p>Έχω ίσως ακουστεί να λέω πολλές φορές στο παρελθόν ότι δεν υπάρχει <a href="/weblog/2006/05/19/anergia-stin-ellada/">ανεργία στην Ελλάδα</a>, με την έννοια της έλλειψης ευκαιριών καλής καριέρας, τουλάχιστον για άτομα με όρεξη. Τα Open Coffee είναι ένα τρανό παράδειγμα του πώς μπορούν να βρεθούν bottom-up αντίδοτα στις προκλήσεις αυτές. Εκεί συναντάς άτομα με ιδέες και όνειρα, και πάνω από όλα όρεξη να τα κάνουν πραγματικότητα, αλλά και άλλα άτομα που ήδη κατάφεραν να βρουν τρόπους να προσφέρουν αξία στην αγορά, και συνεπώς, να πάρουν χρήματα για αυτήν τους την προσφορά. Με άλλα λόγια: αν δε βρίσκεις τη δουλειά που θα ήθελες να κάνεις, γιατί δεν τη δημιουργείς ο ίδιος; :-)</p>
+<p>Όντας πια κάτοικος Πάτρας (η Αγγλία μου φάνηκε κάπως βαρετή, η Αθήνα κάπως μουντή) σκέφτηκα ότι θα ήταν ενδιαφέρον να οργανώσουμε ένα Open Coffee στην Πάτρα. Χαίρομαι πολύ που το ίδιο πίστεψαν και άλλα 50-60 άτομα, που την Παρασκευή μας συνάντησαν στο όμορφο εστιατοριάκι “Μαρκάτο” (πρώην Άρωμα) στον πεζόδρομο της Γεροκωστοπούλου. Όταν ξεκινήσαμε τις ομιλίες, το μέρος κατάφερε να είναι <em>φίσκα</em> στον κόσμο. Τέλεια! Φανταστικός τρόπος να ξεκινήσει ο κύκλος των Open Coffee και στην όμορφη πόλη των Πατρέων.</p>
+<p>Τελευταία με απασχολεί αρκετά κι εμένα τον ίδιο η πιθανότητα για μια δική μου startup, και συγκεκριμένα γύρω από το ελεύθερο λογισμικό. Θέλοντας να μάθω περισσότερα για αυτό το θέμα λοιπόν, ποιος καλύτερος τρόπος από το να ετοιμάσω μια παρουσίαση! Έτσι, πήρα το βήμα για ένα τεταρτάκι στο Open Coffee για μια μικρή ομιλία με τίτλο “Open source for fun and profit” και θέμα το πώς μπορεί μια επιχείρηση να βγάλει χρήματα από το ελεύθερο λογισμικό (<a href="/box/ocpat08.pdf">διαφάνειες</a>, <a href="/box/ocpat08-glezos.ogg">ήχος</a>).</p>
+<p>Το βραδάκι το περάσαμε παρέα με μεζέδες και το “λήξαμε” κατά τις 2. Ωραία μέρα! Ένα μεγάλο ευχαριστώ στην Αθανασία και τον Παναγιώτη του Μαρκάτο που έκαναν το event πραγματικότητα.</p>
+<p>Φωτογραφίες από το event στο:</p>
+<p><strong><a href="/photos/events/opencoffee-patras1/">/photos/events/opencoffee-patras1/</a></strong></p>
+<p>Περισσότερες φωτό από τον <a href="http://www.flickr.com/photos/stylianosm/tags/opencoffeepatras/">stylianosm</a>.</p>
+<p>‘Till next time (ας πούμε αρχές Ιούλη, όπως 4/7). Για ενημέρωση, εγγραφείτε στο ενημερωτική λίστα <a href="http://groups.google.com/group/opencoffee-patras/">opencoffee-patras</a>.</p>
+<p><strong>Ενημέρωση 21/5:</strong> Χάρη στο <a href="http://blog.edu.gr/">Στέλιο Μυστακίδη</a>, η παρουσίαση μου είναι τώρα διαθέσιμη και σε <a href="/box/ocpat08-glezos.ogg">ακουστική μορφή</a> (ogg vorbis, ~7 MiB).</p></li>
+		<li class="postmetadata">
+				at night, Tuesday 20 May 2008 
+				<span title=" 17 years, 5 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/05/20/ocp1-recap/#respond" title="Comment on Open Coffee Patras I — Recap and photos">Open Coffee Patras I — Recap and photos (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/05/18/giving-away-serverhive-com/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Giving away serverhive.com'">Giving away serverhive.com</a>
+			</h2>
+		</li>
+		<li class="entry"><p>I’m considering giving <a href="http://serverhive.com">serverhive.com</a> away. It hosted a dozen popular blogs of Greek technologists, and a few NGOs. Pagerank of 4 IIRC. If you’d like it, <a href="/contact/en/">drop me an email</a>.</p></li>
+		<li class="postmetadata">
+				at night, Sunday 18 May 2008 
+				<span title=" 17 years, 5 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/05/18/giving-away-serverhive-com/#respond" title="Comment on Giving away serverhive.com">Giving away serverhive.com (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/05/14/oc-patras-speakers/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'OpenCoffee Patras I speakers'">OpenCoffee Patras I speakers</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Με το <a href="http://opencoffee.gr/2008/04/21/patra-01-call/">OpenCoffee Patras I</a> σε 2 ημέρες, σήμερα ανακοινώσαμε και τις <a href="http://opencoffee.gr/2008/05/14/oc-patras-speakers/">σύντομες ομιλίες</a> που θα έχουμε. See you there.</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 14 May 2008 
+				<span title=" 17 years, 6 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/05/14/oc-patras-speakers/#respond" title="Comment on OpenCoffee Patras I speakers">OpenCoffee Patras I speakers (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/05/09/webfaction-dreamhost/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Webfaction and Dreamhost'">Webfaction and Dreamhost</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Chatting with <a href="http://fedoraproject.org/wiki/DiegoZacarao">Diego</a>, I remembered how happy I am with Webfaction and unhappy with Dreamhost.</p>
+<dl>
+<dt>Webfaction</dt>
+<dd><code>glezos@webfaction:~$ uptime
+09:25:19 up 255 days, 20:45,  6 users,  load average: 0.20, 0.28, 0.37</code></dd>
+<dt>Dreamhost</dt>
+<dd><code>glezos@dreamhost:~$ uptime
+07:25:44 up 79 days, 19:50,  3 users,  load average: 28.69, 43.53, 42.93</code></dd>
+</dl>
+<p>Heh. Sometimes <code>uptime</code> is worth a thousand words. I couldn’t be happier.</p>
+<p>If you’d sign up, feel free to use <a href="http://www.webfaction.com?affiliate=opendev">this link</a>, which will give a few bucks to a couple of open source chaps.</p>
+<p><img alt="Happy" src="http://farm3.static.flickr.com/2117/2188544310_614a882ef1_m.jpg" title="Happy face"></p>
+<p>Photo by <a href="http://www.flickr.com/photos/litandmore/">kazze</a> (<a href="http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en">cc</a>)</p></li>
+		<li class="postmetadata">
+				at night, Friday 9 May 2008 
+				<span title=" 17 years, 6 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/05/09/webfaction-dreamhost/#respond" title="Comment on Webfaction and Dreamhost">Webfaction and Dreamhost (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/04/21/programming-languages-boats/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Συγκρίσεις #19'">Συγκρίσεις #19</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="http://compsci.ca/blog/if-a-programming-language-was-a-boat/">Αν οι γλώσσες προγραμματισμού ήταν βάρκες</a>…</p></li>
+		<li class="postmetadata">
+				at night, Monday 21 April 2008 
+				<span title=" 17 years, 6 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/humor/"
+				       title="View all posts tagged Humor"
+				       rel="tag">Humor</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/04/21/programming-languages-boats/#respond" title="Comment on Συγκρίσεις #19">Συγκρίσεις #19 (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/04/03/permalinks-day-of-week/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Permanent URLs advice #47'">Permanent URLs advice #47</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Αν είστε κινηματογράφος και έχετε μία σελίδα με τίτλο “Οι ταινίες σήμερα”, προς Θεού <a href="http://www.stercinemas.gr/templates/TLC_Showings.aspx?LMID=6&amp;SHOWDAYID=7">μη βάλετε τον αριθμό της ημέρας στο URL</a> αν θέλετε οι χρήστες σας να κάνουν bookmark τη σελίδα και ο σελιδοδείκτης να δουλεύει και τις υπόλοιπες ημέρες της εβδομάδας.</p></li>
+		<li class="postmetadata">
+				at night, Thursday 3 April 2008 
+				<span title=" 17 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/humor/"
+				       title="View all posts tagged Humor"
+				       rel="tag">Humor</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/04/03/permalinks-day-of-week/#respond" title="Comment on Permanent URLs advice #47">Permanent URLs advice #47 (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/03/26/fosscomm-recap/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'FOSSComm ’08 recap'">FOSSComm ’08 recap</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="/photos/various/fosscomm08/"><img alt="fosscomm" src="/photos/3551-2/dsc_3706.jpg"></a></p>
+<p>Πολύ το χάρηκα το <a href="http://www.fosscomm.gr/">FOSSComm</a> (<a href="/weblog/2008/03/16/fosscomm/">original post</a>). Είναι εξάλλου κάπως προφανές ότι θα περάσεις γαμάτα άμα μαζευτείς μαζί με ένα μάτσο opensource-άδες στον ίδιο χώρο και αρχίσεις τις συζητήσεις και τα flames.</p>
+<p>Και το ότι μετά από μία ολόκληρη μέρα συνεδρίου συνεχίζαμε να τα λέμε σε κάποια ταβέρνα ή καφετέρια, λέει πολλά. ;-)</p>
+<p>Μερικά στιγμιότυπα που απαθανάτισα είναι όλα μαζί στη συλλογή <a href="/photos/various/fosscomm08/">Πρόσωπα του FOSSComm</a>.</p>
+<p><a href="/photos/various/fosscomm08/"><img alt="presentation" src="/photos/3545-2/dsc_3725.jpg"></a></p>
+<p>Η παρουσίαση μου (όπως σχεδόν πάντα) δεν ήταν τελειωμένη μέχρι το προηγούμενο βράδυ. Όταν έστειλα τον τίτλο είχα σκεφτεί πως δεν ήθελα να διαλέξω “μία” κοινότητα που λαμβάνω μέρος, γιατί αυτό δεν έχει και πολύ νόημα. Γιατί να μιλήσω για το Fedora κι όχι για το Patras LUG; Έτσι ο τίτλος που έστειλα ήταν “Fedora, GNOME, Django, Patras LUG… λίγο από όλα”.</p>
+<p>Το βράδυ λοιπόν σκέφτηκα να μην παρουσίασω μόνο αυτό. Ναι, είναι πολύ ενδιαφέρον το τι κάνουμε σε αυτές τις κοινότητες και σε μερικές γίνεται πολύ ομαδική δουλειά. Όντας όμως ένα συνέδριο περί “Κοινοτήτων”, και με αρκετά καλό content, είπα να πω μερικές σκέψεις μου περί “Κοινοτήτων” γενικά, να δούμε λίγο το δάσος και να μελετήσουμε λίγο το context. (Εκ των υστέρων συνειδητοποιώ ότι ήταν από τις καλύτερες παρουσιάσεις που έχω κάνει ποτέ.)</p>
+<p>Μετονομασία σε “<a href="/box/fosscomm08/community-foo.pdf">Community foo</a>” λοιπόν.</p>
+<p>(OMG!!1!! Το πρώτο μου <a href="http://video.google.com/googleplayer.swf?docId=-4561894176425735063">online video</a>! I AMZ L33T. Thx <a href="http://tsirman.com/">Νίκο</a> για την κινηματογράφηση. Το βίντεο μπορείτε επίσης να το <a href="/box/fosscomm08/community-foo.ogg">κατεβάσετε ελεύθερα σε Ogg Theora μορφή</a>.)</p>
+<p>Οι συναντήσεις μετά το συνέδριο ήταν απολαυστικές, ο <a href="http://keramida.wordpress.com/2008/03/23/fosscomm-finished-keramida-pleased/">~keramida τα λέει καλύτερα</a>. Γενικώς, μπορώ να πω ότι απόλαυσα το συνέδριο, και ότι ανυπομονώ για το επόμενο.</p>
+<p>’till the next time, λοιπόν!</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 26 March 2008 
+				<span title=" 17 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/03/26/fosscomm-recap/#respond" title="Comment on FOSSComm ’08 recap">FOSSComm ’08 recap (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/02/26/quantum-browsing/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Quantum browsing'">Quantum browsing</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Σήμερα, στην ίδια ιστοσελίδα, εμφανίστηκαν τα παρακάτω δύο banners ταυτόχρονα:</p>
+<p><img alt="visitor2.png" src="/weblog/wp-content/uploads/2008/02/visitor2.png">
+<img alt="visitor1.png" src="/weblog/wp-content/uploads/2008/02/visitor1.png"></p>
+<p>Δε μπορώ να πω ότι ένιωσα το βάρος μου να αυξάνεται ιδιαίτερα.</p></li>
+		<li class="postmetadata">
+				at night, Tuesday 26 February 2008 
+				<span title=" 17 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/humor/"
+				       title="View all posts tagged Humor"
+				       rel="tag">Humor</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/02/26/quantum-browsing/#respond" title="Comment on Quantum browsing">Quantum browsing (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/12/02/zagreb-reporting-2/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Zagreb reporting — chapter 2'">Zagreb reporting — chapter 2</a>
+			</h2>
+		</li>
+		<li class="entry"><p><img alt="Juggling" src="/weblog/wp-content/uploads/2007/12/dsc_2301.jpg"><br>
+Juggling circus in Zagreb</p>
+<p>Open Translation Tools is rolling on nicely. We’re having some interesting discussions covering almost every aspect of localization. I’m glad to notice that there aren’t only technical discussions, and the atmosphere is to study what the needs are and how could they be covered.</p>
+<p>Two interesting topics that receive attention are community management and translation workflows. Open source projects like GNOME, Fedora and other ones are lucky to have an awesome community very motivated to contribute. Not all projects are that lucky though, but this doesn’t necessarily mean that the translators don’t want to contribute to that project. It might just mean that they haven’t heard about it or that it’s too difficult to do it in a systematic way.</p>
+<p>Take <a href="http://flossmanuals.net/">FLOSS manuals</a> for example. It’s a cool project that helps you compose documentation in a wiki-style way, which can end up in a PDF or even a book from lulu. While they do it in a novel and useful way, they face some challenges in the translation aspect, like how to find translators and make it easy for them to keep up with the projects new docs.</p>
+<p>Another challenage is the workflow they will adopt. Create a new community using a custom web-based tool or do it on top of PO/XLIFF files available for external communities to contribute to? While with the first approach you may save resources (arguable!), with the latter one (small, modular tools over standard file formats) you get interoperability with other tools like Damned Lies, Transifex and Pootle, and can give the opportunity to remote communities to contribute to your project.</p>
+<p>On the technical side, we had some really interesting discussions. With Danilo Šegan of GNOME fame and Dwayne Bailey of Pootle and Translate Toolkit fame, we discussed how to increase interoperability between the tools we write. For example, having a common object model and standard APIs would greatly help in having all three tools (Damned Lies, Transifex, Pootle) work together in an integrated fashion.</p>
+<p>Off to the event’s most anticipated party. Each participant brought an alcoholic beverage from their country. Add to that huge amounts of beer, several bottles of local vodka, etc and you might come close to what’s going to take place. From Greece I brought (what else) <a href="http://en.wikipedia.org/wiki/Ouzo">Ouzo</a>, the anise-flavor liqueur that usually accompanies fresh seafood in Greece.</p>
+<p><img alt="ΟΤΤ07" src="/weblog/wp-content/uploads/2007/12/dsc_2202.jpg"></p></li>
+		<li class="postmetadata">
+				at night, Sunday 2 December 2007 
+				<span title=" 17 years, 11 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/12/02/zagreb-reporting-2/#respond" title="Comment on Zagreb reporting — chapter 2">Zagreb reporting — chapter 2 (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/11/08/livepedia-100k/" rel="bookmark" title="Μόνιμος σύνδεσμος στο '“Γενέθλεια” Livepedia'">“Γενέθλεια” Livepedia</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="http://www.livepedia.gr/">Η LivePedia</a> ξεπέρασε τα 100.000 άρθρα! Για όσους δεν την έχουν ακούσει, πρόκειται για μια ελληνική ελεύθερη εγκυκλοπαίδεια, σαν τη <a href="http://www.wikipedia.org/">Wikipedia</a>, με (αρχικό) χορηγό περιεχομένου τη Magenta. Έστω κι αν δεν έγιναν ακόμη ένα ενιαίο έργο με την <a href="http://el.wikipedia.org/">ελληνική Βικιπαίδεια</a> (νυν υπέρ πάντων η συνεργασία!), χάρηκα πολύ για την μεγάλη επιτυχία του έργου. Και εις ανώτερα!</p></li>
+		<li class="postmetadata">
+				at night, Thursday 8 November 2007 
+				<span title=" 18 years ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/11/08/livepedia-100k/#respond" title="Comment on “Γενέθλεια” Livepedia">“Γενέθλεια” Livepedia (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/10/07/iphone-expectations/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'iPhone wrap-up'">iPhone wrap-up</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Χθες είχα μια ωραία κουβέντα με τον Αντρέα Λουκά (of CyLUG fame) σχετικά με τα iPhone, τη λογική των ξεκλειδωμάτων και την ανοιχτότητα που πολλοί αποζητούν από ένα προϊόν, το οποίο πιο ξεκάθαρα δε θα μπορούσε να φωνάζει “είμαι όσο κλειστό πάει, είτε σου αρέσει είτε όχι”. Ο Mark Pilgrim, ως συνήθως, τα λέει καλύτερα από εμένα, στην καταχώρηση του “<a href="http://diveintomark.org/archives/2007/10/04/if-wishes-were-iphones">Αν οι ευχές ήταν iPhones…</a>“.</p></li>
+		<li class="postmetadata">
+				at night, Sunday 7 October 2007 
+				<span title=" 18 years, 1 month ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/10/07/iphone-expectations/#respond" title="Comment on iPhone wrap-up">iPhone wrap-up (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/09/17/apples-and-worms/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Σκουλουκιασμένα μήλα'">Σκουλουκιασμένα μήλα</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="http://flickr.com/photos/45928391@N00/246792837/"><img alt="'The apple that was' by Daniel Cosman" src="http://farm1.static.flickr.com/80/246792837_8658a776ef_m.jpg" title="Apple by Daniel Cosman"></a></p>
+<p>Όταν λέω ότι <a href="http://yro.slashdot.org/search.pl?query=apple">η Apple είναι χειρότερη από την MS</a> αρκετοί με βγάζουν τρελό. Δε μου έχουν μείνει δάχτυλα να μετρήσω τους λόγους που δε θα αγοράσω ξανά μηχάνημα Apple. Φυλάω μόνο ένα για να χρησιμοποιώ όταν βλέπω διαφημίσεις, ειδήσεις για ακόμη ένα κλειστό format ή μια μονοπωλιακή τακτική, και όταν με πλησιάζουν εκστασιασμένα fanboys με τα σάλια να τρέχουν.</p>
+<p>Κι αν ήταν μόνο τα ιδεολογικά θα ήταν καλά· μετράω ήδη υπερτιμημένα καμένα motherboard και τροφοδοτικά, χάλια οθόνη, υπερβολικό βάρος και linux χωρίς Adobe Flash και Sun Java στο iBook, μηδέν διαλειτουργικότητα στο iPod, και εκνευριστικά χαμηλή λειτουργικότητα και αποδοτικότητα στο Mac OS X.</p>
+<p>Να μου λείπει το βύσσινο. Έχει κι αλλού πορτοκαλιές που κάνουν πορτοκάλια (για τα δικά μου γούστα φυσικά).</p></li>
+		<li class="postmetadata">
+				at night, Monday 17 September 2007 
+				<span title=" 18 years, 1 month ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/09/17/apples-and-worms/#respond" title="Comment on Σκουλουκιασμένα μήλα">Σκουλουκιασμένα μήλα (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/09/17/rss-planet-django/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'RSS, Πλανήτες και Django'">RSS, Πλανήτες και Django</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Δυστυχώς είναι συχνό φαινόμενο να εμφανίζονται διπλές μερικές καταχωρήσεις στους Πλανήτες, όπως συμβαίνει για παράδειγμα στο <a href="http://planet.ellak.gr/">planet.ellak.gr</a> με το feed (ροή) του <a href="http://www.django.gr/weblog/">django.gr weblog</a>.</p>
+<p>Αυτό από ότι κατάλαβα συμβαίνει με τις ροές RSS που δεν έχουν πεδία <code>pubDate</code>, τις οποίες το λογισμικό planet δε μεταχειρίζεται σωστά. Αν κάτι αλλάξει σε μία καταχώρηση μιας τέτοιας ροής, τότε το planet υποθέτει ότι είναι νέα καταχώρηση, την αναρτά, και δε σβήνει την παλιά γιατί είναι ήδη δημοσιευμένη. Αυτό που θα έπρεπε να κάνει όμως είναι να συγκρίνει κάπως τις δύο καταχωρήσεις αν δεν υπάρχει το pubDate, πχ. ελέγχοντας το <code>&lt;link&gt;</code> tag τους πριν αποφανθεί ότι είναι διαφορετικές καταχωρήσεις. Μια και είναι δημοφιλές λογισμικό, θέλω να πιστεύω ότι η λειτουργικότητα αυτή είναι σχεδιαστική απόφαση κι όχι κάποιο σφάλμα (it’s a feature, not a bug).</p>
+<p>Από την πλευρά μας αυτό που μπορούμε να κάνουμε είναι απλά να προσθέσουμε το πεδίο <code>pubDate</code> στα feed που δεν το έχουν. Στα RSS 2.0 και Atom τουλάχιστον, γιατί αν διαθέτουμε μόνο ένα παλαιολιθικό RSS 0.92, δεν έχουμε τέτοια επιλογή χωρίς να κάνουμε τη σύνταξη της ροής μη-έγκυρη ως προς το πρότυπο.</p>
+<p>Το <a href="http://www.django.gr/">django.gr</a> είναι γραμμένο σε Django (προφανώς), και ο κώδικας που παράγει τη ροή RSS είναι ο παρακάτω:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="n">WeblogEntryFeed</span>(<span class="n">Feed</span>):
+    <span class="n">title</span> = <span class="s">&quot;The Greek Django User Group weblog&quot;</span>
+    <span class="nb">link</span> = <span class="s">&quot;http://www.django.gr/weblog/&quot;</span>
+    <span class="n">description</span> = <span class="s">&quot;Latest news about Django, the Python Web framework,&quot;</span> + \
+                  <span class="s">&quot; from the Greek Django User Group.&quot;</span>
+ 
+    <span class="n">def</span> <span class="n">items</span>(<span class="nb">self</span>):
+        <span class="k">return</span> <span class="n">Entry</span>.<span class="n">objects</span>.<span class="n">filter</span>(<span class="n">pub_date__lte</span>=<span class="n">datetime</span>.<span class="n">datetime</span>.<span class="nb">now</span>())[:<span class="mi">10</span>]
+</code></pre></div>
+
+<p>Για να μορφοποιήσουμε τη ροή ώστε να περιέχει για κάθε άρθρο και την ημερομηνία δημοσίευσης, προσθέτουμε τα εξής:</p>
+<div class="highlight"><pre><span></span><code>    def item_pubdate(self, item):
+        return item.pub_date
+</code></pre></div>
+
+<p>Αυτά.</p></li>
+		<li class="postmetadata">
+				at night, Monday 17 September 2007 
+				<span title=" 18 years, 1 month ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/django/"
+				       title="View all posts tagged Django"
+				       rel="tag">Django</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/09/17/rss-planet-django/#respond" title="Comment on RSS, Πλανήτες και Django">RSS, Πλανήτες και Django (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/08/20/web-frameworks/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Web frameworks'">Web frameworks</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="/photos/weblog-images/twister.jpg.html"><img alt="Παίζοντας Twister με φίλους" src="/photos/2970-2/twister.jpg" title="Παίζοντας Twister με φίλους. Πρέβεζα, 2003"></a><br>
+Ανακατέματα…</p>
+<p>Προσπαθώ να μη σκέφτομαι πώς στο καλό αναπτύσσαμε ιστότοπους πριν την ύπαρξη των web app frameworks.</p>
+<p>Τρέμω μη χρειαστεί στο μέλλον να ανάψω φωτιά με πέτρες, ή να γράψω κάτι χωρίς <a href="http://www.djangoproject.com/">Django</a> ή <a href="http://turbogears.org/">TurboGears</a> (για τους τρέντουλες <a href="http://www.rubyonrails.org/">Ruby on Rails</a>, για τους <a href="http://en.wikipedia.org/wiki/Sadism_and_masochism">S&amp;M</a> <a href="http://cakephp.org/">CakePHP</a>, …).</p>
+<p>Μπρρ.</p></li>
+		<li class="postmetadata">
+				at night, Monday 20 August 2007 
+				<span title=" 18 years, 2 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/08/20/web-frameworks/#respond" title="Comment on Web frameworks">Web frameworks (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/08/15/goto/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Γελοιογραφία της ημέρας: Goto'">Γελοιογραφία της ημέρας: Goto</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="http://xkcd.com/292/"><img alt="Goto" src="/weblog/wp-content/uploads/2007/08/goto.png"></a></p>
+<p>(<a href="http://xkcd.com/">xkcd</a>)</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 15 August 2007 
+				<span title=" 18 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/humor/"
+				       title="View all posts tagged Humor"
+				       rel="tag">Humor</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/08/15/goto/#respond" title="Comment on Γελοιογραφία της ημέρας: Goto">Γελοιογραφία της ημέρας: Goto (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/07/27/to-adifago-kitos/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Το αδηφάγο κήτος'">Το αδηφάγο κήτος</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Το πιο πιθανόν είναι να έχεις εκνευριστεί κάποια στιγμή με έναν παλαβό συζητητή, ή να έχεις δει κάποιον άλλο να το παθαίνει. Έναν συζητητή που σε κάθε λογική άποψη που διατυπώνεις, απαντά με ένα εντελώς ασυνάρτητο κατεβατό. Κι όσο απαντάς, τόσο περισσότερο τον ανάβεις. Όσο πιο πολλή σημασία δίνεις, τόσο πιο πολύ πεινάει για περισσότερη.</p>
+<p>Η λύση είναι:</p>
+<p><strong>Μην ταΐζεις το αδηφάγο κήτος!</strong></p>
+<p>Από σήμερα, υπάρχει ένα μέρος που μπορείς να επισκέφτεσαι όταν πέφτεις σε αυτήν τη παγίδα, ή να το δίνεις σε όποιον φουκαρά βλέπεις να το παθαίνει.</p>
+<p><strong><a href="http://to-adifago-kitos.com/" title="Μην ταΐζεις το αδηφάγο κήτος!">http://to-adifago-kitos.com/</a></strong></p>
+<p>Spread the word.</p></li>
+		<li class="postmetadata">
+				at night, Friday 27 July 2007 
+				<span title=" 18 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/random/"
+				       title="View all posts tagged Random"
+				       rel="tag">Random</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/07/27/to-adifago-kitos/#respond" title="Comment on Το αδηφάγο κήτος">Το αδηφάγο κήτος (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/07/14/elegance/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Elegance'">Elegance</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Η ατάκα της ημέρας: “Η κομψότητα έχει το μειονέκτημα ότι χρειάζεται κανείς σκληρή δουλειά για να την πετύχει, και καλή εκπαίδευση για να την εκτιμήσει.” — <a href="http://en.wikipedia.org/wiki/Edsger_Dijkstra">E. W. Dijkstra</a></p></li>
+		<li class="postmetadata">
+				at night, Saturday 14 July 2007 
+				<span title=" 18 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/quotes/"
+				       title="View all posts tagged Quotes"
+				       rel="tag">Quotes</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/thoughts/"
+				       title="View all posts tagged Thoughts</"
+				       rel="tag">Thoughts</</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/07/14/elegance/#respond" title="Comment on Elegance">Elegance (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2007/07/05/mpaa-tricks/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'MPAA tricks'">MPAA tricks</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Μια λέξη μου έρχεται στο μυαλό: <a href="http://slashdot.org/article.pl?sid=07/07/04/2212213">γλοιώδες</a>.</p></li>
+		<li class="postmetadata">
+				at night, Thursday 5 July 2007 
+				<span title=" 18 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2007/07/05/mpaa-tricks/#respond" title="Comment on MPAA tricks">MPAA tricks (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+  <div class="pagination">
+    <p class="floatleft"><a class="btn" href="https://dimitris.glezos.com:8000/weblog/tag/techweb/index4.html">
+      ← Older Posts
+    </a></p>
+    <p class="floatright"><a class="btn" href="https://dimitris.glezos.com:8000/weblog/tag/techweb/index2.html">
+      Newer Posts →
+    </a></p>
+  </div>
+
+<p class="alcenter">
+	<a href="/weblog/archives/">Post archive</a>
+</p>
+
+
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+    <span class="floatright">
+            Last post: in the morning, Tuesday 18 May 2010
+            <span title=" 15 years, 5 months ago">@</span>
+    </span>
+</div>
+
+</body>
+</html>

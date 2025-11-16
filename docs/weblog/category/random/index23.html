@@ -1,0 +1,778 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Category: Random</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+  <h2 class="pagetitle">Category archive: Random</h2>
+	
+
+
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/08/09/markdown/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Markdown σε ιστοσελίδες'">Markdown σε ιστοσελίδες</a>
+			</h2>
+		</li>
+		<li class="entry"><p><img alt="Groovy baby!" src="/weblog/box/groovy-baby.jpg" title="Groovy baby!"></p>
+<p>Με το <a href="/weblog/2005/08/07/wiki-markup/#comment-325" title="σχόλιο του Άγγελου Ορφανάκου">διαφωτιστικό σχόλιο του Άγγελου Ορφανάκου</a>, έμαθα ότι το <a href="http://daringfireball.net/projects/markdown/" title="Ιστοσελίδα του Markdown">Markdown syntax</a> του John Gruber έχει γίνει ported σε PHP, εν ονόματι (τι άλλο) <a href="http://www.michelf.com/projects/php-markdown/" title="Ιστοσελίδα του PHP markdown">PHP Markdown</a>.</p>
+<p>Ρίγη συγκίνσης διαπέρασαν το κορμί μου.</p>
+<p>Τουλάχιστον συγκλονιστικό.</p>
+<p>Το <em>φανταστικό</em> χαρακτηριστικό του Markdown σε σχέση με άλλα συντακτικά text-2-html είναι ότι είναι φτιαγμένο έτσι ώστε να είναι όσο το δυνατόν πιο αναγνώσιμο και κατανοητό από μόνο του. Αυτό σημαίνει ότι το κείμενο είναι τόσο καθαρό, ώστε να μπορεί να δημοσιευτεί <em>όπως είναι</em>, χωρίς να φαίνονται χαρακτήρες ελέγχου ή εντολές φορμαρίσματος. Για το σκοπό αυτό, οι δημιουργοί του εμπνεύστηκαν από τη σύνταξη των email αντί των ιστοσελίδων (εξού και το markdown αντί markup).</p>
+<p>Για να μην κάθομαι να γράφω όλα τα εντυπωσιακά χαρακτηριστικά, σας παραπέμπω <a href="http://daringfireball.net/projects/markdown/basics" title="Βασικά χαρακτηριστικά του markdown">στη σελίδα του markdown</a>. Για να το θέσω όσο πιο απλά γίνεται, ο μόνος λόγος που <a href="/weblog/2005/08/07/wiki-markup/" title="Καταχώρηση για το Text_Wiki σε ιστοσελίδες\&quot;">επέλεξα το κουτσουρεμένο Text_Wiki</a> ήταν ότι το Markdown ήταν γραμμένο σε Perl και έπαψα προ πολλού να γράφω perl.</p>
+<p>Εκτός όλων αυτών, ο <a href="http://www.aaronsw.com/" title="Ιστοσελίδα του Aaron Scwartz">Aaron Swartz</a> έφτιαξε το πολύ χρήσιμο <a href="http://www.aaronsw.com/2002/html2text/" title="Μετατροπή html σε (markdown) κείμενο">html2text</a> με το οποίο μπορεί κανείς να μετατρέψει HTML σελίδες σε markdown format.</p>
+<p>Όσο για την υλοποίηση, δεν υπάρχει και πολλά να πω: Απλά κάνεις <code>include_once "markdown.php";</code> και τελείωσες: <code>echo Markdown($wikitext);</code>.</p>
+<p>Για του λόγου το αληθές, δείτε τον <a href="/box/code/post.markdown.text" title="Markdown κώδικας καταχώρησης">markdown κώδικα αυτής της καταχώρησης</a> και της <a href="/box/code/index.markdown.text" title="Markdown κώδικας αρχικής σελίδας ιστοχώρου">αρχικής σελίδας του ιστοχώρου μου</a>.</p></li>
+		<li class="postmetadata">
+				at night, Tuesday 9 August 2005 
+				<span title=" 20 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/website/"
+				       title="View all posts tagged Website"
+				       rel="tag">Website</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/08/09/markdown/#respond" title="Comment on Markdown σε ιστοσελίδες">Markdown σε ιστοσελίδες (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/08/08/logo-images/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Λογότυπο και desktop backgrounds'">Λογότυπο και desktop backgrounds</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Για όσους ενδιαφέρθηκαν για το λογότυπο του ιστοχώρου και το 16×16 εικονίδιο τους έπεφτε μικρό (παράλογο!), έκανα export <a href="/website/#logo-images">το λογότυπο και σε μεγαλύτερες αναλύσεις</a>. Παίζοντας με το Inkscape βγήκαν και μερικά ομορφούλια <a href="/website/#desktop-backgrounds">desktop backgrounds</a>. Enjoy!</p></li>
+		<li class="postmetadata">
+				at night, Monday 8 August 2005 
+				<span title=" 20 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/website/"
+				       title="View all posts tagged Website"
+				       rel="tag">Website</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/08/08/logo-images/#respond" title="Comment on Λογότυπο και desktop backgrounds">Λογότυπο και desktop backgrounds (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/08/07/wiki-markup/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Wiki markup σε απλές ιστοσελίδες'">Wiki markup σε απλές ιστοσελίδες</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Πρόσφατα αναρωτήθηκα αν θα συνέφερε να χρησιμοποιώ κάποιο wiki-style markup για τις στατικές σελίδες του ιστοχώρου, κυρίως για να δημιουργούνται αυτόματα τα βασικά: παράγραφοι, επικεφαλίδες, λίστες και σύνδεσμοι. Αποδείχτηκε πολύ εύκολο τελικά.</p>
+<p>Καταρχάς χρειάστηκε ένα επιπλέον πακέτο στην PHP, το Text/Wiki (πακέτο της βιβλιοθήκης <a href="http://pear.php.net">PEAR</a>):</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># pear install text_wiki</span>
+<span class="n">downloading</span><span class="w"> </span><span class="n">Text_Wiki</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mf">0.</span><span class="n">tgz</span><span class="w"> </span><span class="o">...</span>
+<span class="n">Starting</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">Text_Wiki</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mf">0.</span><span class="n">tgz</span><span class="w"> </span><span class="p">(</span><span class="mi">47</span><span class="p">,</span><span class="mi">569</span><span class="w"> </span><span class="n">bytes</span><span class="p">)</span>
+<span class="o">.............</span><span class="n">done</span><span class="p">:</span><span class="w"> </span><span class="mi">47</span><span class="p">,</span><span class="mi">569</span><span class="w"> </span><span class="n">bytes</span>
+<span class="n">install</span><span class="w"> </span><span class="n">ok</span><span class="p">:</span><span class="w"> </span><span class="n">Text_Wiki</span><span class="w"> </span><span class="mf">1.0</span><span class="o">.</span><span class="mi">0</span>
+</code></pre></div>
+
+<p>Στο σημείο αυτό χρειάστηκε να αλλάξω ένα αρχείο της βιβλιοθήκης για να υποστηρίζει σωστά το UTF-8 encoding, ακολουθώντας τις οδηγίες στα <a href="http://wiki.ciaweb.net/yawiki/index.php?area=Text_Wiki&amp;page=UserDocs">σχόλια της τεκμηρίωσης της βιβλιοθήκης</a>.</p>
+<p>Το δεύτερο βήμα ήταν να φτιάξω μια συνάρτηση η οποία θα <a href="/box/code/wikitext-function.txt">καλεί τη βιβλιοθήκη και θα μετατρέπει ένα wiki-κείμενο σε XHTML</a>.</p>
+<p>Αυτό ήταν. Για να δούμε με <a href="/box/code/wikitext-example.txt">ένα παράδειγμα</a>…</p>
+<p>…τυμπανοκρουσίες αγωνίας πριν το rendering…</p>
+<hr>
+<div class="highlight"><pre><span></span><code>**Γειά! Είμαι ένα παράδειγμα κειμένου wiki.**
+ 
+Αυτό το κείμενο περιέχει //emphasized// και **strong** κείμενο. Επίσης, @@--- αυτό διαγράφηκε @@ και @@ +++ αυτό εισήχθηκε@@ μετά τη συγγραφή του.
+ 
++++ Επικεφαλίδα επιπέδου 3
+++++ Επικεφαλίδα επιπέδου 4
+ 
+<span class="gh">#</span> Νούμερο 1
+ <span class="k">*</span> Λίστα
+ <span class="k">*</span> Λίστα
+  <span class="k">*</span> Υπο-λίστα
+   # Υπο-υπο-αριθμός
+   # Υπο-υπο-αριθμός
+<span class="gh">#</span> Νούμερο 2
+ <span class="k">*</span> Λίστα
+ <span class="k">*</span> Λίστα
+ 
+Αυτό εδώ είναι κανονικό κείμενο
+<span class="k"> </span>
+<span class="k">&gt; </span><span class="ge">Μπλοκ κειμένου (blockquote)</span>
+<span class="k"> </span>
+<span class="k">&gt; </span><span class="ge">Ακόμη ένα μπλοκ, το οποίο περιέχει...</span>
+&gt;&gt; Ένα εσωτερικό μπλοκ. Λα λα λα, όλα καλά \
+όλα ανθηρά!
+ 
+Πίσω στο κανονικό κείμενο.
+</code></pre></div>
+
+<hr>
+<p>Έτοιμο! Για του λόγου το αληθές, η <a href="/">αρχική σελίδα</a> του ιστοχώρου είναι γραμμένη σε ~~<a href="/box/code/index.wikimarkup.text">wiki-format</a>~~ Markdown πλέον.</p>
+<p>Προφανώς, δεν πρόκειται να αντικαταστήσει πλήρως την χειρόγραφη HTML. Γι’ αυτό, όπου βλέπεις πως δε σε βολεύει, ρίχνεις ένα ζευγάρι διπλών backticks (<code>don't-parse-me-please</code>) και γράφεις ό,τι θα έγραφες κανονικά (από HTML μέχρι και PHP).</p>
+<p>Η βιβλιοθήκη θέλει λίγο ρεγουλάρισμα φυσικά. Ήδη την πείραξα ώστε να υποστηρίζει σχετικά URL (χωρίς http:// μπροστά). Επίσης, σε μια πιο καθαρή προσέγγιση θα μπορούσε κανείς να περικλείσει το wiki κείμενο σε δύο XML tags (π.χ. <code>&lt;wikitext language="php"&gt;μπλα μπλα&lt;/wikitext&gt;</code>), ώστε το αρχείο να περιέχει καθαρή XML αντί ανακατεμένες HTML+PHP.</p>
+<p>Ό,τι χρειαστεί, στην πορεία…</p></li>
+		<li class="postmetadata">
+				at night, Sunday 7 August 2005 
+				<span title=" 20 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/website/"
+				       title="View all posts tagged Website"
+				       rel="tag">Website</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/08/07/wiki-markup/#respond" title="Comment on Wiki markup σε απλές ιστοσελίδες">Wiki markup σε απλές ιστοσελίδες (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/08/04/24th-checkpoint/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Σημείο αλλαγής #24'">Σημείο αλλαγής #24</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Μια φορά κάθε τόσο, ή μάλλον κάθε <em>πολύ</em> τόσο, συγυρίζω το γραφείο μου. Έτσι, για αλλαγή. Για ανανέωση. Για μέτρο σύγκρισης…</p>
+<p><a href="/weblog/box/clean-desk.jpg"><img alt="Καθαρό γραφείο" src="/weblog/box/_clean-desk.jpg" title="Καθαρό γραφείο"></a></p>
+<p>[Ημι-διακρίνονται (clockwise, από πάνω αριστερά): Κορυφογραμμή του Mont Blanc στις Άλπεις, ο <a href="http:/-boy.blogspot.com/">Old boy</a> σε μια Eizo L568, <a href="https://www.moonclimbing.com/index.php?form_action=photo_detail&amp;photo_id=42">Αφίσα του Ben Moon</a>, ντουλάπα με κυριολεκτική "Intel inside" ζωγραφιά, ηχεία Creative Inspire δώρο από τους <a href="/weblog/box/buddies.jpg">κολλητούς</a> πριν 3 χρόνια, "δανεισμένο" Sun Type 6 USB πληκτρολόγιο από ένα <a href="http://www.sun.com/servers/entry/280r/">Sun Fire 280R Server</a>, <a href="http://bigstone.bizhosting.com/issue_144_september_2005.html">τελευταίο τεύχος του Rock &amp; Ice</a>, διπλός εσπρέσσο, Sony Ericsson T610.]</p>
+<p>Ποτέ δεν κατάλαβα γιατί οι άνθρωποι γελάνε όταν στην ερώτηση “Καλά ρε συ Δημήτρη, πότε στο καλό θα συγυρίσεις αυτό το αχούρι που ονομάζεις γραφείο σου;” τους απαντάω “Κάτσε, έχουμε ακόμη καιρό μέχρι τα γενέθλια μου…”.</p>
+<p>Με ‘γειά!</p></li>
+		<li class="postmetadata">
+				at night, Thursday 4 August 2005 
+				<span title=" 20 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/personal/"
+				       title="View all posts tagged Personal"
+				       rel="tag">Personal</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/08/04/24th-checkpoint/#respond" title="Comment on Σημείο αλλαγής #24">Σημείο αλλαγής #24 (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/08/03/paradises/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Παράδεισοι'">Παράδεισοι</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Ποιός είπε ότι οι παράδεισοι βρίσκονται μακριά;</p>
+<p><a href="/weblog/box/voidokilia.jpg"><img alt="Βοϊδοκοιλιά" src="/weblog/box/_voidokilia.jpg" title="Βοϊδοκοιλιά (φωτό © Μ. Τούμπης)"></a>
+Παραλία Βοϊδοκοιλιάς, Γιάλοβα
+<a href="/weblog/box/polylimnio.jpg"><img alt="Πολυλίμνιο Μεσσηνίας" src="/weblog/box/_polylimnio.jpg" title="Πολυλίμνιο Μεσσηνίας"></a>
+Πολυλίμνιο Μεσσηνίας, Χαραυγή</p>
+<p>Στη <a href="http://maps.google.com/maps?ll=36.941249,21.684008&amp;spn=0.084200,0.162100&amp;t=k&amp;hl=en">δορυφορική φωτό από το Google maps</a> μπορείτε να δείτε στο κάτω μέρος την Πύλο, πάνω αριστερά τη Βοϊδοκοιλιά και στη μέση του κόλπου ανεπαίσθητα το Camping Εροδιός.</p>
+<p>Καλώς μας πίσω πάλι.</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 3 August 2005 
+				<span title=" 20 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/personal/"
+				       title="View all posts tagged Personal"
+				       rel="tag">Personal</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/08/03/paradises/#respond" title="Comment on Παράδεισοι">Παράδεισοι (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/26/fygame/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Φύγαμε'">Φύγαμε</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Μιάμιση ώρα πακετάρισμα σακκιδίων, σκηνών και λοιπών μιας-βδομάδας συμπράγκαλων. Ραντεβού σε 20 λεπτά για φαΐ στο πόδι. Το προς τα πού θα αποφασιστεί όταν θα έχουμε ήδη ξεκινήσει. Γειά χαρά. (<a href="/weblog/2005/08/03/paradises/">η επιστροφή</a>)</p></li>
+		<li class="postmetadata">
+				at night, Tuesday 26 July 2005 
+				<span title=" 20 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/personal/"
+				       title="View all posts tagged Personal"
+				       rel="tag">Personal</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/26/fygame/#respond" title="Comment on Φύγαμε">Φύγαμε (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/23/mortadella-steps/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Μορταδελο-πατήματα'">Μορταδελο-πατήματα</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Για όσους λατρεύουν τα σαλάμια και την μορταδέλα, τόσο ώστε να τα έχουν <a href="http://www.flachbild.de/wurstteppich/mortadella.html">και για χαλάκι</a>…</p></li>
+		<li class="postmetadata">
+				at night, Saturday 23 July 2005 
+				<span title=" 20 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/humor/"
+				       title="View all posts tagged Humor"
+				       rel="tag">Humor</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/23/mortadella-steps/#respond" title="Comment on Μορταδελο-πατήματα">Μορταδελο-πατήματα (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/23/ripsokindini-diaswsi/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Ριψοκίνδυνη διάσωση στο βασίλειο του κατακόρυφου'">Ριψοκίνδυνη διάσωση στο βασίλειο του κατακόρυφου</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="/weblog/box/papia-diaswsi.jpg"><img alt="Διάσωση κίτρινου παπιού" src="/weblog/box/_papia-diaswsi.jpg" title="Διάσωση κίτρινου παπιού"></a></p>
+<p>Δόξα το Θεό, όλα πήγαν καλά. Το κίτρινο παπάκι διασώθηκε επιτυχώς.</p>
+<p>Το βράδυ <a href="/weblog/box/papia-eortasmos.jpg">μια γύρα σφηνάκια</a> επιβαλλόταν.</p></li>
+		<li class="postmetadata">
+				at night, Saturday 23 July 2005 
+				<span title=" 20 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/humor/"
+				       title="View all posts tagged Humor"
+				       rel="tag">Humor</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/23/ripsokindini-diaswsi/#respond" title="Comment on Ριψοκίνδυνη διάσωση στο βασίλειο του κατακόρυφου">Ριψοκίνδυνη διάσωση στο βασίλειο του κατακόρυφου (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/21/paralogismos/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Όταν η λογική παίζει το παιχνίδι της'">Όταν η λογική παίζει το παιχνίδι της</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Αν η αδιαφορία δεν είναι επιλογή, ποιά είναι η απάντηση στον παραλογισμό;</p></li>
+		<li class="postmetadata">
+				at night, Thursday 21 July 2005 
+				<span title=" 20 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/thoughts/"
+				       title="View all posts tagged Thoughts"
+				       rel="tag">Thoughts</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/21/paralogismos/#respond" title="Comment on Όταν η λογική παίζει το παιχνίδι της">Όταν η λογική παίζει το παιχνίδι της (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/21/peri-ekriksewn/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Περί εκρήξεων'">Περί εκρήξεων</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Όταν σπέρνεις θύελλες θερίζεις τρόμο” (New manifesto, σχολιάζοντας το <a href="http://orthoumeni.blogspot.com/2005/07/blog-post_112195589518012536.html#c112195978024563224">άρθρο περί εκρήξεων στο Hell to Pay</a>)</p></li>
+		<li class="postmetadata">
+				at night, Thursday 21 July 2005 
+				<span title=" 20 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/quotes/"
+				       title="View all posts tagged Quotes"
+				       rel="tag">Quotes</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/21/peri-ekriksewn/#respond" title="Comment on Περί εκρήξεων">Περί εκρήξεων (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/20/google-moon/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Google-ισμοί'">Google-ισμοί</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Ό,τι και να πει κανείς πάντως, δε μπορεί να αμφισβητήσει ότι οι τύποι στο google έχουν τόση φαντασία και όρεξη που κάνουν και πράγματα που μπορεί να είναι εντελώς άχρηστα. Αν μη τι άλλο, σπάνια βλέπεις τέτοια “<a href="http://moon.google.com/">παιχνιδάκια</a>” σε εταιρίες αυτού του μεγέθους…</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 20 July 2005 
+				<span title=" 20 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/random/"
+				       title="View all posts tagged Random"
+				       rel="tag">Random</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/20/google-moon/#respond" title="Comment on Google-ισμοί">Google-ισμοί (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/18/yosemite-fantasy/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Η μαγεία του Yosemite'">Η μαγεία του Yosemite</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="http://upload.wikimedia.org/wikipedia/en/9/96/Yosemite_1_bg_090504.jpg"><img alt="Half Dome, Yosemite park, USA" src="/weblog/box/_Yosemite_1_bg_090504.jpg" title="Half Dome, Yosemite park, USA"></a>
+Half Dome ~~(aka El Capitan)~~ (<a href="http://blog.spitaki.org/?p=148" title="Περισσότερες φωτογραφίες του Yosemite park από το Σπιτάκι">περισσότερες φωτό στο Σπιτάκι</a>).
+Yosemite park, Περιοχή Sierra Nevada, Καλιφόρνια, ΗΠΑ.
+<a href="http://www.summitpost.org/images/44205.jpg"><img alt="El Capitan, Yosemite park, USA" src="/weblog/box/_el-cap.jpg" title="El Capitan, Yosemite park, USA"></a>
+El Capitan, Yosemite park, ΗΠΑ</p>
+<p>Γρανίτης ύψους ενός χιλιομέτρου. Δυσκολία συνεχόμενη. Τουλάχιστον τρεις μέρες για να φτάσεις στην κορυφή. Δε νομίζω να ξέρω ούτε ένα αφοσιωμένο αναρριχητή που να μην ονειρεύεται να σκαρφαλώσει στο El Cap.</p>
+<p>Κάποια μέρα. Σύντομα…</p></li>
+		<li class="postmetadata">
+				at night, Monday 18 July 2005 
+				<span title=" 20 years, 3 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/climbing/"
+				       title="View all posts tagged Climbing"
+				       rel="tag">Climbing</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/18/yosemite-fantasy/#respond" title="Comment on Η μαγεία του Yosemite">Η μαγεία του Yosemite (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/16/swpat-party/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Πάρτυ για την ομάδα (κατά των) πατεντών λογισμικού'">Πάρτυ για την ομάδα (κατά των) πατεντών λογισμικού</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Yoohoo. <a href="http://www.hellug.gr/beachparty05/" title="HeLLUG Beach party for software patents victory">Τα λέμε εκεί</a>!</p></li>
+		<li class="postmetadata">
+				at night, Saturday 16 July 2005 
+				<span title=" 20 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/random/"
+				       title="View all posts tagged Random"
+				       rel="tag">Random</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/16/swpat-party/#respond" title="Comment on Πάρτυ για την ομάδα (κατά των) πατεντών λογισμικού">Πάρτυ για την ομάδα (κατά των) πατεντών λογισμικού (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/13/istologikes-enoxliseis/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Ιστολογικές ενοχλήσεις'">Ιστολογικές ενοχλήσεις</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Τα 10 πράγματα που με ενοχλούν περισσότερο σε ιστολόγια:</p>
+<ol>
+<li>Το ανώνυμο ή έστω “ψευδώνυμο” στοιχείο του ιστολογίου σου. Το ότι πιστεύεις ότι αυτό δείχνει ταπεινότητα και μετριοφροσύνη και καθόλου ευθυνοφοβία. Όταν δεν βλέπω πουθενά ούτε καν το μικρό σου όνομα ή έστω το e-mail σου.</li>
+<li>Όταν δεν είσαι ο εαυτός σου αλλά κάποιος άλλος, ψεύτικος. Όταν δε γράφεις αυτά που αισθάνεσαι και σκέφτεσαι, αλλά αυτά που θες να διαβάσουν οι άλλοι. Το ότι πιστεύεις ότι αυτό <em>δεν</em> κάνει μπαμ από τη πρώτη στιγμή.</li>
+<li>Το ότι υποκρίνεσαι ότι δεν υπάρχουν άλλοι αξιόλογοι ιστολόγοι και άλλα αξιόλογα ιστολόγια εκτός από το δικό σου τα οποία διαβάζεις. Όταν δεν γράφεις για κάτι πολύ ενδιαφέρον που είπε ένας ιστολόγος που εκτιμάς. Όταν μόνο διαβάζεις και ποτέ, μα ποτέ δεν σχολιάζεις.</li>
+<li>Οι μικροπρέπειες και οι κατινιές μεταξύ ιστολόγων. Όταν πρέπει να αποδείξεις τον εαυτό σου με λόγια.</li>
+<li>Όταν πέφτεις χαμηλά άμα δεχθείς κριτική. Όταν απαιτείς να μη χαλούν την εικόνα σου και δεν δέχεσαι την άποψη του άλλου. Όταν πιστεύεις πως σου οφείλει σεβασμό κάποιος που πιστεύει το αντίθετο. Όταν απαντάς “άμα δε σου αρέσει, μη με διαβάζεις”, λες κι ο άλλος περίεμενε την άδεια σου.</li>
+<li>Το χωρίς κατηγοριοποίηση κατεβατό με τους 1.000 συνδέσμους σε άλλα ιστολόγια που έχεις στο πλάι το οποίο δεν χρηστιμοποιείς ούτε καν εσύ ο ίδιος. Το ότι δεν δέχεσαι πως μ´ αυτό τον τρόπο αδικείς τους ιστολόγους που εκτιμάς. Όταν συνδέεις επειδή σε συνέδεσε κι αυτός.</li>
+<li>Οι τσατσιές που κάνεις με το monitor και που πιστεύεις ότι δεν καταλαβαίνει κανείς όταν το κάνεις σκόπιμα. Όταν δεν χρησιμοποιείς το το monitor αλλά το επισκέπτεσαι για να δεις την δική σου καταχώρηση. Όταν μιλάς για τα νούμερα (hits) σου και ταυτόχρονα υποστηρίζεις πως εκτιμάς τον κάθε αναγνώστη σου.</li>
+<li>Οι πολύ μικρές ή πολύ μεγάλες γραμματοσειρές που έχεις. Τα απαίσια χρώματα που με τυφλώνουν. Η μη-ύπαρξη παραγράφων και σημείων στίξης και τα greeklish που χρησιμοποιείς στα σχόλια σου σε ξένα ιστολόγια.</li>
+<li>Οι 20 καταχωρήσεις σου σε 2 μέρες και η επόμενη μετά από 2 μήνες. Το ότι δεν βρίσκω πουθενά ένα κουτί αναζήτησης στο αρχείο σου.</li>
+<li><strong>Εσύ ο ίδιος</strong>, αν θεωρείς πως <em>όλα</em> τα παραπάνω είναι εντελώς υποκειμενικά.</li>
+</ol>
+<p>Ενημέρωση 14/7: Ε! <strong>ΕΕΕ!</strong> Διαβάστε ξανά, προσεκτικά στην πρώτη πρόταση: <em>σε ιστολόγια</em>. Τρίτη φορά: σε ιστολόγι<strong>α</strong>. Ακόμη πιο λιανά: <strong>Γενικώς στα ιστολόγια</strong>, <em>προφανώς</em> όχι σε κάποιο συγκεκριμένο. Οπουδήποτε δω κάποιο από τα παραπάνω, ενοχλούμαι.</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 13 July 2005 
+				<span title=" 20 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/weblogs/"
+				       title="View all posts tagged Weblogs"
+				       rel="tag">Weblogs</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/13/istologikes-enoxliseis/#respond" title="Comment on Ιστολογικές ενοχλήσεις">Ιστολογικές ενοχλήσεις (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/12/androulakis-question/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Ερώτηση Μίμη Ανδρουλάκη για τις πατέντες λογισμικού'">Ερώτηση Μίμη Ανδρουλάκη για τις πατέντες λογισμικού</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Πριν μερικές μέρες, ο βουλευτής κ. Μίμης Ανδρουλάκης κατέθεσε την παρακάτω ερώτηση στη <a href="http://parliament.gr/">Βουλή των Ελλήνων</a> προς τον Υπουργό Ανάπτυξης κ. Σιούφα.</p>
+<blockquote>
+<p>6/7/2005 - ΕΡΩΤΗΣΗ<br>
+<em>Προς τον Υπουργό Ανάπτυξης: κ. Δ. Σιούφα</em></p>
+<p><strong>Θέμα: Ευρεσιτεχνίες Λογισμικού</strong></p>
+<p>Το Ευρωπαϊκό Κοινοβούλιο συζητά αυτές τις μέρες την πρόταση οδηγίας για την υιοθέτηση των ευρεσιτεχνιών λογισμικού. Αν η πρόταση υιοθετηθεί όπως έχει, η Ευρωπαϊκή οικονομία και ακολούθως η Ελληνική, θα δεχθεί ισχυρότατο πλήγμα σε όφελος των ΗΠΑ και της Ιαπωνίας καθώς το κόστος ανάπτυξης λογισμικού θα αυξηθεί δραματικά. Εκατοντάδες χιλιάδες πατέντες από τις δύο αυτές χώρες θα επιβληθούν στους Ευρωπαίους δημιουργούς καθώς οι εταιρίες των χωρών αυτών είναι με πολύ μεγάλη διαφορά οι σημαντικότεροι κάτοχοι ευρεσιτεχνιών λογισμικού στον κόσμο. Μία τέτοια εξέλιξη θα μετατρέψει την ενεργή συμμετοχή στην Κοινωνία της Πληροφορίας σε άπιαστο όνειρο για την πλειοψηφία των ευρωπαίων πολιτών. Η καινοτομία, ο ανταγωνισμός, η έρευνα και η ανάπτυξη λογισμικού θα ασφυκτιούν υπό τον έλεγχο γιγαντιαίων μη ευρωπαϊκών επιχειρήσεων.</p>
+<p>Οι πατέντες στο λογισμικό, οι οποίες σε καμία περίπτωση δε θα πρέπει να συγχέονται με τα πνευματικά δικαιώματα και την προστασία που αυτά παρέχουν στο δημιουργό ενός έργου, με τη μορφή που περιγράφονται στην οδηγία αποτελούν στην πράξη αξεπέραστο εμπόδιο για αναπτυσσόμενες οικονομίες σαν την Ελληνική οι οποίες επιθυμούν να δραστηριοποιηθούν σε τομείς νέας τεχνολογίας.</p>
+<p>Ερωτάται συνεπώς ο κ. Υπουργός:</p>
+<ol>
+<li>Ποια είναι η θέση του Υπουργείου στο θέμα των ευρεσιτεχνιών λογισμικού;</li>
+<li>Έχει εκπονηθεί σχετική μελέτη η οποία να καταδεικνύει το πιθανό κόστος για τις ελληνικές επιχειρήσεις του κλάδου της πληροφορικής και των νέων τεχνολογιών από την υιοθέτηση της σχετικής οδηγίας;</li>
+</ol>
+<p>Ο ερωτών βουλευτής</p>
+<p>Δημήτρης Ανδρουλάκης</p>
+</blockquote>
+<p>Μόλις λάβουμε απάντηση, θα τη δημοσιεύσω εδώ. Επίσης, θα απαντήσω προσωπικά με ανοιχτό γράμμα στον κ. Υπουργό, το οποίο θα αποσταλεί στο γραφείο του και θα κοινοποιηθεί στον κ. Πρωθυπουργό.</p>
+<p>Ο κ. Ανδρουλάκης έχει δείξει επανειλημμένα τον προβληματισμό του για το το θέμα των πατεντών λογισμικού και των δικαιωμάτων των χρηστών στην προσωπική μας επικοινωνία. Σε λίγες μέρες σκοπεύουμε να συναντηθούμε από κοντά για μια συζήτηση γύρω απ’ αυτά τα θέματα.</p>
+<p>Με σκοπό να συζητήσουμε τα σημαντικότερα θέματα, σας ερωτώ:</p>
+<p><strong><em>Εσάς</em></strong> τι σας απασχολεί το οποίο πιστεύετε ότι πρέπει να φτάσει στη Βουλή των Ελλήνων; Τι θεωρείτε <em>εσείς</em> σημαντικό να μάθει ο κ. Ανδουλάκης και κατά συνέπεια οι υπόλοιποι έλληνες βουλευτές;</p></li>
+		<li class="postmetadata">
+				at night, Tuesday 12 July 2005 
+				<span title=" 20 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/swpatents/"
+				       title="View all posts tagged SWPatents"
+				       rel="tag">Swpatents</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/12/androulakis-question/#respond" title="Comment on Ερώτηση Μίμη Ανδρουλάκη για τις πατέντες λογισμικού">Ερώτηση Μίμη Ανδρουλάκη για τις πατέντες λογισμικού (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/11/right-to-read/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Δικαίωμα στην ανάγνωση'">Δικαίωμα στην ανάγνωση</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="/weblog/box/freedom.jpg"><img alt="Lumini Mattia, Άρωμα ελευθερίας" src="/weblog/box/_freedom.jpg" title="Lumini Mattia, Άρωμα ελευθερίας"></a></p>
+<blockquote>
+<p>From “The Road To Tycho”, a collection of articles about the antecedents of the Lunarian Revolution, published in Luna City in 2096)</p>
+<p>For Dan Halbert, the road to Tycho began in college–when Lissa Lenz asked to borrow his computer. Hers had broken down, and unless she could borrow another, she would fail her midterm project. There was no one she dared ask, except Dan.</p>
+<p>This put Dan in a dilemma. He had to help her–but if he lent her his computer, she might read his books. Aside from the fact that you could go to prison for many years for letting someone else read your books, the very idea shocked him at first. Like everyone, he had been taught since elementary school that sharing books was nasty and wrong–something that only pirates would do.</p>
+<p>And there wasn’t much chance that the SPA–the Software Protection Authority–would fail to catch him. In his software class, Dan had learned that each book had a copyright monitor that reported when and where it was read, and by whom, to Central Licensing. (They used this information to catch reading pirates, but also to sell personal interest profiles to retailers.) The next time his computer was networked, Central Licensing would find out. He, as computer owner, would receive the harshest punishment–for not taking pains to prevent the crime.</p>
+<p>[...]</p>
+</blockquote>
+<p>Richard Stallman, <a href="http://www.gnu.org/philosophy/right-to-read.html">The Right to Read</a></p>
+<p>Παρακαλώ διαβάστε ολόκληρο το <a href="http://www.gnu.org/philosophy/right-to-read.html">The Right to Read</a> πριν συνεχίσετε.</p>
+<p>Σιγά σιγά, ολοένα και περισσότερα μέτρα λαμβάνονται για τον πληροφοριακό έλεγχο της ανθρωπότητας. Μερικά από τα “ελαφριά” παραδείγματα: Στην Αγγλία είναι στάνταρ διαδικασία η παρακολούθηση των email των φοιτητών και εργαζομένων και το μπουκάρισμα στα δωμάτια τους για έλεγχο αντιγραμμένων CD μουσικής. Οι κάμερες σε ολόκληρο το πανεπιστήμιο, απαραίτητο και καλοδεχούμενο κομφόρ πλέον. Στην Αμερική όλοι οι διεθνείς φοιτητές υπογράφουν την αποδοχή τους στην γενική παρακολούθηση (και μάλιστα πληρώνουν και τέλος γι’ αυτό).</p>
+<p>Πρόσφατα πέρασαν νόμοι σαν το <a href="http://en.wikipedia.org/wiki/EUCD">EUCD</a> με το οποίο οι δισκογραφικές (<em>μόνο</em>, προς το παρών) βρίσκονται ένα βήμα πιο κοντά στα προσωπικά μας δεδομένα. Δεν είναι μακριά και το <a href="http://en.wikipedia.org/wiki/Trusted_computing">Trusted Computing</a> μέσω του οποίου θα ελέγχεται το τι μπορείς να τρέξεις στον υπολογιστή σου και τι όχι. Σιγά-σιγά περνάνε μέτρα τα οποία ελέγχουν εκτός από την ίδια την πληροφορία και τα ίδια τα κανάλια στα οποία ρέει, όπως το Διαδίκτυο και τα πρωτόκολλα επικοινωνιών και διαλειτουργικότητας.</p>
+<p>Όλα αυτά τα μέτρα περνούνε μπροστά από τα μάτια μας και νομιμοποιούνται ένα-ένα. Πέραν των 19 στους 20 δεν έχουν ιδέα για όλα αυτά. Η στιγμή που θα το μάθει, <em>με βεβαιότητα</em>, θα είναι περασμένη. Θα είναι αργά. Η στιγμή που θα μάθει επαρκώς μεγάλο κομμάτι της ανθρωπότητας το “τι παίζει”, θα είναι μετά την εδραίωση της χούντας. Όπως γίνεται με όλες τις δικτατορίες.</p>
+<p>Πώς γίνεται αυτό;</p>
+<p>Γίνεται, γιατί το πρώτο πράγμα που θα χτυπήσει ένας τέτοιος εχθρός είναι <strong>το πνεύμα</strong>. Σημαδεύοντας πρώτα-πρώτα στη καρδιά του: Την καλλιέργεια, τις τέχνες. Κόβοντας πρώτα απ’ όλα την πρόσβαση του στη γνώση. <strong>Στα βιβλία</strong>.</p>
+<p>Επειδή δεν βλέπω κάτι άλλο εγώ, <em>σας ερωτώ</em>: Εκτός από το να βγούμε στους δρόμους όλη η ανθρωπότητα και να γεμίσουμε το δρόμο με αίμα, υπάρχει κάποιος άλλος τρόπος να σταματήσει αυτό που πάει να γίνει;</p></li>
+		<li class="postmetadata">
+				at night, Monday 11 July 2005 
+				<span title=" 20 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/thoughts/"
+				       title="View all posts tagged Thoughts"
+				       rel="tag">Thoughts</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/11/right-to-read/#respond" title="Comment on Δικαίωμα στην ανάγνωση">Δικαίωμα στην ανάγνωση (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/08/american-english-skin/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'American skin, English skin'">American skin, English skin</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Δε ξέρω πώς και γιατί (ίσως επειδή στο μυαλό μου η Αγγλία γράφεται και ως “Αμερική”), αλλά οι σημερινές <a href="http://monitor.vrypan.net/search?q=εκρήξεις">εκρήξεις στο Λονδίνο</a> μου θύμισαν τόσο, μα τόσο πολύ το <a href="http://www.brucespringsteen.net/songs/AmericanSkin.html">American Skin (41 shots)</a> του Bruce Springsteen.. It ain’t no secret / no secret my friend / You can get killed just for living / in your American skin</p></li>
+		<li class="postmetadata">
+				at night, Friday 8 July 2005 
+				<span title=" 20 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/random/"
+				       title="View all posts tagged Random"
+				       rel="tag">Random</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/08/american-english-skin/#respond" title="Comment on American skin, English skin">American skin, English skin (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/08/nootropia/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Περί νοοτροπίας'">Περί νοοτροπίας</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="http://nootropia.blogspot.com/2005/07/blog-post_112083725193447617.html">Μεγάλο ποστ για πολλούς μικρούς μπλόγκερς</a>. Άλλη νοοτροπία weblogging. Thumbs up!</p></li>
+		<li class="postmetadata">
+				at night, Friday 8 July 2005 
+				<span title=" 20 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/weblogs/"
+				       title="View all posts tagged Weblogs"
+				       rel="tag">Weblogs</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/08/nootropia/#respond" title="Comment on Περί νοοτροπίας">Περί νοοτροπίας (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/07/nenikikamen/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Φωτογραφίζοντας ένα όνειρο'">Φωτογραφίζοντας ένα όνειρο</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Σε μια φαντασμαγορική τελική φάση, με την αγωνία και την κούραση ζωγραφισμένη στα πρόσωπα όλων, ο αγώνας έληξε. Όλη η εξέδρα όρθια ξεσπάει σε χειροκροτήματα. Οι θεατές πανηγυρίζουν παντού. Οι παίκτες μας προσπαθούν να κρύψουν τα δάκρυα τους. Το τότε όνειρο, πλέον είναι ιστορικό γεγονός.</p>
+<p><strong>Ευρωκοινοβούλιο – Πατέντες λογισμικού, σημειώσατε ένα</strong>.</p>
+<p>Περισσότερα για την είδηση μπορείτε να μάθετε στα <a href="http://wiki.ffii.org/SwpatcninoEn">νέα του FFII</a>. Δύο ακόμη παιδιά της προσπάθειας έγραψαν γι’ αυτό: ο Αστέρης στο <a href="http://isag.meng.auth.gr/blogentis/Oneiros/2005/07/06/beautifulday">Beautiful day</a> και ο Άγγελος στο <a href="http://datan.uom.gr/amarkos/blog/?p=122">STOP Software Patents</a>.</p>
+<p>Αρκετά άτομα με ρώτησαν σήμερα στο τηλέφωνο πως νιώθω…</p>
+<p>Η αλήθεια είναι πως δυσκολεύομαι να το πιστέψω. Ίσως γιατί μέχρι χθες κανείς δεν ήταν σίγουρος για το αποτέλεσμα. Ίσως γιατί μέσα από τις τόσες συναντήσεις και συζητήσεις με βουλευτές, έμαθα ότι η αισιοδοξία δεν είναι καλό πράγμα. Ίσως γιατί “η σκοτεινότερη ώρα είναι πριν την αυγή” που λένε.. Ε, ο ήλιος βρέθηκε ντάλα σε μια στιγμή.</p>
+<p>Πριν μερικές μέρες η αυγή με βρήκε σε μια σκηνή στα 2.000 μέτρα για σκαρφάλωμα ενός βράχου που δεν είχα ξαναδεί στη ζωή μου. Ήταν 5 το πρωί στον Παρνασσό και η στιγμή πρωτόγνωρη. Τα πορτοκαλο-μπλε ακόμα αναμμένα φωτάκια της πόλης της Λειβαδιάς στο βάθος του κάμπου να αχνοφαίνονται μες την ομίχλη του πρωινού. Τα χέρια να αγκαλιάζουν την κούπα του ζεστού καφέ μετά από τρεις και κάτι ώρες ύπνου. Το αεράκι με τη μυρωδιά της φρέσκιας βροχής να χαϊδεύει το πρόσωπο και να ξυπνά τα πνευμόνια. Πήρα τη φωτογραφική μηχανή για να συλλάβω τη στιγμή. Δυστυχώς για μένα, η φωτογραφική μηχανή από όλα όσα κάνουν ξεχωριστή τη στιγμή, συλλαμβάνει μόνο την εικόνα. Υποκρινόμενος ότι συλλαμβάνει και τα υπόλοιπα, πάτησα το κουμπί. Πώς θα νιώσει άραγε κάποιος που θα δει τη φωτογραφία αυτή;</p>
+<p>Πώς νιώθει ένας αθλητής όταν περνάει την τελευταία στροφή σε ένα γεμάτο στάδιο; Πόσο πολύ προπονήθηκε, άραγε, για αυτή τη στιγμή; Πόσο άγχος έχει νιώσει, πόσα μερόνυχτα αγωνίας έχουν περάσει και πόσες στερήσεις έχει υποστεί για να έχει τη δυνατότητα να μπαίνει πρώτος στην τελική ευθεία; Άραγε αν αυτή είναι η μοναδική του ευκαιρία, θα σκεφτεί ότι μπορούσε να είχε προσπαθήσει πιο πολύ; Πώς νιώθει που σε μερικά δευτερόλεπτα μπορεί αυτός και μερικά εκατομμύρια κόσμου να βρεθούν στα ουράνια ή στον πάτο του βούρκου; Πώς νιώθουν οι φίλοι και οι συγγενείς του, ο προπονητής του; Πώς θα νιώσει άραγε κάποιος που θα δει τη φωτογραφία του τερματισμού;</p>
+<p>Πώς θα νιώσει άραγε κάποιος που διαβάζει την “φωτογραφία” του 3+ χρόνων αγώνα κατά του νομοσχεδίου για τις πατέντες λογισμικού, σε ένα άρθρο σε ένα ιστολόγιο;</p>
+<p>Τι να χωρέσει αυτή η φωτογραφία; Τα 700 emails στην mailing list epatents-core της ελληνικής προσπάθειας σε διάστημα 7 μηνών; Τα ~120 bullets-δουλειές που καταγράφηκαν στο <a href="http://web.archive.org/web/20041015140219/epatents.hellug.gr/wiki/index.php/WhatsUp">WhatsUp log</a> της ομάδας, σε διάστημα ενάμιση μήνα; Τις 20.000 λέξεις που έγραψε η ομάδα, μόνο σε δελτία τύπου και ανακοινώσεις; Το ότι <a href="http://www.iospress.gr/ios2004/ios20040620a.htm">η Κυριακάτικη Ελευθεροτυπία έγραψε 2.500 λέξεις</a> για την προσπάθεια που κάνεις και περιείχε σύνδεσμο στο weblog σου;</p>
+<p>Τα ταξίδια στις Βρυξέλλες και στο Στρασβούργο που κάποιες φορές μισή ώρα πριν κοιμηθείς μάθαινες <em>πού</em> θα κοιμηθείς; Και πέντε ώρες μετά (σπανίως 5 ώρες ύπνου λόγω άγχους) ήσουν έξω από το Ευρωκοινοβούλιο; Τη σχεδόν λιποθυμία από το τρακ στην πρώτη συνάντηση με ευρωβουλευτή; Τη γνωριμία με ανθρώπους-θρύλους της κοινότητας Ελεύθερου λογισμικού σαν τους <a href="http://epatents.hellug.gr/pages/rms04res/">Richard Stallman</a>, <a href="http://en.wikipedia.org/wiki/Alan_Cox">Alan Cox</a> και <a href="http://en.wikipedia.org/wiki/Bruce_Perens">Bruce Perens</a>; Το <a href="/weblog/2004/04/28/foss-conference/">δείπνο</a> με τους συντονιστές των Debian, KDE, FSF Europe, Openoffice και Mozilla; Το ότι 30 άνθρωποι ήρθαν να σε βρουν, μερικοί φεύγοντας από τις δουλειές τους, για να <a href="/weblog/2004/07/12/stournari-event/">μοιράσετε μαζί φυλλάδια και μπαλόνια</a> στην Αθήνα;</p>
+<p>Πώς χωράνε σε μια φωτογραφία το <a href="/weblog/2004/02/06/swpat-tour/">κόστος ενός εξαμήνου</a> και το <a href="/weblog/2004/09/10/under-pressure/">κόστος ενός ακόμη</a>, εκείνο το <a href="http://lists.hellug.gr/pipermail/linux-greek-users/2004-May/098097.html">πλατύ χαμόγελο στις 3 το πρωί</a>, οι <a href="/weblog/2004/06/15/time/">αδέσποτες μέρες μιας πιεστικής περιόδου</a> ή το <a href="/weblog/2004/09/19/one-and-a-half-day-before/">παιδικό άγχος μιας συνάντησης</a> με ένα άτομο που θαυμάζεις όσο λίγα;</p>
+<p>Πώς χωράει σε μια φωτογραφία η υπερηφάνεια ότι βοήθησες να γίνει ο κόσμος ένα καλύτερο μέρος για να ζούμε;</p>
+<p>Η απάντηση είναι ότι <em>δεν χωράνε</em>. Η <em>μοίρα</em> της φωτογραφίας είναι να συλλαμβάνει μόνο ένα τμήμα της πραγματικότητας. Η <em>μαγεία</em> της είναι να αφήνει τη φαντασία σου να σχηματίζει όλα τα υπόλοιπα.</p>
+<p>Αυτά ήταν μια φωτογραφία των συναισθημάτων που ένιωσα σήμερα. Όλα τα υπόλοιπα, δυστυχώς, δεν χωρέσανε στις λέξεις.</p>
+<p><a href="/weblog/box/dream-dawn.jpg"><img alt="Dream dawn on Parnassos" src="/weblog/box/_dream-dawn.jpg" title="Dream dawn"></a><br>
+Ονειρικό ξημέρωμα στον Παρνασσό</p></li>
+		<li class="postmetadata">
+				at night, Thursday 7 July 2005 
+				<span title=" 20 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/software-patents/"
+				       title="View all posts tagged Software patents"
+				       rel="tag">Software Patents</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/07/nenikikamen/#respond" title="Comment on Φωτογραφίζοντας ένα όνειρο">Φωτογραφίζοντας ένα όνειρο (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2005/07/06/euparliament-final-line/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Νίκη στο Ευρωκοινοβούλιο'">Νίκη στο Ευρωκοινοβούλιο</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="/weblog/box/no-patents-canoe.jpg"><img alt="No-patents canoe Vs Patents yaught" src="/weblog/box/_no-patents-canoe.jpg" title="No-patents canoe Vs Patents yaught"></a></p>
+<p>Μετά από σχεδόν 4 χρόνια προσπαθειών, τα πράγματα δείχνουν ότι το Ευρωκοινοβούλιο θα απορρίψει την (όχι τόσο) “κοινή θέση” που προτείνει το Συμβούλιο Υπουργών, η οποία πρακτικώς επιτρέπει το πατεντάρισμα το λογισμικού. Το οποίο φυσικά είναι <em>πολύ καλύτερο</em> από το να περνούσε το κείμενο του Συμβουλίου. <strong>Καλύτερα κανένα κείμενο, παρά ένα κακό κείμενο</strong>.</p>
+<p>Ας περιμένουμε όμως το αποτέλεσμα της ψηφοφορίας, η οποία αρχίζει σε περίπου… 5 λεπτά από τώρα (12 ώρα Βρυξελλών). Αν πάνε καλά τα πράγματα, σε μερικά λεπτά μπορεί να τελείωσαν όλα υπέρ μας.</p>
+<p>…Και οι <a href="http://epatents.hellug.gr/">3+ χρόνων αγώνες μας</a> να καρποφόρησαν.</p>
+<p><strong>Update 13:28: ΝΑΙ, είναι γεγονός… Η οδηγία απορρίφθηκε!!!</strong></p></li>
+		<li class="postmetadata">
+				at night, Wednesday 6 July 2005 
+				<span title=" 20 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/software-patents/"
+				       title="View all posts tagged Software patents"
+				       rel="tag">Software Patents</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/07/06/euparliament-final-line/#respond" title="Comment on Νίκη στο Ευρωκοινοβούλιο">Νίκη στο Ευρωκοινοβούλιο (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+  <div class="pagination">
+    <p class="floatleft"><a class="btn" href="https://dimitris.glezos.com:8000/weblog/category/random/index24.html">
+      ← Older Posts
+    </a></p>
+    <p class="floatright"><a class="btn" href="https://dimitris.glezos.com:8000/weblog/category/random/index22.html">
+      Newer Posts →
+    </a></p>
+  </div>
+
+<p class="alcenter">
+	<a href="/weblog/archives/">Post archive</a>
+</p>
+
+
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+    <span class="floatright">
+            Last post: in the morning, Friday 1 November 2013
+            <span title=" 12 years ago">@</span>
+    </span>
+</div>
+
+</body>
+</html>

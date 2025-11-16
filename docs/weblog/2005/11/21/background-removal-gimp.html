@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Αφαίρεση φόντου στο GIMP</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+	
+
+		<ul class="post">
+		<li>
+
+			<h2 id="post-1566"><a href="https://dimitris.glezos.com:8000/weblog/2005/11/21/background-removal-gimp/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Αφαίρεση φόντου στο GIMP'">Αφαίρεση φόντου στο GIMP</a></h2>
+		</li>
+		<li class="entry"><p>Μια και από καιρό τώρα δε μου αρέσει <a href="http://planet.hellug.gr/images/dglezos.png">η φάτσα μου στον Πλανήτη ΕΛ/ΛΑΚ</a>, άνοιξα χθες το GIMP για να αφαιρέσω το φόντο από μια νέα φωτό. Μια και σίγουρα θα χρειαστεί σε κάποιον εκεί έξω η διαδικασία, ας τη γράψω εδώ.</p>
+<p><a href="/photos/weblog-images/bg-removal.png.html">Έχουμε μια εικόνα και θέλουμε να αντικαταστήσουμε το φόντο της</a> με απλά χρώματα ή και διαφάνεια. Καταρχάς, αποκλείεται το Eraser αφού το έκαναν το ’80 και τα Paths αφού πολλές φορές το σχήμα μας είναι περίπλοκο ώστε να μην μπορεί να επιλεγεί (πχ. στα μαλλιά). Η λύση είναι το Layer alpha mask.</p>
+<ol>
+<li>Αντιγράφουμε την εικόνα σε ένα νέο layer (duplicate layer) και απενεργοποιούμε το πρωτότυπο.</li>
+<li>Filters → Colors → Color to Alpha: Επιλέγουμε το χρώμα του φόντου για να το μετατρέψουμε σε διαφάνεια. Επαναλαμβάνουμε και με άλλα χρώματα του φόντου (με μέτρο, γιατί κάθε φορά αδυνατίζει η εικόνα που θέλουμε να κρατήσουμε).</li>
+<li>Tools → Color Tools → Curves → Alpha Layer: Μεταφέρουμε οριζόντια την κάτω αριστερά γωνία για να διώξουμε τα pixel της μάσκας με τη μικρή φωτεινότητα (= ανεπιθύμητα).</li>
+<li>Δεξί κλικ στο layer → Alpha to selection, για να επιλέξουμε το μέρος της εικόνας που μας ενδιαφέρει.</li>
+<li>Πάμε πίσω στο layer με την αρχική φωτό. Layer → Mask → Add layer mask, αρχικά μαύρη (πλήρη διαφάνεια).</li>
+<li>Επιλέγουμε άσπρο χρώμα και πάμε Edit → Fill with FG color.</li>
+</ol>
+<p>Έχουμε τώρα μια ανεκτή μάσκα στην αρχική εικόνα, η οποία ορίζει τι θα φαίνεται και τι όχι. Φυσικά, χρειάζεται κάποιες διορθώσεις. Πρώτα-πρώτα, να γίνει εντελώς διαφανής στα σημεία που θέλουμε να φαίνονται αυτούσια.</p>
+<p>Επεξεργαζόμαστε λοιπόν τη μάσκα (δεξί κουμπί στο layer, επιλεγμένο το “Edit layer mask”) ώστε να προβάλουμε καθαρά το πρώτο πλάνο. Αν σκοπεύουμε να χρησιμοποιήσουμε περισσότερα από ένα χρώματα στο φόντο (π.χ. δύο εναλλακτικά χρώματα ή μια άλλη φωτό), πρέπει να δοκιμάζουμε τακτικά τα δύο χρώματα σε ένα layer κάτω από το κυρίως layer μας.</p>
+<p>Για τις διορθώσεις λοιπόν, έχουμε μερικές επιλογές:</p>
+<ul>
+<li>Tools → Color Tools → Curves: Διορθώνουμε τους τόνους που χρειαζόμαστε (π.χ. αναδεικνύοντας τα σχεδόν πλήρως φωτεινά pixel).</li>
+<li>Δεξί κλικ στο layer → Mask to Selection, Select → Shrink → 2-5 px, Edit → Fill with FG (white): Βάφουμε με άσπρο (διαφανές) τη μάσκα λίγο μέσα από την επιλογή που έγινε.</li>
+<li>Με το Brush βάφουμε χειροκίνητα άσπρα κομμάτια στη μάσκα για να αναδείξουμε την εικόνα (π.χ. τρίχες κλπ) και μαύρα κομμάτια για να σβήσουμε το φόντο που δεν σβήστηκε (π.χ. σε σκιερά μέρη κλπ).</li>
+</ul>
+<p>Αυτά.</p></li>
+		<li class="postmetadata">
+				at night, Monday 21 November 2005 
+				<span title=" 19 years, 11 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/random/"
+				       title="View all posts tagged Random"
+				       rel="tag">Random</a>				| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2005/11/21/background-removal-gimp/#respond" title="Comment on Αφαίρεση φόντου στο GIMP">Αφαίρεση φόντου στο GIMP (Comment!)</a>
+		</li>
+		</ul>
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+</div>
+
+</body>
+</html>

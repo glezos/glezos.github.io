@@ -1,0 +1,820 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Category: Random</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+  <h2 class="pagetitle">Category archive: Random</h2>
+	
+
+
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/04/11/history-lessons/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Μαθήματα Ιστορίας'">Μαθήματα Ιστορίας</a>
+			</h2>
+		</li>
+		<li class="entry"><blockquote>
+<p>Δεν είμαστε εχθροί, αλλά φίλοι. Δεν πρέπει να είμαστε εχθροί. Αν και το πάθος μπορεί να άφησε ανεξίτηλες κηλίδες, δεν πρέπει να σπάει τους δεσμούς συντροφικότητας μας. Οι μυσταγωγικές χορδές της μνήμης, που απλώνονται από κάθε πεδίο μάχης και ηρωικά μνήματα μέχρι κάθε ζωντανή καρδιά και εστία σε ολόκληρη αυτή την πλατιά γη, θα φουσκώσουν και πάλι τη χορωδία της Ένωσης όταν ξανά ακουμπηθούν, όπως σίγουρα θα γίνει, από τους καλύτερους αγγέλους της φύσης μας.</p>
+</blockquote>
+<p>Αβραάμ Λίνκολν, Πρώτη δημόσια αγόρευση (4 Μαρτίου 1861) (<a href="http://www.rottentomatoes.com/m/american_history_x/" title="American History X">via</a>)</p></li>
+		<li class="postmetadata">
+				at night, Friday 11 April 2008 
+				<span title=" 17 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/04/11/history-lessons/#respond" title="Comment on Μαθήματα Ιστορίας">Μαθήματα Ιστορίας (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/04/11/tx-uptake/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Transifex uptake in Fedora'">Transifex uptake in Fedora</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Counting submissions through Transifex in the past month…</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+<span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">aMonthAgo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">31</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">ActionLog</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">AND</span><span class="p">(</span>
+<span class="w">  </span><span class="n">ActionLog</span><span class="o">.</span><span class="n">q</span><span class="o">.</span><span class="n">type</span><span class="o">==</span><span class="s2">&quot;submit&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">ActionLog</span><span class="o">.</span><span class="n">q</span><span class="o">.</span><span class="n">timestamp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">aMonthAgo</span><span class="p">))</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="mi">1281</span>
+</code></pre></div>
+
+<p>That’s 1200+ commits in one month through Transifex, averaging 41 commits per day.</p>
+<p>glezos pleased.</p></li>
+		<li class="postmetadata">
+				at night, Friday 11 April 2008 
+				<span title=" 17 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/04/11/tx-uptake/#respond" title="Comment on Transifex uptake in Fedora">Transifex uptake in Fedora (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/04/04/flashback-lagkada/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Flashback: Λαγκάδα'">Flashback: Λαγκάδα</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="/photos/weblog-images/lagkada.jpg.html"><img alt="None" src="/photos/3561-2/lagkada.jpg" title="Αναρρίχηση στη Λαγκάδα"></a><br>
+Λαγκάδα, Απρίλιος 2005</p></li>
+		<li class="postmetadata">
+				at night, Friday 4 April 2008 
+				<span title=" 17 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/climbing/"
+				       title="View all posts tagged Climbing"
+				       rel="tag">Climbing</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/flashbacks/"
+				       title="View all posts tagged Flashbacks"
+				       rel="tag">Flashbacks</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/04/04/flashback-lagkada/#respond" title="Comment on Flashback: Λαγκάδα">Flashback: Λαγκάδα (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/04/04/what-tis-to-love/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'What ’tis to love'">What ’tis to love</a>
+			</h2>
+		</li>
+		<li class="entry"><dl>
+<dt>Phebe</dt>
+<dd>Good shepherd, tell this youth what ’tis to love.</dd>
+<dt>Silvius</dt>
+<dd>It is to be all made of sighs and tears;<br>
+It is to be all made of faith and service;<br>
+It is to be all made of fantasy,<br>
+All made of passion and all made of wishes,<br>
+All adoration, duty, and observance,<br>
+All humbleness, all patience and impatience,<br>
+All purity, all trial, all observance;</dd>
+</dl>
+<p>William Shakespeare, “As You Like It” (1599)</p></li>
+		<li class="postmetadata">
+				at night, Friday 4 April 2008 
+				<span title=" 17 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/booksmusicfilms/"
+				       title="View all posts tagged Books/Music/Films"
+				       rel="tag">Books/music/films</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/04/04/what-tis-to-love/#respond" title="Comment on What ’tis to love">What ’tis to love (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/04/03/permalinks-day-of-week/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Permanent URLs advice #47'">Permanent URLs advice #47</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Αν είστε κινηματογράφος και έχετε μία σελίδα με τίτλο “Οι ταινίες σήμερα”, προς Θεού <a href="http://www.stercinemas.gr/templates/TLC_Showings.aspx?LMID=6&amp;SHOWDAYID=7">μη βάλετε τον αριθμό της ημέρας στο URL</a> αν θέλετε οι χρήστες σας να κάνουν bookmark τη σελίδα και ο σελιδοδείκτης να δουλεύει και τις υπόλοιπες ημέρες της εβδομάδας.</p></li>
+		<li class="postmetadata">
+				at night, Thursday 3 April 2008 
+				<span title=" 17 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/humor/"
+				       title="View all posts tagged Humor"
+				       rel="tag">Humor</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/04/03/permalinks-day-of-week/#respond" title="Comment on Permanent URLs advice #47">Permanent URLs advice #47 (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/04/03/tx-pootle-gsoc/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Transifex + Pootle = Love (sooner than later!)'">Transifex + Pootle = Love (sooner than later!)</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Are you a <a href="http://code.google.com/opensource/gsoc/2008/faqs.html#0.1_what_is">geek student</a> who’d like to have some thousands of open source contributors and a few millions of users thank you for making their lives a bit more beautiful? This summer you have the chance to do it by <a href="http://fedoraproject.org/wiki/SummerCoding/2008/Ideas#tx_pootle">making Transifex and Pootle work together</a> and giving the chance to translators to use an easy-to-use web interface to submit translations to their favourite projects. If you like Python, tools integration, and work with big impact, <a href="http://groups.google.com/group/google-summer-of-code-announce/web/guide-to-the-gsoc-web-app-for-student-applicants">apply</a> by <a href="http://code.google.com/opensource/gsoc/2008/faqs.html#0.1_timeline">the 7th of April</a>.</p></li>
+		<li class="postmetadata">
+				at night, Thursday 3 April 2008 
+				<span title=" 17 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/transifex/"
+				       title="View all posts tagged Transifex"
+				       rel="tag">Transifex</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/04/03/tx-pootle-gsoc/#respond" title="Comment on Transifex + Pootle = Love (sooner than later!)">Transifex + Pootle = Love (sooner than later!) (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/03/27/transifex-gsoc-08/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Transifex Google Summer of Code ideas'">Transifex Google Summer of Code ideas</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Better late than never, I’ve put together some ideas for <a href="http://fedoraproject.org/wiki/SummerCoding/2008/Ideas#transifex">Google Summer of Code projects on L10n engineering and Transifex</a>. If you’re interested in any of them, please <a href="/contact/en/">contact me</a> directly for more information. I’d be happy to listen to your ideas as well! Get those applications in <a href="http://code.google.com/opensource/gsoc/2008/faqs.html#0.1_timeline">by March 31st</a>! (potentially useful: <a href="http://fedoraproject.org/wiki/SummerOfCode/2007/DimitrisGlezos">Tx’07 application)</a></p></li>
+		<li class="postmetadata">
+				at night, Thursday 27 March 2008 
+				<span title=" 17 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/transifex/"
+				       title="View all posts tagged Transifex"
+				       rel="tag">Transifex</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/03/27/transifex-gsoc-08/#respond" title="Comment on Transifex Google Summer of Code ideas">Transifex Google Summer of Code ideas (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/03/26/fosscomm-recap/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'FOSSComm ’08 recap'">FOSSComm ’08 recap</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="/photos/various/fosscomm08/"><img alt="fosscomm" src="/photos/3551-2/dsc_3706.jpg"></a></p>
+<p>Πολύ το χάρηκα το <a href="http://www.fosscomm.gr/">FOSSComm</a> (<a href="/weblog/2008/03/16/fosscomm/">original post</a>). Είναι εξάλλου κάπως προφανές ότι θα περάσεις γαμάτα άμα μαζευτείς μαζί με ένα μάτσο opensource-άδες στον ίδιο χώρο και αρχίσεις τις συζητήσεις και τα flames.</p>
+<p>Και το ότι μετά από μία ολόκληρη μέρα συνεδρίου συνεχίζαμε να τα λέμε σε κάποια ταβέρνα ή καφετέρια, λέει πολλά. ;-)</p>
+<p>Μερικά στιγμιότυπα που απαθανάτισα είναι όλα μαζί στη συλλογή <a href="/photos/various/fosscomm08/">Πρόσωπα του FOSSComm</a>.</p>
+<p><a href="/photos/various/fosscomm08/"><img alt="presentation" src="/photos/3545-2/dsc_3725.jpg"></a></p>
+<p>Η παρουσίαση μου (όπως σχεδόν πάντα) δεν ήταν τελειωμένη μέχρι το προηγούμενο βράδυ. Όταν έστειλα τον τίτλο είχα σκεφτεί πως δεν ήθελα να διαλέξω “μία” κοινότητα που λαμβάνω μέρος, γιατί αυτό δεν έχει και πολύ νόημα. Γιατί να μιλήσω για το Fedora κι όχι για το Patras LUG; Έτσι ο τίτλος που έστειλα ήταν “Fedora, GNOME, Django, Patras LUG… λίγο από όλα”.</p>
+<p>Το βράδυ λοιπόν σκέφτηκα να μην παρουσίασω μόνο αυτό. Ναι, είναι πολύ ενδιαφέρον το τι κάνουμε σε αυτές τις κοινότητες και σε μερικές γίνεται πολύ ομαδική δουλειά. Όντας όμως ένα συνέδριο περί “Κοινοτήτων”, και με αρκετά καλό content, είπα να πω μερικές σκέψεις μου περί “Κοινοτήτων” γενικά, να δούμε λίγο το δάσος και να μελετήσουμε λίγο το context. (Εκ των υστέρων συνειδητοποιώ ότι ήταν από τις καλύτερες παρουσιάσεις που έχω κάνει ποτέ.)</p>
+<p>Μετονομασία σε “<a href="/box/fosscomm08/community-foo.pdf">Community foo</a>” λοιπόν.</p>
+<p>(OMG!!1!! Το πρώτο μου <a href="http://video.google.com/googleplayer.swf?docId=-4561894176425735063">online video</a>! I AMZ L33T. Thx <a href="http://tsirman.com/">Νίκο</a> για την κινηματογράφηση. Το βίντεο μπορείτε επίσης να το <a href="/box/fosscomm08/community-foo.ogg">κατεβάσετε ελεύθερα σε Ogg Theora μορφή</a>.)</p>
+<p>Οι συναντήσεις μετά το συνέδριο ήταν απολαυστικές, ο <a href="http://keramida.wordpress.com/2008/03/23/fosscomm-finished-keramida-pleased/">~keramida τα λέει καλύτερα</a>. Γενικώς, μπορώ να πω ότι απόλαυσα το συνέδριο, και ότι ανυπομονώ για το επόμενο.</p>
+<p>’till the next time, λοιπόν!</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 26 March 2008 
+				<span title=" 17 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/03/26/fosscomm-recap/#respond" title="Comment on FOSSComm ’08 recap">FOSSComm ’08 recap (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/03/25/telegraphic-monday-night/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Telegraphic Monday night'">Telegraphic Monday night</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Bed-blogging with the n810. Eyelids half closed. Wishing the days of these weeks had 40 hours. Up for a new start soon. Good times ahead. Rockin’ good ones.</p></li>
+		<li class="postmetadata">
+				at night, Tuesday 25 March 2008 
+				<span title=" 17 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/personal/"
+				       title="View all posts tagged Personal"
+				       rel="tag">Personal</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/03/25/telegraphic-monday-night/#respond" title="Comment on Telegraphic Monday night">Telegraphic Monday night (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/03/20/logs/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Ημερολόγια'">Ημερολόγια</a>
+			</h2>
+		</li>
+		<li class="entry"><p><a href="http://www.magicdespell.gr/arheio/istoriko.htm">Αυτά μένουν</a>.</p></li>
+		<li class="postmetadata">
+				at night, Thursday 20 March 2008 
+				<span title=" 17 years, 7 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/thoughts/"
+				       title="View all posts tagged Thoughts"
+				       rel="tag">Thoughts</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/03/20/logs/#respond" title="Comment on Ημερολόγια">Ημερολόγια (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/03/15/unavailability/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Heads up: Unavailability'">Heads up: Unavailability</a>
+			</h2>
+		</li>
+		<li class="entry"><p>I’ll be mostly unavailable for the next couple of weeks. Because of high load at my $dayjob, I will have very little time, if any, to dedicate to Fedora.</p>
+<p>In case you need me for something, please be patient during this period, since a reply might take some time.</p>
+<p>If something on our L10n toolchain seems to behave in a strange way to you, please take a look at the L10n FAQ. If the issue is affecting your productivity, the folks over at #fedora-admin might be able to help, but please be gentle as their plate is always full.</p>
+<p><img alt="Juggler" src="/weblog/wp-content/uploads/2008/03/mess2.jpg" title="Juggling theater"><br>
+Juggler<br>
+Zagreb, December 2007</p></li>
+		<li class="postmetadata">
+				at night, Saturday 15 March 2008 
+				<span title=" 17 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/03/15/unavailability/#respond" title="Comment on Heads up: Unavailability">Heads up: Unavailability (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/03/12/crossroads/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Crossroads'">Crossroads</a>
+			</h2>
+		</li>
+		<li class="entry"><p><img alt="decisions" src="http://farm3.static.flickr.com/2105/2231285988_98f0421e55.jpg?v=0" title="decisions"><br>
+Photo by <a href="http://www.flickr.com/photos/evilnick/">evilnick</a> (<a href="http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en">cc</a>)</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 12 March 2008 
+				<span title=" 17 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/personal/"
+				       title="View all posts tagged Personal"
+				       rel="tag">Personal</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/03/12/crossroads/#respond" title="Comment on Crossroads">Crossroads (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/03/11/two-cities/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'A tail of two cities'">A tail of two cities</a>
+			</h2>
+		</li>
+		<li class="entry"><p>“It was the best of times, it was the worst of times; it was the age of wisdom, it was the age of foolishness; it was the epoch of belief, it was the epoch of incredulity; it was the season of Light, it was the season of Darkness; it was the spring of hope, it was the winter of despair; we had everything before us, we had nothing before us; we were all going directly to Heaven, we were all going the other way.”</p></li>
+		<li class="postmetadata">
+				at night, Tuesday 11 March 2008 
+				<span title=" 17 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/random/"
+				       title="View all posts tagged Random"
+				       rel="tag">Random</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/03/11/two-cities/#respond" title="Comment on A tail of two cities">A tail of two cities (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/03/04/black/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Black'">Black</a>
+			</h2>
+		</li>
+		<li class="entry"><blockquote>
+<p>Sheets of empty canvas, untouched sheets of clay<br>
+Were laid spread out before me as her body once did<br>
+All five horizons revolved around her soul<br>
+As the earth to the sun<br>
+Now the air I tasted and breathed has taken a turn</p>
+<p>Ooh, and all I taught her was everything<br>
+Ooh, I know she gave me all that she wore<br>
+And now my bitter hands chafe beneath the clouds<br>
+Of what was everything.<br>
+Oh, the pictures have all been washed in black, tattooed everything…</p>
+<p>I take a walk outside<br>
+I’m surrounded by some kids at play<br>
+I can feel their laughter, so why do I sear?<br>
+Oh, and twisted thoughts that spin round my head<br>
+I’m spinning, oh, I’m spinning<br>
+How quick the sun can drop away</p>
+<p>And now my bitter hands cradle broken glass<br>
+Of what was everything?<br>
+All the pictures have all been washed in black, tattooed everything…</p>
+<p>All the love gone bad turned my world to black<br>
+Tattooed all I see, all that I am, all I’ll be… yeah…</p>
+<p>I know someday you’ll have a beautiful life,<br>
+I know you’ll be a sun in somebody else’s sky, but why<br>
+Why, why can’t it be, why can’t it be mine..</p>
+</blockquote>
+<p>Pearl Jam, “<a href="/box/temp/pearl-jam_black.mp3">Black</a>”</p>
+<p><a href="/photos/weblog-images/black.jpg.html"><img alt="Glasses left on a staircase step" src="/photos/3311-2/black.jpg" title="Glasses left on a staircase step"></a><br>
+Φεβρουάριος 2008</p></li>
+		<li class="postmetadata">
+				at night, Tuesday 4 March 2008 
+				<span title=" 17 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/03/04/black/#respond" title="Comment on Black">Black (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/03/01/fosdem08-slide-deck/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'FOSDEM’08 slide deck'">FOSDEM’08 slide deck</a>
+			</h2>
+		</li>
+		<li class="entry"><p>FWIW, the slide deck for the <a href="http://fosdem.org/2008/schedule/events/fedora_transifex">Transifex presentation at FOSDEM’08</a> is now available for download <a href="http://glezos.fedorapeople.org/fosdem08/slides.pdf">from fedorapeople</a>.</p></li>
+		<li class="postmetadata">
+				at night, Saturday 1 March 2008 
+				<span title=" 17 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/mini-post/"
+				       title="View all posts tagged Mini-post"
+				       rel="tag">Mini-Post</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/transifex/"
+				       title="View all posts tagged Transifex"
+				       rel="tag">Transifex</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/03/01/fosdem08-slide-deck/#respond" title="Comment on FOSDEM’08 slide deck">FOSDEM’08 slide deck (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/02/28/linus-community/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Ο Linus για την “κοινότητα”'">Ο Linus για την “κοινότητα”</a>
+			</h2>
+		</li>
+		<li class="entry"><dl>
+<dt>Jim Zemlin</dt>
+<dd>Πώς ορίζεις την κοινότητα; Εννοώ, πώς βλέπεις αυτό το θέμα;</dd>
+<dt>Linus Torvalds</dt>
+<dd>Στην πραγματικότητα.. προσπαθώ να αποφεύγω να χρησιμοποιώ τη λέξη “κοινότητα” γιατί είναι παραπλανητική με τόσους πολλούς τρόπους. Είναι παραπλανητική με την έννοια του ότι δεν υπάρχει μία μοναδική κοινότητα — ο καθένας τείνει να έχει τα δικά του θέματα που νοιάζεται για αυτά και μπορεί να έχει να κάνει οτιδήποτε, ή να μην έχει τίποτα να κάνει με κάποιο άλλο άτομο που φαινομενικά ανήκει στην ίδια κοινότητα.
+Μια παραπλανητική σκέψη είναι ότι οι άνθρωποι σαν να μοιράζονται ιδανικά και στόχους, και αυτό δεν είναι αλήθεια. Συχνά συμβαίνει οι άνθρωποι να έχουν εντελώς διαφορετικούς στόχους — έχεις εμπορικούς πωλητές που έχουν δικούς τους πολύ ξεκάθαρους εμπορικούς στόχους και βρίσκεις άτομα μέσα στην ανοιχτού λογισμικού (λεγόμενη) κοινότητα, που δεν τους αρέσουν οι εμπορικές οντότητες, ειδικά οι μεγάλες. Ε, συχνά οι στόχοι είναι πολύ διαφορετικοί.
+Και το άλλο είναι, η κοινότητα τείνει να μην φαίνεται σαν μία οντότητα, αλλά επίσης βλέπεις ανθρώπους να είναι και μέσα και έξω από αυτήν.. Νομίζω ότι οι περισσότερες εταιρίες έχουν αρχίσει να μαθαίνουν σιγά σιγά, αλλά συνήθιζε να είναι ένα τεράστιο ζήτημα όπου οι εταιρίες μιλούσαν για το “Πώς αλληλεπιδρούμε με την κοινότητα;” Και εκεί η κοινότητα κατέληγε να είναι κάποια εξωτερική οντότητα, ενώ η πραγματική απάντηση πάντα κατέληγε να είναι πως δεν αλληλεπιδράς με την κοινότητα, απλά ενεργείς ως μέλος αυτής της μη-υπάρχουσας κοινότητας. Δεν αλληλεπιδράς με αυτήν, είσαι κομμάτι της.</dd>
+</dl>
+<p><a href="http://linux-foundation.org/weblogs/openvoices/linus-torvalds-part-i/">Συνέντευξη του Linus Torvalds στο Open Voices</a></p>
+<p><img alt="Community" src="http://farm1.static.flickr.com/30/96848329_c1ad734c48.jpg?v=0" title="Community">
+Photo by <a href="http://flickr.com/photos/kazze/">kazze</a> (<a href="http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en_GB">cc</a>)</p></li>
+		<li class="postmetadata">
+				at night, Thursday 28 February 2008 
+				<span title=" 17 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/random/"
+				       title="View all posts tagged Random"
+				       rel="tag">Random</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/02/28/linus-community/#respond" title="Comment on Ο Linus για την “κοινότητα”">Ο Linus για την “κοινότητα” (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/02/27/fosdem-recap/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'FOSDEM recap'">FOSDEM recap</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Another February, another <a href="http://fosdem.org/2008/">FOSDEM</a>. And what a great experience it was. I can’t decide where to start from. From the joy of seeing familiar faces again and the networking with cool people full of ideas, or the beautiful Brussels and the delicious crêpes Suzette. What a great trip.</p>
+<p>I’ll try to document most of the interesting stuff that happened. This helps me track down TODOs for the next days and provides a nice report to see how stuff are progressing over time.</p>
+<h3 id="init-mozilla-bof-and-beers">Init, Mozilla BoF and beers</h3>
+<p>Last year I was there with a couple of Greek friends. This time, the group was around 20 people. Not sure how that happened, maybe from a few of those encouraging emails to Greek mailing lists. It’s so fun travelling with friends, lots of laughs, especially with Themis from my local city’s LUG.</p>
+<p><img alt="fosdem08elsmall.png" src="/weblog/wp-content/uploads/2008/02/fosdem08elsmall.png"></p>
+<p>The day before the event, <a href="http://blog.mozilla.com/seth/2008/02/14/localization-tools-bof-finalized-for-fosdem/">the Mozilla folks organized a BoF</a> to discuss with various people from the community L10n tools. Some cool projects were presented at the session, all revolving around tools used to translate stuff. A couple of presentations caught my attention, like Alexandru Szasz’s one about <a href="http://www.alexxed.com/node/67">Narro</a> and Friedel Wolff’s about <a href="http://www.wordforge.org/drupal/projects/wordforge/tools/pootle">Pootle</a>.</p>
+<p>Like software development, translation engineering depends on the structure of the project being localized. Fedora’s challenges revolve around the fact that it’s a distribution of resources: we have many independent projects hosted around, each one with its own type, release schedule and quirks. Fedora is an aggregation of upstream stuff — even if some of them are built by Fedora engineers, and hosted <a href="http://fedorahosted.org/">locally</a>. Under this light, we are called to cross quite a challenging river. With each tool we design and each process we adopt, we need to keep in mind characteristics that would make <em>any</em> combination of processes more complex: content diversity, hosting uniqueness, scheduling differences.</p>
+<p><a href="/photos/weblog-images/elevator.jpg.html"><img alt="Eleveator in Atomium" src="/photos/3307-2/elevator.jpg"></a><br>
+Elevator in Atomium</p>
+<p>In this respect, I was more interested how these projects could fit in this distributed and upstream-friendly way of developing software and writing documentation, and the scalability that Transifex can ultimately achieve. Unfortunately, most of the tools don’t do well in this respect, and need some work to handle large numbers of projects (eg. 3+ branches of 80 projects for now, one of which has 6K strings in it). I invited people who are challenged by the existence of multiple systems and versioning systems in their ecosystem to find me at FOSDEM to discuss how their tools can use Transifex to overcome these difficulties, and it seems most of the tool developers were interested in such options (I wonder how difficult it is to have PHP and Python work together).</p>
+<p><a href="/photos/weblog-images/belgium-beer.jpg.html"><img alt="Belgian Beer" src="/photos/3305-2/belgium-beer.jpg"></a>
+Kwak Belgian beer</p>
+<p>At the evening, we hit the beer party. I have to admit, some Belgian beers are <em>strong</em>. Despite this fact, me and Yaakov of smolt fame managed to discuss a bit about server-to-server protocols and how we could achieve federating translation portals like fedora.transifex.org or india.transifex.org in separate servers, while retaining the benefits of a common configuration scheme. Challenging stuff, but with great potential of resource distribution and locality.</p>
+<h3 id="presentation-and-mediawiki">Presentation and Mediawiki</h3>
+<p>On Saturday the day started with a good breakfast at the hostel (no internet, no blogging) and the setup of the Fedora booth. I brought with me a 3m-tall Tux poster, which we hanged right behind our booth, along with Máirín’s new slick ones. Had some good discussions with Joerg about Fedora EMEA and spot about our L10n engineering progress.</p>
+<p>My presentation went really nice, despite some mic twists. I was happy to see a lot of people being interested in it enough to attend and listen to me for 40 minutes, but also to see that people from Debian, openSUSE, Ubuntu and Wikipedia were there. Some very interesting questions were asked, like if Transifex can be used to provide a common terminology or lexicon to translators, and whether Transifex can be used with Launchpad, Ubuntu’s main development (and translation) service. Unfortunately, Launchpad is closed-source software, so I can’t know how to make it use Transifex to solve its limitations with dealing with upstream.</p>
+<p>On the other hand, Launchpad hosts projects on a versioning system open to external contributions, so Transifex <em>could</em> be used to submit translations to projects hosted on Launchpad, just like any other upstream repo. Once our hooks are there and we can let any developer register his repo on Transifex, then any project hosted on bazaar.launchpad.net, code.google.com, sourceforge.net <em>et al</em> could use Fedora’s translation community for contributions.</p>
+<p>We also had a good chat with the Mediawiki folks that were there. They want to grow their community (and hence, their language coverage) and reminded me that one of the values Transifex has is bringing translation communities together. I also seem to have forgotten to mention in my talk that compared to the traditional direct access, we can now have pre- and post-commit hooks to validate, for example, PO files being uploaded in terms of syntax, encoding, etc, send commit notifications with high-level checks and messages, etc.</p>
+<p>Since we are thinking of using Mediawiki for Fedora’s wiki, I want to make sure that it has the i18n support we need, both in terms of the UI and the content. I am extremely happy to see upstream is so much helpful in this respect. I’ll investigate more on the extensions MW has to support i18n and try to report back sometime in the next weeks.</p>
+<h3 id="fedora-l10n-meeting-opensuse-and-pootle">Fedora L10n Meeting, openSUSE, and Pootle</h3>
+<p>Since some of the most active European translators were present, we got together for a L10n meeting. We mainly covered topics around Tools, Community and European locality. I was very glad to hear the guys were feeling much more comfortable with the new tools. It seems despite the ups and downs we are having, the new way of things using a website to submit translations is much easier for newcomers (and for some experienced users as well) is more enjoyable. Always good to hear things are getting better. Got a lot of good suggestions too, and, after popular demand, it seems the possibility of getting Pootle setup on one of our publictest servers could arrive sooner than later.</p>
+<p>The openSUSE folks confirmed my belief that we have many common goals and point of views. They found Transifex a good idea that solves important issues, and worth of investigating and working together on it. In particular, they agreed that an authorization layer is needed for proper bridging between larger projects that have existing translation teams, like openSUSE and GNOME. It’s probably a good time to start working on it, and the separation of the commit mechanism from the web server. This way, a remote project could install the commit service on its own server, eliminating the need for creating SSH keys, etc.</p>
+<p>Finally, I had a good discussion with Friedel Wolff from Pootle about their future plans. They are planning for a <em>bunch</em> of exciting features, which put the project even higher in my scale. Pootle is undoubtly the most complete web-based translation management solution out there, and its developers are such a friendly bunch of good hackers. Which makes me want to download the source right away and start working on how to make it work with our environment and Transifex.</p>
+<p><a href="/photos/weblog-images/fosdem.jpg.html"><img alt="FOSDEM" src="/photos/3309-2/fosdem.jpg"></a></p></li>
+		<li class="postmetadata">
+				at night, Wednesday 27 February 2008 
+				<span title=" 17 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/02/27/fosdem-recap/#respond" title="Comment on FOSDEM recap">FOSDEM recap (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/02/27/paul-on-l10n/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Paul on L10n'">Paul on L10n</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Quoting <a href="http://blogs.cnet.com/8301-13505_1-9875189-16.html?tag=head">Paul’s interview on c|net</a>:</p>
+<blockquote>
+<p>There are also a lot of interesting community/project things going on. Transifex is a cool tool for facilitation localization. If you have a pet project that you’re interested in having someone within or outside Fedora localize, you can submit it no matter what source management system it uses on the back-end. Those communities can immediately start working on it. From the project page:
+“Translators can use Fedora Web-based tools to contribute directly to any upstream project, large or small, through one translator-oriented Web interface. Developers of projects with no existing translation community can easily reach out to Fedora’s established community for translations. In turn, the latter can reach out to numerous projects related to Fedora to easily contribute translations.”
+Again, the Fedora community revolves around software, but there is more room in the community than simply for developers. Others can and do play important roles.</p>
+</blockquote>
+<p><a href="http://blogs.cnet.com/8301-13505_1-9875189-16.html?tag=head">Fedora and the art of creating an inclusive community</a></p>
+<p><a href="http://marilyn.frields.org:8080/~paul/wordpress">Paul</a>, I just realized that the person who put the whole L10n re-engineering madnes^Wstory in my mind was actually <em>you</em>. I might as well start referring to you as “the guy that gave me that irritating itch”. I remember watching you copy around PO files from cvs.fpo to elvis every time you wanted your release notes localized, often doing re-syncs and re-merges for small updates in the doc source. And it happened more than once in each release cycle. And that was almost sad.</p>
+<p>I remember thinking to myself <em>“hell, this guy has better things to do with his time”</em>.</p>
+<p>The Docs Project was the first entity that used the ‘cvsl10n’ FAS group. In Fedora 7, we decided to be bold, and for the first time, give the opportunity to Fedora translators to work directly on the files hosted on the Fedora servers. The truth is, things did look risky back then. We had maybe less than 80 people in the cvsl10n group, compared to elvis, which had 2000 translators. We also had a different translation workflow, a separated time schedule and freezes than the rest of Fedora, and no statistics interface. While one would expect that the Fedora 7 release notes would ship in fewer languages and be of inferior quality, they not only caught up with FC6, but were actually shipped in <em>more</em> languages. And not only that, we did manage to save Paul from the time to juggle PO files all over the place.</p>
+<p>Next goal: Have all tools work flawlessly (Makefile targets, Transifex notifications, Bodhi integration) and perfect Documentation so that developers and documenters worry about translations a tenth of how much they do today, and work on more interesting and creative things.</p>
+<p><img alt="loose-shoes.jpg" src="/weblog/wp-content/uploads/2008/02/loose-shoes1.jpg"><br>
+Boston Commons park, USA</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 27 February 2008 
+				<span title=" 17 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/02/27/paul-on-l10n/#respond" title="Comment on Paul on L10n">Paul on L10n (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/02/26/quantum-browsing/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Quantum browsing'">Quantum browsing</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Σήμερα, στην ίδια ιστοσελίδα, εμφανίστηκαν τα παρακάτω δύο banners ταυτόχρονα:</p>
+<p><img alt="visitor2.png" src="/weblog/wp-content/uploads/2008/02/visitor2.png">
+<img alt="visitor1.png" src="/weblog/wp-content/uploads/2008/02/visitor1.png"></p>
+<p>Δε μπορώ να πω ότι ένιωσα το βάρος μου να αυξάνεται ιδιαίτερα.</p></li>
+		<li class="postmetadata">
+				at night, Tuesday 26 February 2008 
+				<span title=" 17 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/humor/"
+				       title="View all posts tagged Humor"
+				       rel="tag">Humor</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/02/26/quantum-browsing/#respond" title="Comment on Quantum browsing">Quantum browsing (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com:8000/weblog/2008/02/20/life-as-a-spammer/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Life as a spammer'">Life as a spammer</a>
+			</h2>
+		</li>
+		<li class="entry"><p><img alt="Elvis Presley" src="/weblog/wp-content/uploads/2008/02/elvis_presley.jpg"></p>
+<p>Yesterday I sent spam to 2300 people. To 800 of them, I sent it twice. Yes, I sent 3000 spam mails in a single day.</p>
+<p>The reason behind this (if there’s ever justification behind spamming people!) was to notify our translators we are migrating our last development modules off the legendary and invaluable <a href="http://i18n.redhat.com/cgi-bin/i18n-status">elvis server</a>, which has served as the i18n host for Red Hat and Fedora for such a long, long time.</p>
+<p>It’s hard being separated from the systems you love, but this old fella’s mojo was wearing off for some time now, substituted by fatigue and a clear need for retirement. It’s time to let the chap take some time off, let him just be, and start playing with the <a href="https://fedorahosted.org/">new kid on the block</a>.</p>
+<p>So, back to spam, spam, bacon and spam.</p>
+<p>For those who missed it, here’s what the mail was:</p>
+<blockquote>
+<p>Dear translators,
+You are receiving this email as one of the 2300+ people who have contributed translations to Fedora, and previously, Red Hat Linux. Thanks to your work, Fedora can reach out to millions more people around the world!
+Please continue reading, as we are changing some core bits that will affect your translation work.
+Today all translatable Fedora projects will be moved away from the traditional ‘i18n.redhat.com’ server, and over to Fedora servers. This move is part of our effort to grow our community and open up our processes. It will help us increase the number of Fedora languages and their quality, and also lower the barrier of entry for new translators.
+What does this mean for you?
+To continue contributing translations you’ll need to follow some steps to join the Fedora Localization Project. We’re a cool bunch of people, working in language teams, and translating everything that has to do with Fedora. All information you need to know to continue working on Fedora translations can be found at:
+<a href="http://fedoraproject.org/wiki/L10N/FedoraModulesMove">http://fedoraproject.org/wiki/L10N/FedoraModulesMove</a>
+If you have any questions about any step of the migration process, don’t hesitate to drop by IRC on #fedora-l10n on the Freenode network, or send an email to fedora-trans-list@redhat.com, and someone will jump right in to help you out. We’re sorry that we can’t move everyone automatically to the new system, but we are dedicated to helping each and every translator who has any difficulty with the process.
+As of tomorrow, support for translations via the older system will be dropped, and you’ll no longer need to send translations there. Our efforts will focus on improving the new architecture, constantly adding more projects for translation, creating new translation teams, and making it easier for you to contribute translations.
+So, thanks for your work, for bearing with us on this long email, and for continuing contributing to Fedora.
+<a href="http://fedoraproject.org/wiki/L10N/FedoraModulesMove">http://fedoraproject.org/wiki/L10N/FedoraModulesMove</a>
+Dimitris Glezos
+Fedora Localization engineer</p>
+</blockquote>
+<p>Being a spammer is no easy job, I tell you. It involves a variety of skills, including experience around technology, and an aptitude for psychology and sociology. Good spammers are gurus, hackers, like those who put a police car on top of a University building without no one noticing or them getting caught. The manage to avoid all the cops <em>and</em> make it to the user’s attention (in our case, their inbox).</p>
+<p>I’m happy this whole story is now over. From now on, we’ve got a <a href="http://www.redhat.com/archives/fedora-trans-list/">proper mailing list</a> to discuss things, each language team has its own, and we can use the account system to send emails to people belonging in a group. Also, from now on, all moved modules are <a href="https://translate.fedoraproject.org/submit/module/">accepting translations through Transifex</a>, no matter what the target VCS of their move was.</p>
+<p>Ahh, the joy of good, well-integrated tools.</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 20 February 2008 
+				<span title=" 17 years, 8 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/fedora/"
+				       title="View all posts tagged Fedora"
+				       rel="tag">Fedora</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/humor/"
+				       title="View all posts tagged Humor"
+				       rel="tag">Humor</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/02/20/life-as-a-spammer/#respond" title="Comment on Life as a spammer">Life as a spammer (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
+  <div class="pagination">
+    <p class="floatleft"><a class="btn" href="https://dimitris.glezos.com:8000/weblog/category/random/index12.html">
+      ← Older Posts
+    </a></p>
+    <p class="floatright"><a class="btn" href="https://dimitris.glezos.com:8000/weblog/category/random/index10.html">
+      Newer Posts →
+    </a></p>
+  </div>
+
+<p class="alcenter">
+	<a href="/weblog/archives/">Post archive</a>
+</p>
+
+
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+    <span class="floatright">
+            Last post: in the morning, Friday 1 November 2013
+            <span title=" 12 years ago">@</span>
+    </span>
+</div>
+
+</body>
+</html>

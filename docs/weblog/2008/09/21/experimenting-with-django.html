@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el-GR" xml:lang="el-GR">
+
+<head>
+	<title>Dimitris Glezos' old personal site » Weblog » Experimenting with Django</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Dimitris Glezos" />	
+	<meta name="copyright" content="Copyright (c) 2025 Dimitris Glezos" />
+	<meta name="description" content="Personal webpage of Dimitris Glezos" />
+	<meta name="keywords" content="dimitris, glezos, Δημήτρης, Γλέζος, weblog" />
+	
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style-static.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://dimitris.glezos.com:8000/theme/css/style.css" type="text/css" media="screen" />
+
+<link href="https://dimitris.glezos.com:8000/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+
+	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
+	<link rel="shortcut icon" href="https://dimitris.glezos.com:8000/theme/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="page">
+	
+<div id="header">
+	<ul id="logo" class="simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/" class="simlink" tabindex="1" accesskey="1"><img id="top" src="https://dimitris.glezos.com:8000/theme/images/logo.png" alt="Personal webpage of Dimitris Glezos" /></a></li>
+		<li class="dotcom"><a href="https://dimitris.glezos.com:8000">.com</a></li><li class="dotcom dotcomactive"><a href="https://dimitris.glezos.com:8000/weblog/" accesskey="2">/weblog</a>	</ul>
+
+</div>
+
+	<div id="content">
+
+	
+
+		<ul class="post">
+		<li>
+
+			<h2 id="post-1566"><a href="https://dimitris.glezos.com:8000/weblog/2008/09/21/experimenting-with-django/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Experimenting with Django'">Experimenting with Django</a></h2>
+		</li>
+		<li class="entry"><p>Lately I’ve been experimenting more and more with <a href="dj">Django</a>. With its recent 1.0 release, I feel more comfortable investing in it, since the project folks plan for long-term backwards compatibility, an issue that was a <em>very</em> sore point for the Transifex development team.</p>
+<p>Some of the things I like about Django include:</p>
+<ul>
+<li>Since all components are developed by Django itself, the designers were able to structure them in a way to interoperate best, and compliment each other nicely. The pieces fit perfectly with each other and you can’t feel the glue like you do with Turbogears. This gives you the feeling that there’s one way to do a particular thing, following the <a href="http://www.python.org/dev/peps/pep-0020/">Zen of Python</a>.</li>
+<li>In addition, Django ships with “batteries included”, so you get to have a bunch of additional stuff like feeds, testing, internationalization, caching. Pretty handy, given the fact that I like good integration where it makes sense, and when people who are smarter than me pick the best ideas, so that I don’t have to.</li>
+<li>The fact tha Django follows the UNIX philosophy of “do one thing and do it right” allows us developers to work that way ‘by default’. Your service consists of a bunch of different applications each of which does a particular task: adds tagging support to other applications, user registration, OpenID, notifications, twitter, geotagging. All kinds of cool stuff, encapsulated and <a href="http://djangoplugables.com/">reusable</a>.</li>
+<li>Django seems very much influenced by the rules that govern Python development. You feel there’s a particular way to do each thing. Readability counts. Beautiful counts. <a href="http://code.djangoproject.com/wiki/RemovingTheMagic">No magic</a> (aka explicit is better than implicit). Oh, and Guido seems to like Django too.</li>
+<li>Django’s documentation is stellar.</li>
+<li>I think I <a href="/weblog/2008/08/16/on-community-support/">already</a> <a href="/weblog/2008/06/05/framework-stats/">mentioned</a> the fantastic community around it. There are a dozen websites we use to learn all kinds of things, and people are writing blog posts all the time about the cool stuff they did today. And there are a gazillion of those.</li>
+<li>In my eyes, it’s like Django striked perfect spot between having a hacker-centered community (amazing features, but you miss being slick, stylish and well-documented… think git, perl) and a user-centered community (more feature requests than patches, less plugins, more use of ’should do’ than ‘am doing’ but more documentation, blogs, etc.. think apple).</li>
+<li>Django’s maintainers are smart. <em>Very</em> smart. And friendly and fun too.</li>
+</ul>
+<p>But probably most importantly, and probably as a result of the above and some other ones, it makes writing web applications <strong>fun</strong>. Not that TurboGears, Rails or CakePHP don’t. But for a lot of things, it feels like “it’s already been thought for you. Just go now, and get creative. Get stuff done”.</p>
+<p>About Transifex now. I admit that a number of times I <em>have</em> thought about how Transifex could be if it could leverage the benefits Django would provide. Also had some discussions with a few smart folks about the benefits and costs of a possible migration (rewrite?). I’m starting to think that a few things will improve a lot, like the out-of-the-box feature set, the development pace, the overall code quality and the maintenance cost. And these improvements will most likely be worth the cost.</p>
+<p>Hmm.</p>
+<p><a href="http://www.djangoproject.com/"><img alt="A Django site." src="http://media.djangoproject.com/img/badges/djangowish126x70.gif" title="I wish this site was powered by Django."></a></p></li>
+		<li class="postmetadata">
+				at night, Sunday 21 September 2008 
+				<span title=" 17 years, 1 month ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+				    <a href="https://dimitris.glezos.com:8000/weblog/tag/techweb/"
+				       title="View all posts tagged Tech/web"
+				       rel="tag">Tech/web</a>, 				    <a href="https://dimitris.glezos.com:8000/weblog/tag/transifex/"
+				       title="View all posts tagged Transifex"
+				       rel="tag">Transifex</a>				| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com:8000/weblog/2008/09/21/experimenting-with-django/#respond" title="Comment on Experimenting with Django">Experimenting with Django (Comment!)</a>
+		</li>
+		</ul>
+
+
+		
+		
+	</div>
+
+	<div id="sidebar">
+		<ul>
+			<li>
+			<h2>CHOICES</h2>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/" tabindex="2">Weblog homepage</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/about/en/" tabindex="3">About the author</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/about/" tabindex="4">About this blog</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/weblog/archives/" tabindex="5">Archive</a></li>
+				<li><a href="https://dimitris.glezos.com:8000/contact/en/" tabindex="6">Contact</a></li>
+			</ul>
+			</li>
+
+			<li>
+			<form method="get" id="sidesearchform" action="https://dimitris.glezos.com:8000/weblog/">
+			<h2><label for="sidesearch">SEARCH</label></h2>
+			<div><input size="13" type="text" value="(text)" name="s" id="sidesearch" tabindex="7"
+			onfocus="this.value='';"
+			/>
+			<input type="submit" id="sidesearchsubmit" value="!" disabled />
+			</div>
+			</form>
+			</li>
+
+			<li><h2>FEEDS</h2>
+			<ul>
+				<li class="disabled">All articles (atom)</li>
+				<li class="disabled">Main articles (atom)</li>
+				<li class="disabled">Mini-posts (atom)</li>
+				<li class="disabled">Comments (atom)</li>
+			</ul>
+			</li>
+
+			<li id="i-read"><h2>COMMUNITIES</h2>
+
+			<h3>Belonging</h3>
+			<ul>
+				<li><a href="http://planet.ellak.gr/">planet ελλακ</a>, </li>
+				<li><a href="http://planet.fedoraproject.org/">planet Fedora</a>, </li>
+				<li><a href="http://fedoraproject.gr/">Fedora greece</a>, </li>
+				<li><a href="http://gnome.gr/">gnome.gr</a>, </li>
+				<li><a href="http://django.gr/">django.gr</a>, </li>
+				<li><a href="http://transifex.org/">transifex</a>,</li>
+				<li><a href="http://digitalrights.gr/">digitalrights.gr</a>, </li>
+				<li><a href="http://groups.google.com/group/patras-lug/">patras <acronym title="Linux User Group">lug</acronym></a></li>
+			</ul>
+
+			<h3>Hanging around</h3>
+			<ul>
+				<li><a href="https://dimitris.glezos.com:8000/photos/">gallery</a>, </li>
+				<li><a href="http://twitter.com/glezos">twitter</a>, </li>
+				<li><a href="http://identi.ca/glezos">identi.ca</a>, </li>
+				<li><a href="http://del.icio.us/glezos">del.icio.us</a>, </li>
+				<li><a href="irc://irc.freenode.net:6667/ellak">#ellak on Freenode</a></li>
+			</ul>
+			
+			<h3>Using</h3>
+			<ul>
+				<li><a href="http://www.webfaction.com/signup?affiliate=dglezos">webfaction</a>, </li>
+				<li><a href="http://www.dreamhost.com/r.cgi?263869">dreamhost</a>, </li>
+				<li><a href="http://www.radioparadise.com/">radio paradise</a></li>
+			</ul>
+			
+			<h3>Participating</h3>
+			<ul>
+				<li><a href="http://fedoraproject.org/wiki/FUDCon/">fudcon</a>, </li>
+				<li><a href="http://www.athensdigitalweek.gr/">athens digital week</a>, </li>
+				<li><a href="http://foss.in/">foss.in</a>, </li>
+				<li><a href="http://guadec.org/">GUADEC</a>, </li>
+				<li><a href="http://groups.yahoo.com/group/patras-freecycle">patras freecycle</a></li>
+			</ul>
+			</li>
+
+		</ul>
+
+        <div class="poetry">
+        <p>
+            CODE IS POETRY.
+            THIS WEBSITE USES ONLY <span title="(HUMANLY)">CORRECT</span> <a href="http://validator.w3.org/check/referer" title="Website uses valid XHTML">XHTML</a> AND <a href="http://jigsaw.w3.org/css-validator/validator?uri=/weblog/wp-content/themes/glezos/style.css">CSS</a>
+            AND STATES <a href="https://dimitris.glezos.com:8000/website/accessibility/">EQUALLY ACCESSIBLE</a> BY EVERYONE.
+        </p>
+        </div>
+	</div>
+	<div class="clearer">&nbsp;</div>
+
+
+<div id="bodydown">
+	<div id="sidebar-bottom">
+		<ul class="simpleblockul nobullet">
+		<li>
+			<a class="getfirefox" href="http://getfirefox.com/" title="Get Firefox - Take Back the Web"><span class="hide">Get Firefox - Take Back the Web</span></a>
+		</li>
+		<li>
+			<a class="validhtml" href="http://validator.w3.org/check/referer" title="Website uses Valid XHTML 1.0 Strict"><span class="hide">Website uses Valid XHTML 1.0 Strict</span></a>
+		</li>
+		<li>
+			<a class="validcss" href="http://jigsaw.w3.org/css-validator/validator?uri=/style.css" title="Website uses Valid CSS"><span class="hide">Website uses Valid CSS</span></a>
+		</li>
+		</ul>
+	</div>
+	<span id="pi">
+		<a href="https://dimitris.glezos.com:8000/website/terms/">π</a>
+	</span>
+</div>
+
+</div> <!-- /page -->
+
+<div id="bottom">
+	<ul class="floatleft simpleinlineul">
+		<li><a href="https://dimitris.glezos.com:8000/contact/" accesskey="9">Dimitris Glezos</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/terms/" accesskey="8"><em>Some</em> rights reserved</a> |</li>
+		<li><a href="https://dimitris.glezos.com:8000/website/accessibility/" accesskey="0">Accessibility statement</a></li>
+	</ul>
+</div>
+
+</body>
+</html>
