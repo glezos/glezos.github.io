@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="https://dimitris.glezos.com/theme/css/style-static.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="https://dimitris.glezos.com/theme/css/style.css" type="text/css" media="screen" />
 
-<link href="https://dimitris.glezos.com/" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+    <link href="https://dimitris.glezos.com/weblog/feeds/all.atom" type="application/atom+xml" rel="alternate" title="Dimitris Glezos' old personal site ATOM Feed" />
+    <link href="https://dimitris.glezos.com/weblog/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Dimitris Glezos' old personal site RSS Feed" />
+
+  <script src="https://dimitris.glezos.com/theme/js/base.js"></script>
 
 	<link rel="accessibility" href="/accessibility/" title="Accessibility details" />
 	<link rel="shortcut icon" href="https://dimitris.glezos.com/theme/images/favicon.ico" type="image/x-icon" />
@@ -117,7 +120,9 @@ Feel free to speak your mind — just stay on topic and respect others. You know
 <p>Good question... I keep asking myself the same thing.</p>
 <hr>    <div class="updated">
             Last update: in the evening, Wednesday 2 May 2007
-            <span title=" 18 years, 6 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span>
+            <span class="updated-timeago" data-timeago="2007-05-02T22:10:00" title="2007-05-02 22:10">
+                <img alt="date" src="/theme/images/clock.gif" width="9" height="11" />
+            </span>
     </div>
 
 		
@@ -150,10 +155,13 @@ Feel free to speak your mind — just stay on topic and respect others. You know
 
 			<li><h2>FEEDS</h2>
 			<ul>
-				<li class="disabled">All articles (atom)</li>
-				<li class="disabled">Main articles (atom)</li>
-				<li class="disabled">Mini-posts (atom)</li>
-				<li class="disabled">Comments (atom)</li>
+				<li>
+				  <a href="https://dimitris.glezos.com/weblog/feeds/all.rss">All articles</a> (<a href="https://dimitris.glezos.com/weblog/feeds/all.atom">atom</a>)
+				</li>
+				<li>
+				  <a href="https://dimitris.glezos.com/weblog/feeds/tag/mini-post.rss">Mini-posts</a>
+				  (<a href="https://dimitris.glezos.com/weblog/feeds/tag/mini-post.atom">atom</a>)
+				</li>
 			</ul>
 			</li>
 
