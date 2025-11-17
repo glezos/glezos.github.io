@@ -160,6 +160,7 @@ del {
 	background: #FFF;
 	color: #000;
 	border: 2px solid #5680A6;
+	border-radius: 10px;
 	width: 920px;
 	margin: 50px auto 0 auto;
 	padding: 0;
