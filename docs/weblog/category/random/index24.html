@@ -44,70 +44,6 @@
 		<ul class="post random">
 		<li>
 			<h2 id="post-1566">
-				  <a href="https://dimitris.glezos.com/weblog/2005/07/03/software-installation/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Εγκατάσταση λογισμικού: linux & windows'">Εγκατάσταση λογισμικού: linux & windows</a>
-			</h2>
-		</li>
-		<li class="entry"><p>Συχνά σε συζητήσεις, φίλοι με ενημερώνουν για το πόσο δύσκολη είναι η εγκατάσταση επιπλέον λογισμικού στο linux σε σχέση με τα windows.</p>
-<p>Στα windows τα πράγματα είναι πολύ απλά: Σε μια τυπική (απόλυτα νόμιμη) περίπτωση ο χρήστης αναζητά στο διαδίκτυο το πρόγραμμα ή την εταιρία, πληοηγείται στην ιστοσελίδα της εταιρίας να βρει τον σύνδεσμο για το κατέβασμα του προγράμματος, συμφωνεί στην άδεια για το download, πιθανότατα συμπληρώνει τα στοιχεία του για να πάρει σε email τον σύνδεσμο με την ακριβή τοποθεσία του κατεβάσματος. Όταν το κατεβάζει, διαβάζει την EULA (αρκετά μεγάλη συνήθως), κάνει μόνο καμιά 10αριά κλικ στον οδηγό εγκατάστασης και είναι έτοιμος. Για την ενεργοποίηση του προγράμματος, ο χρήστης πλοηγείται στην ιστοσελίδα της εταιρίας, βρίσκει τις φόρμες αγοράς του προϊόντος, εισάγει τα στοιχεία του και τον αριθμό της πιστωτικής του κάρτας, ανοίγει το πρόγραμμα αλληλογραφίας του για να διαβάσει το email με τον κωδικό πρόσβασης και τον εισάγει στο πρώτο παράθυρο στην έναρξη του προγράμματος.</p>
-<p>(Το τελευταίο βήμα μπορεί να αντικατασταθεί με πλοήγηση σε σελίδες με κωδικούς και προγράμματα “σπασίματος” του λογισμικού, δοκιμές διαφόρων κωδικών που μπορεί να μην δουλεύουν, πιθανή αναζήτηση άλλων κωδικών σε peer-2-peer προγράμματα και τέλος παράνομο “σπάσιμο” του λογισμικού. Αν επιλέξει να παρανομήσει, ο χρήστης μπορεί μάλιστα να γλυτώσει την ανάγνωση της EULA κάνοντας κλικ στο “Δέχομαι” χωρίς να την έχει διαβάσει).</p>
-<p>Σήμερα λοιπόν, κατά την εγκατάσταση του διανυσματικού προγράμματος σχεδίασης <a href="http://www.inkscape.org/">Inkscape</a> στο linux (διανομή Fedora Core), αποφάσισα να καταγράψω όσο πιο αναλυτικά μπορώ όλα τα βήματα που χρειάστηκαν, ώστε όσοι σκοπεύουν να μεταβούν από windows σε linux, να χρησιμοποιήσουν για ευκολία αυτό τον πλήρη οδηγό απόκτησης και εγκατάστασης του προγράμματος αυτού.</p>
-<p>Ακολουθούν όλα τα βήματα. Με έντονο χρώμα σημειώνεται η είσοδος του χρήστη (πληκτρολόγιο και ποντίκι).</p>
-<h3 id="1">Βήμα 1</h3>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">root</span><span class="err">@</span><span class="n">glezos</span><span class="w"> </span><span class="o">~</span><span class="p">]</span><span class="c1"># yum install inkscape</span>
-<span class="err">…</span>
-<span class="o">==============================================/==========</span>
-<span class="w"> </span><span class="n">Package</span><span class="w">                 </span><span class="n">Arch</span><span class="w">       </span><span class="n">Version</span><span class="w">        </span><span class="n">Size</span>
-<span class="o">==============================================/==========</span>
-<span class="n">Installing</span><span class="p">:</span>
-<span class="w"> </span><span class="n">inkscape</span><span class="w">                </span><span class="n">i386</span><span class="w">       </span><span class="mf">0.41</span><span class="o">-</span><span class="mi">7</span><span class="w">         </span><span class="mf">5.8</span><span class="w"> </span><span class="n">M</span>
-<span class="n">Installing</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">dependencies</span><span class="p">:</span>
-<span class="w"> </span><span class="n">gc</span><span class="w">                      </span><span class="n">i386</span><span class="w">       </span><span class="mf">6.4</span><span class="o">-</span><span class="mi">3</span><span class="w">          </span><span class="mi">119</span><span class="w"> </span><span class="n">k</span>
-<span class="w"> </span><span class="n">glibmm24</span><span class="w">                </span><span class="n">i386</span><span class="w">       </span><span class="mf">2.6</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="w">        </span><span class="mi">142</span><span class="w"> </span><span class="n">k</span>
-<span class="w"> </span><span class="n">gtkmm24</span><span class="w">                 </span><span class="n">i386</span><span class="w">       </span><span class="mf">2.6</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="mi">2</span><span class="w">        </span><span class="mi">948</span><span class="w"> </span><span class="n">k</span>
-<span class="w"> </span><span class="n">libsigc</span><span class="o">++</span><span class="mi">20</span><span class="w">             </span><span class="n">i386</span><span class="w">       </span><span class="mf">2.0</span><span class="o">.</span><span class="mi">11</span><span class="o">-</span><span class="mi">1</span><span class="w">        </span><span class="mi">38</span><span class="w"> </span><span class="n">k</span>
-<span class="err">…</span>
-<span class="n">Total</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">size</span><span class="p">:</span><span class="w"> </span><span class="mf">7.0</span><span class="w"> </span><span class="n">M</span>
-<span class="n">Is</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">ok</span><span class="w"> </span><span class="p">[</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">]:</span><span class="w"> </span><span class="n">y</span>
-<span class="err">…</span>
-<span class="n">Installed</span><span class="p">:</span><span class="w"> </span><span class="n">inkscape</span><span class="o">.</span><span class="n">i386</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">0.41</span><span class="o">-</span><span class="mi">7</span>
-<span class="n">Dependency</span><span class="w"> </span><span class="n">Installed</span><span class="p">:</span><span class="w"> </span><span class="n">gc</span><span class="o">.</span><span class="n">i386</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">6.4</span><span class="o">-</span><span class="mi">3</span><span class="w"> </span><span class="n">glibmm24</span><span class="o">.</span><span class="n">i386</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">2.6</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span>
-<span class="n">gtkmm24</span><span class="o">.</span><span class="n">i386</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">2.6</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="mi">2</span><span class="w"> </span><span class="n">libsigc</span><span class="o">++</span><span class="mf">20.</span><span class="n">i386</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">11</span><span class="o">-</span><span class="mi">1</span>
-</code></pre></div>
-
-<p>Complete!
-[root@glezos ~]#</p>
-<h3 id="2">Βήμα 2</h3>
-<p>Πλοήγηση στο Applications → Graphics → Inkspace. (<strong>3 κλικ</strong>)</p>
-<h3 id="_1">(τέλος)</h3>
-<hr>
-<p>Εναλλακτικά, μπορεί κανείς να γλτώσει το γράψιμο των τεσσάρων λέξεων στη κονσόλα του βήματος 1:</p>
-<h3 id="1_1">Βήμα 1α</h3>
-<p>Πλοήγηση στο Desktop → System Settings → Synaptic Package Manger. (<strong>3 κλικ</strong>)</p>
-<h3 id="1_2">Βήμα 1β</h3>
-<p>Κλικ στο αναζήτηση πακέτων, εισαγωγή “inkspace”, επιλογή “Inkspace” με διπλό κλικ, κλικ στο Apply. (<strong>4 κλικ, 1 φράση</strong>).</p>
-<hr>
-<p>(τέλος αναλυτικού οδηγού εγκατάστασης λογισμικού στο linux)</p></li>
-		<li class="postmetadata">
-				at night, Sunday 3 July 2005 
-				<span title=" 20 years, 4 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
-				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
-
-				    <a href="https://dimitris.glezos.com/weblog/tag/foss/"
-				       title="View all posts tagged FOSS"
-				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com/weblog/tag/linux/"
-				       title="View all posts tagged linux"
-				       rel="tag">Linux</a>
- 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
-				<a href="https://dimitris.glezos.com/weblog/2005/07/03/software-installation/#respond" title="Comment on Εγκατάσταση λογισμικού: linux & windows">Εγκατάσταση λογισμικού: linux & windows (Comment!)</a>
-		</li>
-		</ul>
-		
-		<hr class="separator" />
-
-
-		<ul class="post random">
-		<li>
-			<h2 id="post-1566">
 				  <a href="https://dimitris.glezos.com/weblog/2005/06/30/past-images/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'Εικόνες του παρελθόντος'">Εικόνες του παρελθόντος</a>
 			</h2>
 		</li>
@@ -615,6 +551,31 @@ Microsoft.</p>
 		<hr class="separator" />
 
 
+		<ul class="post random">
+		<li>
+			<h2 id="post-1566">
+				  <a href="https://dimitris.glezos.com/weblog/2005/05/25/kdiff3/" rel="bookmark" title="Μόνιμος σύνδεσμος στο 'kdiff3'">kdiff3</a>
+			</h2>
+		</li>
+		<li class="entry"><p>Wow. Γαμάτο εργαλείο το <a href="http://kdiff3.sourceforge.net/doc/screenshots.html#dirmergebigscreenshot">kdiff3</a>.</p></li>
+		<li class="postmetadata">
+				at night, Wednesday 25 May 2005 
+				<span title=" 20 years, 5 months ago"><img alt="date" src="/theme/images/clock.gif" width="9" height="11" /></span><br/>
+				<img alt="comments" src="/theme/images/comments.gif" width="11" height="12" />
+
+				    <a href="https://dimitris.glezos.com/weblog/tag/foss/"
+				       title="View all posts tagged FOSS"
+				       rel="tag">Foss</a>, 				    <a href="https://dimitris.glezos.com/weblog/tag/linux/"
+				       title="View all posts tagged linux"
+				       rel="tag">Linux</a>
+ 			| <img alt="link" src="/theme/images/link.gif" width="7" height="7" />
+				<a href="https://dimitris.glezos.com/weblog/2005/05/25/kdiff3/#respond" title="Comment on kdiff3">kdiff3 (Comment!)</a>
+		</li>
+		</ul>
+		
+		<hr class="separator" />
+
+
   <div class="pagination">
     <p class="floatleft"><a class="btn" href="https://dimitris.glezos.com/weblog/category/random/index25.html">
       ← Older Posts
@@ -752,8 +713,8 @@ Microsoft.</p>
 		<li><a href="https://dimitris.glezos.com/website/accessibility/" accesskey="0">Accessibility statement</a></li>
 	</ul>
     <span class="floatright">
-            Last post: in the morning, Friday 1 November 2013
-            <span title=" 12 years ago">@</span>
+            Last post: at night, Wednesday 25 April 2012
+            <span title=" 13 years, 6 months ago">@</span>
     </span>
 </div>
 
